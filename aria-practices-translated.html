@@ -13,7 +13,7 @@
   <section id="abstract">
     <p>
       이 문서는 독자에게 접근 가능한 리치 인터넷 어플리케이션을 만드는데 <cite><a href="https://www.w3.org/TR/wai-aria-1.2/"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 1.2</a></cite> [[WAI-ARIA]]를 어떻게 사용하는지에 대한 이해를 제공합니다.
-      WAI-ARIA 명세만으로는 대다수의 작성자에게 명백하지 않을 수 있는 고려 사항들을 설명하고 WAI-ARIA 역할(role), 상태(state), 속성(property)을 사용하여 위젯, 내비게이션, 동작을 접근 가능하게 할 수 있는 처리 방법을 추천합니다.
+      WAI-ARIA 명세만으로는 대다수의 작성자에게 명확하지 않을 수 있는 고려 사항들을 설명하고 WAI-ARIA 역할(role), 상태(state), 속성(property)을 사용하여 위젯, 내비게이션, 동작을 접근 가능하게 할 수 있는 처리 방법을 추천합니다.
       이 문서는 주로 웹 어플리케이션 개발자들을 대상으로 하지만, 지침은 유저 에이전트와 보조 기술 개발자에게도 유용합니다.
     </p>
     <p>이 문서는 <a href="https://www.w3.org/WAI/intro/aria.php">WAI-ARIA 개요</a>에 기술된 WAI-ARIA 제품군의 일부입니다.</p>
@@ -63,7 +63,7 @@
       <a href="https://www.w3.org/WAI/intro/aria.php">WAI-ARIA 개요</a>는 WAI-ARIA에 대한 자세한 배경을 제공하고, 그 노력들을 간략하게 이야기하고, WAI-ARIA 제품군에 포함된 다른 문서들을 나열합니다.
     </p>
     <p>
-      간단한 <q>먼저 읽어주세요</q> 섹션 이후, 지침은 예상되는 동작을 열거하고 작업 코드로 그 동작을 보여주는 공통 위젯에 대한 ARIA 구현 패턴으로 시작합니다.
+      짧은 <q>먼저 읽어주세요</q> 섹션 이후, 지침은 예상되는 동작을 열거하고 작업 코드로 그 동작을 보여주는 공통 위젯에 대한 ARIA 구현 패턴으로 시작합니다.
       구현 패턴과 예제들은 후속 지침 섹션에서 지원 개념에 대한 자세한 설명을 참조합니다.
       지침 섹션은 ARIA 랜드마크의 사용, 키보드 인터페이스에 대한 방법, 그리드와 테이블 속성(property), <code>presentation</code> 역할(role)의 영향과 같은 좀 더 일반적인 주제들을 다룹니다.
     </p>
@@ -74,7 +74,7 @@
     <section id="no_aria_better_bad_aria">
       <h3>잘못된 ARIA보다 ARIA를 안쓰는게 낫다</h3>
       <p>
-        기능적으로, ARIA (role), 상태(state), 속성(property)들은 보조 기술에 대한 CSS와 유사합니다.
+        기능적으로, ARIA (role), 상태(state), 속성(property)들은 보조 기술에 대해 CSS와 유사합니다.
         스크린리더 사용자들의 경우, ARIA는 비시각적 경험의 렌더링을 제어합니다.
         잘못된 ARIA는 잠재적으로 비시각적 경험에 대한 심각한 손상과 함께, 시각적 경험을 잘못 전달합니다.
       </p>
@@ -85,46 +85,46 @@
         &lt;div role=&quot;button&quot;&gt;Place Order&lt;/div&gt;
           </code> </pre>
       <p>
-        해당 <code>&lt;div&gt;</code>의 작성자가 버튼에 기대되는 키보드 인터랙션을 제공하는 자바스크립트도 구현했음을 약속합니다.
+        해당 <code>&lt;div&gt;</code>의 작성자가 버튼에 기대되는 키보드 인터랙션을 제공하는 JavaScript도 구현했음을 약속합니다.
         HTML 입력 요소(element)와 달리, ARIA 역할(role)은 브라우저가 키보드 동작이나 스타일링을 제공하지 않습니다.
       </p>
       <p>그 역할(role)의 약속을 이행하지 않고 사용하는 것은 주문을 빼먹고 쇼핑 카트를 비우는 &quot;주문하기&quot; 버튼을 만드는 것과 유사합니다.</p>
       <p>이 지침의 목표 중 하나는 각 ARIA 역할(role)에 대해 기대되는 동작을 정의하는 것입니다.</p>
-      <h4>원칙 2: ARIA는 힘과 위험성 모두를 생성하여, 숨기고 강화시킬 수 있다.</h4>
+      <h4>원칙 2: ARIA는 은폐와 강화를 통해 힘과 위험 모두를 창출할 수 있습니다.</h4>
       <p>
         유저 인터페이스 요소(element)들의 의미와 목적에 대해 필요한 정보 보조 기술을 접근성 의미론이라고 합니다.
-        보조 기술의 관점에서, ARIA는 작성자가 HTML과 SVG 요소(element)를 보조 기술이 신뢰성 있게 도출 할 수 없는 중요한 접근성 의미론들로 꾸밀 수 있는 능력을 제공합니다.
+        보조 기술의 관점에서, ARIA는 작성자에게 보조 기술이 달리 확실하게 추론 할 수 없을 중요한 접근성 의미론으로 HTML과 SVG 요소(element)를 꾸밀 수 있는 능력을 제공합니다.
       </p>
-      <p>일부 ARIA는 망토와 같습니다; 원래 의미나 콘텐트를 완전히 덮거나 덮어씌웁니다.</p>
+      <p>일부 ARIA는 가면과 같습니다; 원래의 의미나 콘텐트를 완전히 감추거나 덮어 씌웁니다.</p>
       <pre><code>
-        &lt;a role=&quot;menuitem&quot;&gt;Assistive tech users perceive this element as an item in a menu, not a link.&lt;/a&gt;
-        &lt;a aria-label=&quot;Assistive tech users can only perceive the contents of this aria-label, not the link text&quot;&gt;Link Text&lt;/a&gt;
+        &lt;a role=&quot;menuitem&quot;&gt;보조 기술 사용자는 이 요소(element)를 링크가 아니라 메뉴의 항목으로 인지합니다.&lt;/a&gt;
+        &lt;a aria-label=&quot;보조 기술 사용자는 링크 텍스트가 아니라 이 aria-lable의 콘텐트만을 인식할 수 있습니다&quot;&gt;링크 텍스트&lt;/a&gt;
 </code></pre>
-      <p>반면에, 일부 ARIA의 사용은 멜빵이나 벨트와 같습니다; 원본 콘텐트에 필수적인 지원을 제공하는 의미를 추가합니다.</p>
+      <p>반면에, 일부 ARIA의 사용은 멜빵이나 벨트에 가깝습니다; 원본 콘텐트에 필수적인 지원을 제공하는 의미를 추가합니다.</p>
       <pre><code>
         &lt;button aria-pressed=&quot;false&quot;&gt;Mute&lt;/button&gt;
       </code></pre>
       <p>
         이것이 ARIA의 힘입니다.
-        작성자가 보조 기술이 신뢰성 있게 해석할 수 있게 하므로 컴포넌트를 보조 기술 사용자들이 접근할 수 있게 만드는 방식으로 거의 모든 유저 인터페이스 컴포넌트를 기술 할 수 있게 합니다.
+        작성자가 보조 기술들이 확실하게 해석할 수 있는 방법으로 거의 모든 유저 인터페이스를 기술할 수 있게 하므로, 보조 기술 사용자에게 컴포넌트를 접근 가능하게 할 수 있습니다.
       </p>
       <p>
-        이것은 동시에 ARIA의 위험성입니다.
-        작성자는 부주의하게 접근성 의미를 덮어쓸 수 있습니다.
+        이것은 동시에 ARIA의 위험입니다.
+        작성자는 부주의하게 접근성 의미를 덮어쓸 수도 있습니다.
       </p>
       <pre>
         <code>
           &lt;table role=&quot;log&quot;&gt;
             &lt;!--
               보조 기술 사용자가 표로 인식하지 못하는 표.
-              로그 역할(role)은 브라우저에게 이것이 표가 아니라 기록이라고 알립니다.
+              log 역할(role)은 브라우저에게 이것이 표가 아니라 기록이라고 알립니다.
             --&gt;
           &lt;/table&gt;
           &lt;ul role=&quot;navigation&quot;&gt;
-            &lt;!-- 이것은 목록이 아니라 탐색 영역 입니다. --&gt;
+            &lt;!-- 이것은 목록이 아니라 navigation 영역 입니다. --&gt;
             &lt;li&gt;&lt;a href=&quot;uri1&quot;&gt;nav link 1&lt;/li&gt;
             &lt;li&gt;&lt;a href=&quot;uri2&quot;&gt;nav link 2&lt;/li&gt;
-            &lt;!-- 오류! 위 항목들은 목록에 없습니다! --&gt;
+            &lt;!-- 오류! 위 목록 항목들은 목록에 없습니다! --&gt;
           &lt;/ul&gt;
         </code>
       </pre>
