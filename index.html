@@ -358,7 +358,7 @@ h6 > a.self-link::before {
   
   <link href="common/css/common.css" rel="stylesheet" type="text/css">
 <meta name="description" content="이 문서는 독자에게 접근 가능한 리치 인터넷 어플리케이션을 만드는데 WAI-ARIA 1.2 [WAI-ARIA]를 어떻게 사용하는지에 대한 이해를 제공합니다.
-      WAI-ARIA 명세만으로는 대다수의 작성자에게 명백하지 않을 수 있는 고려 사항들을 설명하고 WAI-ARIA 역할(role), 상태(state), 속성(property)을 사용하여 위젯, 내비게이션, 동작을 접근 가능하게 할 수 있는 처리 방법을 추천합니다.
+      WAI-ARIA 명세만으로는 대다수의 작성자에게 명확하지 않을 수 있는 고려 사항들을 설명하고 WAI-ARIA 역할(role), 상태(state), 속성(property)을 사용하여 위젯, 내비게이션, 동작을 접근 가능하게 할 수 있는 처리 방법을 추천합니다.
       이 문서는 주로 웹 어플리케이션 개발자들을 대상으로 하지만, 지침은 유저 에이전트와 보조 기술 개발자에게도 유용합니다."><link rel="canonical" href="https://www.w3.org/TR/wai-aria-practices-1.2/"><style>/*
 
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
@@ -776,16 +776,16 @@ var[data-type]:hover::before {
   "preProcess": [
     null
   ],
-  "publishDate": "2019-11-27",
-  "publishISODate": "2019-11-27T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 27 November 2019"
+  "publishDate": "2019-11-28",
+  "publishISODate": "2019-11-28T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 28 November 2019"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 <body class="h-entry informative"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">WAI-ARIA 작성 방법 1.2</h1>
       
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2019-11-27">27 November 2019</time>
+        <time class="dt-published" datetime="2019-11-28">28 November 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -841,10 +841,18 @@ var[data-type]:hover::before {
     </p>
       <hr title="Separator for header">
     </div>
+  <p class="translator-comment intro">
+    이 번역본은 ARIA 1.2 버전에 대한 개인 번역본으로 공식 번역본이 아닙니다. <br>
+    잘못된 번역으로 원문의 의도를 해치지 않기 위해 의도적으로 직역을 선택하였으며, 일부는
+    이해를 돕기 위해 원문의 의도를 해치지 않는 선에서 의역되거나 각색되었습니다. <br>
+    원문은 아래 링크에서 확인이 가능하며, 오역이 있을 경우 <a href="https://github.com/mulder21c/aria-practices/issues">Github issue</a>에
+    남겨시면 확인 후 수정하도록 하겠습니다. <br>
+    원문: <a href="https://rawgit.com/w3c/aria-practices/apg-1.2/aria-practices.html"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Authoring Practices 1.2</a>
+  </p>
   <section id="abstract" class="introductory"><h2>Abstract</h2>
     <p>
       이 문서는 독자에게 접근 가능한 리치 인터넷 어플리케이션을 만드는데 <cite><a href="https://www.w3.org/TR/wai-aria-1.2/"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 1.2</a></cite> [<cite><a class="bibref" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.0" data-link-type="biblio">WAI-ARIA</a></cite>]를 어떻게 사용하는지에 대한 이해를 제공합니다.
-      <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 명세만으로는 대다수의 작성자에게 명백하지 않을 수 있는 고려 사항들을 설명하고 <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 역할(role), 상태(state), 속성(property)을 사용하여 위젯, 내비게이션, 동작을 접근 가능하게 할 수 있는 처리 방법을 추천합니다.
+      <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 명세만으로는 대다수의 작성자에게 명확하지 않을 수 있는 고려 사항들을 설명하고 <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 역할(role), 상태(state), 속성(property)을 사용하여 위젯, 내비게이션, 동작을 접근 가능하게 할 수 있는 처리 방법을 추천합니다.
       이 문서는 주로 웹 어플리케이션 개발자들을 대상으로 하지만, 지침은 유저 에이전트와 보조 기술 개발자에게도 유용합니다.
     </p>
     <p>이 문서는 <a href="https://www.w3.org/WAI/intro/aria.php"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 개요</a>에 기술된 <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 제품군의 일부입니다.</p>
@@ -915,7 +923,7 @@ var[data-type]:hover::before {
     </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>소개</a></li><li class="tocline"><a class="tocxref" href="#read_me_first"><bdi class="secno">2. </bdi>먼저 읽어주세요</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#no_aria_better_bad_aria"><bdi class="secno">2.1 </bdi>잘못된 ARIA보다 ARIA를 안쓰는게 낫다</a></li><li class="tocline"><a class="tocxref" href="#browser_and_AT_support"><bdi class="secno">2.2 </bdi>Browser and Assistive Technology Support</a></li><li class="tocline"><a class="tocxref" href="#mobile_and_touch_support"><bdi class="secno">2.3 </bdi>Mobile and Touch Support</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_ex"><bdi class="secno">3. </bdi>Design Patterns and Widgets</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accordion"><bdi class="secno">3.1 </bdi>Accordion (Sections With Show/Hide Functionality)</a></li><li class="tocline"><a class="tocxref" href="#alert"><bdi class="secno">3.2 </bdi>Alert</a></li><li class="tocline"><a class="tocxref" href="#alertdialog"><bdi class="secno">3.3 </bdi>Alert and Message Dialogs</a></li><li class="tocline"><a class="tocxref" href="#breadcrumb"><bdi class="secno">3.4 </bdi>Breadcrumb</a></li><li class="tocline"><a class="tocxref" href="#button"><bdi class="secno">3.5 </bdi>Button</a></li><li class="tocline"><a class="tocxref" href="#carousel"><bdi class="secno">3.6 </bdi>Carousel (Slide Show or Image Rotator)</a></li><li class="tocline"><a class="tocxref" href="#checkbox"><bdi class="secno">3.7 </bdi>Checkbox</a></li><li class="tocline"><a class="tocxref" href="#combobox"><bdi class="secno">3.8 </bdi>Combobox</a></li><li class="tocline"><a class="tocxref" href="#dialog_modal"><bdi class="secno">3.9 </bdi>Dialog (Modal)</a></li><li class="tocline"><a class="tocxref" href="#disclosure"><bdi class="secno">3.10 </bdi>Disclosure (Show/Hide)</a></li><li class="tocline"><a class="tocxref" href="#feed"><bdi class="secno">3.11 </bdi>Feed</a></li><li class="tocline"><a class="tocxref" href="#grid"><bdi class="secno">3.12 </bdi>Grids : Interactive Tabular Data and Layout Containers</a></li><li class="tocline"><a class="tocxref" href="#link"><bdi class="secno">3.13 </bdi>Link</a></li><li class="tocline"><a class="tocxref" href="#Listbox"><bdi class="secno">3.14 </bdi>Listbox</a></li><li class="tocline"><a class="tocxref" href="#menu"><bdi class="secno">3.15 </bdi>Menu or Menu bar</a></li><li class="tocline"><a class="tocxref" href="#menubutton"><bdi class="secno">3.16 </bdi>Menu Button</a></li><li class="tocline"><a class="tocxref" href="#meter"><bdi class="secno">3.17 </bdi>Meter</a></li><li class="tocline"><a class="tocxref" href="#radiobutton"><bdi class="secno">3.18 </bdi>Radio Group</a></li><li class="tocline"><a class="tocxref" href="#slider"><bdi class="secno">3.19 </bdi>Slider</a></li><li class="tocline"><a class="tocxref" href="#slidertwothumb"><bdi class="secno">3.20 </bdi>Slider (Multi-Thumb)</a></li><li class="tocline"><a class="tocxref" href="#spinbutton"><bdi class="secno">3.21 </bdi>Spinbutton</a></li><li class="tocline"><a class="tocxref" href="#table"><bdi class="secno">3.22 </bdi>Table</a></li><li class="tocline"><a class="tocxref" href="#tabpanel"><bdi class="secno">3.23 </bdi>Tabs</a></li><li class="tocline"><a class="tocxref" href="#toolbar"><bdi class="secno">3.24 </bdi>Toolbar</a></li><li class="tocline"><a class="tocxref" href="#tooltip"><bdi class="secno">3.25 </bdi>Tooltip Widget</a></li><li class="tocline"><a class="tocxref" href="#TreeView"><bdi class="secno">3.26 </bdi>Tree View</a></li><li class="tocline"><a class="tocxref" href="#treegrid"><bdi class="secno">3.27 </bdi>Treegrid</a></li><li class="tocline"><a class="tocxref" href="#windowsplitter"><bdi class="secno">3.28 </bdi>Window Splitter</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_landmark"><bdi class="secno">4. </bdi>Landmark Regions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#html-sectioning-elements"><bdi class="secno">4.1 </bdi>HTML Sectioning Elements</a></li><li class="tocline"><a class="tocxref" href="#general-principles-of-landmark-design"><bdi class="secno">4.2 </bdi>General Principles of Landmark Design</a></li><li class="tocline"><a class="tocxref" href="#landmark-roles"><bdi class="secno">4.3 </bdi>Landmark Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aria_lh_banner"><bdi class="secno">4.3.1 </bdi>Banner</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_complementary"><bdi class="secno">4.3.2 </bdi>Complementary</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_contentinfo"><bdi class="secno">4.3.3 </bdi>Contentinfo</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_form"><bdi class="secno">4.3.4 </bdi>Form</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_main"><bdi class="secno">4.3.5 </bdi>Main</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_navigation"><bdi class="secno">4.3.6 </bdi>Navigation</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_region"><bdi class="secno">4.3.7 </bdi>Region</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_search"><bdi class="secno">4.3.8 </bdi>Search</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions"><bdi class="secno">5. </bdi>Providing Accessible Names and Descriptions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#names_and_descriptions_definition"><bdi class="secno">5.1 </bdi>What ARE Accessible Names and Descriptions?</a></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions_derivation"><bdi class="secno">5.2 </bdi>How Are Name and Description Strings Derived?</a></li><li class="tocline"><a class="tocxref" href="#accessible_names"><bdi class="secno">5.3 </bdi>Accessible Names</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_cardinal_rules"><bdi class="secno">5.3.1 </bdi>Cardinal Rules of Naming</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_rule_heed_warnings"><bdi class="secno">5.3.1.1 </bdi>Rule 1: Heed Warnings and Test Thoroughly</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_visible_text"><bdi class="secno">5.3.1.2 </bdi>Rule 2: Prefer Visible Text</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_native_techniques"><bdi class="secno">5.3.1.3 </bdi>Rule 3: Prefer Native Techniques</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_avoid_fallback"><bdi class="secno">5.3.1.4 </bdi>Rule 4: Avoid Browser Fallback</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_brief_names"><bdi class="secno">5.3.1.5 </bdi>Rule 5: Compose Brief, Useful Names</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_techniques"><bdi class="secno">5.3.2 </bdi>Naming Techniques</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_with_child_content"><bdi class="secno">5.3.2.1 </bdi>Naming with Child Content</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-label"><bdi class="secno">5.3.2.2 </bdi>Naming with a String Attribute Via <code>aria-label</code></a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-labelledby"><bdi class="secno">5.3.2.3 </bdi>Naming with Referenced Content Via <code>aria-labelledby</code></a></li><li class="tocline"><a class="tocxref" href="#naming_with_labels"><bdi class="secno">5.3.2.4 </bdi>Naming Form Controls with the Label Element</a></li><li class="tocline"><a class="tocxref" href="#naming_with_legends"><bdi class="secno">5.3.2.5 </bdi>Naming Fieldsets with the Legend Element</a></li><li class="tocline"><a class="tocxref" href="#naming_with_captions"><bdi class="secno">5.3.2.6 </bdi>Naming Tables and Figures with Captions</a></li><li class="tocline"><a class="tocxref" href="#naming_with_fallback"><bdi class="secno">5.3.2.7 </bdi>Fallback Names Derived from Titles and Placeholders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_effectively"><bdi class="secno">5.3.3 </bdi>Composing Effective and User-friendly Accessible Names</a></li><li class="tocline"><a class="tocxref" href="#naming_role_guidance"><bdi class="secno">5.3.4 </bdi><span id="naming_role_guidance_heading">Accessible Name Guidance by Role</span></a></li><li class="tocline"><a class="tocxref" href="#name_calculation"><bdi class="secno">5.3.5 </bdi>Accessible name calculation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#name_calculation_non-recursive_ex"><bdi class="secno">5.3.5.1 </bdi>Examples of non-recursive accessible name calculation</a></li><li class="tocline"><a class="tocxref" href="#name_calculation_recursive_ex"><bdi class="secno">5.3.5.2 </bdi>Examples of recursive accessible name calculation</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessible_descriptions"><bdi class="secno">5.4 </bdi>Accessible Descriptions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_techniques"><bdi class="secno">5.4.1 </bdi>Describing Techniques</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_with_aria-describedby"><bdi class="secno">5.4.1.1 </bdi>Describing by referencing content with <code>aria-describedby</code></a></li><li class="tocline"><a class="tocxref" href="#describing_with_captions"><bdi class="secno">5.4.1.2 </bdi>Describing Tables and Figures with Captions</a></li><li class="tocline"><a class="tocxref" href="#describing_with_title"><bdi class="secno">5.4.1.3 </bdi>Descriptions Derived from Titles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#description_calculation"><bdi class="secno">5.4.2 </bdi>Accessible description calculation</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#keyboard"><bdi class="secno">6. </bdi>Developing a Keyboard Interface</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_generalnav"><bdi class="secno">6.1 </bdi>Fundamental Keyboard Navigation Conventions</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_discernable_predictable"><bdi class="secno">6.2 </bdi>Discernible and Predictable Keyboard Focus</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_vs_selection"><bdi class="secno">6.3 </bdi>Focus VS Selection and the Perception of Dual Focus</a></li><li class="tocline"><a class="tocxref" href="#kbd_selection_follows_focus"><bdi class="secno">6.4 </bdi>Deciding When to Make Selection Automatically Follow Focus</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_between"><bdi class="secno">6.5 </bdi>Keyboard Navigation Between Components (The Tab Sequence)</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_within"><bdi class="secno">6.6 </bdi> Keyboard Navigation Inside Components</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_roving_tabindex"><bdi class="secno">6.6.1 </bdi>Managing Focus Within Components Using a Roving tabindex</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_activedescendant"><bdi class="secno">6.6.2 </bdi>Managing Focus in Composites Using aria-activedescendant</a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_disabled_controls"><bdi class="secno">6.7 </bdi>Focusability of disabled controls</a></li><li class="tocline"><a class="tocxref" href="#kbd_common_conventions"><bdi class="secno">6.8 </bdi>Key Assignment Conventions for Common Functions</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts"><bdi class="secno">6.9 </bdi>Keyboard Shortcuts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_behavior_design"><bdi class="secno">6.9.1 </bdi>Designing the Scope and Behavior of Keyboard Shortcuts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_basic"><bdi class="secno">6.9.1.1 </bdi>Ensure Basic Access Via Navigation </a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_choose_behavior"><bdi class="secno">6.9.1.2 </bdi>Choose Appropriate Shortcut Behavior</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_where"><bdi class="secno">6.9.1.3 </bdi>Choose Where to Add Shortcuts </a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assigning"><bdi class="secno">6.9.2 </bdi>Assigning Keyboard Shortcuts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_opsys_conflicts"><bdi class="secno">6.9.2.1 </bdi>Operating System Key Conflicts</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_assistivetech_conflicts"><bdi class="secno">6.9.2.2 </bdi>Assistive Technology Key Conflicts</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_browser_conflicts"><bdi class="secno">6.9.2.3 </bdi>Browser Key Conflicts</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_intentional_conflicts"><bdi class="secno">6.9.2.4 </bdi>Intentional Key Conflicts</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties"><bdi class="secno">7. </bdi>Grid and Table Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_rows"><bdi class="secno">7.1 </bdi>Using <code>aria-rowcount</code> and <code>aria-rowindex</code></a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols"><bdi class="secno">7.2 </bdi>Using <code>aria-colcount</code> and <code>aria-colindex</code></a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_contiguous"><bdi class="secno">7.2.1 </bdi>Using <code>aria-colindex</code> When Column Indices Are Contiguous</a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_noncontiguous"><bdi class="secno">7.2.2 </bdi>Using <code>aria-colindex</code> When Column Indices Are Not Contiguous</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_spans"><bdi class="secno">7.3 </bdi>Defining cell spans using <code>aria-colspan</code> and <code>aria-rowspan</code></a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_sort"><bdi class="secno">7.4 </bdi>Indicating sort order with <code>aria-sort</code></a></li></ol></li><li class="tocline"><a class="tocxref" href="#presentation_role"><bdi class="secno">8. </bdi>Intentionally Hiding Semantics with the <code>presentation</code> Role</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#presentation_role_effects"><bdi class="secno">8.1 </bdi>
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>소개</a></li><li class="tocline"><a class="tocxref" href="#read_me_first"><bdi class="secno">2. </bdi>먼저 읽어주세요</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#no_aria_better_bad_aria"><bdi class="secno">2.1 </bdi>잘못된 ARIA보다 ARIA를 안쓰는게 낫다</a></li><li class="tocline"><a class="tocxref" href="#browser_and_AT_support"><bdi class="secno">2.2 </bdi>브라우저와 보조 기술 지원</a></li><li class="tocline"><a class="tocxref" href="#mobile_and_touch_support"><bdi class="secno">2.3 </bdi>모바일과 터치 지원</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_ex"><bdi class="secno">3. </bdi>디자인 패턴과 위젯</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accordion"><bdi class="secno">3.1 </bdi>아코디언 (Show/Hide 기능이 있는 섹션)</a></li><li class="tocline"><a class="tocxref" href="#alert"><bdi class="secno">3.2 </bdi>Alert</a></li><li class="tocline"><a class="tocxref" href="#alertdialog"><bdi class="secno">3.3 </bdi>Alert and Message Dialogs</a></li><li class="tocline"><a class="tocxref" href="#breadcrumb"><bdi class="secno">3.4 </bdi>Breadcrumb</a></li><li class="tocline"><a class="tocxref" href="#button"><bdi class="secno">3.5 </bdi>Button</a></li><li class="tocline"><a class="tocxref" href="#carousel"><bdi class="secno">3.6 </bdi>Carousel (Slide Show or Image Rotator)</a></li><li class="tocline"><a class="tocxref" href="#checkbox"><bdi class="secno">3.7 </bdi>Checkbox</a></li><li class="tocline"><a class="tocxref" href="#combobox"><bdi class="secno">3.8 </bdi>Combobox</a></li><li class="tocline"><a class="tocxref" href="#dialog_modal"><bdi class="secno">3.9 </bdi>Dialog (Modal)</a></li><li class="tocline"><a class="tocxref" href="#disclosure"><bdi class="secno">3.10 </bdi>Disclosure (Show/Hide)</a></li><li class="tocline"><a class="tocxref" href="#feed"><bdi class="secno">3.11 </bdi>Feed</a></li><li class="tocline"><a class="tocxref" href="#grid"><bdi class="secno">3.12 </bdi>Grids : Interactive Tabular Data and Layout Containers</a></li><li class="tocline"><a class="tocxref" href="#link"><bdi class="secno">3.13 </bdi>Link</a></li><li class="tocline"><a class="tocxref" href="#Listbox"><bdi class="secno">3.14 </bdi>Listbox</a></li><li class="tocline"><a class="tocxref" href="#menu"><bdi class="secno">3.15 </bdi>Menu or Menu bar</a></li><li class="tocline"><a class="tocxref" href="#menubutton"><bdi class="secno">3.16 </bdi>Menu Button</a></li><li class="tocline"><a class="tocxref" href="#meter"><bdi class="secno">3.17 </bdi>Meter</a></li><li class="tocline"><a class="tocxref" href="#radiobutton"><bdi class="secno">3.18 </bdi>Radio Group</a></li><li class="tocline"><a class="tocxref" href="#slider"><bdi class="secno">3.19 </bdi>Slider</a></li><li class="tocline"><a class="tocxref" href="#slidertwothumb"><bdi class="secno">3.20 </bdi>Slider (Multi-Thumb)</a></li><li class="tocline"><a class="tocxref" href="#spinbutton"><bdi class="secno">3.21 </bdi>Spinbutton</a></li><li class="tocline"><a class="tocxref" href="#table"><bdi class="secno">3.22 </bdi>Table</a></li><li class="tocline"><a class="tocxref" href="#tabpanel"><bdi class="secno">3.23 </bdi>Tabs</a></li><li class="tocline"><a class="tocxref" href="#toolbar"><bdi class="secno">3.24 </bdi>Toolbar</a></li><li class="tocline"><a class="tocxref" href="#tooltip"><bdi class="secno">3.25 </bdi>Tooltip Widget</a></li><li class="tocline"><a class="tocxref" href="#TreeView"><bdi class="secno">3.26 </bdi>Tree View</a></li><li class="tocline"><a class="tocxref" href="#treegrid"><bdi class="secno">3.27 </bdi>Treegrid</a></li><li class="tocline"><a class="tocxref" href="#windowsplitter"><bdi class="secno">3.28 </bdi>Window Splitter</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_landmark"><bdi class="secno">4. </bdi>Landmark Regions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#html-sectioning-elements"><bdi class="secno">4.1 </bdi>HTML Sectioning Elements</a></li><li class="tocline"><a class="tocxref" href="#general-principles-of-landmark-design"><bdi class="secno">4.2 </bdi>General Principles of Landmark Design</a></li><li class="tocline"><a class="tocxref" href="#landmark-roles"><bdi class="secno">4.3 </bdi>Landmark Roles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aria_lh_banner"><bdi class="secno">4.3.1 </bdi>Banner</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_complementary"><bdi class="secno">4.3.2 </bdi>Complementary</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_contentinfo"><bdi class="secno">4.3.3 </bdi>Contentinfo</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_form"><bdi class="secno">4.3.4 </bdi>Form</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_main"><bdi class="secno">4.3.5 </bdi>Main</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_navigation"><bdi class="secno">4.3.6 </bdi>Navigation</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_region"><bdi class="secno">4.3.7 </bdi>Region</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_search"><bdi class="secno">4.3.8 </bdi>Search</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions"><bdi class="secno">5. </bdi>Providing Accessible Names and Descriptions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#names_and_descriptions_definition"><bdi class="secno">5.1 </bdi>What ARE Accessible Names and Descriptions?</a></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions_derivation"><bdi class="secno">5.2 </bdi>How Are Name and Description Strings Derived?</a></li><li class="tocline"><a class="tocxref" href="#accessible_names"><bdi class="secno">5.3 </bdi>Accessible Names</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_cardinal_rules"><bdi class="secno">5.3.1 </bdi>Cardinal Rules of Naming</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_rule_heed_warnings"><bdi class="secno">5.3.1.1 </bdi>Rule 1: Heed Warnings and Test Thoroughly</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_visible_text"><bdi class="secno">5.3.1.2 </bdi>Rule 2: Prefer Visible Text</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_native_techniques"><bdi class="secno">5.3.1.3 </bdi>Rule 3: Prefer Native Techniques</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_avoid_fallback"><bdi class="secno">5.3.1.4 </bdi>Rule 4: Avoid Browser Fallback</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_brief_names"><bdi class="secno">5.3.1.5 </bdi>Rule 5: Compose Brief, Useful Names</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_techniques"><bdi class="secno">5.3.2 </bdi>Naming Techniques</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_with_child_content"><bdi class="secno">5.3.2.1 </bdi>Naming with Child Content</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-label"><bdi class="secno">5.3.2.2 </bdi>Naming with a String Attribute Via <code>aria-label</code></a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-labelledby"><bdi class="secno">5.3.2.3 </bdi>Naming with Referenced Content Via <code>aria-labelledby</code></a></li><li class="tocline"><a class="tocxref" href="#naming_with_labels"><bdi class="secno">5.3.2.4 </bdi>Naming Form Controls with the Label Element</a></li><li class="tocline"><a class="tocxref" href="#naming_with_legends"><bdi class="secno">5.3.2.5 </bdi>Naming Fieldsets with the Legend Element</a></li><li class="tocline"><a class="tocxref" href="#naming_with_captions"><bdi class="secno">5.3.2.6 </bdi>Naming Tables and Figures with Captions</a></li><li class="tocline"><a class="tocxref" href="#naming_with_fallback"><bdi class="secno">5.3.2.7 </bdi>Fallback Names Derived from Titles and Placeholders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_effectively"><bdi class="secno">5.3.3 </bdi>Composing Effective and User-friendly Accessible Names</a></li><li class="tocline"><a class="tocxref" href="#naming_role_guidance"><bdi class="secno">5.3.4 </bdi><span id="naming_role_guidance_heading">Accessible Name Guidance by Role</span></a></li><li class="tocline"><a class="tocxref" href="#name_calculation"><bdi class="secno">5.3.5 </bdi>Accessible name calculation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#name_calculation_non-recursive_ex"><bdi class="secno">5.3.5.1 </bdi>Examples of non-recursive accessible name calculation</a></li><li class="tocline"><a class="tocxref" href="#name_calculation_recursive_ex"><bdi class="secno">5.3.5.2 </bdi>Examples of recursive accessible name calculation</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessible_descriptions"><bdi class="secno">5.4 </bdi>Accessible Descriptions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_techniques"><bdi class="secno">5.4.1 </bdi>Describing Techniques</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_with_aria-describedby"><bdi class="secno">5.4.1.1 </bdi>Describing by referencing content with <code>aria-describedby</code></a></li><li class="tocline"><a class="tocxref" href="#describing_with_captions"><bdi class="secno">5.4.1.2 </bdi>Describing Tables and Figures with Captions</a></li><li class="tocline"><a class="tocxref" href="#describing_with_title"><bdi class="secno">5.4.1.3 </bdi>Descriptions Derived from Titles</a></li></ol></li><li class="tocline"><a class="tocxref" href="#description_calculation"><bdi class="secno">5.4.2 </bdi>Accessible description calculation</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#keyboard"><bdi class="secno">6. </bdi>Developing a Keyboard Interface</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_generalnav"><bdi class="secno">6.1 </bdi>Fundamental Keyboard Navigation Conventions</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_discernable_predictable"><bdi class="secno">6.2 </bdi>Discernible and Predictable Keyboard Focus</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_vs_selection"><bdi class="secno">6.3 </bdi>Focus VS Selection and the Perception of Dual Focus</a></li><li class="tocline"><a class="tocxref" href="#kbd_selection_follows_focus"><bdi class="secno">6.4 </bdi>Deciding When to Make Selection Automatically Follow Focus</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_between"><bdi class="secno">6.5 </bdi>Keyboard Navigation Between Components (The Tab Sequence)</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_within"><bdi class="secno">6.6 </bdi> Keyboard Navigation Inside Components</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_roving_tabindex"><bdi class="secno">6.6.1 </bdi>Managing Focus Within Components Using a Roving tabindex</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_activedescendant"><bdi class="secno">6.6.2 </bdi>Managing Focus in Composites Using aria-activedescendant</a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_disabled_controls"><bdi class="secno">6.7 </bdi>Focusability of disabled controls</a></li><li class="tocline"><a class="tocxref" href="#kbd_common_conventions"><bdi class="secno">6.8 </bdi>Key Assignment Conventions for Common Functions</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts"><bdi class="secno">6.9 </bdi>Keyboard Shortcuts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_behavior_design"><bdi class="secno">6.9.1 </bdi>Designing the Scope and Behavior of Keyboard Shortcuts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_basic"><bdi class="secno">6.9.1.1 </bdi>Ensure Basic Access Via Navigation </a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_choose_behavior"><bdi class="secno">6.9.1.2 </bdi>Choose Appropriate Shortcut Behavior</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_where"><bdi class="secno">6.9.1.3 </bdi>Choose Where to Add Shortcuts </a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assigning"><bdi class="secno">6.9.2 </bdi>Assigning Keyboard Shortcuts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_opsys_conflicts"><bdi class="secno">6.9.2.1 </bdi>Operating System Key Conflicts</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_assistivetech_conflicts"><bdi class="secno">6.9.2.2 </bdi>Assistive Technology Key Conflicts</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_browser_conflicts"><bdi class="secno">6.9.2.3 </bdi>Browser Key Conflicts</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_intentional_conflicts"><bdi class="secno">6.9.2.4 </bdi>Intentional Key Conflicts</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties"><bdi class="secno">7. </bdi>Grid and Table Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_rows"><bdi class="secno">7.1 </bdi>Using <code>aria-rowcount</code> and <code>aria-rowindex</code></a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols"><bdi class="secno">7.2 </bdi>Using <code>aria-colcount</code> and <code>aria-colindex</code></a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_contiguous"><bdi class="secno">7.2.1 </bdi>Using <code>aria-colindex</code> When Column Indices Are Contiguous</a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_noncontiguous"><bdi class="secno">7.2.2 </bdi>Using <code>aria-colindex</code> When Column Indices Are Not Contiguous</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_spans"><bdi class="secno">7.3 </bdi>Defining cell spans using <code>aria-colspan</code> and <code>aria-rowspan</code></a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_sort"><bdi class="secno">7.4 </bdi>Indicating sort order with <code>aria-sort</code></a></li></ol></li><li class="tocline"><a class="tocxref" href="#presentation_role"><bdi class="secno">8. </bdi>Intentionally Hiding Semantics with the <code>presentation</code> Role</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#presentation_role_effects"><bdi class="secno">8.1 </bdi>
         Effects of Role <code>presentation</code>
       </a></li><li class="tocline"><a class="tocxref" href="#presentation_role_ignored"><bdi class="secno">8.2 </bdi>
         Conditions That Cause Role <code>presentation</code> to be Ignored
@@ -937,7 +945,7 @@ var[data-type]:hover::before {
       <a href="https://www.w3.org/WAI/intro/aria.php"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 개요</a>는 <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr>에 대한 자세한 배경을 제공하고, 그 노력들을 간략하게 이야기하고, <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 제품군에 포함된 다른 문서들을 나열합니다.
     </p>
     <p>
-      간단한 <q>먼저 읽어주세요</q> 섹션 이후, 지침은 예상되는 동작을 열거하고 작업 코드로 그 동작을 보여주는 공통 위젯에 대한 ARIA 구현 패턴으로 시작합니다.
+      짧은 <q>먼저 읽어주세요</q> 섹션 이후, 지침은 예상되는 동작을 열거하고 작업 코드로 그 동작을 보여주는 공통 위젯에 대한 ARIA 구현 패턴으로 시작합니다.
       구현 패턴과 예제들은 후속 지침 섹션에서 지원 개념에 대한 자세한 설명을 참조합니다.
       지침 섹션은 ARIA 랜드마크의 사용, 키보드 인터페이스에 대한 방법, 그리드와 테이블 속성(property), <code>presentation</code> 역할(role)의 영향과 같은 좀 더 일반적인 주제들을 다룹니다.
     </p>
@@ -948,7 +956,7 @@ var[data-type]:hover::before {
     <section id="no_aria_better_bad_aria">
       <h3 id="x2-1-aria-aria"><bdi class="secno">2.1 </bdi>잘못된 ARIA보다 ARIA를 안쓰는게 낫다<a class="self-link" aria-label="§" href="#no_aria_better_bad_aria"></a></h3>
       <p>
-        기능적으로, ARIA (role), 상태(state), 속성(property)들은 보조 기술에 대한 CSS와 유사합니다.
+        기능적으로, ARIA (role), 상태(state), 속성(property)들은 보조 기술에 대해 CSS와 유사합니다.
         스크린리더 사용자들의 경우, ARIA는 비시각적 경험의 렌더링을 제어합니다.
         잘못된 ARIA는 잠재적으로 비시각적 경험에 대한 심각한 손상과 함께, 시각적 경험을 잘못 전달합니다.
       </p>
@@ -959,174 +967,172 @@ var[data-type]:hover::before {
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span>&gt;</span>Place Order<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           </code></pre>
       <p>
-        해당 <code>&lt;div&gt;</code>의 작성자가 버튼에 기대되는 키보드 인터랙션을 제공하는 자바스크립트도 구현했음을 약속합니다.
+        해당 <code>&lt;div&gt;</code>의 작성자가 버튼에 기대되는 키보드 인터랙션을 제공하는 JavaScript도 구현했음을 약속합니다.
         HTML 입력 요소(element)와 달리, ARIA 역할(role)은 브라우저가 키보드 동작이나 스타일링을 제공하지 않습니다.
       </p>
       <p>그 역할(role)의 약속을 이행하지 않고 사용하는 것은 주문을 빼먹고 쇼핑 카트를 비우는 "주문하기" 버튼을 만드는 것과 유사합니다.</p>
       <p>이 지침의 목표 중 하나는 각 ARIA 역할(role)에 대해 기대되는 동작을 정의하는 것입니다.</p>
-      <h4 id="x2-aria">원칙 2: ARIA는 힘과 위험성 모두를 생성하여, 숨기고 강화시킬 수 있다.<a class="self-link" aria-label="§" href="#no_aria_better_bad_aria"></a></h4>
+      <h4 id="x2-aria">원칙 2: ARIA는 은폐와 강화를 통해 힘과 위험 모두를 창출할 수 있습니다.<a class="self-link" aria-label="§" href="#no_aria_better_bad_aria"></a></h4>
       <p>
         유저 인터페이스 요소(element)들의 의미와 목적에 대해 필요한 정보 보조 기술을 접근성 의미론이라고 합니다.
-        보조 기술의 관점에서, ARIA는 작성자가 HTML과 SVG 요소(element)를 보조 기술이 신뢰성 있게 도출 할 수 없는 중요한 접근성 의미론들로 꾸밀 수 있는 능력을 제공합니다.
+        보조 기술의 관점에서, ARIA는 작성자에게 보조 기술이 달리 확실하게 추론 할 수 없을 중요한 접근성 의미론으로 HTML과 SVG 요소(element)를 꾸밀 수 있는 능력을 제공합니다.
       </p>
-      <p>일부 ARIA는 망토와 같습니다; 원래 의미나 콘텐트를 완전히 덮거나 덮어씌웁니다.</p>
+      <p>일부 ARIA는 가면과 같습니다; 원래의 의미나 콘텐트를 완전히 감추거나 덮어 씌웁니다.</p>
       <pre><code aria-busy="false" class="hljs xml">
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"menuitem"</span>&gt;</span>Assistive tech users perceive this element as an item in a menu, not a link.<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Assistive tech users can only perceive the contents of this aria-label, not the link text"</span>&gt;</span>Link Text<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"menuitem"</span>&gt;</span>보조 기술 사용자는 이 요소(element)를 링크가 아니라 메뉴의 항목으로 인지합니다.<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"보조 기술 사용자는 링크 텍스트가 아니라 이 aria-lable의 콘텐트만을 인식할 수 있습니다"</span>&gt;</span>링크 텍스트<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 </code></pre>
-      <p>반면에, 일부 ARIA의 사용은 멜빵이나 벨트와 같습니다; 원본 콘텐트에 필수적인 지원을 제공하는 의미를 추가합니다.</p>
+      <p>반면에, 일부 ARIA의 사용은 멜빵이나 벨트에 가깝습니다; 원본 콘텐트에 필수적인 지원을 제공하는 의미를 추가합니다.</p>
       <pre><code aria-busy="false" class="hljs xml">
         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-pressed</span>=<span class="hljs-string">"false"</span>&gt;</span>Mute<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
       </code></pre>
       <p>
         이것이 ARIA의 힘입니다.
-        작성자가 보조 기술이 신뢰성 있게 해석할 수 있게 하므로 컴포넌트를 보조 기술 사용자들이 접근할 수 있게 만드는 방식으로 거의 모든 유저 인터페이스 컴포넌트를 기술 할 수 있게 합니다.
+        작성자가 보조 기술들이 확실하게 해석할 수 있는 방법으로 거의 모든 유저 인터페이스를 기술할 수 있게 하므로, 보조 기술 사용자에게 컴포넌트를 접근 가능하게 할 수 있습니다.
       </p>
       <p>
-        이것은 동시에 ARIA의 위험성입니다.
-        작성자는 부주의하게 접근성 의미를 덮어쓸 수 있습니다.
+        이것은 동시에 ARIA의 위험입니다.
+        작성자는 부주의하게 접근성 의미를 덮어쓸 수도 있습니다.
       </p>
       <pre><code aria-busy="false" class="hljs xml">
   <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"log"</span>&gt;</span>
     <span class="hljs-comment">&lt;!--
       보조 기술 사용자가 표로 인식하지 못하는 표.
-      로그 역할(role)은 브라우저에게 이것이 표가 아니라 기록이라고 알립니다.
+      log 역할(role)은 브라우저에게 이것이 표가 아니라 기록이라고 알립니다.
     --&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"navigation"</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- 이것은 목록이 아니라 탐색 영역 입니다. --&gt;</span>
+    <span class="hljs-comment">&lt;!-- 이것은 목록이 아니라 navigation 영역 입니다. --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"uri1"</span>&gt;</span>nav link 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"uri2"</span>&gt;</span>nav link 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- 오류! 위 항목들은 목록에 없습니다! --&gt;</span>
+    <span class="hljs-comment">&lt;!-- 오류! 위 목록 항목들은 목록에 없습니다! --&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 </code></pre>
     </section>
     <section id="browser_and_AT_support">
-      <h3 id="x2-2-browser-and-assistive-technology-support"><bdi class="secno">2.2 </bdi>Browser and Assistive Technology Support<a class="self-link" aria-label="§" href="#browser_and_AT_support"></a></h3>
+      <h3 id="x2-2"><bdi class="secno">2.2 </bdi>브라우저와 보조 기술 지원<a class="self-link" aria-label="§" href="#browser_and_AT_support"></a></h3>
       <p>
-        <strong>Testing assistive technology interoperability is essential before using code from this guide in production.</strong>
-        Because the purpose of this guide is to illustrate appropriate use of ARIA 1.2 as defined in the ARIA specification, the design patterns, reference examples, and sample code intentionally <strong>do not</strong> describe and implement coding techniques for working around problems caused by gaps in support for ARIA 1.2 in browsers and assistive technologies.
-        It is thus advisable to test implementations thoroughly with each browser and assistive technology combination that is relevant within a target audience.
+        <strong>제품에 이 가이드의 코드를 사용하기 이전에 보조 기술 상호 운용성 테스트가 필수적입니다.</strong>
+        이 지침의 목적은 ARIA 명세에 정의 된 대로 ARIA 1.2의 적절한 사용을 실제로 보여주는 것이기 때문에, 디자인 패턴, 참고 예제, 샘플 코드는 일부러 브라우저와 보조 기술들의 ARIA 1.2에 대한 지원의 격차로 인한 문제를 해결하기 위한 코딩 기법을 기술하고 구현하지 <strong>않습니다</strong>.
+        따라서, 대상 고객과 관련된 각 브라우저와 보조 기술 조합으로 구현을 철저하게 테스트 하는 것이 바람직합니다.
       </p>
       <p>
-        Similarly, JavaScript and CSS in this guide is written to be compatible with the most recent version of Chrome, Firefox, Internet Explorer, and Safari at the time of writing.
-        In particular, some JavaScript and CSS may not function correctly in Internet Explorer version 10 or earlier.
+        비슷하게, 이 지침의 JavaScript와 CSS는 작성 시점에서의 가장 최신 버전의 크롬, 파이어폭스, 인터넷 익스플로러, 사파리와 호환되도록 작성되었습니다.
+        특히, 인터넷 익스플로러 10 이하 버전에서는 일부 JavaScript와 CSS가 제대로 동작하지 않을 수 있습니다.
       </p>
       <p>
-        Except in cases where the ARIA Working Group and other contributors have overlooked an error,
-        examples in this guide that do not function well in a particular browser or with a specific assistive technology are demonstrating browser or assistive technology bugs.
-        Browser and assistive technology developers can thus utilize code in this guide to help assess the quality of their support for ARIA 1.2.
+        ARIA 워킹 그룹과 다른 컨트리뷰터들이 오류를 못 보고 지나친 경우를 제외하고, 이 지침의 특정 브라우저나 특정 보조 기술에서 제대로 동작하지 않는 예제는 브라우저나 보조 기술 버그를 시연하는 것입니다.
+        따라서 브라우저와 보조 기술 개발자는 이 지침의 코드를 활용하여 ARIA 1.2에 대한 지원 품질을 평가할 수 있습니다.
       </p>
     </section>
     <section id="mobile_and_touch_support">
-      <h3 id="x2-3-mobile-and-touch-support"><bdi class="secno">2.3 </bdi>Mobile and Touch Support<a class="self-link" aria-label="§" href="#mobile_and_touch_support"></a></h3>
+      <h3 id="x2-3"><bdi class="secno">2.3 </bdi>모바일과 터치 지원<a class="self-link" aria-label="§" href="#mobile_and_touch_support"></a></h3>
       <p>
-        Currently, this guide does not indicate which examples are compatible with mobile browsers or touch interfaces.
-        While some of the examples include specific features that enhance mobile and touch support, some ARIA features are not supported in any mobile browser.
-        In addition, there is not yet a standardized approach for providing touch interactions that work across mobile browsers.
+        현재, 이 지침은 모바일 브라우저나 터치 인터페이스와 호환되는 예제는 나와 있지 않습니다.
+        일부 예제는 모바일과 터치 지원을 향상시키는 특정 기능이 포함되어 있지만, 일부 ARIA 기능은 모바일 브라우저에서 지원되지 않습니다.
+        또한, 모바일 브라우저에서 동작하는 터치 인터랙션을 제공하기 위한 표준화 된 접근 방식은 아직 없습니다.
       </p>
-      <p>More guidance about touch and mobile support is planned for future releases of the guide.</p>
+      <p>터치와 모바일 지원에 대한 추가 지침은 향후 지침 릴리즈에 계획되어 있습니다. </p>
     </section>
   </section>
 
   <section id="aria_ex">
-    <h2 id="x3-design-patterns-and-widgets"><bdi class="secno">3. </bdi>Design Patterns and Widgets<a class="self-link" aria-label="§" href="#aria_ex"></a></h2>
-    <p>This section demonstrates how to make common rich internet application patterns and widgets accessible by applying <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles, states, and properties and implementing keyboard support.</p>
+    <h2 id="x3"><bdi class="secno">3. </bdi>디자인 패턴과 위젯<a class="self-link" aria-label="§" href="#aria_ex"></a></h2>
+    <p>이 섹션은 <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 역할(role), 상태(state), 속성(property)을 적용하고 키보드 지원을 구현하여 일반적인 리치 인터넷 어플리케이션 패턴과 위젯을 접근 가능하게 만드는 방법을 보여줍니다.</p>
     <section class="widget" id="accordion">
-      <h3 id="x3-1-accordion-sections-with-show-hide-functionality"><bdi class="secno">3.1 </bdi>Accordion (Sections With Show/Hide Functionality)<a class="self-link" aria-label="§" href="#accordion"></a></h3>
+      <h3 id="x3-1-show-hide"><bdi class="secno">3.1 </bdi>아코디언 (Show/Hide 기능이 있는 섹션)<a class="self-link" aria-label="§" href="#accordion"></a></h3>
       <p>
-        An accordion is a vertically stacked set of interactive headings that each contain a title, content snippet, or thumbnail representing a section of content.
-        The headings function as controls that enable users to reveal or hide their associated sections of content.
-        Accordions are commonly used to reduce the need to scroll when presenting multiple sections of content on a single page.
+        아코디언은 각각 콘텐츠 섹션을 나타내는 제목, 콘텐트 스니펫, 또는 썸네일을 포함하는 수직으로 쌓여있는 인터랙티브 제목 집합입니다.
+        제목은 연관된 콘텐츠 섹션을 사용자에게 나타내거나 숨길 수 있는 컨트롤로 쓰입니다.
+        아코디언은 일반적으로 단일 페이지에서 콘텐트의 여러 섹션들을 표현할 때 스크롤 할 필요성을 줄이기 위해 사용됩니다.
       </p>
-      <p>Terms for understanding accordions include:</p>
+      <p>아코디언을 이해하는데 필요한 용어:</p>
       <dl>
-        <dt>Accordion Header:</dt>
-        <dd>Label for or thumbnail representing a section of content that also serves as a control for showing, and in some implementations, hiding  the section of content. </dd>
-        <dt>Accordion Panel:</dt>
-        <dd>Section of content associated with an accordion header.</dd>
+        <dt>아코디언 헤더:</dt>
+        <dd>
+          콘텐트 섹션을 노출시키고 일부 구현에서는 숨기는 컨트롤 역할을 하는, 콘텐트 섹션에 대한 레이블이나 콘텐트 섹션을 나타내는 썸네일.</dd>
+        <dt>아코디언 패널:</dt>
+        <dd>아코디언 헤더와 연관된 콘텐트 섹션.</dd>
       </dl>
       <p>
-        In some accordions, there are additional elements that are always visible adjacent to the accordion header.
-        For instance, a menubutton may accompany each accordion header to provide access to actions that apply to that section.
-        And, in some cases, a snippet of the hidden content may also be visually persistent.
+        일부 아코디언에서는 아코디언 헤더 근처에 항상 보이는 추가 요소가 있습니다.
+        예를 들어, 메뉴버튼은 그 섹션에 적용되는 동작으로의 접근을 제공하기 위해 각 헤더와 함께 있을 수 있습니다.
+        그리고 경우에 따라, 숨겨진 콘텐트의 일부가 보여지게 유지될 수도 있습니다.
       </p>
       <section class="notoc">
-        <h4 id="example">Example<a class="self-link" aria-label="§" href="#example"></a></h4>
-        <p><a href="examples/accordion/accordion.html">Accordion Example</a>: demonstrates a form divided into three sections using an accordion to show one section at a time. </p>
+        <h4 id="generatedID">예제<a class="self-link" aria-label="§" href="#generatedID"></a></h4>
+        <p><a href="examples/accordion/accordion.html">아코디언 예</a>: 한 번에 하나의 섹션을 보여주기 위해 아코디언을 사용하여 세 개 섹션으로 분리된 양식을 보여줍니다.</p>
       </section>
       <section class="notoc">
-        <h4 id="keyboard-interaction">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction"></a></h4>
+        <h4 id="generatedID-0">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-0"></a></h4>
         <ul>
           <li>
-            <kbd>Enter</kbd> or <kbd>Space</kbd>:
+            <kbd>Enter</kbd> 또는 <kbd>Space</kbd>:
             <ul>
               <li>
-                When focus is on the accordion header for a collapsed panel, expands the associated panel.
-                If the implementation allows only one panel to be expanded, and if another panel is expanded, collapses that panel.
+                초점이 축소 된 패널에 대한 아코디언 헤더에 있다면, 관련된 패널을 확장시킵니다.
+                동작이 항상 단 하나의 패널만 확장 되는 것을 허용하면서 다른 패널이 확장되어 있는 경우, 그 패널을 축소시킵니다.
               </li>
               <li>
-                When focus is on the accordion header for an expanded panel, collapses the panel if the implementation supports collapsing.
-                Some implementations require one panel to be expanded at all times and allow only one panel to be expanded; so, they do not support a collapse function.
+                초점이 확장 된 패널에 대한 아코디언 헤더에 있다면, 동작이 축소를 지원하는 경우 패널을 축소 시킵니다.
+                일부 동작에서는 항상 하나의 패널이 확장되어 있고 오직 하나의 패널만이 확장되도록 요구됩니다; 따라서 이 경우에는  축소 기능을 지원하지 않습니다.
               </li>
             </ul>
           </li>
-          <li><kbd>Tab</kbd>: Moves focus to the next focusable element; all focusable elements in the accordion are included in the page <kbd>Tab</kbd> sequence.</li>
-          <li><kbd>Shift + Tab</kbd>: Moves focus to the previous focusable element; all focusable elements in the accordion are included in the page <kbd>Tab</kbd> sequence.</li>
+          <li><kbd>Tab</kbd>: 초점을 다음 초점을 얻을 수 있는 요소(focusable element)로 이동시킵니다; 아코디언 내의 모든 초점을 얻을 수 있는 요소(focusable element)는 페이지 <kbd>Tab</kbd> 순서에 포함됩니다.</li>
+          <li><kbd>Shift + Tab</kbd>: 초점을 이전 초점을 얻을 수 있는 요소(focusable element)로 이동시킵니다; 아코디언 내의 모든 초점을 얻을 수 있는 요소(focusable element)는 페이지 <kbd>Tab</kbd> 순서에 포함됩니다.</li>
           <li>
-            <kbd>Down Arrow</kbd> (Optional): If focus is on an accordion header, moves focus to the next accordion header.
-            If focus is on the last accordion header, either does nothing or moves focus to the first accordion header.
+            <kbd>Down Arrow</kbd> (선택적): 초점이 아코디언 헤더에 있다면, 다음 아코디언 헤더로 초점을 이동시킵니다.
+            초점이 마지막 아코디언 헤더에 있다면, 아무 것도 하지 않거나 첫 번째 아코디언 헤더로 초점을 이동시킵니다.
           </li>
           <li>
-            <kbd>Up Arrow</kbd> (Optional): If focus is on an accordion header, moves focus to the previous accordion header.
-            If focus is on the first accordion header, either does nothing or moves focus to the last accordion header.
+            <kbd>Up Arrow</kbd> (선택적): 초점이 아코디언 헤더에 있다면, 이전 아코디언 헤더로 초점을 이동시킵니다.
+            초점이 첫 번째 아코디언 헤더에 있다면, 아무 것도 하지 않거나 마지막 아코디언 헤더로 초점을 이동시킵니다.
           </li>
           <li>
-            <kbd>Home</kbd> (Optional): When focus is on an accordion header, moves focus to the first accordion header.
+            <kbd>Home</kbd> (선택적): 초점이 아코디언 헤더에 있다면, 첫 번째 아코디언 헤더로 초점을 이동시킵니다.
           </li>
           <li>
-            <kbd>End</kbd> (Optional): When focus is on an accordion header, moves focus to the last accordion header.
+            <kbd>End</kbd> (선택적): 초점이 아코디언 헤더에 있다면,  마지막 아코디언 헤더로 초점을 이동시킵니다.
           </li>
         </ul>
       </section>
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties:<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties"></a></h4>
+        <h4 id="wai-aria-role-state-proeprty"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 역할(role), 상태(state), 속성(proeprty):<a class="self-link" aria-label="§" href="#wai-aria-role-state-proeprty"></a></h4>
         <ul>
           <li>
-            The title of each accordion header is contained in an element with role <a href="https://w3c.github.io/aria/#button" class="role-reference">button</a>.
+            각 아코디언 헤더의 제목은 <a href="https://w3c.github.io/aria/#button" class="role-reference">button</a> 역할(role)을 가진 요소(element)에 포함됩니다.
           </li>
           <li>
-            Each accordion header <code>button</code> is wrapped in an element with role <a href="https://w3c.github.io/aria/#heading" class="role-reference">heading</a> that has a value set for <a href="https://w3c.github.io/aria/#aria-level" class="property-reference">aria-level</a> that is appropriate for the information architecture of the page.
+            각 아코디언 헤더 <code>button</code>은 페이지의 정보 구성에 적절한 <a href="https://w3c.github.io/aria/#aria-level" class="property-reference">aria-level</a>로 정해진 값을 가지는 <a href="https://w3c.github.io/aria/#heading" class="role-reference">heading</a> 역할(role)을 가진 요소(element)로 감싸집니다.
             <ul>
-              <li>If the native host language has an element with an implicit <code>heading</code> and <code>aria-level</code>, such as an HTML heading tag, a native host language element may be used.</li>
+              <li>네이티브 호스트 언어가 HTML 헤딩 태그 같이, 암묵적인 <code>heading</code>과 <code>aria-level</code>을 가지고 있는 경우, 네이티브 호스트 언어 요소(element)가 사용될 수 있습니다.</li>
               <li>
-                The <code>button</code> element is the only element inside the <code>heading</code> element.
-                That is, if there are other visually persistent elements, they are not included inside the <code>heading</code> element.
+                <code>button</code> 요소(element)는 <code>heading</code> 요소(element) 내의 유일한 요소(element)입니다.
+                즉, 다른 보여지도록 유지되는 요소(element)가 있다면, <code>heading</code> 요소(element)에 포함되지 않습니다.
               </li>
             </ul>
           </li>
           <li>
-            If the accordion panel associated with an accordion header is visible, the header <code>button</code> element has <a href="https://w3c.github.io/aria/#aria-expanded" class="state-reference">aria-expanded</a> set to <code>true</code>.
-            If the panel is not visible, <a href="https://w3c.github.io/aria/#aria-expanded" class="state-reference">aria-expanded</a> is set to <code>false</code>.
+            아코디언 헤더와 연관된 아코디언 패널이 보여지는 상태라면, 헤더 <code>button</code> 요소(element)는 <code>true</code>로 설정된 <a href="https://w3c.github.io/aria/#aria-expanded" class="state-reference">aria-expanded</a>를 가집니다.
+            패널이 보여지지 않는 상태라면, <a href="https://w3c.github.io/aria/#aria-expanded" class="state-reference">aria-expanded</a>는 <code>false</code>로 설정됩니다.
           </li>
           <li>
-            The accordion header <code>button</code> element has <a href="https://w3c.github.io/aria/#aria-controls" class="property-reference">aria-controls</a> set to the ID of the element containing the accordion panel content.
+            아코디언 헤더 <code>button</code> 요소(element)는 아코디언 패널 콘텐트를 포함하는 요소(element)의 ID로 설정된 <a href="https://w3c.github.io/aria/#aria-controls" class="property-reference">aria-controls</a> 를 가집니다.
           </li>
           <li>
-            If the accordion panel associated with an accordion header is visible, and if the accordion does not permit the panel to be collapsed, the header <code>button</code> element has <a href="https://w3c.github.io/aria/#aria-disabled" class="state-reference">aria-disabled</a> set to <code>true</code>.
+            아코디언 헤더와 연관된 아코디언 패널이 보이는 상태이고 아코디언이 패널이 축소되는 것을 허용하지 않는다면, 헤더 <code>button</code> 요소(element)는 <code>true</code>로 설정된 <a href="https://w3c.github.io/aria/#aria-disabled" class="state-reference">aria-disabled</a>를 가집니다.
           </li>
           <li>
-            Optionally, each element that serves as a container for panel content has role
-            <a href="https://w3c.github.io/aria/#region" class="role-reference">region</a> and
-            <a href="https://w3c.github.io/aria/#aria-labelledby" class="property-reference">aria-labelledby</a>
-            with a value that refers to the button that controls display of the panel.
+            선택적으로, 패널 콘텐트에 대한 컨테이너를 제공하는 각 요소(element)는
+            <a href="https://w3c.github.io/aria/#region" class="role-reference">region</a> 역할(role)과
+            패널의 가시성을 제어하는 버튼을 가리키는 값을 가진 <a href="https://w3c.github.io/aria/#aria-labelledby" class="property-reference">aria-labelledby</a>를 가집니다.
             <ul>
               <li>
-                Avoid using the <code>region</code> role in circumstances that create landmark region proliferation,
-                e.g., in an accordion that contains more than approximately 6 panels that can be expanded at the same time.
+                랜드마크 영역을 급증하게 만드는 상황에서는 (예를 들어, 동시에 확장 될 수 있는 거의 6개 이상의 패널들을 포함하는 아코디언) <code>region</code> 역할(role)을 사용하는 것을 지양하세요.
               </li>
               <li>
-                Role <code>region</code> is especially helpful to the perception of structure by screen reader users when panels contain heading elements or a nested accordion.
+                <code>region</code> 역할(role)은 패널이 헤딩 요소(element)를 포함하거나 중첩된 아코디언이 포함 된 경우  스크린리더 사용자가 구조를 인식하는데 특히 유용합니다.
               </li>
             </ul>
           </li>
@@ -1157,17 +1163,17 @@ var[data-type]:hover::before {
       </p>
 
       <section class="notoc">
-        <h4 id="example-0">Example<a class="self-link" aria-label="§" href="#example-0"></a></h4>
+        <h4 id="example">Example<a class="self-link" aria-label="§" href="#example"></a></h4>
         <p><a href="examples/alert/alert.html">Alert Example</a></p>
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-0">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-0"></a></h4>
+        <h4 id="keyboard-interaction">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction"></a></h4>
         <p>Not applicable.</p>
       </section>
 
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-0"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-0"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties"></a></h4>
         <p>The widget has a role of <a class="role-reference" href="https://w3c.github.io/aria/#alert">alert</a>.</p>
       </section>
     </section>
@@ -1183,16 +1189,16 @@ var[data-type]:hover::before {
       </p>
 
       <section class="notoc">
-        <h4 id="example-1">Example<a class="self-link" aria-label="§" href="#example-1"></a></h4>
+        <h4 id="example-0">Example<a class="self-link" aria-label="§" href="#example-0"></a></h4>
         <p><a href="examples/dialog-modal/alertdialog.html">Alert Dialog Example</a>: A confirmation prompt that demonstrates an alert dialog.</p>
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-1">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-1"></a></h4>
+        <h4 id="keyboard-interaction-0">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-0"></a></h4>
         <p>See the keyboard interaction section for the <a href="#dialog_modal">modal dialog pattern</a>.</p>
       </section>
       <section class="notoc">
-          <h4 id="wai-aria-roles-states-and-properties-1"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-1"></a></h4>
+          <h4 id="wai-aria-roles-states-and-properties-0"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-0"></a></h4>
           <ul>
               <li>
                   The element that contains all elements of the dialog, including the alert
@@ -1233,17 +1239,17 @@ var[data-type]:hover::before {
       </p>
 
       <section class="notoc">
-        <h4 id="example-2">Example<a class="self-link" aria-label="§" href="#example-2"></a></h4>
+        <h4 id="example-1">Example<a class="self-link" aria-label="§" href="#example-1"></a></h4>
         <p><a href="examples/breadcrumb/index.html">Breadcrumb design pattern example</a></p>
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-2">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-2"></a></h4>
+        <h4 id="keyboard-interaction-1">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-1"></a></h4>
         <p>Not applicable.</p>
       </section>
 
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-2"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-2"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-1"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-1"></a></h4>
         <ul>
           <li>Breadcrumb trail is contained within a navigation landmark region.</li>
           <li>The landmark region is labelled via <a href="https://w3c.github.io/aria/#aria-label" class="property-reference">aria-label</a> or <a href="https://w3c.github.io/aria/#aria-labelledby" class="property-reference">aria-labelledby</a>.</li>
@@ -1290,7 +1296,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-3">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-3"></a></h4>
+        <h4 id="keyboard-interaction-2">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-2"></a></h4>
         <p>When the button has focus:</p>
         <ul>
           <li>
@@ -1332,7 +1338,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-3"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-3"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-2"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-2"></a></h4>
         <ul>
           <li>The button has role of <a class="role-reference" href="https://w3c.github.io/aria/#button">button</a>.</li>
           <li>
@@ -1377,7 +1383,7 @@ var[data-type]:hover::before {
       </ul>
 
       <section class="notoc">
-        <h4 id="example-3">Example<a class="self-link" aria-label="§" href="#example-3"></a></h4>
+        <h4 id="example-2">Example<a class="self-link" aria-label="§" href="#example-2"></a></h4>
         <p>
           <a href="examples/carousel/carousel-1.html">Auto-Rotating Image Carousel Example:</a> A basic image carousel that demonstrates the accessibility features necessary for carousels that rotate automatically on page load.
         </p>
@@ -1401,7 +1407,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-4">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-4"></a></h4>
+        <h4 id="keyboard-interaction-3">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-3"></a></h4>
         <ul>
           <li>
             If the carousel has an auto-rotate feature, automatic slide rotation stops when any element in the carousel receives keyboard focus.
@@ -1418,7 +1424,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-4"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-4"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-3"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-3"></a></h4>
         <p>This section describes the element composition for three styles of carousels:</p>
         <ul>
           <li>Basic: Has rotation, previous slide, and next slide controls but no slide picker controls.</li>
@@ -1553,12 +1559,12 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-5">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-5"></a></h4>
+        <h4 id="keyboard-interaction-4">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-4"></a></h4>
         <p>When the checkbox has focus, pressing the <kbd>Space</kbd> key changes the state of the checkbox.</p>
       </section>
 
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-5"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-5"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-4"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-4"></a></h4>
         <ul>
           <li>The checkbox has role <a href="https://w3c.github.io/aria/#checkbox" class="role-reference">checkbox</a>.</li>
           <li>
@@ -1667,7 +1673,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-6">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-6"></a></h4>
+        <h4 id="keyboard-interaction-5">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-5"></a></h4>
         <ul>
           <li><kbd>Tab</kbd>: The combobox is in the page <kbd>Tab</kbd> sequence.</li>
           <li>Note: The popup indicator icon or button (if present), the popup, and the popup descendants are excluded from the page <kbd>Tab</kbd> sequence. </li>
@@ -1888,7 +1894,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-6"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-6"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-5"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-5"></a></h4>
         <ul>
           <li>The element that serves as an input and displays the combobox value has role <a href="https://w3c.github.io/aria/#combobox" class="role-reference">combobox</a>.</li>
           <li>
@@ -1975,7 +1981,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-7">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-7"></a></h4>
+        <h4 id="keyboard-interaction-6">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-6"></a></h4>
         <p>In the following description, the term <q>tabbable element</q> refers to any element with a <code>tabindex</code> value of zero or greater. Note that values greater than 0 are strongly discouraged.</p>
         <ul>
           <li>When a dialog opens, focus moves to an element inside the dialog. See notes below regarding initial focus placement.</li>
@@ -2033,7 +2039,7 @@ var[data-type]:hover::before {
       </section>
 
       <section id="dialog_roles_states_props" class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-7"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#dialog_roles_states_props"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-6"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#dialog_roles_states_props"></a></h4>
         <ul>
           <li>The element that serves as the dialog container has a role of <a href="https://w3c.github.io/aria/#dialog" class="role-reference">dialog</a>.</li>
           <li>All elements required to operate the dialog are descendants of the element that has role <code>dialog</code>.</li>
@@ -2096,7 +2102,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-8">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-8"></a></h4>
+        <h4 id="keyboard-interaction-7">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-7"></a></h4>
         <p>When the disclosure control has focus:</p>
         <ul>
           <li><kbd>Enter</kbd>: activates the disclosure control and toggles the visibility of the disclosure content.</li>
@@ -2105,7 +2111,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-8"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-8"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-7"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-7"></a></h4>
         <ul>
           <li>The element that shows and hides the content has role <a href="https://w3c.github.io/aria/#button" class="role-reference">button</a>.</li>
           <li>
@@ -2173,14 +2179,14 @@ var[data-type]:hover::before {
       </p>
 
       <section class="notoc">
-        <h4 id="example-4">Example<a class="self-link" aria-label="§" href="#example-4"></a></h4>
+        <h4 id="example-3">Example<a class="self-link" aria-label="§" href="#example-3"></a></h4>
         <p>
         <a href="examples/feed/feed.html">Example Implementation of Feed Pattern</a>
         </p>
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-9">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-9"></a></h4>
+        <h4 id="keyboard-interaction-8">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-8"></a></h4>
         <p>
           The feed pattern is not based on a desktop GUI widget so the <code>feed</code> role is not associated with any well-established keyboard conventions.
           Supporting the following, or a similar,  interface is recommended.
@@ -2213,7 +2219,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-9"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-9"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-8"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-8"></a></h4>
         <ul>
           <li>The element that contains the set of feed articles has role <a href="https://w3c.github.io/aria/#feed" class="role-reference">feed</a>.</li>
           <li>
@@ -2553,7 +2559,7 @@ var[data-type]:hover::before {
       </section>
 
       <section id="grid_roles_states_props" class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-10"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#grid_roles_states_props"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-9"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#grid_roles_states_props"></a></h4>
         <ul>
           <li>The grid container has role <a href="https://w3c.github.io/aria/#grid" class="role-reference">grid</a>. </li>
           <li>Each row container has role <a href="https://w3c.github.io/aria/#row" class="role-reference">row</a> and is either a DOM descendant of or owned by the <code>grid</code> element or an element with role <a href="https://w3c.github.io/aria/#rowgroup" class="role-reference">rowgroup</a>. </li>
@@ -2624,7 +2630,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-10">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-10"></a></h4>
+        <h4 id="keyboard-interaction-9">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-9"></a></h4>
         <ul>
           <li><kbd>Enter</kbd>: Executes the link and moves focus to the link target.</li>
           <li><kbd>Shift + F10</kbd> (Optional): Opens a context menu for the link.</li>
@@ -2632,7 +2638,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-11"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-11"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-10"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-10"></a></h4>
         <p>
             The element containing the link text or graphic has role of <a href="https://w3c.github.io/aria/#link" class="role-reference">link</a>.
         </p>
@@ -2678,7 +2684,7 @@ var[data-type]:hover::before {
       </section>
 
       <section id="listbox_kbd_interaction" class="notoc">
-        <h4 id="keyboard-interaction-11">Keyboard Interaction<a class="self-link" aria-label="§" href="#listbox_kbd_interaction"></a></h4>
+        <h4 id="keyboard-interaction-10">Keyboard Interaction<a class="self-link" aria-label="§" href="#listbox_kbd_interaction"></a></h4>
         <p>For a vertically oriented listbox:</p>
         <ul>
           <li> When a single-select listbox receives focus:
@@ -2760,7 +2766,7 @@ var[data-type]:hover::before {
       </section>
 
       <section id="listbox_roles_states_props" class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-12"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#listbox_roles_states_props"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-11"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#listbox_roles_states_props"></a></h4>
         <ul>
           <li>An element that contains or owns all the listbox options has role <a href="https://w3c.github.io/aria/#listbox" class="role-reference">listbox</a>.</li>
           <li>Each option in the listbox has role <a href="https://w3c.github.io/aria/#option" class="role-reference">option</a> and is a DOM  descendant of the element with role <code>listbox</code> or is referenced by an <a href="https://w3c.github.io/aria/#aria-owns" class="property-reference">aria-owns</a> property on the listbox element.</li>
@@ -2807,7 +2813,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-12">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-12"></a></h4>
+        <h4 id="keyboard-interaction-11">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-11"></a></h4>
         <p>
           The following description of keyboard behaviors assumes:</p>
           <ol>
@@ -2918,7 +2924,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-13"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-13"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-12"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-12"></a></h4>
         <ul>
           <li>A menu is a container of items that represent choices. The element serving as the menu has a role of either <a href="https://w3c.github.io/aria/#menu" class="role-reference">menu</a> or   <a href="https://w3c.github.io/aria/#menubar" class="role-reference">menubar</a>. </li>
           <li>The items contained in a menu are child elements of the containing menu or menubar and have any of the following roles:
@@ -2988,7 +2994,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-13">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-13"></a></h4>
+        <h4 id="keyboard-interaction-12">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-12"></a></h4>
         <ul>
           <li>With focus on the button:
             <ul>
@@ -3003,7 +3009,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-14"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-14"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-13"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-13"></a></h4>
         <ul>
           <li>The element that opens the menu has role <a href="https://w3c.github.io/aria/#button" class="role-reference">button</a>.</li>
           <li>The element with role <code>button</code> has <a href="https://w3c.github.io/aria/#aria-haspopup" class="property-reference">aria-haspopup</a> set to either <code>menu</code> or <code>true</code>.</li>
@@ -3043,17 +3049,17 @@ var[data-type]:hover::before {
       </ul></div>
 
       <section class="notoc">
-        <h4 id="example-5">Example<a class="self-link" aria-label="§" href="#example-5"></a></h4>
+        <h4 id="example-4">Example<a class="self-link" aria-label="§" href="#example-4"></a></h4>
         <p><a href="examples/meter/meter.html">Meter Example</a></p>
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-14">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-14"></a></h4>
+        <h4 id="keyboard-interaction-13">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-13"></a></h4>
         <p>Not applicable.</p>
       </section>
 
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-15"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-15"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-14"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-14"></a></h4>
         <ul>
           <li>The element serving as the meter has a role of <a class="role-reference" href="https://w3c.github.io/aria/#meter">meter</a>.</li>
           <li>The meter has <a class="property-reference" href="https://w3c.github.io/aria/#aria-valuenow">aria-valuenow</a> set to a decimal value between <code>aria-valuemin</code> and <code>aria-valuemax</code> representing the current value of the meter.</li>
@@ -3087,7 +3093,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-15">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-15"></a></h4>
+        <h4 id="keyboard-interaction-14">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-14"></a></h4>
         <section class="notoc">
           <h5 id="for-radio-groups-not-contained-in-a-toolbar">For Radio Groups Not Contained in a Toolbar<a class="self-link" aria-label="§" href="#for-radio-groups-not-contained-in-a-toolbar"></a></h5>
           <p>
@@ -3166,7 +3172,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-16"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-16"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-15"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-15"></a></h4>
         <ul>
           <li>
             The radio buttons are contained in or owned by an element with role
@@ -3223,7 +3229,7 @@ var[data-type]:hover::before {
       </section>
 
       <section id="slider_kbd_interaction" class="notoc">
-        <h4 id="keyboard-interaction-16">Keyboard Interaction<a class="self-link" aria-label="§" href="#slider_kbd_interaction"></a></h4>
+        <h4 id="keyboard-interaction-15">Keyboard Interaction<a class="self-link" aria-label="§" href="#slider_kbd_interaction"></a></h4>
         <ul>
           <li><kbd>Right Arrow</kbd>: Increase the value of the slider by one step.</li>
           <li><kbd>Up Arrow</kbd>: Increase the value of the slider by one step.</li>
@@ -3240,7 +3246,7 @@ var[data-type]:hover::before {
         </ol></div>
       </section>
       <section id="slider_roles_states_props" class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-17"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#slider_roles_states_props"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-16"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#slider_roles_states_props"></a></h4>
         <ul>
           <li>The element serving as the focusable slider control has role <a class="role-reference" href="https://w3c.github.io/aria/#slider">slider</a>.</li>
           <li>The slider element has the <a class="property-reference" href="https://w3c.github.io/aria/#aria-valuenow">aria-valuenow</a> property set to a decimal value representing the current value of the slider.</li>
@@ -3278,12 +3284,12 @@ var[data-type]:hover::before {
       </p>
 
       <section class="notoc">
-        <h4 id="example-6">Example<a class="self-link" aria-label="§" href="#example-6"></a></h4>
+        <h4 id="example-5">Example<a class="self-link" aria-label="§" href="#example-5"></a></h4>
         <p><a href="examples/slider/multithumb-slider.html">Multi-Thumb Slider Examples</a>: Demonstrates two-thumb sliders for picking price ranges for an airline flight and hotel reservation.</p>
       </section>
 
       <section id="slidertwothumb_kbd_interaction" class="notoc">
-        <h4 id="keyboard-interaction-17">Keyboard Interaction<a class="self-link" aria-label="§" href="#slidertwothumb_kbd_interaction"></a></h4>
+        <h4 id="keyboard-interaction-16">Keyboard Interaction<a class="self-link" aria-label="§" href="#slidertwothumb_kbd_interaction"></a></h4>
         <ul>
           <li>Each thumb is in the page tab sequence and has the same keyboard interaction as a <a href="#slider_kbd_interaction">single-thumb slider</a>.</li>
           <li>
@@ -3294,7 +3300,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-18"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-18"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-17"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-17"></a></h4>
         <ul>
           <li>Each element serving as a focusable slider thumb has role <a class="role-reference" href="https://w3c.github.io/aria/#slider">slider</a>.</li>
           <li>Each slider element has the <a class="property-reference" href="https://w3c.github.io/aria/#aria-valuenow">aria-valuenow</a> property set to a decimal value representing the current value of the slider.</li>
@@ -3337,12 +3343,12 @@ var[data-type]:hover::before {
       </p>
 
       <section class="notoc">
-        <h4 id="example-7">Example<a class="self-link" aria-label="§" href="#example-7"></a></h4>
+        <h4 id="example-6">Example<a class="self-link" aria-label="§" href="#example-6"></a></h4>
         <p><a href="examples/spinbutton/datepicker-spinbuttons.html">Date Picker Spin Button Example:</a> Illustrates a date picker made from three spin buttons for day, month, and year.</p>
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-18">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-18"></a></h4>
+        <h4 id="keyboard-interaction-17">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-17"></a></h4>
         <ul>
           <li><kbd>Up Arrow</kbd>: Increases the value.</li>
           <li><kbd>Down Arrow</kbd>: Decreases the value.</li>
@@ -3375,7 +3381,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-19"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-19"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-18"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-18"></a></h4>
         <ul>
           <li>
             The focusable element serving as the spinbutton has role <a class="role-reference" href="https://w3c.github.io/aria/#spinbutton">spinbutton</a>.
@@ -3428,11 +3434,11 @@ var[data-type]:hover::before {
         <p><a href="examples/table/table.html">Table Example</a>: ARIA table made using HTML <code>div</code> and <code>span</code> elements.</p>
       </section>
       <section class="notoc">
-        <h4 id="keyboard-interaction-19">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-19"></a></h4>
+        <h4 id="keyboard-interaction-18">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-18"></a></h4>
         <p>Not applicable.</p>
       </section>
       <section id="table_roles_states_props" class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-20"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#table_roles_states_props"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-19"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#table_roles_states_props"></a></h4>
         <ul>
           <li>The table container has role <a href="https://w3c.github.io/aria/#table" class="role-reference">table</a>. </li>
           <li>Each row container has role <a href="https://w3c.github.io/aria/#row" class="role-reference">row</a> and is either a DOM descendant of or owned by the <code>table</code> element or an element with role <a href="https://w3c.github.io/aria/#rowgroup" class="role-reference">rowgroup</a>. </li>
@@ -3497,7 +3503,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-20">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-20"></a></h4>
+        <h4 id="keyboard-interaction-19">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-19"></a></h4>
         <p>For the tab list:</p>
         <ul>
           <li>
@@ -3554,7 +3560,7 @@ var[data-type]:hover::before {
         </ol></div>
       </section>
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-21"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-21"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-20"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-20"></a></h4>
         <ul>
         <li>The element that serves as the container for the set of tabs has role  <a class="role-reference" href="https://w3c.github.io/aria/#tablist">tablist</a>. </li>
         <li>Each element that serves as a tab has role <a class="role-reference" href="https://w3c.github.io/aria/#tab">tab</a> and is contained within the element with role <code>tablist</code>.</li>
@@ -3596,14 +3602,14 @@ var[data-type]:hover::before {
         <li>Use toolbar as a grouping element only if the group contains 3 or more controls.</li>
       </ul>
       <section class="notoc">
-        <h4 id="example-8">Example<a class="self-link" aria-label="§" href="#example-8"></a></h4>
+        <h4 id="example-7">Example<a class="self-link" aria-label="§" href="#example-7"></a></h4>
         <p>
           <a href="examples/toolbar/toolbar.html">Toolbar Example</a>:
           A toolbar that uses roving tabindex to manage focus and contains several types of controls, including toggle buttons, radio buttons, a menu button, a spin button, a checkbox, and a link.
         </p>
       </section>
       <section class="notoc">
-        <h4 id="keyboard-interaction-21">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-21"></a></h4>
+        <h4 id="keyboard-interaction-20">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-20"></a></h4>
         <ul>
           <li><kbd>Tab</kbd> and <kbd>Shift + Tab</kbd>: Move focus into and out of the toolbar. When focus moves into a toolbar:
             <ul>
@@ -3636,7 +3642,7 @@ var[data-type]:hover::before {
         </ol></div>
       </section>
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-22"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-22"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-21"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-21"></a></h4>
         <ul>
           <li>The element that serves as the toolbar container has role <a class="role-reference" href="https://w3c.github.io/aria/#toolbar">toolbar</a>.  </li>
           <li>
@@ -3666,14 +3672,14 @@ var[data-type]:hover::before {
         A hover that contains focusable elements can be made using a non-modal dialog.
       </p>
       <section class="notoc">
-        <h4 id="example-9">Example<a class="self-link" aria-label="§" href="#example-9"></a></h4>
+        <h4 id="example-8">Example<a class="self-link" aria-label="§" href="#example-8"></a></h4>
         <p>
           Work to develop a tooltip example is tracked by
           <a href="https://github.com/w3c/aria-practices/issues/127">issue 127.</a>
         </p>
       </section>
       <section class="notoc">
-        <h4 id="keyboard-interaction-22">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-22"></a></h4>
+        <h4 id="keyboard-interaction-21">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-21"></a></h4>
         <p><kbd>Escape</kbd>: Dismisses the Tooltip.</p>
         <div class="note" role="note" id="issue-container-generatedID-27"><div role="heading" class="note-title marker" id="h-note-27" aria-level="5"><span>Note</span></div><ol class="">
           <li>Focus stays on the triggering element while the tooltip is displayed.</li>
@@ -3684,7 +3690,7 @@ var[data-type]:hover::before {
         </ol></div>
       </section>
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-23"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-23"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-22"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-22"></a></h4>
         <ul>
           <li>The element that serves as the tooltip container has role <a href="https://w3c.github.io/aria/#tooltip" class="role-reference">tooltip</a>.</li>
           <li>The element that triggers the tooltip references the tooltip element with <a href="https://w3c.github.io/aria/#aria-describedby" class="property-reference">aria-describedby</a>.</li>
@@ -3751,7 +3757,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-23">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-23"></a></h4>
+        <h4 id="keyboard-interaction-22">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-22"></a></h4>
         <p>For a vertically oriented tree:</p>
         <ul>
           <li> When a single-select tree receives focus:
@@ -3848,7 +3854,7 @@ var[data-type]:hover::before {
       </section>
 
       <section id="tree_roles_states_props" class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-24"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#tree_roles_states_props"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-23"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#tree_roles_states_props"></a></h4>
         <ul>
           <li>All tree nodes are contained in or owned by an element with role <a class="role-reference" href="https://w3c.github.io/aria/#tree">tree</a>.</li>
           <li>Each element serving as a tree node has role <a class="role-reference" href="https://w3c.github.io/aria/#treeitem">treeitem</a>.</li>
@@ -3918,7 +3924,7 @@ var[data-type]:hover::before {
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-24">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-24"></a></h4>
+        <h4 id="keyboard-interaction-23">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-23"></a></h4>
         <p>
           The following keys provide <code>treegrid</code> navigation by moving focus among rows and cells of the grid.
           Implementations of <code>treegrid</code> make these key commands available when an element in the grid has received focus, e.g., after a user has moved focus to the grid with <kbd>Tab</kbd>.
@@ -4062,7 +4068,7 @@ var[data-type]:hover::before {
       </section>
 
       <section id="treegrid_roles_states_props" class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-25"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#treegrid_roles_states_props"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-24"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#treegrid_roles_states_props"></a></h4>
         <ul>
           <li>The treegrid container has role <a href="https://w3c.github.io/aria/#treegrid" class="role-reference">treegrid</a>. </li>
           <li>Each row container has role <a href="https://w3c.github.io/aria/#row" class="role-reference">row</a> and is either a DOM descendant of or owned by the <code>treegrid</code> element or an element with role <a href="https://w3c.github.io/aria/#rowgroup" class="role-reference">rowgroup</a>. </li>
@@ -4147,14 +4153,14 @@ var[data-type]:hover::before {
         Note that the term "primary pane" does not describe the importance or purpose of content inside the pane.
       </p>
       <section class="notoc">
-        <h4 id="example-10">Example<a class="self-link" aria-label="§" href="#example-10"></a></h4>
+        <h4 id="example-9">Example<a class="self-link" aria-label="§" href="#example-9"></a></h4>
         <p>
           Work to develop an example window splitter widget is tracked by
           <a href="https://github.com/w3c/aria-practices/issues/130">issue 130.</a>
         </p>
       </section>
       <section class="notoc">
-        <h4 id="keyboard-interaction-25">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-25"></a></h4>
+        <h4 id="keyboard-interaction-24">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-24"></a></h4>
         <ul>
           <li><kbd>Left Arrow</kbd>: Moves a vertical splitter to the left.</li>
           <li><kbd>Right Arrow</kbd>: Moves a vertical splitter to the right.</li>
@@ -4168,7 +4174,7 @@ var[data-type]:hover::before {
         <div class="note" role="note" id="issue-container-generatedID-33"><div role="heading" class="note-title marker" id="h-note-33" aria-level="5"><span>Note</span></div><p class="">A fixed size splitter omits implementation of the arrow keys.</p></div>
       </section>
       <section class="notoc">
-        <h4 id="wai-aria-roles-states-and-properties-26"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-26"></a></h4>
+        <h4 id="wai-aria-roles-states-and-properties-25"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> Roles, States, and Properties<a class="self-link" aria-label="§" href="#wai-aria-roles-states-and-properties-25"></a></h4>
         <ul>
           <li>The element that serves as the focusable splitter has role <a href="https://w3c.github.io/aria/#separator" class="role-reference">separator</a>.</li>
           <li>The separator element has the <a class="property-reference" href="https://w3c.github.io/aria/#aria-valuenow">aria-valuenow</a> property set to a decimal value representing the current position of the separator.</li>
@@ -6389,7 +6395,7 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
       <p>
         As described in section <a href="#kbd_generalnav" class="sec-ref">§&nbsp;<bdi class="secno">6.1 </bdi>Fundamental Keyboard Navigation Conventions</a>, the tab sequence should include only one focusable element of a composite UI component.
         Once a composite contains focus, keys other than <kbd>Tab</kbd> and <kbd>Shift + Tab</kbd> enable the user to move focus among its focusable elements.
-        Authors are free to choose which keys move focus inside of a composite, but they are strongly advised to use the same key bindings as similar components in common GUI operating systems as demonstrated in <a href="#aria_ex" class="sec-ref">§&nbsp;<bdi class="secno">3. </bdi>Design Patterns and Widgets</a>.
+        Authors are free to choose which keys move focus inside of a composite, but they are strongly advised to use the same key bindings as similar components in common GUI operating systems as demonstrated in <a href="#aria_ex" class="sec-ref">§&nbsp;<bdi class="secno">3. </bdi>디자인 패턴과 위젯</a>.
       </p>
 
       <p> The convention for where focus lands in a composite when it receives focus as a result of a <kbd>Tab</kbd> key event depends on the type of composite. It is typically one of the following. </p>
