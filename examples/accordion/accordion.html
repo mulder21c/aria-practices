@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-<title>Accordion Example | WAI-ARIA Authoring Practices 1.2</title>
+<title>아코디언 예 | WAI-ARIA 작성 방법 1.2</title>
 <!--  Core js and css shared by all examples; do not modify when using this template. -->
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css">
 <link rel="stylesheet" href="../css/core.css">
@@ -18,33 +18,33 @@
 <body>
   <nav aria-label="Related Links" class="feedback">
     <ul>
-      <li><a href="../../#browser_and_AT_support">Browser and Assistive Technology Support</a></li>
-      <li><a href="https://github.com/w3c/aria-practices/issues/new">Report Issue</a></li>
-      <li><a href="https://github.com/w3c/aria-practices/projects/8">Related Issues</a></li>
-      <li><a href="../../#accordion">Design Pattern</a></li>
+      <li><a href="../../#browser_and_AT_support">브라우저와 보조 기술 지원</a></li>
+      <li><a href="https://github.com/w3c/aria-practices/issues/new">이슈 알리기</a></li>
+      <li><a href="https://github.com/w3c/aria-practices/projects/8">관련된 이슈</a></li>
+      <li><a href="../../#accordion">설계 패턴</a></li>
     </ul>
   </nav>
   <main>
-  <h1>Accordion Example</h1>
+  <h1>아코디언</h1>
   <p>
-    The below example section contains a simple personal information input form divided into 3 sections
-    that demonstrates the
-    <a href="../../#accordion">design pattern for accordion.</a>
-    In this implementation, one panel of the accordion is always expanded, and only one panel may
-    be expanded at a time.
+    아래 예제 섹션은
+    <a href="../../#accordion">아코디언 디자인 패턴</a>을 실례로 보여주는
+    3개 섹션으로 나뉘어진 간단한 개인 정보 입력 양식을 포함하고 있습니다.
+    이 구현에서, 한 개 아코디언 패널이 항상 확장 되어 있으며, 한 번에 오직 하나의 패널만
+    확장 될 수 있습니다.
   </p>
   <section>
-    <h2 id="ex_label">Example</h2>
+    <h2 id="ex_label">예</h2>
     <div role="separator" id="ex_start_sep" aria-labelledby="ex_start_sep ex_label" aria-label="Start of"></div>
     <div id="coding-arena">
       <div class="demo-block">
-        <!-- Accordion Configuration Options
+        <!-- 아코디언 설정 옵션
 
           data-allow-toggle
-            Allow for each toggle to both open and close its section. Makes it possible for all sections to be closed. Assumes only one section may be open.
+            각 토글이 그것의 섹션을 열거나 닫을 수 있도록 합니다. 모든 섹션이 닫힐 수 있게 합니다. 단 하나의 섹션만 열릴 수 있다고 가정합니다.
 
           data-allow-multiple
-            Allow for multiple accordion sections to be expanded at the same time. Assumes data-allow-toggle otherwise the toggle on open sections would be disabled.
+            여러 아코디언 섹션이 동시에 확장될 수 있도록 합니다. data-allow-toggle가 적용된 것으로 가정하거나 그렇지 않으면 열린 섹션에서 토글은 비활성화 됩니다.
           __________
 
           Ex:
@@ -64,7 +64,7 @@
           </h3>
           <div id="sect1" role="region" aria-labelledby="accordion1id" class="Accordion-panel">
             <div>
-              <!-- Variable content within section, may include any type of markup or interactive widgets. -->
+              <!-- 섹션 내의 다양한 콘텐트는 모든 유형의 마크업 또는 대화형 위젯을 포함할 수 있습니다. -->
               <fieldset>
                 <p>
                   <label for="cufc1">Name<span aria-hidden="true">*</span>:</label>
@@ -173,42 +173,42 @@
     <div role="separator" id="ex_end_sep" aria-labelledby="ex_end_sep ex_label" aria-label="End of"></div>
   </section>
   <section>
-    <h2>Accessibility Features</h2>
+    <h2>접근성 기능</h2>
     <p>
-      The visual design includes features intended to help users understand that the accordion provides enhanced keyboard navigation functions.
-      When an accordion header button has keyboard focus, the styling of the accordion container and all its header buttons is changed.
+      시각적 설계에는 사용자가 아코디언이 향상된 키보드 탐색 기능을 제공한다는 것을 이해하도록 돕기 위한 기능이 포함됩니다.
+      아코디언 헤더 버튼에 키보드 초점이 있을 경우, 아코디언 컨테이너와 모든 헤더 버튼의 스타일링이 변경됩니다.
     </p>
-    <p>When any accordion header button receives focus:</p>
+    <p>아코디언 헤더 버튼이 초점을 받는 경우:</p>
     <ul>
-      <li>The border encompassing the entire accordion changes color.</li>
-      <li>The background color of the accordion header buttons changes.</li>
+      <li>전체 아코디언을 둘러싸는 테두리의 색상이 변경됩니다.</li>
+      <li>아코디언 헤더 버튼의 배경색이 변경됩니다.</li>
     </ul>
-    <p>The focused accordion header button:</p>
+    <p>초점을 받은 아코디언 헤더 버튼:</p>
     <ul>
-      <li>Has a border that encompasses both the header text and icon.</li>
-      <li>Has a background color that distinguishes it from the other accordion buttons that are not focused.</li>
+      <li>헤더 텍스트와 아이콘을 모두 포함하는 테두리를 가지게 합니다.</li>
+      <li>초점을 얻지 않은 다른 아코디언과 구별되는 배경색을 가지게 합니다.</li>
     </ul>
   </section>
   <section>
-    <h2 id="kbd_label">Keyboard Support</h2>
+    <h2 id="kbd_label">키보드 지원</h2>
     <table aria-labelledby="kbd_label" class="def">
       <thead>
         <tr>
-          <th>Key</th>
-          <th>Function</th>
+          <th>키</th>
+          <th>기능</th>
         </tr>
       </thead>
       <tbody>
         <tr data-test-id="key-enter-or-space">
-          <th><kbd>Space</kbd> or <kbd>Enter</kbd></th>
-          <td>When focus is on the accordion header of a collapsed section, expands the section.</td>
+          <th><kbd>Space</kbd> 또는 <kbd>Enter</kbd></th>
+          <td>축소된 섹션의 아코디언 헤더에 초점이 있는 경우, 섹션을 확장시킵니다.</td>
         </tr>
         <tr data-test-id="key-tab">
           <th><kbd>Tab</kbd></th>
           <td>
             <ul>
-              <li>Moves focus to the next focusable element.</li>
-              <li>All focusable elements in the accordion are included in the page <kbd>Tab</kbd> sequence.</li>
+              <li>초점을 다음 초점을 얻을 수 있는 요소(focusable element)로 이동시킵니다.</li>
+              <li>아코디언의 모든 초점을 얻을 수 있는 요소(focusable element)는 페이지 <kbd>Tab</kbd> 순서에 포함됩니다.</li>
             </ul>
           </td>
         </tr>
@@ -216,8 +216,8 @@
           <th><kbd>Shift + Tab</kbd></th>
           <td>
             <ul>
-              <li>Moves focus to the previous focusable element.</li>
-              <li>All focusable elements in the accordion are included in the page <kbd>Tab</kbd> sequence.</li>
+              <li>초점을 이전 초점을 얻을 수 있는 요소(focusable element)로 이동시킵니다.</li>
+              <li>아코디언의 모든 초점을 얻을 수 있는 요소(focusable element)는 페이지 <kbd>Tab</kbd> 순서에 포함됩니다.</li>
             </ul>
           </td>
         </tr>
@@ -225,8 +225,8 @@
           <th><kbd>Down Arrow</kbd></th>
           <td>
             <ul>
-              <li>When focus is on an accordion header, moves focus to the next accordion header.</li>
-              <li>When focus is on last accordion header, moves focus to first accordion header.</li>
+              <li>초점이 아코디언 헤더에 있는 경우, 초점을 다음 아코디언 헤더로 이동시킵니다.</li>
+              <li>초점이 마지막 아코디언 헤더이 있는 경우, 초점을 첫 번째 아코디언 헤더로 이동시킵니다.</li>
             </ul>
           </td>
         </tr>
@@ -234,34 +234,34 @@
           <th><kbd>Up Arrow</kbd></th>
           <td>
             <ul>
-              <li>When focus is on an accordion header, moves focus to the previous accordion header.</li>
-              <li>When focus is on first accordion header, moves focus to last accordion header.</li>
+              <li>초점이 아코디언 헤더에 있는 경우, 초점을 이전 아코디언 헤더로 이동시킵니다.</li>
+              <li>초점이 첫 번째 아코디언 헤더에 있는 경우, 초점을 마지막 아코디언 헤더로 이동시킵니다.</li>
             </ul>
           </td>
         </tr>
         <tr data-test-id="key-home">
           <th><kbd>Home</kbd></th>
-          <td>When focus is on an accordion header, moves focus to the first accordion header.</td>
+          <td>초점이 아코디언 헤더에 있는 경우, 초점을 첫 번째 아코디언 헤더로 이동시킵니다.</td>
         </tr>
         <tr data-test-id="key-end">
           <th><kbd>End</kbd></th>
-          <td>When focus is on an accordion header, moves focus to the last accordion header.</td>
+          <td>초점이 아코디언 헤더에 있는 경우, 초점을 마지막 아코디언 헤더로 이동시킵니다.</td>
         </tr>
       </tbody>
     </table>
   </section>
 
   <section>
-    <h2 id="rps_label">Role, Property, State, and Tabindex  Attributes</h2>
+    <h2 id="rps_label">역할(role), 속성(property), 상태(state), Tabindex 속성(attribute)</h2>
     <!--
       Update this table to describe how roles, properties, states, and tabindex are used in this example -->
     <table aria-labelledby="rps_label" class="data attributes">
       <thead>
         <tr>
-          <th scope="col">Role</th>
-          <th scope="col">Attribute</th>
-          <th scope="col">Element</th>
-          <th scope="col">Usage</th>
+          <th scope="col">역할(role)</th>
+          <th scope="col">속성(attribute)</th>
+          <th scope="col">요소(element)</th>
+          <th scope="col">사용법</th>
         </tr>
       </thead>
       <tbody>
@@ -271,9 +271,9 @@
           <th scope="row"><code>h3</code></th>
           <td>
             <ul>
-              <li>Element that serves as an accordion header.</li>
-              <li>Each accordion header element contains a button that controls the visibility of its content panel.</li>
-              <li>The example uses heading level 3 so it fits correctly within the outline of the page; the example is contained in a section titled with a level 2 heading.</li> 
+              <li>아코디언 헤더로 제공되는 요소(element)</li>
+              <li>각 아코디언 헤더 요소(element)는 그것의 콘텐트 패널의 가시성을 제어하는 버튼을 포함합니다.</li>
+              <li>예제는 제목 수준 3을 사용하므로 페이지의 개요에 정확히 들어맞습니다; 이 예는 수준 2의 제목이 있는 섹션에 포함됩니다.</li>
             </ul>
           </td>
         </tr>
@@ -282,7 +282,7 @@
           <th scope="row"><code>aria-expanded="true"</code></th>
           <td><code>button</code></td>
           <td>
-            Set to <code>true</code> when the Accordion panel is expanded, otherwise set to <code>false</code>.
+            아코디언 패널이 확장되는 경우 <code>true</code>로 설정하고, 그렇지 않으면<code>false</code>로 설정.
           </td>
         </tr>
         <tr data-test-id="button-aria-controls">
@@ -290,7 +290,7 @@
           <th scope="row"><code>aria-controls="ID"</code></th>
           <td><code>button</code></td>
           <td>
-            Points to the ID of the panel which the header controls.
+            헤더가 제어하는 패널의 ID를 가리킵니다.
           </td>
         </tr>
         <tr data-test-id="button-aria-disabled">
@@ -298,14 +298,14 @@
           <th scope="row"><code>aria-disabled="true"</code></th>
           <td><code>button</code></td>
           <td>
-            If the accordion panel is expanded and is not allowed to be collapsed, then set to <code>true</code>.
+            아코디언 패널이 확장되고 축소가 허용되지 않는 다면, <code>true</code>로 설정합니다.
           </td>
         </tr>
         <tr data-test-id="region-role">
           <th scope="row"><code>region</code></th>
           <td></td>
           <td><code>div</code></td>
-          <td>Creates a landmark region that contains the currently expanded accordion panel.</td>
+          <td>현재 확장된 아코디언 패널을 포함하는 랜드마크 영역을 생성합니다.</td>
         </tr>
         <tr data-test-id="region-aria-labelledby">
           <td></td>
@@ -313,9 +313,9 @@
           <td><code>div</code></td>
           <td>
             <ul>
-              <li>Defines the accessible name for the <code>region</code> element.</li>
-              <li>References the accordion header button that expands and collapses the region.</li>
-              <li><code>region</code> elements are required to have an accessible name to be identified as a landmark.</li>
+              <li><code>region</code> 요소(element)에 대한 접근 가능한 이름을 정의합니다.</li>
+              <li>영역을 확장하고 축소하는 아코데이너 헤더 버튼을 참조합니다.</li>
+              <li><code>region</code> 요소(element)는 랜드마크로 식별될 수 있는 접근 가능한 이름을 가지도록 요구됩니다.</li>
             </ul>
           </td>
         </tr>
@@ -324,7 +324,7 @@
   </section>
 
   <section>
-    <h2>Javascript and CSS Source Code</h2>
+    <h2>Javascript와 CSS 소스 코드</h2>
     <ul>
       <li>CSS: <a href="css/accordion.css" type="tex/css">accordion.css</a></li>
       <li>JavaScript: <a href="js/accordion.js" type="text/javascript">accordion.js</a></li>
@@ -332,7 +332,7 @@
   </section>
 
   <section>
-    <h2 id="sc1_label">HTML Source Code</h2>
+    <h2 id="sc1_label">HTML 소스 코드</h2>
     <div role="separator" id="sc1_start_sep" aria-labelledby="sc1_start_sep sc1_label" aria-label="Start of"></div>
     <pre><code id="sc1"></code></pre>
     <div role="separator" id="sc1_end_sep" aria-labelledby="sc1_end_sep sc1_label" aria-label="End of"></div>
@@ -344,7 +344,7 @@
 
   </main>
   <nav>
-    <a href="../../#accordion">Accordion Design Pattern in WAI-ARIA Authoring Practices 1.2</a>
+    <a href="../../#accordion">WAI-ARIA 작성 방법 1.2의 아코디언 디자인 패턴</a>
   </nav>
   <script src="js/accordion.js"></script>
 </body>
