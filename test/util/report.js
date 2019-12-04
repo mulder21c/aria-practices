@@ -7,7 +7,7 @@ const fs = require('fs');
 const htmlparser2 = require('htmlparser2');
 const { spawnSync } = require('child_process');
 
-const examplePath = path.resolve(__dirname, '..', '..', 'examples');
+const examplePath = path.resolve(__dirname, '..', '..', 'examples-ko');
 const testsPath = path.resolve(__dirname, '..', 'tests');
 const ignoreExampleDirs = path.resolve(__dirname, 'report_files', 'ignore_test_directories');
 const ignoreExampleFiles = path.resolve(__dirname, 'report_files', 'ignore_html_files');

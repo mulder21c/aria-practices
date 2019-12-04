@@ -63,7 +63,7 @@ ariaTest.failing = (desc, page, testId, body) => {
 };
 
 const _ariaTest = (desc, page, testId, body, failing) => {
-  const absPath = path.resolve(__dirname, '..', 'examples', ...page.split('/'));
+  const absPath = path.resolve(__dirname, '..', 'examples-ko', ...page.split('/'));
   const url = 'file://' + absPath;
   const selector = '[data-test-id="' + testId + '"]';
 

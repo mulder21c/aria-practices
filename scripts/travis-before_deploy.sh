@@ -3,7 +3,7 @@
 # Stash the latest examples
 mkdir /tmp/aria-practices
 cp -R common /tmp/aria-practices
-cp -R examples /tmp/aria-practices
+cp -R examples-ko /tmp/aria-practices
 cp -R img /tmp/aria-practices
 cp .gitignore /tmp/aria-practices
 cp .editorconfig /tmp/aria-practices
@@ -20,5 +20,6 @@ curl "https://labs.w3.org/spec-generator/?type=respec&url=https://raw.githack.co
 # Clean and update the examples
 rm -rf common/
 rm -rf examples/
+rm -rf examples-ko/
 rm -rf img/
 cp -R /tmp/aria-practices/ ..
