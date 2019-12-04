@@ -2,3 +2,5 @@
 common/
 examples/landmarks/js/visua11y.js
 examples/js/highlight.pack.js
+examples-ko/landmarks/js/visua11y.js
+examples-ko/js/highlight.pack.js

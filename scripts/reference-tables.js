@@ -11,7 +11,7 @@ const path = require('path');
 const glob = require('glob');
 const cheerio = require('cheerio');
 
-const exampleFilePath = path.join(__dirname, '..', 'examples', 'index.html');
+const exampleFilePath = path.join(__dirname, '..', 'examples-ko', 'index.html');
 const exampleTemplatePath = path.join(__dirname, 'reference-tables.template');
 
 let output = fs.readFileSync(exampleTemplatePath, function (err) {
@@ -263,9 +263,9 @@ function addLandmarkRole (landmark, hasLabel, title, ref) {
   }
 }
 
-glob.sync('examples/!(landmarks)/**/!(index).html', {cwd: path.join(__dirname, '..'), nodir: true}).forEach(function (file) {
+glob.sync('examples-ko/!(landmarks)/**/!(index).html', {cwd: path.join(__dirname, '..'), nodir: true}).forEach(function (file) {
   let data = fs.readFileSync(file, 'utf8');
-  let ref = file.replace('examples/', '');
+  let ref = file.replace('examples-ko/', '');
   let title = data.substring(data.indexOf('<title>') + 7, data.indexOf('</title>'))
     .split('|')[0]
     .replace('Examples', '')
