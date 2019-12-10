@@ -3329,24 +3329,24 @@
       랜드마크 영역은 &quot;스킵 링크&quot;의 대상으로도 사용될 수 있고, 브라우저 확장을 통해 키보드 탐색을 향상시킬 수도 있습니다.
     </p>
     <p>
-      This section explains how HTML sectioning elements and ARIA landmark roles
-      are used to make it easy for assistive technology users to understand the meaning of the layout of a page.
+      이 섹션은 보조 기술 사용자가 페이지의 레이아웃의 의미를 이해하기 쉽게 할 수 있도록
+      HTML 섹션화 요소(element)와 ARIA 랜드마크 역할(role)을 사용하는 방법을 설명합니다.
     </p>
     <section>
-      <h3>HTML Sectioning Elements</h3>
+      <h3>HTML 섹션화 요소(element)</h3>
       <p>
-        Several HTML sectioning elements automatically create ARIA landmark regions.
-        So, in order to provide assistive technology users with a logical view of a page,
-        it is important to understand the effects of using HTML sectioning elements.
-        [[HTML-ARIA]] contains more information on HTML element role mapping.
+        몇 몇 HTML 섹션화 요소(element)는 자동으로 ARIA 랜드마크 영역을 생성합니다.
+        따라서, 보조 기술 사용자에게 페이지의 논리적 시야를 제공하려면,
+        HTML 섹션화 요소(element) 사용의 영향을 이해하는 것이 중요합니다.
+        [[HTML-ARIA]]에는 HTML 요소 역할 매핑에 대한 자세한 정보가 포함되어 있습니다.
       </p>
       <table class="widget-features">
-        <caption>Default landmark roles for HTML sectioning elements</caption>
+        <caption>HTML 섹션화 요소(element)에 대한 기본 랜드마크 역할(role)</caption>
         <thead>
           <tr>
-            <th>HTML Element</th>
+            <th>HTML 요소(element)</th>
 
-            <th>Default Landmark Role</th>
+            <th>기본 랜드마크 역할(role)</th>
           </tr>
         </thead>
 
@@ -3360,13 +3360,13 @@
           <tr>
             <td><code>footer</code></td>
 
-            <td><code>contentinfo</code> when in context of the <code>body</code> element</td>
+            <td><code>body</code> 요소(element) 컨텍스트에서 <code>contentinfo</code></td>
           </tr>
 
           <tr>
             <td><code>header</code></td>
 
-            <td><code>banner</code> when in context of the <code>body</code> element</td>
+            <td><code>body</code> 요소(element) 컨텍스트에서 <code>banner</code></td>
           </tr>
 
           <tr>
@@ -3384,7 +3384,7 @@
           <tr>
             <td><code>section</code></td>
 
-            <td><code>region</code> when it has an accessible name using <code>aria-labelledby</code> or <code>aria-label</code></td>
+            <td><code>aria-labelledby</code>나 <code>aria-label</code>를 사용하여 접근 가능한 이름을 가지는 경우 <code>region</code></td>
           </tr>
         </tbody>
       </table>
