@@ -84,16 +84,15 @@
       <p>
         기능적으로, ARIA (role), 상태(state), 속성(property)들은 보조 기술에 대해 CSS와 유사합니다.
         스크린리더 사용자들의 경우, ARIA는 비시각적 경험의 렌더링을 제어합니다.
-        잘못된 ARIA는 잠재적으로 비시각적 경험에 대한 심각한 손상과 함께, 시각적 경험을 잘못 전달합니다.
+        잘못된 ARIA는 잠재적으로 비시각적 경험에 대해 심각한 손상을 주며 시각적 경험을 잘못 전달합니다.
       </p>
       <p>ARIA나 이 문서의 어떤 지침을 사용하기 이전에, 다음의 두 가지 기본 원칙을 이해하는데 시간을 들이세요.</p>
       <h4>원칙 1: 역할(role)은 약속이다</h4>
       <p>이 코드는:</p>
-      <pre><code>
-        &lt;div role=&quot;button&quot;&gt;Place Order&lt;/div&gt;
-          </code> </pre>
+      <pre><code>&lt;div role=&quot;button&quot;&gt;Place Order&lt;/div&gt;
+</code> </pre>
       <p>
-        해당 <code>&lt;div&gt;</code>의 작성자가 버튼에 기대되는 키보드 인터랙션을 제공하는 JavaScript도 구현했음을 약속합니다.
+        해당 <code>&lt;div&gt;</code>의 작성자가 버튼에 기대되는 키보드 인터랙션을 제공하는 JavaScript도 구현했다는 약속입니다.
         HTML 입력 요소(element)와 달리, ARIA 역할(role)은 브라우저가 키보드 동작이나 스타일링을 제공하지 않습니다.
       </p>
       <p>그 역할(role)의 약속을 이행하지 않고 사용하는 것은 주문을 빼먹고 쇼핑 카트를 비우는 &quot;주문하기&quot; 버튼을 만드는 것과 유사합니다.</p>
@@ -104,44 +103,39 @@
         보조 기술의 관점에서, ARIA는 작성자에게 보조 기술이 달리 확실하게 추론 할 수 없을 중요한 접근성 의미론으로 HTML과 SVG 요소(element)를 꾸밀 수 있는 능력을 제공합니다.
       </p>
       <p>일부 ARIA는 가면과 같습니다; 원래의 의미나 콘텐트를 완전히 감추거나 덮어 씌웁니다.</p>
-      <pre><code>
-        &lt;a role=&quot;menuitem&quot;&gt;보조 기술 사용자는 이 요소(element)를 링크가 아니라 메뉴의 항목으로 인지합니다.&lt;/a&gt;
-        &lt;a aria-label=&quot;보조 기술 사용자는 링크 텍스트가 아니라 이 aria-lable의 콘텐트만을 인식할 수 있습니다&quot;&gt;링크 텍스트&lt;/a&gt;
+      <pre><code>&lt;a role=&quot;menuitem&quot;&gt;보조 기술 사용자는 이 요소(element)를 링크가 아니라 메뉴의 항목으로 인지합니다.&lt;/a&gt;
+&lt;a aria-label=&quot;보조 기술 사용자는 링크 텍스트가 아니라 이 aria-lable의 콘텐트만을 인식할 수 있습니다&quot;&gt;링크 텍스트&lt;/a&gt;
 </code></pre>
       <p>반면에, 일부 ARIA의 사용은 멜빵이나 벨트에 가깝습니다; 원본 콘텐트에 필수적인 지원을 제공하는 의미를 추가합니다.</p>
-      <pre><code>
-        &lt;button aria-pressed=&quot;false&quot;&gt;Mute&lt;/button&gt;
-      </code></pre>
+      <pre><code>&lt;button aria-pressed=&quot;false&quot;&gt;Mute&lt;/button&gt;
+</code></pre>
       <p>
         이것이 ARIA의 힘입니다.
         작성자가 보조 기술들이 확실하게 해석할 수 있는 방법으로 거의 모든 유저 인터페이스를 기술할 수 있게 하므로, 보조 기술 사용자에게 컴포넌트를 접근 가능하게 할 수 있습니다.
       </p>
       <p>
-        이것은 동시에 ARIA의 위험입니다.
+        이것은 동시에 ARIA의 위험이기도 합니다.
         작성자는 부주의하게 접근성 의미를 덮어쓸 수도 있습니다.
       </p>
-      <pre>
-        <code>
-          &lt;table role=&quot;log&quot;&gt;
-            &lt;!--
-              보조 기술 사용자가 표로 인식하지 못하는 표.
-              log 역할(role)은 브라우저에게 이것이 표가 아니라 기록이라고 알립니다.
-            --&gt;
-          &lt;/table&gt;
-          &lt;ul role=&quot;navigation&quot;&gt;
-            &lt;!-- 이것은 목록이 아니라 navigation 영역 입니다. --&gt;
-            &lt;li&gt;&lt;a href=&quot;uri1&quot;&gt;nav link 1&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;uri2&quot;&gt;nav link 2&lt;/li&gt;
-            &lt;!-- 오류! 위 목록 항목들은 목록에 없습니다! --&gt;
-          &lt;/ul&gt;
-        </code>
-      </pre>
+      <pre><code>&lt;table role=&quot;log&quot;&gt;
+  &lt;!--
+    보조 기술 사용자가 표로 인식하지 못하는 표.
+    log 역할(role)은 브라우저에게 이것이 표가 아니라 기록이라고 알립니다.
+  --&gt;
+&lt;/table&gt;
+&lt;ul role=&quot;navigation&quot;&gt;
+  &lt;!-- 이것은 목록이 아니라 navigation 영역 입니다. --&gt;
+  &lt;li&gt;&lt;a href=&quot;uri1&quot;&gt;nav link 1&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;uri2&quot;&gt;nav link 2&lt;/li&gt;
+  &lt;!-- 오류! 위 목록 항목들은 목록에 없습니다! --&gt;
+&lt;/ul&gt;
+</code></pre>
     </section>
     <section id="browser_and_AT_support">
       <h3>브라우저와 보조 기술 지원</h3>
       <p>
         <strong>제품에 이 가이드의 코드를 사용하기 이전에 보조 기술 상호 운용성 테스트가 필수적입니다.</strong>
-        이 지침의 목적은 ARIA 명세에 정의 된 대로 ARIA 1.2의 적절한 사용을 실제로 보여주는 것이기 때문에, 디자인 패턴, 참고 예제, 샘플 코드는 일부러 브라우저와 보조 기술들의 ARIA 1.2에 대한 지원의 격차로 인한 문제를 해결하기 위한 코딩 기법을 기술하고 구현하지 <strong>않습니다</strong>.
+        이 지침의 목적은 ARIA 명세에 정의 된 대로 ARIA 1.2의 적절한 사용을 실제로 보여주는 것이기 때문에, 디자인 패턴, 참고 예제, 샘플 코드는 일부러 브라우저와 보조 기술들의 ARIA 1.2에 대한 지원의 격차에 따른 문제를 해결하기 위한 코딩 기법을 기술하고 구현하지 <strong>않습니다</strong>.
         따라서, 대상 고객과 관련된 각 브라우저와 보조 기술 조합으로 구현을 철저하게 테스트 하는 것이 바람직합니다.
       </p>
       <p>
@@ -3323,7 +3317,7 @@
   <section class="widget" id="aria_landmark">
     <h2>랜드마크 영역</h2>
     <p>
-      아리아 랜드마크 역할(role)은 웹 페이지의 구성과 구조를 식별하는 강력한 방법을 제공합니다.
+      ARIA 랜드마크 역할(role)은 웹 페이지의 구성과 구조를 식별하는 강력한 방법을 제공합니다.
       페이지의 섹션을 분류하고 레이블을 지정함으로써, 레이아웃을 통해 시각적으로 전달되는 구조 정보를 프로그래밍 방식으로 나타낼 수 있습니다.
       스크린리더는 페이지의 중요한 부분으로의 키보드 탐색을 제공하는데 랜드마크 역할(role)을 활용합니다.
       랜드마크 영역은 &quot;스킵 링크&quot;의 대상으로도 사용될 수 있고, 브라우저 확장을 통해 키보드 탐색을 향상시킬 수도 있습니다.
@@ -3399,9 +3393,9 @@
       <p><strong>1 단계: 논리적 구조 식별</strong></p>
 
       <ul>
-        <li>디자이너가 일반적으로 정렬과 간격을 사용하여 시각적으로 표시하는 콘텐트의 인식 가능한 영역으로 페이지를 쪼갭니다.</li>
+        <li>디자이너가 일반적으로 정렬과 간격을 사용하여 시각적으로 표시한 콘텐트의 인식 가능한 영역으로 페이지를 쪼갭니다.</li>
 
-        <li>필요에 따라 영역을 논리적 하위 영역 안으로 추가 정의될 수 있습니다.</li>
+        <li>필요에 따라 영역이 논리적 하위 영역 안으로 추가 정의될 수 있습니다.</li>
 
         <li>하위 영역의 예는 포털 어플리케이션의 포틀릿입니다.</li>
       </ul>
@@ -3409,7 +3403,7 @@
       <p><strong>2 단계: 각 영역에 랜드마크 역할(role) 할당</strong></p>
 
       <ul>
-        <li>해당 영역의 콘텐트 타입에 따라 랜드마크 역할(role)을 할당합니다.</li>
+        <li>영역 내의 콘텐트 타입에 따라 랜드마크 역할(role)을 할당합니다.</li>
 
         <li><code>banner</code>, <code>main</code>, <code>complementary</code>, <code>contentinfo</code> 랜드 마크는 최상위 랜드마크여야 합니다.</li>
 
