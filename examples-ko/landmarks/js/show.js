@@ -21,10 +21,10 @@ function showLandmarks (event) {
   }
 
   if (window[initLandmarks].run()) {
-    event.target.innerHTML = 'Hide Landmarks';
+    event.target.innerHTML = '랜드마크 감추기';
   }
   else {
-    event.target.innerHTML = 'Show Landmarks';
+    event.target.innerHTML = '랜드마크 보기';
   }
 }
 
@@ -34,9 +34,9 @@ function showHeadings (event) {
   }
 
   if (window[initHeadings].run()) {
-    event.target.innerHTML = 'Hide Headings';
+    event.target.innerHTML = '헤딩 감추기';
   }
   else {
-    event.target.innerHTML = 'Show Headings';
+    event.target.innerHTML = '헤딩 보기';
   }
 }
