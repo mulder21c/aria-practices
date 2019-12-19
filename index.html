@@ -4421,9 +4421,9 @@ var[data-type]:hover::before {
         </section>
 
         <section class="notoc">
-          <h5 id="examples-15">Examples<a class="self-link" aria-label="§" href="#examples-15"></a></h5>
+          <h5 id="generatedID-5">예<a class="self-link" aria-label="§" href="#generatedID-5"></a></h5>
 
-          <p><a href="examples/landmarks/banner.html">Banner Landmark Example</a></p>
+          <p><a href="examples/landmarks/banner.html">Banner Landmark 예제</a></p>
         </section>
 
       </section>
@@ -4431,31 +4431,31 @@ var[data-type]:hover::before {
       <section id="aria_lh_complementary">
         <h4 class="widget-name" id="x4-3-2-complementary"><bdi class="secno">4.3.2 </bdi>Complementary<a class="self-link" aria-label="§" href="#aria_lh_complementary"></a></h4>
 
-        <p>A <a class="role-reference" href="https://w3c.github.io/aria/#complementary"><code>complementary</code></a> landmark is a supporting section of the document, designed to be complementary to the main content at a similar level in the DOM hierarchy, but remains meaningful
-          when separated from the main content.</p>
+        <p><a class="role-reference" href="https://w3c.github.io/aria/#complementary"><code>complementary</code></a> 랜드마크는 문서의 지원(supporting) 섹션으로,
+          DOM 계층상 유사한 수준에서 주 콘텐트를 보완하도록 설계되었으며 주 콘텐트로부터 분리되는 경우에도 여전히 유의미합니다. </p>
 
         <ul>
-          <li><code>complementary</code> landmarks should be top level landmarks (e.g. not contained within any other landmarks).</li>
+          <li><code>complementary</code> 랜드마크는 최상위 랜드마크여야 합니다. (예를 들어, 다른 랜드마크에 포함되지 않은).</li>
 
-          <li>If the complementary content is not related to the main content, a more general role should be assigned (e.g. <code>region</code>).</li>
+          <li>complementary 콘텐트가 주 콘텐트와 관련이 없다면, 좀 더 일반적인 역할(role)이 할당되어야 합니다(예를 들어 <code>region</code>).</li>
 
-          <li>If a page includes more than one <code>complementary</code> landmark, each should have a unique label (see <a href="#aria_lh_step3">Step 3</a> above).</li>
+          <li>페이지가 둘 이상의 <code>complementary</code> 랜드마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다 (위 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
         </ul>
 
         <section class="notoc">
-          <h5 id="html-technique">HTML Technique<a class="self-link" aria-label="§" href="#html-technique"></a></h5>
+          <h5 id="html-0">HTML 기법<a class="self-link" aria-label="§" href="#html-0"></a></h5>
 
-          <p>Use the HTML <code>aside</code> element to define a <code>complementary</code> landmark.</p>
+          <p><code>complementary</code> 랜드마크를 정의하도록 HTML <code>aside</code> 요소(element)를 사용하세요.</p>
 
-          <h5 id="aria-technique">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique"></a></h5>
+          <h5 id="aria-0">ARIA 기법<a class="self-link" aria-label="§" href="#aria-0"></a></h5>
 
-          <p>If the HTML <code>aside</code> element technique is not being used, use a <code>role="complementary"</code> attribute to define a <code>complementary</code> landmark.</p>
+          <p>HTML <code>aside</code> 요소(element) 기법이 사용되지 않는다면,  <code>complementary</code> 랜드마크를 정의하도록 <code>role="complementary"</code> 속성(attribute)을 사용하세요.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-16">Examples<a class="self-link" aria-label="§" href="#examples-16"></a></h5>
+          <h5 id="generatedID-6">예제<a class="self-link" aria-label="§" href="#generatedID-6"></a></h5>
 
-          <p><a href="examples/landmarks/complementary.html">Complementary Landmark Example</a></p>
+          <p><a href="examples/landmarks/complementary.html">Complementary 랜드마크 예</a></p>
         </section>
       </section>
 
@@ -4495,13 +4495,13 @@ var[data-type]:hover::before {
             </li>
           </ul>
 
-          <h5 id="aria-technique-0">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-0"></a></h5>
+          <h5 id="aria-technique">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique"></a></h5>
 
           <p>If the HTML <code>footer</code> element technique is not being used, a <code>role="contentinfo"</code> attribute should be used to define a <code>contentinfo</code> landmark.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-17">Examples<a class="self-link" aria-label="§" href="#examples-17"></a></h5>
+          <h5 id="examples-15">Examples<a class="self-link" aria-label="§" href="#examples-15"></a></h5>
           <p><a href="examples/landmarks/contentinfo.html">Contentinfo Landmark Example</a></p>
         </section>
       </section>
@@ -4540,13 +4540,13 @@ var[data-type]:hover::before {
 
           <p>The HTML <code>form</code> element defines a <code>form</code> landmark when it has an accessible name (e.g. <code>aria-labelledby</code>, <code>aria-label</code> or <code>title</code>).</p>
 
-          <h5 id="aria-technique-1">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-1"></a></h5>
+          <h5 id="aria-technique-0">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-0"></a></h5>
 
           <p>Use the <code>role="form"</code> to identify a region of the page; do not use it to identify every form field.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-18">Examples<a class="self-link" aria-label="§" href="#examples-18"></a></h5>
+          <h5 id="examples-16">Examples<a class="self-link" aria-label="§" href="#examples-16"></a></h5>
 
           <p><a href="examples/landmarks/form.html">Form Landmark Example</a></p>
         </section>
@@ -4569,17 +4569,17 @@ var[data-type]:hover::before {
         </ul>
 
         <section class="notoc">
-          <h5 id="html-technique-0">HTML Technique<a class="self-link" aria-label="§" href="#html-technique-0"></a></h5>
+          <h5 id="html-technique">HTML Technique<a class="self-link" aria-label="§" href="#html-technique"></a></h5>
 
           <p>Use the HTML <code>main</code> element to define a <code>main</code> landmark.</p>
 
-          <h5 id="aria-technique-2">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-2"></a></h5>
+          <h5 id="aria-technique-1">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-1"></a></h5>
 
           <p>If the HTML <code>main</code> element technique is not being used, use a <code>role="main"</code> attribute to define a <code>main</code> landmark.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-19">Examples<a class="self-link" aria-label="§" href="#examples-19"></a></h5>
+          <h5 id="examples-17">Examples<a class="self-link" aria-label="§" href="#examples-17"></a></h5>
 
           <p><a href="examples/landmarks/main.html">Main Landmark Example</a></p>
         </section>
@@ -4597,18 +4597,18 @@ var[data-type]:hover::before {
         </ul>
 
         <section class="notoc">
-          <h5 id="html-technique-1">HTML Technique<a class="self-link" aria-label="§" href="#html-technique-1"></a></h5>
+          <h5 id="html-technique-0">HTML Technique<a class="self-link" aria-label="§" href="#html-technique-0"></a></h5>
 
           <p>Use the HTML <code>nav</code> element to define a <code>navigation</code> landmark.</p>
 
-          <h5 id="aria-technique-3">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-3"></a></h5>
+          <h5 id="aria-technique-2">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-2"></a></h5>
 
           <p>If the HTML <code>nav</code> element technique is not being used, use a <code>role="navigation"</code> attribute to define a <code>navigation</code> landmark.</p>
 
         </section>
 
         <section class="notoc">
-          <h5 id="examples-20">Examples<a class="self-link" aria-label="§" href="#examples-20"></a></h5>
+          <h5 id="examples-18">Examples<a class="self-link" aria-label="§" href="#examples-18"></a></h5>
 
           <p><a href="examples/landmarks/navigation.html">Navigation Landmark Example</a></p>
         </section>
@@ -4628,17 +4628,17 @@ var[data-type]:hover::before {
         </ul>
 
         <section class="notoc">
-          <h5 id="html-technique-2">HTML Technique<a class="self-link" aria-label="§" href="#html-technique-2"></a></h5>
+          <h5 id="html-technique-1">HTML Technique<a class="self-link" aria-label="§" href="#html-technique-1"></a></h5>
 
           <p>The HTML <code>section</code> element defines a <code>region</code> landmark when it has an accessible name (e.g. <code>aria-labelledby</code>, <code>aria-label</code> or <code>title</code>).</p>
 
-          <h5 id="aria-technique-4">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-4"></a></h5>
+          <h5 id="aria-technique-3">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-3"></a></h5>
 
           <p>If the HTML <code>section</code> element technique is not being used, use a <code>role="region"</code> attribute to define a <code>region</code> landmark.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-21">Examples<a class="self-link" aria-label="§" href="#examples-21"></a></h5>
+          <h5 id="examples-19">Examples<a class="self-link" aria-label="§" href="#examples-19"></a></h5>
 
           <p><a href="examples/landmarks/region.html">Region Landmark Example</a></p>
         </section>
@@ -4656,16 +4656,16 @@ var[data-type]:hover::before {
         </ul>
 
         <section class="notoc">
-          <h5 id="html-technique-3">HTML Technique<a class="self-link" aria-label="§" href="#html-technique-3"></a></h5>
+          <h5 id="html-technique-2">HTML Technique<a class="self-link" aria-label="§" href="#html-technique-2"></a></h5>
           <p>There is no HTML element that defines a <code>search</code> landmark.</p>
 
-          <h5 id="aria-technique-5">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-5"></a></h5>
+          <h5 id="aria-technique-4">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-4"></a></h5>
 
           <p>The <code>role="search"</code> attribute defines a <code>search</code> landmark.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-22">Examples<a class="self-link" aria-label="§" href="#examples-22"></a></h5>
+          <h5 id="examples-20">Examples<a class="self-link" aria-label="§" href="#examples-20"></a></h5>
 
           <p><a href="examples/landmarks/search.html">Search Landmark Example</a></p>
         </section>
