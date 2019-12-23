@@ -845,16 +845,16 @@ var[data-type]:hover::before {
   "preProcess": [
     null
   ],
-  "publishDate": "2019-12-19",
-  "publishISODate": "2019-12-19T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 19 December 2019"
+  "publishDate": "2019-12-23",
+  "publishISODate": "2019-12-23T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 23 December 2019"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 <body class="h-entry informative"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">WAI-ARIA 작성 방법 1.2</h1>
       
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2019-12-19">19 December 2019</time>
+        <time class="dt-published" datetime="2019-12-23">23 December 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -4392,7 +4392,7 @@ var[data-type]:hover::before {
 
           <li><code>banner</code> 랜드마크는 최상위 랜드마크이어야 합니다.</li>
 
-          <li>페이지가 중첩된 <code>document</code>과/또는 <code>application</code> 역할(role)을 포함하는 경우 (예를 들어, 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(element)의 사용을 통해), 각 <code>document</code>나 <code>application</code> 역할(role)은
+          <li>페이지가 중첩된 <code>document</code>와/또는 <code>application</code> 역할(role)을 포함하는 경우 (예를 들어, 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(element)의 사용을 통해), 각 <code>document</code>나 <code>application</code> 역할(role)은
             하나의 <code>banner</code> 랜드마크가 있을 수 있습니다. </li>
 
           <li>페이지가 두 개 이상의 <code>banner</code> 랜드 마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다 (위의 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
@@ -4462,29 +4462,29 @@ var[data-type]:hover::before {
       <section id="aria_lh_contentinfo">
         <h4 class="widget-name" id="x4-3-3-contentinfo"><bdi class="secno">4.3.3 </bdi>Contentinfo<a class="self-link" aria-label="§" href="#aria_lh_contentinfo"></a></h4>
 
-        <p>A <a class="role-reference" href="https://w3c.github.io/aria/#contentinfo"><code>contentinfo</code></a> landmark is a way to identify common information at the bottom of each page within a website, typically called the "footer" of the page, including information
-          such as copyrights and links to privacy and accessibility statements.</p>
+        <p><a class="role-reference" href="https://w3c.github.io/aria/#contentinfo"><code>contentinfo</code></a> 랜드마크는 저작권 및 개인 정보 보호와 접근성 성명서에 대한 링크 같은 정보를 포함하는
+          일반적으로 페이지의 "footer"라고 불리는 웹 사이트 내에서 각 페이지의 하단에 있는 일반적인 정보를 식별하는 방법입니다.</p>
 
         <ul>
-          <li>Each page may have one <code>contentinfo</code> landmark.</li>
+          <li>각 페이지는 하나의 <code>contentinfo</code> 랜드마크가 있을 수 있습니다.</li>
 
-          <li>The <code>contentinfo</code> landmark should be a top-level landmark.</li>
+          <li><code>contentinfo</code> 랜드마크는 최상위 랜드마크여야 합니다.</li>
 
-          <li>When a page contains nested <code>document</code> and/or <code>application</code> roles (e.g. typically through the use of <code>iframe</code> and <code>frame</code> elements), each <code>document</code> or <code>application</code> role may have
-            one <code>contentinfo</code> landmark.</li>
+          <li>페이지가 중첩된 <code>document</code>와/또는 <code>application</code> 역할(role)을 포함하는 경우 (예를 들어, 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(element)의 사용을 통해), 각 <code>document</code>나 <code>application</code> 역할(role)은
+            하나의 <code>contentinfo</code> 랜드마크가 있을 수 있습니다.</li>
 
-          <li>If a page includes more than one <code>contentinfo</code> landmark, each should have a unique label (see <a href="#aria_lh_step3">Step 3</a> above).</li>
+          <li>페이지가 두 개 이상의 <code>contentinfo</code> 랜드마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다 (위 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
         </ul>
 
         <section class="notoc">
 
-          <h5 id="html-techniques">HTML Techniques<a class="self-link" aria-label="§" href="#html-techniques"></a></h5>
+          <h5 id="html-1">HTML 기법<a class="self-link" aria-label="§" href="#html-1"></a></h5>
 
           <ul>
-            <li>The HTML <code>footer</code> element defines a <code>contentinfo</code> landmark when its context is the <code>body</code> element.</li>
+            <li>HTML <code>footer</code> 요소(element)는 그것의 컨텍스트가 <code>body</code> 요소(element)인 경우 <code>contentinfo</code> 랜드마크를 정의합니다.</li>
 
             <li>
-              The HTML <code>footer</code> element is not considered a <code>contentinfo</code> landmark when it is descendant of any of following elements (see <a href="https://w3c.github.io/html-aam/" class="html-mapping">HTML Accessibility Mappings</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-html-aam">HTML-AAM</a></cite>]):
+              HTML <code>footer</code> 요소(element)는 다음 요소(element)들 중 하나의 후손일 경우 <code>contentinfo</code> 랜드마크로 간주되지 않습니다 (<a href="https://w3c.github.io/html-aam/" class="html-mapping">HTML 접근성 매핑</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-html-aam">HTML-AAM</a></cite>] 참고):
               <ul>
                 <li><code>article</code></li>
                 <li><code>aside</code></li>
@@ -4495,14 +4495,14 @@ var[data-type]:hover::before {
             </li>
           </ul>
 
-          <h5 id="aria-technique">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique"></a></h5>
+          <h5 id="aria-1">ARIA 기법<a class="self-link" aria-label="§" href="#aria-1"></a></h5>
 
-          <p>If the HTML <code>footer</code> element technique is not being used, a <code>role="contentinfo"</code> attribute should be used to define a <code>contentinfo</code> landmark.</p>
+          <p>HTML <code>footer</code> 요소(element) 기법이 사용되지 않는다면, <code>contentinfo</code> 랜드마크를 정의하도록 <code>role="contentinfo"</code> 속성(attribute)이 사용되어야 합니다.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-15">Examples<a class="self-link" aria-label="§" href="#examples-15"></a></h5>
-          <p><a href="examples/landmarks/contentinfo.html">Contentinfo Landmark Example</a></p>
+          <h5 id="generatedID-7">예제<a class="self-link" aria-label="§" href="#generatedID-7"></a></h5>
+          <p><a href="examples/landmarks/contentinfo.html">Contentinfo 랜드마크 예</a></p>
         </section>
       </section>
 
@@ -4536,17 +4536,17 @@ var[data-type]:hover::before {
         </ul>
 
         <section class="notoc">
-          <h5 id="html-techniques-0">HTML Techniques<a class="self-link" aria-label="§" href="#html-techniques-0"></a></h5>
+          <h5 id="html-techniques">HTML Techniques<a class="self-link" aria-label="§" href="#html-techniques"></a></h5>
 
           <p>The HTML <code>form</code> element defines a <code>form</code> landmark when it has an accessible name (e.g. <code>aria-labelledby</code>, <code>aria-label</code> or <code>title</code>).</p>
 
-          <h5 id="aria-technique-0">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-0"></a></h5>
+          <h5 id="aria-technique">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique"></a></h5>
 
           <p>Use the <code>role="form"</code> to identify a region of the page; do not use it to identify every form field.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-16">Examples<a class="self-link" aria-label="§" href="#examples-16"></a></h5>
+          <h5 id="examples-15">Examples<a class="self-link" aria-label="§" href="#examples-15"></a></h5>
 
           <p><a href="examples/landmarks/form.html">Form Landmark Example</a></p>
         </section>
@@ -4573,13 +4573,13 @@ var[data-type]:hover::before {
 
           <p>Use the HTML <code>main</code> element to define a <code>main</code> landmark.</p>
 
-          <h5 id="aria-technique-1">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-1"></a></h5>
+          <h5 id="aria-technique-0">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-0"></a></h5>
 
           <p>If the HTML <code>main</code> element technique is not being used, use a <code>role="main"</code> attribute to define a <code>main</code> landmark.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-17">Examples<a class="self-link" aria-label="§" href="#examples-17"></a></h5>
+          <h5 id="examples-16">Examples<a class="self-link" aria-label="§" href="#examples-16"></a></h5>
 
           <p><a href="examples/landmarks/main.html">Main Landmark Example</a></p>
         </section>
@@ -4601,14 +4601,14 @@ var[data-type]:hover::before {
 
           <p>Use the HTML <code>nav</code> element to define a <code>navigation</code> landmark.</p>
 
-          <h5 id="aria-technique-2">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-2"></a></h5>
+          <h5 id="aria-technique-1">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-1"></a></h5>
 
           <p>If the HTML <code>nav</code> element technique is not being used, use a <code>role="navigation"</code> attribute to define a <code>navigation</code> landmark.</p>
 
         </section>
 
         <section class="notoc">
-          <h5 id="examples-18">Examples<a class="self-link" aria-label="§" href="#examples-18"></a></h5>
+          <h5 id="examples-17">Examples<a class="self-link" aria-label="§" href="#examples-17"></a></h5>
 
           <p><a href="examples/landmarks/navigation.html">Navigation Landmark Example</a></p>
         </section>
@@ -4632,13 +4632,13 @@ var[data-type]:hover::before {
 
           <p>The HTML <code>section</code> element defines a <code>region</code> landmark when it has an accessible name (e.g. <code>aria-labelledby</code>, <code>aria-label</code> or <code>title</code>).</p>
 
-          <h5 id="aria-technique-3">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-3"></a></h5>
+          <h5 id="aria-technique-2">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-2"></a></h5>
 
           <p>If the HTML <code>section</code> element technique is not being used, use a <code>role="region"</code> attribute to define a <code>region</code> landmark.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-19">Examples<a class="self-link" aria-label="§" href="#examples-19"></a></h5>
+          <h5 id="examples-18">Examples<a class="self-link" aria-label="§" href="#examples-18"></a></h5>
 
           <p><a href="examples/landmarks/region.html">Region Landmark Example</a></p>
         </section>
@@ -4659,13 +4659,13 @@ var[data-type]:hover::before {
           <h5 id="html-technique-2">HTML Technique<a class="self-link" aria-label="§" href="#html-technique-2"></a></h5>
           <p>There is no HTML element that defines a <code>search</code> landmark.</p>
 
-          <h5 id="aria-technique-4">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-4"></a></h5>
+          <h5 id="aria-technique-3">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-3"></a></h5>
 
           <p>The <code>role="search"</code> attribute defines a <code>search</code> landmark.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-20">Examples<a class="self-link" aria-label="§" href="#examples-20"></a></h5>
+          <h5 id="examples-19">Examples<a class="self-link" aria-label="§" href="#examples-19"></a></h5>
 
           <p><a href="examples/landmarks/search.html">Search Landmark Example</a></p>
         </section>
