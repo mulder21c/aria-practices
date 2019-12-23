@@ -3450,7 +3450,7 @@
 
           <li><code>banner</code> 랜드마크는 최상위 랜드마크이어야 합니다.</li>
 
-          <li>페이지가 중첩된 <code>document</code>과/또는 <code>application</code> 역할(role)을 포함하는 경우 (예를 들어, 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(element)의 사용을 통해), 각 <code>document</code>나 <code>application</code> 역할(role)은
+          <li>페이지가 중첩된 <code>document</code>와/또는 <code>application</code> 역할(role)을 포함하는 경우 (예를 들어, 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(element)의 사용을 통해), 각 <code>document</code>나 <code>application</code> 역할(role)은
             하나의 <code>banner</code> 랜드마크가 있을 수 있습니다. </li>
 
           <li>페이지가 두 개 이상의 <code>banner</code> 랜드 마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다 (위의 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
@@ -3520,29 +3520,29 @@
       <section id="aria_lh_contentinfo">
         <h4 class="widget-name">Contentinfo</h4>
 
-        <p>A <a class="role-reference" href="#contentinfo"><code>contentinfo</code></a> landmark is a way to identify common information at the bottom of each page within a website, typically called the &quot;footer&quot; of the page, including information
-          such as copyrights and links to privacy and accessibility statements.</p>
+        <p><a class="role-reference" href="#contentinfo"><code>contentinfo</code></a> 랜드마크는 저작권 및 개인 정보 보호와 접근성 성명서에 대한 링크 같은 정보를 포함하는
+          일반적으로 페이지의 &quot;footer&quot;라고 불리는 웹 사이트 내에서 각 페이지의 하단에 있는 일반적인 정보를 식별하는 방법입니다.</p>
 
         <ul>
-          <li>Each page may have one <code>contentinfo</code> landmark.</li>
+          <li>각 페이지는 하나의 <code>contentinfo</code> 랜드마크가 있을 수 있습니다.</li>
 
-          <li>The <code>contentinfo</code> landmark should be a top-level landmark.</li>
+          <li><code>contentinfo</code> 랜드마크는 최상위 랜드마크여야 합니다.</li>
 
-          <li>When a page contains nested <code>document</code> and/or <code>application</code> roles (e.g. typically through the use of <code>iframe</code> and <code>frame</code> elements), each <code>document</code> or <code>application</code> role may have
-            one <code>contentinfo</code> landmark.</li>
+          <li>페이지가 중첩된 <code>document</code>와/또는 <code>application</code> 역할(role)을 포함하는 경우 (예를 들어, 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(element)의 사용을 통해), 각 <code>document</code>나 <code>application</code> 역할(role)은
+            하나의 <code>contentinfo</code> 랜드마크가 있을 수 있습니다.</li>
 
-          <li>If a page includes more than one <code>contentinfo</code> landmark, each should have a unique label (see <a href="#aria_lh_step3">Step 3</a> above).</li>
+          <li>페이지가 두 개 이상의 <code>contentinfo</code> 랜드마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다 (위 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
         </ul>
 
         <section class="notoc">
 
-          <h5>HTML Techniques</h5>
+          <h5>HTML 기법</h5>
 
           <ul>
-            <li>The HTML <code>footer</code> element defines a <code>contentinfo</code> landmark when its context is the <code>body</code> element.</li>
+            <li>HTML <code>footer</code> 요소(element)는 그것의 컨텍스트가 <code>body</code> 요소(element)인 경우 <code>contentinfo</code> 랜드마크를 정의합니다.</li>
 
             <li>
-              The HTML <code>footer</code> element is not considered a <code>contentinfo</code> landmark when it is descendant of any of following elements (see <a href="" class="html-mapping">HTML Accessibility Mappings</a> [[HTML-AAM]]):
+              HTML <code>footer</code> 요소(element)는 다음 요소(element)들 중 하나의 후손일 경우 <code>contentinfo</code> 랜드마크로 간주되지 않습니다 (<a href="" class="html-mapping">HTML 접근성 매핑</a> [[HTML-AAM]] 참고):
               <ul>
                 <li><code>article</code></li>
                 <li><code>aside</code></li>
@@ -3553,14 +3553,14 @@
             </li>
           </ul>
 
-          <h5>ARIA Technique</h5>
+          <h5>ARIA 기법</h5>
 
-          <p>If the HTML <code>footer</code> element technique is not being used, a <code>role=&quot;contentinfo&quot;</code> attribute should be used to define a <code>contentinfo</code> landmark.</p>
+          <p>HTML <code>footer</code> 요소(element) 기법이 사용되지 않는다면, <code>contentinfo</code> 랜드마크를 정의하도록 <code>role=&quot;contentinfo&quot;</code> 속성(attribute)이 사용되어야 합니다.</p>
         </section>
 
         <section class="notoc">
-          <h5>Examples</h5>
-          <p><a href="examples/landmarks/contentinfo.html">Contentinfo Landmark Example</a></p>
+          <h5>예제</h5>
+          <p><a href="examples/landmarks/contentinfo.html">Contentinfo 랜드마크 예</a></p>
         </section>
       </section>
 
