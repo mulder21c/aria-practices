@@ -3567,20 +3567,20 @@
       <section id="aria_lh_form">
         <h4 class="widget-name">Form</h4>
 
-        <p>A <a class="role-reference" href="#form"><code>form</code></a> landmark identifies a region that contains a collection of items and objects that, as a whole, combine to create a form when no other named landmark is appropriate (e.g. main
-          or search).</p>
+        <p><a class="role-reference" href="#form"><code>form</code></a> 랜드마크는 다른 기명 랜드마크(예를 들어, main 또는 search)가
+          적절하지 않은 경우 양식을 만들도록 전체적으로 결합되는 항목과 객체들의 모음을 포함하는 영역을 식별합니다.</p>
 
         <ul>
-          <li>Use the <code>search</code> landmark instead of the <code>form</code> landmark when the form is used for search functionality.</li>
+          <li>양식이 검색 기능으로 사용되는 경우 <code>form</code> 랜드마크 대신 <code>search</code> 랜드마크를 사용하세요.</li>
 
-          <li>A <code>form</code> landmark should have a label to help users understand the purpose of the form.</li>
+          <li><code>form</code> 랜드마크는 사용자들이 양식의 목적을 이해할 수 있도록 레이블을 가져야 합니다.</li>
 
-          <li>A label for the <code>form</code> landmark should be visible to all users (e.g. an <code>h1-h6</code> element).</li>
+          <li><code>form</code> 랜드마크에 대한 레이블은 모든 사용자들에게 잘 보여야 합니다(예를 들어, <code>h1-h6</code> 요소(element)).</li>
 
-          <li>If a page includes more than one <code>form</code> landmark, each should have a unique label (see <a href="#aria_lh_step3">Step 3</a> above).</li>
+          <li>페이지가 둘 이상의 <code>form</code> 랜드마크를 포함하는 경우, 각각은 고유한 레이블을 가져야 합니다 (위 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
 
           <li>
-            Whenever possible, controls contained in a <code>form</code> landmark in an HTML document should use native host semantics:
+            가능한 항상 HTML 문서의 <code>form</code> 랜드마크에 포함된 컨트롤들은 네이티브 호스트 의미론을 사용해야 합니다:
             <ul>
               <li><code>button</code></li>
 
@@ -3594,19 +3594,19 @@
         </ul>
 
         <section class="notoc">
-          <h5>HTML Techniques</h5>
+          <h5>HTML 기법</h5>
 
-          <p>The HTML <code>form</code> element defines a <code>form</code> landmark when it has an accessible name (e.g. <code>aria-labelledby</code>, <code>aria-label</code> or <code>title</code>).</p>
+          <p>HTML <code>form</code> 요소(element)는 접근 가능한 이름 (예를 들어, <code>aria-labelledby</code>, <code>aria-label</code>나 <code>title</code>)을 가질 때 <code>form</code> 랜드마크를 정의합니다.</p>
 
-          <h5>ARIA Technique</h5>
+          <h5>ARIA 기법</h5>
 
-          <p>Use the <code>role=&quot;form&quot;</code> to identify a region of the page; do not use it to identify every form field.</p>
+          <p>페이지의 영역을 식별하도록 <code>role=&quot;form&quot;</code> 을 사용하세요; 모든 양식 필드를 식별하는데 사용하지 마세요.</p>
         </section>
 
         <section class="notoc">
-          <h5>Examples</h5>
+          <h5>예제</h5>
 
-          <p><a href="examples/landmarks/form.html">Form Landmark Example</a></p>
+          <p><a href="examples/landmarks/form.html">Form 랜드마크 예</a></p>
         </section>
       </section>
 
