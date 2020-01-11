@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.0.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.0.4"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 .issue-label {
     text-transform: initial;
 }
@@ -425,95 +425,85 @@ h6 > a.self-link::before {
 <meta name="description" content="이 문서는 독자에게 접근 가능한 리치 인터넷 어플리케이션을 만드는데 WAI-ARIA 1.2 [WAI-ARIA]를 어떻게 사용하는지에 대한 이해를 제공합니다.
       WAI-ARIA 명세만으로는 대다수의 작성자에게 명확하지 않을 수 있는 고려 사항들을 설명하고 WAI-ARIA 역할(role), 상태(state), 속성(property)을 사용하여 위젯, 내비게이션, 동작을 접근 가능하게 할 수 있는 처리 방법을 추천합니다.
       이 문서는 주로 웹 어플리케이션 개발자들을 대상으로 하지만, 지침은 유저 에이전트와 보조 기술 개발자에게도 유용합니다."><link rel="canonical" href="https://www.w3.org/TR/wai-aria-practices-1.2/"><style>/*
-
-github.com style (c) Vasily Polovnyov <vast@whiteants.net>
-
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+base:    #fafafa
+mono-1:  #383a42
+mono-2:  #686b77
+mono-3:  #a0a1a7
+hue-1:   #0184bb
+hue-2:   #4078f2
+hue-3:   #a626a4
+hue-4:   #50a14f
+hue-5:   #e45649
+hue-5-2: #c91243
+hue-6:   #986801
+hue-6-2: #c18401
 */
 
 .hljs {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  color: #333;
-  background: #f8f8f8;
+  color: #383a42;
+  background: #fafafa;
 }
 
 .hljs-comment,
 .hljs-quote {
-  color: #998;
+  color: #a0a1a7;
   font-style: italic;
 }
 
+.hljs-doctag,
 .hljs-keyword,
-.hljs-selector-tag,
-.hljs-subst {
-  color: #333;
-  font-weight: bold;
+.hljs-formula {
+  color: #a626a4;
 }
 
-.hljs-number,
-.hljs-literal,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag .hljs-attr {
-  color: #008080;
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
 }
 
 .hljs-string,
-.hljs-doctag {
-  color: #d14;
-}
-
-.hljs-title,
-.hljs-section,
-.hljs-selector-id {
-  color: #900;
-  font-weight: bold;
-}
-
-.hljs-subst {
-  font-weight: normal;
-}
-
-.hljs-type,
-.hljs-class .hljs-title {
-  color: #458;
-  font-weight: bold;
-}
-
-.hljs-tag,
-.hljs-name,
-.hljs-attribute {
-  color: #000080;
-  font-weight: normal;
-}
-
 .hljs-regexp,
-.hljs-link {
-  color: #009926;
-}
-
-.hljs-symbol,
-.hljs-bullet {
-  color: #990073;
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+  color: #50a14f;
 }
 
 .hljs-built_in,
-.hljs-builtin-name {
-  color: #0086b3;
+.hljs-class .hljs-title {
+  color: #c18401;
 }
 
-.hljs-meta {
-  color: #999;
-  font-weight: bold;
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
 }
 
-.hljs-deletion {
-  background: #fdd;
-}
-
-.hljs-addition {
-  background: #dfd;
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
 }
 
 .hljs-emphasis {
@@ -522,6 +512,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 .hljs-strong {
   font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
 }
 </style><style>var {
   position: relative;
@@ -843,16 +837,16 @@ var[data-type]:hover::before {
   "preProcess": [
     null
   ],
-  "publishDate": "2019-12-31",
-  "publishISODate": "2019-12-31T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 31 December 2019"
+  "publishDate": "2020-01-11",
+  "publishISODate": "2020-01-11T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 11 January 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 <body class="h-entry informative"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">WAI-ARIA 작성 방법 1.2</h1>
       
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2019-12-31">31 December 2019</time>
+        <time class="dt-published" datetime="2020-01-11">11 January 2020</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -896,7 +890,7 @@ var[data-type]:hover::before {
       <p class="copyright">
       <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
       ©
-      2018-2019
+      2018-2020
       
       <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
       <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
@@ -4386,12 +4380,12 @@ var[data-type]:hover::before {
         </p>
 
         <ul>
-          <li>각 페이지는 하나의 <code>banner</code> 랜드마크가 있을 수 있습니다.</li>
+          <li>각 페이지는 하나의 <code>banner</code> 랜드마크를 가질 수 있습니다.</li>
 
           <li><code>banner</code> 랜드마크는 최상위 랜드마크이어야 합니다.</li>
 
           <li>페이지가 중첩된 <code>document</code>와/또는 <code>application</code> 역할(role)을 포함하는 경우 (예를 들어, 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(element)의 사용을 통해), 각 <code>document</code>나 <code>application</code> 역할(role)은
-            하나의 <code>banner</code> 랜드마크가 있을 수 있습니다. </li>
+            하나의 <code>banner</code> 랜드마크를 가질 수 있습니다. </li>
 
           <li>페이지가 두 개 이상의 <code>banner</code> 랜드 마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다 (위의 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
         </ul>
@@ -4464,12 +4458,12 @@ var[data-type]:hover::before {
           일반적으로 페이지의 "footer"라고 불리는 웹 사이트 내에서 각 페이지의 하단에 있는 일반적인 정보를 식별하는 방법입니다.</p>
 
         <ul>
-          <li>각 페이지는 하나의 <code>contentinfo</code> 랜드마크가 있을 수 있습니다.</li>
+          <li>각 페이지는 하나의 <code>contentinfo</code> 랜드마크를 가질 수 있습니다.</li>
 
           <li><code>contentinfo</code> 랜드마크는 최상위 랜드마크여야 합니다.</li>
 
           <li>페이지가 중첩된 <code>document</code>와/또는 <code>application</code> 역할(role)을 포함하는 경우 (예를 들어, 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(element)의 사용을 통해), 각 <code>document</code>나 <code>application</code> 역할(role)은
-            하나의 <code>contentinfo</code> 랜드마크가 있을 수 있습니다.</li>
+            하나의 <code>contentinfo</code> 랜드마크를 가질 수 있습니다.</li>
 
           <li>페이지가 두 개 이상의 <code>contentinfo</code> 랜드마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다 (위 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
         </ul>
@@ -4553,31 +4547,31 @@ var[data-type]:hover::before {
       <section id="aria_lh_main">
         <h4 class="widget-name" id="x4-3-5-main"><bdi class="secno">4.3.5 </bdi>Main<a class="self-link" aria-label="§" href="#aria_lh_main"></a></h4>
 
-        <p>A <a class="role-reference" href="https://w3c.github.io/aria/#main"><code>main</code></a> landmark identifies the primary content of the page.</p>
+        <p><a class="role-reference" href="https://w3c.github.io/aria/#main"><code>main</code></a> 랜드마크는 페이지의 주요(primary) 콘텐트를 식별합니다.</p>
 
         <ul>
-          <li>Each page should have one <code>main</code> landmark.</li>
+          <li>각 페이지는 하나의 <code>main</code> 랜드마크를 가져야 합니다.</li>
 
-          <li>The <code>main</code> landmark should be a top-level landmark.</li>
+          <li><code>main</code> 랜드마크는 최상위 랜드마크여야 합니다.</li>
 
-          <li>When a page contains nested <code>document</code> and/or <code>application</code> roles (e.g. typically through the use of <code>iframe</code> and <code>frame</code> elements), each <code>document</code> or <code>application</code> role may have
-            one <code>main</code> landmark.</li>
+          <li>페이지에 중첩된 <code>document</code>와/또는 <code>application</code> 역할(roles)을 포함하는 경우 (예를 들어, 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(elements)의 사용을 통해), 각 <code>document</code>나 <code>application</code> 역할(role)은 하나의
+            <code>main</code> 랜드마크를 가질 수 있습니다.</li>
 
-          <li>If a page includes more than one <code>main</code> landmark, each should have a unique label (see <a href="#aria_lh_step3">Step 3</a> above).</li>
+          <li>페이지가 둘 이상의 <code>main</code> 랜드마크를 포함하는 경우, 각각은 고유한 레이블을 가져야 합니다 (위 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
         </ul>
 
         <section class="notoc">
-          <h5 id="html-technique">HTML Technique<a class="self-link" aria-label="§" href="#html-technique"></a></h5>
+          <h5 id="html-3">HTML 기법<a class="self-link" aria-label="§" href="#html-3"></a></h5>
 
-          <p>Use the HTML <code>main</code> element to define a <code>main</code> landmark.</p>
+          <p><code>main</code> 랜드마크를 정의하도록 HTML <code>main</code> 요소(element)를 사용하세요.</p>
 
-          <h5 id="aria-technique">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique"></a></h5>
+          <h5 id="aria-3">ARIA 기법<a class="self-link" aria-label="§" href="#aria-3"></a></h5>
 
-          <p>If the HTML <code>main</code> element technique is not being used, use a <code>role="main"</code> attribute to define a <code>main</code> landmark.</p>
+          <p><code>role="main"</code> attribute <code>role="main"</code> 속성(attribute)을 사용하세요.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-15">Examples<a class="self-link" aria-label="§" href="#examples-15"></a></h5>
+          <h5 id="generatedID-9">예제<a class="self-link" aria-label="§" href="#generatedID-9"></a></h5>
 
           <p><a href="examples/landmarks/main.html">Main Landmark Example</a></p>
         </section>
@@ -4595,18 +4589,18 @@ var[data-type]:hover::before {
         </ul>
 
         <section class="notoc">
-          <h5 id="html-technique-0">HTML Technique<a class="self-link" aria-label="§" href="#html-technique-0"></a></h5>
+          <h5 id="html-technique">HTML Technique<a class="self-link" aria-label="§" href="#html-technique"></a></h5>
 
           <p>Use the HTML <code>nav</code> element to define a <code>navigation</code> landmark.</p>
 
-          <h5 id="aria-technique-0">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-0"></a></h5>
+          <h5 id="aria-technique">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique"></a></h5>
 
           <p>If the HTML <code>nav</code> element technique is not being used, use a <code>role="navigation"</code> attribute to define a <code>navigation</code> landmark.</p>
 
         </section>
 
         <section class="notoc">
-          <h5 id="examples-16">Examples<a class="self-link" aria-label="§" href="#examples-16"></a></h5>
+          <h5 id="examples-15">Examples<a class="self-link" aria-label="§" href="#examples-15"></a></h5>
 
           <p><a href="examples/landmarks/navigation.html">Navigation Landmark Example</a></p>
         </section>
@@ -4626,17 +4620,17 @@ var[data-type]:hover::before {
         </ul>
 
         <section class="notoc">
-          <h5 id="html-technique-1">HTML Technique<a class="self-link" aria-label="§" href="#html-technique-1"></a></h5>
+          <h5 id="html-technique-0">HTML Technique<a class="self-link" aria-label="§" href="#html-technique-0"></a></h5>
 
           <p>The HTML <code>section</code> element defines a <code>region</code> landmark when it has an accessible name (e.g. <code>aria-labelledby</code>, <code>aria-label</code> or <code>title</code>).</p>
 
-          <h5 id="aria-technique-1">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-1"></a></h5>
+          <h5 id="aria-technique-0">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-0"></a></h5>
 
           <p>If the HTML <code>section</code> element technique is not being used, use a <code>role="region"</code> attribute to define a <code>region</code> landmark.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-17">Examples<a class="self-link" aria-label="§" href="#examples-17"></a></h5>
+          <h5 id="examples-16">Examples<a class="self-link" aria-label="§" href="#examples-16"></a></h5>
 
           <p><a href="examples/landmarks/region.html">Region Landmark Example</a></p>
         </section>
@@ -4654,16 +4648,16 @@ var[data-type]:hover::before {
         </ul>
 
         <section class="notoc">
-          <h5 id="html-technique-2">HTML Technique<a class="self-link" aria-label="§" href="#html-technique-2"></a></h5>
+          <h5 id="html-technique-1">HTML Technique<a class="self-link" aria-label="§" href="#html-technique-1"></a></h5>
           <p>There is no HTML element that defines a <code>search</code> landmark.</p>
 
-          <h5 id="aria-technique-2">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-2"></a></h5>
+          <h5 id="aria-technique-1">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-1"></a></h5>
 
           <p>The <code>role="search"</code> attribute defines a <code>search</code> landmark.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-18">Examples<a class="self-link" aria-label="§" href="#examples-18"></a></h5>
+          <h5 id="examples-17">Examples<a class="self-link" aria-label="§" href="#examples-17"></a></h5>
 
           <p><a href="examples/landmarks/search.html">Search Landmark Example</a></p>
         </section>
