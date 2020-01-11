@@ -3613,31 +3613,31 @@
       <section id="aria_lh_main">
         <h4 class="widget-name">Main</h4>
 
-        <p>A <a class="role-reference" href="#main"><code>main</code></a> landmark identifies the primary content of the page.</p>
+        <p><a class="role-reference" href="#main"><code>main</code></a> 랜드마크는 페이지의 주요(primary) 콘텐트를 식별합니다.</p>
 
         <ul>
-          <li>Each page should have one <code>main</code> landmark.</li>
+          <li>각 페이지는 하나의 <code>main</code> 랜드마크를 가져야 합니다.</li>
 
-          <li>The <code>main</code> landmark should be a top-level landmark.</li>
+          <li><code>main</code> 랜드마크는 최상위 랜드마크여야 합니다.</li>
 
-          <li>When a page contains nested <code>document</code> and/or <code>application</code> roles (e.g. typically through the use of <code>iframe</code> and <code>frame</code> elements), each <code>document</code> or <code>application</code> role may have
-            one <code>main</code> landmark.</li>
+          <li>페이지에 중첩된 <code>document</code>와/또는 <code>application</code> 역할(roles)을 포함하는 경우 (예를 들어, 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(elements)의 사용을 통해), 각 <code>document</code>나 <code>application</code> 역할(role)은 하나의
+            <code>main</code> 랜드마크를 가질 수 있습니다.</li>
 
-          <li>If a page includes more than one <code>main</code> landmark, each should have a unique label (see <a href="#aria_lh_step3">Step 3</a> above).</li>
+          <li>페이지가 둘 이상의 <code>main</code> 랜드마크를 포함하는 경우, 각각은 고유한 레이블을 가져야 합니다 (위 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
         </ul>
 
         <section class="notoc">
-          <h5>HTML Technique</h5>
+          <h5>HTML 기법</h5>
 
-          <p>Use the HTML <code>main</code> element to define a <code>main</code> landmark.</p>
+          <p><code>main</code> 랜드마크를 정의하도록 HTML <code>main</code> 요소(element)를 사용하세요.</p>
 
-          <h5>ARIA Technique</h5>
+          <h5>ARIA 기법</h5>
 
-          <p>If the HTML <code>main</code> element technique is not being used, use a <code>role=&quot;main&quot;</code> attribute to define a <code>main</code> landmark.</p>
+          <p><code>role=&quot;main&quot;</code> attribute <code>role=&quot;main&quot;</code> 속성(attribute)을 사용하세요.</p>
         </section>
 
         <section class="notoc">
-          <h5>Examples</h5>
+          <h5>예제</h5>
 
           <p><a href="examples/landmarks/main.html">Main Landmark Example</a></p>
         </section>

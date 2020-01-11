@@ -1,7 +1,7 @@
 <!DOCTYPE html >
-<html lang="en">
+<html lang="ko">
   <head>
-    <title>Main Landmark: ARIA Landmarks Example</title>
+    <title>Main 랜드마크: ARIA 랜드마크 예제</title>
     <meta charset="utf-8">
     <link href="css/bootstrap.css" rel="stylesheet" media="screen"/>
     <link href="css/bootstrap-theme.css" rel="stylesheet" media="screen"/>
@@ -17,17 +17,17 @@
           <img src="images/w3c.png" alt="W3C Logo" />
         </div>
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
-          <h1>ARIA Landmarks Example</h1>
-          <p id="inst" class="inst">Visually outline the landmarks and/or headings on the page using the following buttons.</p>
-          <button type="button" onclick="showLandmarks(event)" aria-describedby="inst">Show Landmarks</button>
-          <button type="button" onclick="showHeadings(event)"  aria-describedby="inst">Show Headings</button>
+          <h1>ARIA 랜드마크 예제</h1>
+          <p id="inst" class="inst">다음 버튼을 사용하여 페이지의 랜드마크와/또는 헤딩에 대해 시각적으로 윤곽을 보세요.</p>
+          <button type="button" onclick="showLandmarks(event)" aria-describedby="inst">랜드마크 보기</button>
+          <button type="button" onclick="showHeadings(event)"  aria-describedby="inst">헤딩 보기</button>
         </div>
       </header>
       <div class="row">
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
           <nav>
             <ul class="nav nav-pills nav-stacked">
-              <li><a href="index.html">Principles</a></li>
+              <li><a href="index.html">원칙</a></li>
               <li><a href="HTML5.html">HTML</a></li>
               <li><a href="banner.html">Banner</a></li>
               <li><a href="complementary.html">Complementary</a></li>
@@ -37,60 +37,60 @@
               <li><a href="navigation.html">Navigation</a></li>
               <li><a href="region.html">Region</a></li>
               <li><a href="search.html">Search</a></li>
-              <li><a href="at.html" aria-label="Assistive Technology">Asst. Tech.</a></li>
-              <li><a href="resources.html">Resources</a></li>
+              <li><a href="at.html" aria-label="Assistive Technology">보조 기술</a></li>
+              <li><a href="resources.html">참조</a></li>
             </ul>
           </nav>
         </div>
         <div class="col-xs-12 col-sm-9 col-md-6 col-lg-7">
           <main>
-            <h1 id="id1"> Main Landmark</h1>
-            <p> A <code>main</code> landmark identifies the primary content of the page. </p>
-            <p> ARIA 1.1 Specification: <a href="https://www.w3.org/TR/wai-aria-1.1/#main"><code>main</code> landmark</a> </p>
-            <h2>Design Patterns</h2>
+            <h1 id="id1"> Main 랜드마크</h1>
+            <p> <code>main</code> 랜드마크는 페이지의 주요(primary) 콘텐트를 식별합니다. </p>
+            <p> ARIA 1.1 명세: <a href="https://www.w3.org/TR/wai-aria-1.1/#main"><code>main</code> 랜드마크</a> </p>
+            <h2>디자인 패턴</h2>
             <ul>
-              <li>Each page should have one <code>main</code> landmark.</li>
-              <li>The <code>main</code> landmark should be a top-level landmark.</li>
-              <li>When a page contains nested <code>document</code> and/or <code>application</code> roles (e.g. typically through the use of <code>iframe</code> and <code>frame</code> elements), 
-                each <code>document</code> or <code>application</code> role may have one <code>main</code> landmark.
+              <li>각 페이지는 하나의 <code>main</code> 랜트마크를 가져야 합니다.</li>
+              <li><code>main</code> 랜드마크는 최상위 랜드마크여야 합니다.</li>
+              <li>페이지에 중첩된 <code>document</code> 와/또는 <code>application</code> 역할(roles)을 포함하는 경우 (예를 들어 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(element)의 사용을 통해),
+                각 <code>document</code>나 <code>application</code> 역할(role)은 하나의 <code>main</code> 랜드마크를 가질 수 있습니다.
               </li>
-              <li>If a page includes more than one <code>main</code> landmark, each should have a unique label.</li>
+              <li>페이지가 둘 이상의 <code>main</code> 랜드마크를 포함하는 경우, 각각은 고유한 레이블을 가져야 합니다.</li>
             </ul>
             <section aria-label="Coding Techniques">
               <ul id="myTabs" class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab" data-toggle="tab">ARIA Techniques</a></li>
-                <li role="presentation"><a id="tab2" href="#tabpanel2" aria-controls="tabpanel2" role="tab" data-toggle="tab">HTML Techniques</a></li>
+                <li role="presentation" class="active"><a id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab" data-toggle="tab">ARIA 기법</a></li>
+                <li role="presentation"><a id="tab2" href="#tabpanel2" aria-controls="tabpanel2" role="tab" data-toggle="tab">HTML 기법</a></li>
               </ul>
               <div class="tab-content">
                 <div id="tabpanel1" aria-labelledby="tab1" role="tabpanel" class="tab-pane active">
-                  <p>A <code>role="main"</code> attribute is used to define a <code>main</code> landmark.</p>
+                  <p><code>main</code> 랜드마크를 정의하도록 <code>role="main"</code> 속성(attribute)이 사용됩니다.</p>
 
-                  <h3>ARIA Example: One Main Landmark</h3>
+                  <h3>ARIA 예제: 한 개 Main 랜드마크</h3>
 
-                  <p>When only one main landmark exists on a page, a label is optional.</p>
+                  <p>페이지에 한 개 main 랜드마크만 존재하는 경우, 레이블은 선택적입니다.</p>
 
                   <div class="code">
                     &lt;div <strong>role="main"&gt;</strong>
                     <br>
                     <br>
-                    &nbsp;&nbsp;&lt;h1&gt;<em>title for main content</em>&lt;h1&gt;<br>
+                    &nbsp;&nbsp;&lt;h1&gt;<em>주요 콘텐트에 대한 제목</em>&lt;h1&gt;<br>
                     <br>
-                    &nbsp;&nbsp;.... <em>main content area</em> ....   <br>
+                    &nbsp;&nbsp;.... <em>주요 콘텐트 영역</em> ....   <br>
                     <br>
                     &lt;/div&gt;
                   </div>
 
-                  <h3>ARIA Example: Multiple Main Landmarks</h3>
+                  <h3>ARIA 예제: 여러 Main 랜드마크</h3>
 
-                  <p>When there is more than one main landmark on a page, each should have a unique label.</p>
+                  <p>페이지에 두 개 이상의 랜드마크가 있는 경우, 각각은 고유의 레이블을 가져야 합니다.</p>
 
                   <div class="code">
                     &lt;div <strong>role="main"  aria-labelledby="<em>title1</em>"</strong>&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&lt;h1 <strong>id="<em>title1</em>"</strong>&gt;<em>title for main content area 1</em>&lt;h1&gt;<br>
+                    &nbsp;&nbsp;&lt;h1 <strong>id="<em>title1</em>"</strong>&gt;<em>주요 콘텐트 영역 1에 대한 제목</em>&lt;h1&gt;<br>
                     <br>
-                    &nbsp;&nbsp;.... <em>main content area 1</em> ....<br>
+                    &nbsp;&nbsp;.... <em>주요 콘텐트 영역 1</em> ....<br>
                     <br>
                     &lt;/div&gt;
                     <br>
@@ -100,9 +100,9 @@
                     &lt;div <strong>role="main"  aria-labelledby="<em>title2</em>"</strong>&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&lt;h1 <strong>id="<em>title2</em>"</strong>&gt;<em>title for main content area 2</em>&lt;h1&gt;<br>
+                    &nbsp;&nbsp;&lt;h1 <strong>id="<em>title2</em>"</strong>&gt;<em>주요 콘텐트 영역 2에 대한 제목</em>&lt;h1&gt;<br>
                     <br>
-                    &nbsp;&nbsp;.... <em>main content area 2</em> ....<br>
+                    &nbsp;&nbsp;.... <em>주요 콘텐트 영역 2</em> ....<br>
                     <br>
                     &lt;/div&gt;
                     <br>
@@ -112,34 +112,34 @@
                 </div>
                 <div id="tabpanel2" aria-labelledby="tab2" role="tabpanel" class="tab-pane">
 
-                  <p>Use the HTML <code>main</code> element to define a <code>main</code> landmark.</p>
+                  <p><code>main</code> 랜드마크를 정의하도록 HTML <code>main</code> 요소(element)를 사용하세요.</p>
 
-                  <h3>HTML Example: One Main Landmark</h3>
+                  <h3>HTML 예제: 한 개 Main 랜드마크</h3>
 
-                  <p>When only one main landmark on a page, a label is optional.</p>
+                  <p>페이지에 한 개 main 랜드마크만 존재하는 경우, 레이블은 선택적입니다.</p>
 
                   <div class="code">
                     <strong>&lt;main&gt;</strong>
                     <br>
                     <br>
-                    &nbsp;&nbsp;&lt;h1&gt;<em>title for main content</em>&lt;h1&gt;<br>
+                    &nbsp;&nbsp;&lt;h1&gt;<em>주요 콘텐트에 대한 제목</em>&lt;h1&gt;<br>
                     <br>
-                    &nbsp;&nbsp;.... <em>main content area </em> ....   <br>
+                    &nbsp;&nbsp;.... <em>주요 콘텐트 영역</em> ....   <br>
                     <br>
                     <strong>&lt;/main&gt;</strong>
                   </div>
-                  
-                  <h3>HTML Example: Multiple Main Landmarks</h3>
 
-                  <p>When there is more than one main landmark on a page, each should have a unique label.</p>
+                  <h3>HTML 예제: 여러 Main 랜드마크</h3>
+
+                  <p>페이지에 두 개 이상의 main 랜드마크가 있는 경우, 각각은 ㅣ고유의 레이블을 가져야 합니다.</p>
 
                   <div class="code">
                     <strong>&lt;main  aria-labelledby="<em>title1</em>"&gt;</strong>
                     <br>
                     <br>
-                    &nbsp;&nbsp;&lt;h1 <strong>id="<em>title1</em>"</strong>&gt;<em>title for main content area 1</em>&lt;h1&gt;<br>
+                    &nbsp;&nbsp;&lt;h1 <strong>id="<em>title1</em>"</strong>&gt;<em>주요 콘텐트 영역 1에 대한 제목</em>&lt;h1&gt;<br>
                     <br>
-                    &nbsp;&nbsp;.... <em>main content area 1</em> ....<br>
+                    &nbsp;&nbsp;.... <em>주요 콘텐트 영역 1</em> ....<br>
                     <br>
                     <strong>&lt;/main&gt;</strong>
                     <br>
@@ -149,9 +149,9 @@
                     <strong>&lt;main  aria-labelledby="<em>title2</em>"&gt;</strong>
                     <br>
                     <br>
-                    &nbsp;&nbsp;&lt;h1 <strong>id="<em>title2</em>"</strong>&gt;<em>title for main content area 2</em>&lt;h1&gt;<br>
+                    &nbsp;&nbsp;&lt;h1 <strong>id="<em>title2</em>"</strong>&gt;<em>주요 콘텐트 영역 2에 대한 제목</em>&lt;h1&gt;<br>
                     <br>
-                    &nbsp;&nbsp;.... <em>main content area 2</em> ....<br>
+                    &nbsp;&nbsp;.... <em>주요 콘텐트 영역 2</em> ....<br>
                     <br>
                     <strong>&lt;/main&gt;</strong>
                     <br>
@@ -164,8 +164,8 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
           <aside aria-labelledby="id4">
-            <h2 id="id4">Landmarks</h2>
-            <p>The following landmarks are defined on this page:</p>
+            <h2 id="id4">랜드마크</h2>
+            <p>이 페이지에는 다음의 랜드마크들이 정의되어 있습니다:</p>
             <ul>
               <li>Banner</li>
               <li>Complementary</li>
@@ -175,7 +175,7 @@
             </ul>
           </aside>
           <aside aria-labelledby="id3">
-            <h2 id="id3">Related Documents</h2>
+            <h2 id="id3">관련 문서</h2>
             <ul>
               <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/">WAI-ARIA Authoring Practices 1.1</a></li>
               <li><a href="http://www.w3.org/TR/2014/REC-wai-aria-20140320/">WAI-ARIA 1.0 Specification</a></li>
@@ -202,12 +202,12 @@
         </footer>
       </div>
     </div>
-    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>        
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>        
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-accessibility.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-accessibility-2.js"></script>       
-    <script type="text/javascript" src="js/visua11y.js"></script>        
-    <script type="text/javascript" src="js/show.js"></script>        
+    <script type="text/javascript" src="js/bootstrap-accessibility-2.js"></script>
+    <script type="text/javascript" src="js/visua11y.js"></script>
+    <script type="text/javascript" src="js/show.js"></script>
     <script type="text/javascript" >
       // Use the SkipTo defaults, but just showing custom configuration
       var SkipToConfig =
@@ -220,6 +220,6 @@
         }
       };
     </script>
-    <script type="text/javascript" src="js/SkipTo.min.js"></script>      
+    <script type="text/javascript" src="js/SkipTo.min.js"></script>
   </body>
 </html>
