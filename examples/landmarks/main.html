@@ -49,9 +49,9 @@
             <p> ARIA 1.1 명세: <a href="https://www.w3.org/TR/wai-aria-1.1/#main"><code>main</code> 랜드마크</a> </p>
             <h2>디자인 패턴</h2>
             <ul>
-              <li>각 페이지는 하나의 <code>main</code> 랜트마크를 가져야 합니다.</li>
+              <li>각 페이지는 하나의 <code>main</code> 랜드마크를 가져야 합니다.</li>
               <li><code>main</code> 랜드마크는 최상위 랜드마크여야 합니다.</li>
-              <li>페이지에 중첩된 <code>document</code> 와/또는 <code>application</code> 역할(roles)을 포함하는 경우 (예를 들어 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(element)의 사용을 통해),
+              <li>페이지가 중첩된 <code>document</code>와/또는 <code>application</code> 역할(roles)을 포함하는 경우 (예를 들어 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(elements)의 사용을 통해),
                 각 <code>document</code>나 <code>application</code> 역할(role)은 하나의 <code>main</code> 랜드마크를 가질 수 있습니다.
               </li>
               <li>페이지가 둘 이상의 <code>main</code> 랜드마크를 포함하는 경우, 각각은 고유한 레이블을 가져야 합니다.</li>
@@ -67,7 +67,7 @@
 
                   <h3>ARIA 예제: 한 개 Main 랜드마크</h3>
 
-                  <p>페이지에 한 개 main 랜드마크만 존재하는 경우, 레이블은 선택적입니다.</p>
+                  <p>페이지에 오직 하나의 main 랜드마크만 존재한다면, 레이블은 선택적입니다.</p>
 
                   <div class="code">
                     &lt;div <strong>role="main"&gt;</strong>
@@ -82,7 +82,7 @@
 
                   <h3>ARIA 예제: 여러 Main 랜드마크</h3>
 
-                  <p>페이지에 두 개 이상의 랜드마크가 있는 경우, 각각은 고유의 레이블을 가져야 합니다.</p>
+                  <p>페이지에 둘 이상의 main 랜드마크가 있다면, 각각은 고유한 레이블을 가져야 합니다.</p>
 
                   <div class="code">
                     &lt;div <strong>role="main"  aria-labelledby="<em>title1</em>"</strong>&gt;
@@ -116,7 +116,7 @@
 
                   <h3>HTML 예제: 한 개 Main 랜드마크</h3>
 
-                  <p>페이지에 한 개 main 랜드마크만 존재하는 경우, 레이블은 선택적입니다.</p>
+                  <p>페이지에 하나의 main 랜드마크만 있다면, 레이블은 선택적입니다.</p>
 
                   <div class="code">
                     <strong>&lt;main&gt;</strong>
@@ -131,7 +131,7 @@
 
                   <h3>HTML 예제: 여러 Main 랜드마크</h3>
 
-                  <p>페이지에 두 개 이상의 main 랜드마크가 있는 경우, 각각은 ㅣ고유의 레이블을 가져야 합니다.</p>
+                  <p>페이지에 둘 이상의 main 랜드마크가 있다면, 각각은 고유한 레이블을 가져야 합니다.</p>
 
                   <div class="code">
                     <strong>&lt;main  aria-labelledby="<em>title1</em>"&gt;</strong>
