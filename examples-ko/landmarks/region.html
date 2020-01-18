@@ -1,7 +1,7 @@
 <!DOCTYPE html >
-<html lang="en">
+<html lang="ko">
   <head>
-    <title>Region Landmark: ARIA Landmarks Example</title>
+    <title>Region 랜드마크: ARIA 랜드마크 예제</title>
     <meta charset="utf-8">
     <link href="css/bootstrap.css" rel="stylesheet" media="screen"/>
     <link href="css/bootstrap-theme.css" rel="stylesheet" media="screen"/>
@@ -16,17 +16,17 @@
           <img src="images/w3c.png" alt="W3C Logo" />
         </div>
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
-          <h1>ARIA Landmarks Example</h1>
-          <p id="inst" class="inst">Visually outline the landmarks and/or headings on the page using the following buttons.</p>
-          <button type="button" onclick="showLandmarks(event)" aria-describedby="inst">Show Landmarks</button>
-          <button type="button" onclick="showHeadings(event)"  aria-describedby="inst">Show Headings</button>
+          <h1>ARIA 랜드마크 예제</h1>
+          <p id="inst" class="inst">다음 버튼을 사용하여 페이지의 랜드마크와/또는 헤딩에 대해 시각적으로 윤곽을 보세요.</p>
+          <button type="button" onclick="showLandmarks(event)" aria-describedby="inst">랜드마크 보기</button>
+          <button type="button" onclick="showHeadings(event)" aria-describedby="inst">헤딩 보기</button>
         </div>
       </header>
       <div class="row">
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
           <nav>
             <ul class="nav nav-pills nav-stacked">
-              <li><a href="index.html">Principles</a></li>
+              <li><a href="index.html">원칙</a></li>
               <li><a href="HTML5.html">HTML</a></li>
               <li><a href="banner.html">Banner</a></li>
               <li><a href="complementary.html">Complementary</a></li>
@@ -36,47 +36,47 @@
               <li><a href="navigation.html">Navigation</a></li>
               <li class="active"><a href="region.html" aria-current="page">Region</a></li>
               <li><a href="search.html">Search</a></li>
-              <li><a href="at.html" aria-label="Assistive Technology">Asst. Tech.</a></li>
-              <li><a href="resources.html">Resources</a></li>
+              <li><a href="at.html" aria-label="Assistive Technology">보조 기술</a></li>
+              <li><a href="resources.html">참조</a></li>
             </ul>
           </nav>
         </div>
         <div class="col-xs-12 col-sm-9 col-md-6 col-lg-7">
           <main>
-            <h1 id="id1"> Region Landmark</h1>
-            <p> A <code>region</code> landmark is a perceivable section containing content that is relevant to a specific, author-specified purpose and sufficiently important that users will likely want to be able to navigate to the section easily and to have it listed in a summary of the page.</p>
-            <p> ARIA 1.1 Specification: <a href="https://www.w3.org/TR/wai-aria-1.1/#region"><code>region</code> landmark</a></p>
-            
-            <h2>Design Patterns</h2>
+            <h1 id="id1"> Region 랜드마크</h1>
+            <p> <code>region</code> 랜드마크는 랜드마크는 사용자가 섹션으로 이동 할 수 있어야 할 정도로 충분히 중요한 콘텐트를 포함하는 페이지의 인식 가능한 섹션입니다.</p>
+            <p> ARIA 1.1 명세: <a href="https://www.w3.org/TR/wai-aria-1.1/#region"><code>region</code> 랜드마크</a></p>
+
+            <h2>디자인 패턴</h2>
             <ul>
-              <li>A <code>region</code> landmark must have a label.</li>
-              <li>If a page includes more than one <code>region</code> landmark, each should have a unique label.</li>
-              <li>The <code>region</code> landmark can be used identify content that named landmarks do not appropriately describe.</li>
+              <li><code>region</code> 랜드마크는 레이블을 가져야(must) 합니다.</li>
+              <li>페이지가 둘 이상의 <code>region</code> 랜드마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다</li>
+              <li><code>region</code> 랜드마크는 기명 랜드마크로는 적절하게 설명할 수 없는 콘텐트를 식별하는데 사용될 수 있습니다.</li>
             </ul>
 
             <section aria-label="Coding Techniques">
               <ul id="myTabs" class="nav nav-tabs" role="tablist">
-                <li class="active"><a id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab" data-toggle="tab">ARIA Techniques</a></li>
-                <li><a id="tab2" href="#tabpanel2" aria-controls="tabpanel2"  role="tab" data-toggle="tab">HTML Techniques</a></li>
+                <li class="active"><a id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab" data-toggle="tab">ARIA 기법</a></li>
+                <li><a id="tab2" href="#tabpanel2" aria-controls="tabpanel2"  role="tab" data-toggle="tab">HTML 기법</a></li>
               </ul>
 
-              <section aria-label="Coding Techniques">
+              <div class="tab-content">
                 <div id="tabpanel1" aria-labelledby="tab1" role="tabpanel" class="tab-pane active">
-                  <p>A <code>role="region"</code> attribute is used to define a <code>region</code> landmark.</p>
+                  <p><code>role="region"</code> 속성(attribute)이 <code>region</code> 랜드마크를 정의하는데 사용됩니다.</p>
 
-                  <h3>ARIA Example: Using <code>section[aria-labelledby]</code> attribute</h3>
+                  <h3>ARIA 예: <code>section[aria-labelledby]</code> 속성(attribute) 사용</h3>
                   <div class="code">
                     &lt;div role="main"&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&lt;h1&gt;<em>title for main content area</em>&lt;h1&gt;<br>
+                    &nbsp;&nbsp;&lt;h1&gt;<em>주요 콘텐트 영역에 대한 제목</em>&lt;h1&gt;<br>
                     <br>
                     &nbsp;&nbsp;&lt;div <strong>role="region" aria-labelledby="region1"</strong>&gt;
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 <strong>id="region1"</strong>&gt;title for region area 1&lt;/h2&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 <strong>id="region1"</strong>&gt;영역 1에 대한 제목&lt;/h2&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>content for region area 1</em> ...
+                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>영역 1에 대한 콘텐트</em> ...
                     <br>
                     <br>
                     &nbsp;&nbsp;&lt;/div&gt;
@@ -85,10 +85,10 @@
                     &nbsp;&nbsp;&lt;div <strong>role="region" aria-labelledby="region2"</strong>&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 <strong>id="region2"</strong>&gt;title for region area 2&lt;/h2&gt;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 <strong>id="region2"</strong>&gt;영역 2에 대한 제목&lt;/h2&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>content for region area 2</em> ...
+                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>영역 2에 대한 콘텐트</em> ...
                     <br>
                     <br>
                     &nbsp;&nbsp;&lt;/div&gt;
@@ -100,9 +100,9 @@
                 </div>
 
                 <div  id="tabpanel2" aria-labelledby="tab2" role="tabpanel" class="tab-pane">
-                  <p>Use the HTML <code>section</code> element to define a <code>region</code> landmark.</p>
+                  <p><code>region</code> 랜드마크를 정의하도록 HTML <code>section</code> 요소(element)를 사용하세요.</p>
 
-                  <h3>HTML Example: Using <code>section[aria-labelledby]</code> attribute</h3>
+                  <h3>HTML 예: <code>section[aria-labelledby]</code> 속성(attribute) 사용</h3>
                   <p>Defines a label for each region using existing content on the page.</p>
                   <div class="code">
                     &lt;main&gt;
@@ -208,7 +208,7 @@
                     &lt;/main&gt;
                   </div>
                 </div>
-              </section>
+              </div>
             </section>
           </main>
         </div>
@@ -253,12 +253,12 @@
         </footer>
       </div>
     </div>
-    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>        
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>        
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-accessibility.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-accessibility-2.js"></script>       
-    <script type="text/javascript" src="js/visua11y.js"></script>        
-    <script type="text/javascript" src="js/show.js"></script>        
+    <script type="text/javascript" src="js/bootstrap-accessibility-2.js"></script>
+    <script type="text/javascript" src="js/visua11y.js"></script>
+    <script type="text/javascript" src="js/show.js"></script>
     <script type="text/javascript" >
       // Use the SkipTo defaults, but just showing custom configuration
       var SkipToConfig =
@@ -271,6 +271,6 @@
         }
       };
     </script>
-    <script type="text/javascript" src="js/SkipTo.min.js"></script>      
+    <script type="text/javascript" src="js/SkipTo.min.js"></script>
   </body>
 </html>
