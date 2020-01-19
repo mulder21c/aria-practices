@@ -1,7 +1,7 @@
 <!DOCTYPE html >
-<html lang="en">
+<html lang="ko">
   <head>
-    <title>Assistive Technology: ARIA Landmarks Example</title>
+    <title>보조 기술: ARIA 랜드마크 예제</title>
     <meta charset="utf-8">
     <link href="css/bootstrap.css" rel="stylesheet" media="screen"/>
     <link href="css/bootstrap-theme.css" rel="stylesheet" media="screen"/>
@@ -16,17 +16,17 @@
           <img src="images/w3c.png" alt="W3C Logo" />
         </div>
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
-          <h1>ARIA Landmarks Example</h1>
-          <p id="inst" class="inst">Visually outline the landmarks and/or headings on the page using the following buttons.</p>
-          <button type="button" onclick="showLandmarks(event)" aria-describedby="inst">Show Landmarks</button>
-          <button type="button" onclick="showHeadings(event)"  aria-describedby="inst">Show Headings</button>
+          <h1>ARIA 랜드마크 예제</h1>
+          <p id="inst" class="inst">다음 버튼을 사용하여 페이지의 랜드마크와/또는 헤딩에 대해 시각적으로 윤곽을 보세요.</p>
+          <button type="button" onclick="showLandmarks(event)" aria-describedby="inst">랜드마크 보기</button>
+          <button type="button" onclick="showHeadings(event)"  aria-describedby="inst">헤딩 보기</button>
         </div>
       </header>
       <div class="row">
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
           <nav>
             <ul class="nav nav-pills nav-stacked">
-              <li><a href="index.html">Principles</a></li>
+              <li><a href="index.html">원칙</a></li>
               <li><a href="HTML5.html">HTML</a></li>
               <li><a href="banner.html">Banner</a></li>
               <li><a href="complementary.html">Complementary</a></li>
@@ -36,181 +36,180 @@
               <li><a href="navigation.html">Navigation</a></li>
               <li><a href="region.html">Region</a></li>
               <li><a href="search.html">Search</a></li>
-              <li class="active"><a href="at.html" aria-label="Assistive Technology" aria-current="page">Asst. Tech.</a></li>
-              <li><a href="resources.html">Resources</a></li>
+              <li class="active"><a href="at.html" aria-label="Assistive Technology" aria-current="page">보조 기술</a></li>
+              <li><a href="resources.html">참조</a></li>
             </ul>
           </nav>
         </div>
         <div class="col-xs-12 col-sm-9 col-md-6 col-lg-7">
           <main>
-            <h1>Assistive Technology</h1>
+            <h1>보조 기술</h1>
 
-            <p>The following sections demonstrate how various popular 
-            assistive technologies support landmark navigation</p>
+            <p>다음 섹션에서는 다양한 인기 보조 기술들이 랜드마크 탐색을 지원하는 방법을 보여줍니다. </p>
 
             <ul>
-              <li><a href="#jaws">JAWS Screen Reader for Windows</a></li>
-              <li><a href="#nvda">NVDA Screen Reader for Windows</a></li>
-              <li><a href="#we">Window-Eyes Screen Reader for Windows</a></li>
-              <li><a href="#vo">Voice Over Screen Reader for OSX</a></li>
-              <li><a href="#orca">ORCA Screen Reader for Linux/Gnome</a></li>
+              <li><a href="#jaws">윈도우용 JAWS 스크린 리더</a></li>
+              <li><a href="#nvda">윈도우용 NVDA 스크린 리더</a></li>
+              <li><a href="#we">윈도우용 Window-Eyes 스크린 리더</a></li>
+              <li><a href="#vo">OSX용 보이스 오버 스크린 리더</a></li>
+              <li><a href="#orca">Linux/Gnome용 ORCA 스크린 리더</a></li>
             </ul>
 
             <section aria-labelledby="jaws">
-              <h2 id="jaws">JAWS Screen Reader for Windows</h2>
-              <p>The following commands are available in the JAWS screen reader (since version 15) for navigating landmarks:</p>
+              <h2 id="jaws">윈도우용 JAWS 스크린 리더</h2>
+              <p>다음 명령어는 JAWS 스크린 리더에서 (15 버전 이후) 랜드마크를 탐색하는데 사용 가능합니다:</p>
 
               <table class="table table-striped table-hover" aria-labelledby="jaws">
 
                 <thead>
                   <tr>
-                    <th>Command</th>
-                    <th>Action</th>
+                    <th>명령어</th>
+                    <th>행동</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>Q</td>
-                    <td>Go to main landmark</td>
+                    <td>main 랜드마크로 이동</td>
                   </tr>
                   <tr>
                     <td>R</td>
-                    <td>Go to next landmark</td>
+                    <td>다음 랜드마크로 이동</td>
                   </tr>
                   <tr>
                     <td>Shift+R</td>
-                    <td>Go to previous landmark</td>
+                    <td>이전 랜드마크로 이동</td>
                   </tr>
                   <tr>
                     <td>Insert+Control+R</td>
-                    <td>List of landmarks</td>
+                    <td>랜드마크 목록</td>
                   </tr>
                 </tbody>
-                
+
               </table>
 
-              <p>Screen shot of list of landmarks in JAWS</p>
-              <p><img src="images/landmarks-jaws.png" alt="Screen shot of list of landmarks in voice over"></p>
-            
+              <p>JAWS의 랜드마크 목록 스크린샷</p>
+              <p><img src="images/landmarks-jaws.png" alt="JAWS의 랜드마크 목록 스크린샷"></p>
+
             </section>
 
             <section aria-labelledby="nvda">
-            <h2 id="nvda">NVDA Screen Reader for Windows</h2>
-               <p>The following commands are available in NVDA screen reader (since version 2014.2) for navigating landmarks:</p>
+            <h2 id="nvda">윈도우용 NVDA 스크린 리더</h2>
+               <p>다음 명령어는 NVDA 스크린 리더에서 (2014.02 버전 이후) 랜드마크를 탐색하는데 사용 가능합니다:</p>
 
               <table class="table table-striped table-hover" aria-labelledby="nvda">
 
                 <thead>
                   <tr>
-                    <th>Command</th>
-                    <th>Action</th>
+                    <th>명령어</th>
+                    <th>행동</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>D</td>
-                    <td>Go to next landmark</td>
+                    <td>다음 랜드마크로 이동</td>
                   </tr>
                   <tr>
                     <td>Shift+D</td>
-                    <td>Go to previous landmark</td>
+                    <td>이전 랜드마크로 이동</td>
                   </tr>
                   <tr>
                     <td>NVDA+F7</td>
-                    <td>List of landmarks</td>
+                    <td>랜드마크 목록</td>
                   </tr>
                 </tbody>
-                
-              </table>         
-              <p>Screen shot of list of landmarks in NVDA</p>
-                <p><img src="images/landmarks-nvda.png" alt="Screen shot of list of landmarks in voice over"></p>
+
+              </table>
+              <p>NVDA의 랜드마크 목록 스크린 샷</p>
+                <p><img src="images/landmarks-nvda.png" alt="NVDA의 랜드마크 목록 스크린 샷"></p>
             </section>
 
             <section aria-labelledby="we">
-            <h2 id="we">Window-Eyes Screen Reader for Windows</h2>
-               <p>The following commands are available in Window-Eyes screen reader (since version 8.4) for navigating landmarks:</p>
+            <h2 id="we">윈도우용 Window-Eyes 스크린 리더</h2>
+               <p>다음 명령어는 Window-Eyes 스크린 리더에서 (8.4 버전 이후) 랜드마크를 탐색하는데 사용 가능 합니다:</p>
 
               <table class="table table-striped table-hover" aria-labelledby="we">
 
                 <thead>
                   <tr>
-                    <th>Command</th>
-                    <th>Action</th>
+                    <th>명령어</th>
+                    <th>행동</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>;</td>
-                    <td>Go to next landmark</td>
+                    <td>다음 랜드마크로 이동</td>
                   </tr>
                   <tr>
                     <td>Shift+;</td>
-                    <td>Go to previous landmark</td>
+                    <td>이전 랜드마크로 이동</td>
                   </tr>
                   <tr>
                     <td>Insert+Tab, Alt+K</td>
-                    <td>List of landmarks</td>
+                    <td>랜드마크 목록</td>
                   </tr>
                 </tbody>
-                
-              </table>         
+
+              </table>
             </section>
 
             <section aria-labelledby="vo">
-            <h2 id="vo">Voice Over Screen Reader for OS X (Mac OS)</h2>
-               <p>The following commands are available in Voice Over screen reader for OS X El Capitan (10.11) for navigating landmarks:</p>
+            <h2 id="vo">OS X (Mac OS)용 보이스 오버 스크린 리더</h2>
+               <p>다음 명령어는 OS X 엘 카피탠 (10.11)의 보이스 오버 스크린리더에서 랜드마크를 탐색하는데 사용 가능합니다:</p>
               <table class="table table-striped table-hover" aria-labelledby="vo">
 
                 <thead>
                   <tr>
-                    <th>Command</th>
-                    <th>Action</th>
+                    <th>명령어</th>
+                    <th>행동</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>W (Quick Nav)</td>
-                    <td>Go to next landmark</td>
+                    <td>W (빠른 탐색)</td>
+                    <td>다음 랜드마크로 이동</td>
                   </tr>
                   <tr>
-                    <td>Shift+W (Quick Nav)</td>
-                    <td>Go to previous landmark</td>
+                    <td>Shift+W (빠른 탐색)</td>
+                    <td>이전 랜드마크로 이동</td>
                   </tr>
                   <tr>
-                    <td>Control+Option+U, then left or right arrow key to landmark list</td>
-                    <td>List of landmarks</td>
+                    <td>Control+Option+U, 누른 후 랜드마크 목록으로 왼쪽 또는 오른쪽 방향키</td>
+                    <td>랜드마크 목록</td>
                   </tr>
                 </tbody>
-                
-              </table>         
-             <p>Screen shot of list of landmarks in Voice Over</p>
-            <p><img src="images/landmarks-vo.png" alt="Screen shot of list of landmarks in voice over"></p>
+
+              </table>
+             <p>보이스 오버의 랜드마크 목록 스크린 샷</p>
+            <p><img src="images/landmarks-vo.png" alt="보이스 오버의 랜드마크 목록 스크린 샷"></p>
             </section>
 
             <section aria-labelledby="orca">
-            <h2 id="orca">ORCA Screen Reader for Linux/GNOME</h2>
-              <p>The following commands are available in ORCA Screen reader for navigating landmarks:</p>
+            <h2 id="orca">Linux/GNOME용 ORCA 스크린 리더</h2>
+              <p>다음 명령어는 ORCA 스크린 리더에서 랜드마크를 탐색하는데 사용 가능합니다:</p>
 
               <table class="table table-striped table-hover" aria-labelledby="orca">
 
                 <thead>
                   <tr>
-                    <th>Command</th>
-                    <th>Action</th>
+                    <th>명령어</th>
+                    <th>행동</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>M</td>
-                    <td>Next landmark</td>
+                    <td>다음 랜드마크</td>
                   </tr>
                   <tr>
                     <td>Shift+M</td>
-                    <td>Previous landmark</td>
+                    <td>이전 랜드마크</td>
                   </tr>
                   <tr>
                     <td>Alt+Shift+M</td>
-                    <td>List of landmarks</td>
+                    <td>랜드마크 목록</td>
                   </tr>
                 </tbody>
 
@@ -222,8 +221,8 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
           <aside aria-labelledby="id4">
-            <h2 id="id4">Landmarks</h2>
-            <p>The following landmarks are defined on this page:</p>
+            <h2 id="id4">랜드마크</h2>
+            <p>이 페이지에는 다음의 랜드마크들이 정의되어 있습니다:</p>
             <ul>
               <li>Banner</li>
               <li>Complementary</li>
@@ -233,7 +232,7 @@
             </ul>
           </aside>
           <aside aria-labelledby="id3">
-            <h2 id="id3">Related Documents</h2>
+            <h2 id="id3">관련 문서</h2>
             <ul>
               <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/">WAI-ARIA Authoring Practices 1.1</a></li>
               <li><a href="http://www.w3.org/TR/2014/REC-wai-aria-20140320/">WAI-ARIA 1.0 Specification</a></li>
@@ -260,13 +259,13 @@
         </footer>
       </div>
     </div>
-    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>        
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>        
-    <script type="text/javascript" src="js/tabs.js"></script>        
-    <script type="text/javascript" src="js/bootstrap-accessibility.min.js"></script>        
-    <script type="text/javascript" src="js/bootstrap-accessibility-2.js"></script>        
-    <script type="text/javascript" src="js/visua11y.js"></script>        
-    <script type="text/javascript" src="js/show.js"></script>        
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/tabs.js"></script>
+    <script type="text/javascript" src="js/bootstrap-accessibility.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-accessibility-2.js"></script>
+    <script type="text/javascript" src="js/visua11y.js"></script>
+    <script type="text/javascript" src="js/show.js"></script>
     <script type="text/javascript" >
       // Use the SkipTo defaults, but just showing custom configuration
       var SkipToConfig =
@@ -279,6 +278,6 @@
         }
       };
     </script>
-    <script type="text/javascript" src="js/SkipTo.min.js"></script>      
+    <script type="text/javascript" src="js/SkipTo.min.js"></script>
   </body>
 </html>

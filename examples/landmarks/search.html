@@ -1,7 +1,7 @@
 <!DOCTYPE html >
 <html lang="en">
   <head>
-    <title>Search Landmark: ARIA Landmarks Example</title>
+    <title>Search 랜드마크: ARIA 랜드마크 예제</title>
     <meta charset="utf-8">
     <link href="css/bootstrap.css" rel="stylesheet" media="screen"/>
     <link href="css/bootstrap-theme.css" rel="stylesheet" media="screen"/>
@@ -16,17 +16,17 @@
           <img src="images/w3c.png" alt="W3C Logo" />
         </div>
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
-          <h1>ARIA Landmarks Example</h1>
-          <p id="inst" class="inst">Visually outline the landmarks and/or headings on the page using the following buttons.</p>
-          <button type="button" onclick="showLandmarks(event)" aria-describedby="inst">Show Landmarks</button>
-          <button type="button" onclick="showHeadings(event)"  aria-describedby="inst">Show Headings</button>
+          <h1>ARIA 랜드마크 예제</h1>
+          <p id="inst" class="inst">다음 버튼을 사용하여 페이지의 랜드마크와/또는 헤딩에 대해 시각적으로 윤곽을 보세요.</p>
+          <button type="button" onclick="showLandmarks(event)" aria-describedby="inst">랜드마크 보기</button>
+          <button type="button" onclick="showHeadings(event)"  aria-describedby="inst">헤딩 보기</button>
         </div>
       </header>
       <div class="row">
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
           <nav>
             <ul class="nav nav-pills nav-stacked">
-              <li><a href="index.html">Principles</a></li>
+              <li><a href="index.html">원칙</a></li>
               <li><a href="HTML5.html">HTML</a></li>
               <li><a href="banner.html">Banner</a></li>
               <li><a href="complementary.html">Complementary</a></li>
@@ -36,23 +36,23 @@
               <li><a href="navigation.html">Navigation</a></li>
               <li><a href="region.html">Region</a></li>
               <li class="active"><a href="search.html" aria-current="page">Search</a></li>
-              <li><a href="at.html" aria-label="Assistive Technology">Asst. Tech.</a></li>
-              <li><a href="resources.html">Resources</a></li>
+              <li><a href="at.html" aria-label="Assistive Technology">보조 기술</a></li>
+              <li><a href="resources.html">참조</a></li>
             </ul>
           </nav>
         </div>
         <div class="col-xs-12 col-sm-9 col-md-6 col-lg-7">
           <main>
-            <h1 id="id1"> Search Landmark</h1>
-            <h2>Definition</h2>
+            <h1 id="id1"> Search 랜드마크</h1>
+            <h2>정의</h2>
             <ul>
-              <li> A <code>search</code> landmark contains a collection of items and objects that, as a whole, combine to create search functionality to content on the website.</li>
-              <li> ARIA 1.1 Specification: <a href="https://www.w3.org/TR/wai-aria-1.1/#search"><code>search</code> landmark</a></li>
+              <li> <code>search</code> 랜드마크는 검색 기능을 만들기 위해 결합 된 항목과 객체들의 전체 집합을 포함합니다.</li>
+              <li> ARIA 1.1 명세: <a href="https://www.w3.org/TR/wai-aria-1.1/#search"><code>search</code> 랜드마크</a></li>
             </ul>
-            <h2>Design Patterns</h2>
+            <h2>디자인 패턴</h2>
             <ul>
-              <li>Use the <code>search</code> landmark instead of the <code>form</code> landmark when the form is used for search functionality.</li>
-              <li>If a page includes more than one <code>search</code> landmark, each should have a unique label.</li>
+              <li>양식이 검색 기능으로 사용되는 경우 <code>form</code> 랜드마크 대신 <code>search</code> 랜드마크를 사용하세요.</li>
+              <li>페이지가 둘 이상의 <code>search</code> 랜드마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다.</li>
             </ul>
             <section aria-label="Coding Techniques">
               <ul id="myTabs" class="nav nav-tabs" role="tablist">
@@ -61,8 +61,8 @@
               </ul>
               <div class="tab-content">
                 <div id="tabpanel1" aria-labelledby="tab1" role="tabpanel" class="tab-pane active">
-                  <p>A <code>role="search"</code> attribute is used to define a <code>search</code> landmark.</p>
-                   <h3>ARIA Example</h3>
+                  <p><code>role="search"</code> 속성(attribute)이 <code>search</code> 랜드마크를 정의합니다.</p>
+                   <h3>ARIA 예</h3>
 
                   <form role="search">
 
@@ -74,7 +74,7 @@
                     &lt;form <strong>role="search"</strong>&gt;
                     <br>
                     <br>
-                    &nbsp;&nbsp;&lt;input type="search" aria-label="search text" size="20"&gt;
+                    &nbsp;&nbsp;&lt;input type="search" aria-label="검색어" size="20"&gt;
                     <br>
                     <br>
                     &nbsp;&nbsp;&lt;input type="submit" value="Search"&gt;
@@ -85,7 +85,7 @@
                   </div>
                </div>
                 <div id="tabpanel2" aria-labelledby="tab2" role="tabpanel" class="tab-pane">
-                  <p>There is no HTML element that defines a <code>search</code> landmark.</p>
+                  <p><code>search</code> 랜드마크를 정의하는 HTML 요소(element)는 없습니다.</p>
                 </div>
               </div>
             </section>
@@ -93,8 +93,8 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
           <aside aria-labelledby="id4">
-            <h2 id="id4">Landmarks</h2>
-            <p>The following landmarks are defined on this page:</p>
+            <h2 id="id4">랜드마크</h2>
+            <p>이 페이지에는 다음의 랜드마크들이 정의되어 있습니다:</p>
             <ul>
               <li>Banner</li>
               <li>Complementary</li>
@@ -106,7 +106,7 @@
             </ul>
           </aside>
           <aside aria-labelledby="id3">
-            <h2 id="id3">Related Documents</h2>
+            <h2 id="id3">관련 문서</h2>
             <ul>
               <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/">WAI-ARIA Authoring Practices 1.1</a></li>
               <li><a href="http://www.w3.org/TR/2014/REC-wai-aria-20140320/">WAI-ARIA 1.0 Specification</a></li>
@@ -133,12 +133,12 @@
         </footer>
       </div>
     </div>
-    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>        
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>        
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-accessibility.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-accessibility-2.js"></script>       
-    <script type="text/javascript" src="js/visua11y.js"></script>        
-    <script type="text/javascript" src="js/show.js"></script>        
+    <script type="text/javascript" src="js/bootstrap-accessibility-2.js"></script>
+    <script type="text/javascript" src="js/visua11y.js"></script>
+    <script type="text/javascript" src="js/show.js"></script>
     <script type="text/javascript" >
       // Use the SkipTo defaults, but just showing custom configuration
       var SkipToConfig =
@@ -151,6 +151,6 @@
         }
       };
     </script>
-    <script type="text/javascript" src="js/SkipTo.min.js"></script>      
+    <script type="text/javascript" src="js/SkipTo.min.js"></script>
   </body>
 </html>
