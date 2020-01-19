@@ -1,7 +1,7 @@
 <!DOCTYPE html >
 <html lang="en">
   <head>
-    <title>General Principles: Principles: ARIA Landmarks Example</title>
+    <title>일반 원칙: ARIA 랜드마크 예제</title>
     <meta charset="utf-8">
     <link href="css/bootstrap.css" rel="stylesheet" media="screen"/>
     <link href="css/bootstrap-theme.css" rel="stylesheet" media="screen"/>
@@ -16,17 +16,17 @@
           <img src="images/w3c.png" alt="W3C Logo" />
         </div>
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
-          <h1>ARIA Landmarks Example</h1>
-          <p id="inst" class="inst">Visually outline the landmarks and/or headings on the page using the following buttons.</p>
-          <button type="button" onclick="showLandmarks(event)" aria-describedby="inst">Show Landmarks</button>
-          <button type="button" onclick="showHeadings(event)"  aria-describedby="inst">Show Headings</button>
+          <h1>ARIA 랜드마크 예제</h1>
+          <p id="inst" class="inst">다음 버튼을 사용하여 페이지의 랜드마크와/또는 헤딩에 대해 시각적으로 윤곽을 보세요.</p>
+          <button type="button" onclick="showLandmarks(event)" aria-describedby="inst">랜드마크 보기</button>
+          <button type="button" onclick="showHeadings(event)"  aria-describedby="inst">헤딩 보기</button>
         </div>
       </header>
       <div class="row">
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
           <nav>
             <ul class="nav nav-pills nav-stacked">
-              <li class="active"><a href="index.html" aria-current="page">Principles</a></li>
+              <li class="active"><a href="index.html" aria-current="page">원칙</a></li>
               <li><a href="HTML5.html">HTML</a></li>
               <li><a href="banner.html">Banner</a></li>
               <li><a href="complementary.html">Complementary</a></li>
@@ -36,75 +36,74 @@
               <li><a href="navigation.html">Navigation</a></li>
               <li><a href="region.html">Region</a></li>
               <li><a href="search.html">Search</a></li>
-              <li><a href="at.html" aria-label="Assistive Technology">Asst. Tech.</a></li>
-              <li><a href="resources.html">Resources</a></li>
+              <li><a href="at.html" aria-label="Assistive Technology">보조 기술</a></li>
+              <li><a href="resources.html">참조</a></li>
             </ul>
           </nav>
         </div>
         <div class="col-xs-12 col-sm-9 col-md-6 col-lg-7">
           <main>
-            <h1>General Principles</h1>
-            <p>Landmarks provide a powerful way to identify the organization and structure of a web page.  
-              The structural information conveyed visually to users should be represented programmatically in the markup using landmark roles.  
-              The use of landmarks roles support keyboard navigation to the structure of a web page for screen reader users, and can be used as targets for author supplied "skip links" and browser extensions for enhanced keyboard navigation.
+            <h1>일반 원칙</h1>
+            <p>ARIA 랜드마크 역할(role)은 웹 페이지의 구성과 구조를 식별하는 강력한 방법을 제공합니다.
+              사용자에게 시각적으로 전달되는 구조 정보는 랜드마크 역할(role)을 사용하여 마크업으로 프로그래밍 방식으로 표현되어야 합니다.
+              랜드마크 역할(role)의 사용은 스크린리더 사용자들에게 웹 페이지의 구조에 키보드 탐색을 지원하고, 작성자가 제공한 "스킵 링크"에 대한 타겟으로 그리고 향상된 키보드 탐색에 대한 브라우저 확장으로 사용될 수 있습니다.
             </p>
-            <p>This section is intended to assist designers, developers and quality assurance staff in defining and understanding the importance of logical, usable, and accessible layout for assistive technologies 
-              using HTML sectioning elements and ARIA landmark roles.
+            <p>이 섹션은 보조 기술 설계자, 개발자, 품질 보증 담당자가 HTML 섹셔닝 요소(sectioning element)와 ARIA 랜드마크 역할(role)을 사용하여 보조 기기들에 대한 논리성, 사용성 및 접근 가능한 레이아웃의 중요성을 정의하고 이해하는 것에 목적을 두고 있습니다.
             </p>
-            <p>Due to the complexity of today's web content, if using landmarks, <strong>all perceivable content</strong> should reside in a semantically meaningful landmark in order that content is not missed by the user.</p>
+            <p>오늘 날의 웹 콘텐트의 목잡성 때문에, 랜드마크를 사용한다면, <strong>모든 인지 가능한 콘텐트</strong>는 사용자가 콘텐트를 못 보고 지나가지 않도록 의미론적(semantically)으로 유의미한(meaningful) 랜드마크에 존재해야 합니다.</p>
 
-            <p style="font-weight: bold">Step 1: Identify the logical structure</p>
+            <p style="font-weight: bold">1 단계: 논리적 구조 식별</p>
             <ul>
               <li>
-                Break the page into perceivable areas called "areas". 
-              </li>
-              <li>   
-                Typically, designers indicate areas visually using alignment and spacing of content.
+                "영역"이라고 불리는 인식 가능한 영역으로 페이지를 쪼갭니다.
               </li>
               <li>
-                Regions can be further defined into logical sub-areas as needed. 
+                일반적으로, 디자이너는 콘텐트의 정렬과 간격을 사용하여 시각적으로 영역을 나타탭니다.
               </li>
               <li>
-                An example of a sub-area is a portlet in a portal application.   
+                필요에 따라 영역이 논리적 하위 영역 안으로 추가 정의될 수 있습니다.
+              </li>
+              <li>
+                하위 영역의 예는 포털 어플리케이션의 포틀릿입니다.
               </li>
             </ul>
-            
-            <p style="font-weight: bold">Step 2: Assign landmark roles to each area</p>
+
+            <p style="font-weight: bold">2 단계: 각 영역에 랜드마크 역할(role) 할당</p>
             <ul>
               <li>
-                Assign landmark roles based on the type of content in the area.
+                영역 내의 콘텐트 유형에 따라 랜드마크 역할(role)을 할당 하세요.
               </li>
               <li>
-                <code>banner</code>, <code>main</code>, <code>complementary</code> and <code>contentinfo</code> landmarks should be top level landmarks.
+                <code>banner</code>, <code>main</code>, <code>complementary</code> and <code>contentinfo</code> 랜드 마크는 최상위 랜드마크여야 합니다.
               </li>
               <li>
-                Landmark roles can be nested to identify parent/child relationships of the information being presented.
+                랜드마크 역할(role)은 표시되는 정보의 부모/자식 관계를 식별하기 위해 중첩 될 수 있습니다.
               </li>
             </ul>
-            
-            <p style="font-weight: bold">Step 3: Label each area</p>
+
+            <p style="font-weight: bold">3 단계: 각 영역에 레이블 지정</p>
             <ul>
               <li>
-                If a specific landmark role is used more than once on a web page, it should have a unique label.
+                특정 랜드마크 역할(role)이 페이지에 두 번 이상 사용될 경우, 그것은 고유한 레이블을 가져야 합니다.
               </li>
               <li>
-                If an area begins with a heading element (e.g. <code>h1-h6</code>), it can be used as the label for the area using <code>aria-labelledby</code> attribute.
+                영역이 헤딩 요소 (예를 들어 <code>h1-h6</code>)로 시작한다면, <code>aria-labelledby</code> 속성(attribute)을 사용하여 영역에 대한 레이블로 사용될 수 있습니다.
               </li>
               <li>
-                If an area does not have a heading element, provide a label using the <code>aria-label</code> attribute.
+                영역이 헤딩 요소(element)를 가지지 않는다면, <code>aria-label</code> 속성(attribute)을 사용하여 레이블을 제공하세요.
               </li>
               <li>
-                Avoid using the landmark role as part of the label.  
-                For example, a navigation landmark with a label "Site Navigation" will be announced by a screen reader as "Site Navigation Navigation".  
-                The label should simply be "Site".
+                랜드마크 역할(role)을 레이블의 일부로 사용하지 마십시오.
+                예를 들어,  "사이트 내비게이션"이라는 레이블을 가진 랜드마크는 스크린리더에 의해 "사이트 내비게이션 내비게이션"이라고 낭독될 겁니다.
+                레이블은 단순하게 "사이트"이어야 합니다.
               </li>
             </ul>
           </main>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
           <aside aria-labelledby="id4">
-            <h2 id="id4">Landmarks</h2>
-            <p>The following landmarks are defined on this page:</p>
+            <h2 id="id4">랜드마크</h2>
+            <p>이 페이지에는 다음의 랜드마크들이 정의되어 있습니다:</p>
             <ul>
               <li>Banner</li>
               <li>Complementary</li>
@@ -114,7 +113,7 @@
             </ul>
           </aside>
           <aside aria-labelledby="id3">
-            <h2 id="id3">Related Documents</h2>
+            <h2 id="id3">관련 문서</h2>
             <ul>
               <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/">WAI-ARIA Authoring Practices 1.1</a></li>
               <li><a href="http://www.w3.org/TR/2014/REC-wai-aria-20140320/">WAI-ARIA 1.0 Specification</a></li>
@@ -141,12 +140,12 @@
         </footer>
       </div>
     </div>
-    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>        
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>        
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-accessibility.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-accessibility-2.js"></script>       
-    <script type="text/javascript" src="js/visua11y.js"></script>        
-    <script type="text/javascript" src="js/show.js"></script>        
+    <script type="text/javascript" src="js/bootstrap-accessibility-2.js"></script>
+    <script type="text/javascript" src="js/visua11y.js"></script>
+    <script type="text/javascript" src="js/show.js"></script>
     <script type="text/javascript" >
       // Use the SkipTo defaults, but just showing custom configuration
       var SkipToConfig =
@@ -159,6 +158,6 @@
         }
       };
     </script>
-    <script type="text/javascript" src="js/SkipTo.min.js"></script>      
+    <script type="text/javascript" src="js/SkipTo.min.js"></script>
   </body>
 </html>
