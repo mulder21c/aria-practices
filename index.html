@@ -837,16 +837,16 @@ var[data-type]:hover::before {
   "preProcess": [
     null
   ],
-  "publishDate": "2020-01-17",
-  "publishISODate": "2020-01-17T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 17 January 2020"
+  "publishDate": "2020-01-19",
+  "publishISODate": "2020-01-19T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 19 January 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 <body class="h-entry informative"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">WAI-ARIA 작성 방법 1.2</h1>
       
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2020-01-17">17 January 2020</time>
+        <time class="dt-published" datetime="2020-01-19">19 January 2020</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -4580,59 +4580,59 @@ var[data-type]:hover::before {
       <section id="aria_lh_navigation">
         <h4 class="widget-name" id="x4-3-6-navigation"><bdi class="secno">4.3.6 </bdi>Navigation<a class="self-link" aria-label="§" href="#aria_lh_navigation"></a></h4>
 
-        <p><a class="role-reference" href="https://w3c.github.io/aria/#navigation"><code>Navigation</code></a> landmarks provide a way to identify groups (e.g. lists) of links that are intended to be used for website or page content navigation.</p>
+        <p><a class="role-reference" href="https://w3c.github.io/aria/#navigation"><code>Navigation</code></a> 랜드마크는 웹 사이트나 페이지 콘텐트를 탐색하는데 사용되도록 의도된 링크의 그룹(예를 들어 목록)을 식별하는 방법을 제공합니다. </p>
 
         <ul>
-          <li>If a page includes more than one <code>navigation</code> landmark, each should have a unique label (see <a href="#aria_lh_step3">Step 3</a> above).</li>
+          <li>페이지가 둘 이상의 <code>navigation</code> 랜드마크를 포함하는 경우, 각각은 고유한 레이블을 가져야 합니다.(위 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
 
-          <li>If a <code>navigation</code> landmark has an identical set of links as another <code>navigation</code> landmark on the page, use the same label for each <code>navigation</code> landmark.</li>
+          <li><code>navigation</code> 랜드마크가 페이지의 다른 <code>navigation</code> 랜드마크와 동일한 링크 세트를 가지는 경우, 각  <code>navigation</code> 랜드마크에 대해 동일한 레이블을 사용하세요.</li>
         </ul>
 
         <section class="notoc">
-          <h5 id="html-technique">HTML Technique<a class="self-link" aria-label="§" href="#html-technique"></a></h5>
+          <h5 id="html-4">HTML 기법<a class="self-link" aria-label="§" href="#html-4"></a></h5>
 
-          <p>Use the HTML <code>nav</code> element to define a <code>navigation</code> landmark.</p>
+          <p><code>navigation</code> 랜드마크를 정의하도록 HTML <code>nav</code> 요소(element)를 사용하세요.</p>
 
-          <h5 id="aria-technique">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique"></a></h5>
+          <h5 id="aria-4">ARIA 기법<a class="self-link" aria-label="§" href="#aria-4"></a></h5>
 
-          <p>If the HTML <code>nav</code> element technique is not being used, use a <code>role="navigation"</code> attribute to define a <code>navigation</code> landmark.</p>
+          <p>HTML <code>nav</code> 요소(element) 기법이 사용되지 않는다면, <code>navigation</code> 랜드마크를 정의하도록 <code>role="navigation"</code> 속성(attribute)을 사용하세요.</p>
 
         </section>
 
         <section class="notoc">
-          <h5 id="examples-15">Examples<a class="self-link" aria-label="§" href="#examples-15"></a></h5>
+          <h5 id="generatedID-10">예제<a class="self-link" aria-label="§" href="#generatedID-10"></a></h5>
 
-          <p><a href="examples/landmarks/navigation.html">Navigation Landmark Example</a></p>
+          <p><a href="examples/landmarks/navigation.html">Navigation 랜드마크 예</a></p>
         </section>
       </section>
 
       <section id="aria_lh_region">
         <h4 class="widget-name" id="x4-3-7-region"><bdi class="secno">4.3.7 </bdi>Region<a class="self-link" aria-label="§" href="#aria_lh_region"></a></h4>
 
-        <p>A <a class="role-reference" href="https://w3c.github.io/aria/#region"><code>region</code></a> landmark is a perceivable section of the page containing content that is sufficiently important for users to be able to navigate to the section.</p>
+        <p><a class="role-reference" href="https://w3c.github.io/aria/#region"><code>region</code></a> 랜드마크는 사용자가 섹션으로 이동 할 수 있어야 할 정도로 충분히 중요한 콘텐트를 포함하는 페이지의 인식 가능한 섹션입니다.</p>
 
         <ul>
-          <li>A <code>region</code> landmark must have a label.</li>
+          <li><code>region</code> 랜드마크는 레이블을 가져야(must) 합니다.</li>
 
-          <li>If a page includes more than one <code>region</code> landmark, each should have a unique label (see <a href="#aria_lh_step3">Step 3</a> above).</li>
+          <li>페이지가 둘 이상의 <code>region</code> 랜드마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다 (위 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
 
-          <li>The <code>region</code> landmark can be used identify content that named landmarks do not appropriately describe.</li>
+          <li><code>region</code> 랜드마크는 기명 랜드마크로는 적절하게 설명할 수 없는 콘텐트를 식별하는데 사용될 수 있습니다.</li>
         </ul>
 
         <section class="notoc">
-          <h5 id="html-technique-0">HTML Technique<a class="self-link" aria-label="§" href="#html-technique-0"></a></h5>
+          <h5 id="html-5">HTML 기법<a class="self-link" aria-label="§" href="#html-5"></a></h5>
 
-          <p>The HTML <code>section</code> element defines a <code>region</code> landmark when it has an accessible name (e.g. <code>aria-labelledby</code>, <code>aria-label</code> or <code>title</code>).</p>
+          <p>HTML <code>section</code> 요소(element)가 접근 가능한 이름을(예를 들어 <code>aria-labelledby</code>나 <code>aria-label</code>나 <code>title</code>) 가지는 경우 <code>region</code> 랜드마크를 정의합니다.</p>
 
-          <h5 id="aria-technique-0">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-0"></a></h5>
+          <h5 id="aria-5">ARIA 기법<a class="self-link" aria-label="§" href="#aria-5"></a></h5>
 
-          <p>If the HTML <code>section</code> element technique is not being used, use a <code>role="region"</code> attribute to define a <code>region</code> landmark.</p>
+          <p>HTML <code>section</code> 요소(element) 기법이 사용되지 않는 다면, <code>region</code> 랜드마크를 정의하도록 <code>role="region"</code> 속성(attribute)을 사용하세요.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-16">Examples<a class="self-link" aria-label="§" href="#examples-16"></a></h5>
+          <h5 id="generatedID-11">예제<a class="self-link" aria-label="§" href="#generatedID-11"></a></h5>
 
-          <p><a href="examples/landmarks/region.html">Region Landmark Example</a></p>
+          <p><a href="examples/landmarks/region.html">Region 랜드마크 예제</a></p>
         </section>
       </section>
 
@@ -4648,16 +4648,16 @@ var[data-type]:hover::before {
         </ul>
 
         <section class="notoc">
-          <h5 id="html-technique-1">HTML Technique<a class="self-link" aria-label="§" href="#html-technique-1"></a></h5>
+          <h5 id="html-technique">HTML Technique<a class="self-link" aria-label="§" href="#html-technique"></a></h5>
           <p>There is no HTML element that defines a <code>search</code> landmark.</p>
 
-          <h5 id="aria-technique-1">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique-1"></a></h5>
+          <h5 id="aria-technique">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique"></a></h5>
 
           <p>The <code>role="search"</code> attribute defines a <code>search</code> landmark.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-17">Examples<a class="self-link" aria-label="§" href="#examples-17"></a></h5>
+          <h5 id="examples-15">Examples<a class="self-link" aria-label="§" href="#examples-15"></a></h5>
 
           <p><a href="examples/landmarks/search.html">Search Landmark Example</a></p>
         </section>
