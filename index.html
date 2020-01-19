@@ -4254,7 +4254,7 @@ var[data-type]:hover::before {
       ARIA 랜드마크 역할(role)은 웹 페이지의 구성과 구조를 식별하는 강력한 방법을 제공합니다.
       페이지의 섹션을 분류하고 레이블을 지정함으로써, 레이아웃을 통해 시각적으로 전달되는 구조 정보를 프로그래밍 방식으로 나타낼 수 있습니다.
       스크린리더는 페이지의 중요한 부분으로의 키보드 탐색을 제공하는데 랜드마크 역할(role)을 활용합니다.
-      랜드마크 영역은 "스킵 링크"의 대상으로도 사용될 수 있고, 브라우저 확장을 통해 키보드 탐색을 향상시킬 수도 있습니다.
+      랜드마크 영역은 "스킵 링크"의 대상으로도 사용될 수 있고, 브라우저 확장을 통해 향상된 키보드 탐색으로 사용될 수 있습니다.
     </p>
     <p>
       이 섹션은 보조 기술 사용자가 페이지의 레이아웃의 의미를 이해하기 쉽게 할 수 있도록
@@ -4288,13 +4288,13 @@ var[data-type]:hover::before {
           <tr>
             <td><code>footer</code></td>
 
-            <td><code>body</code> 요소(element) 컨텍스트에서 <code>contentinfo</code></td>
+            <td><code>body</code> 요소(element)의 컨텍스트에 있는 경우 <code>contentinfo</code></td>
           </tr>
 
           <tr>
             <td><code>header</code></td>
 
-            <td><code>body</code> 요소(element) 컨텍스트에서 <code>banner</code></td>
+            <td><code>body</code> 요소(element)의 컨텍스트에 있는 경우 <code>banner</code></td>
           </tr>
 
           <tr>
@@ -4337,7 +4337,7 @@ var[data-type]:hover::before {
       <p><strong>2 단계: 각 영역에 랜드마크 역할(role) 할당</strong></p>
 
       <ul>
-        <li>영역 내의 콘텐트 타입에 따라 랜드마크 역할(role)을 할당합니다.</li>
+        <li>영역 내의 콘텐트 유형에 따라 랜드마크 역할(role)을 할당 하세요.</li>
 
         <li><code>banner</code>, <code>main</code>, <code>complementary</code>, <code>contentinfo</code> 랜드 마크는 최상위 랜드마크여야 합니다.</li>
 
@@ -4362,7 +4362,7 @@ var[data-type]:hover::before {
 
         <li>
           랜드마크 역할(role)을 레이블의 일부로 사용하지 마십시오.
-          예를 들어, "사이트 내비게이션"이라는 레이블을 가진 내비게이션 랜드마크는 스크린리더에 의해 "사이트 내비게이션 내비게이션"이라고 낭독될 겁니다.
+          예를 들어, "사이트 내비게이션"이라는 레이블을 가진 navigation 랜드마크는 스크린리더에 의해 "사이트 내비게이션 내비게이션"이라고 낭독될 겁니다.
           레이블은 단순히 "Site"이어야 합니다.
         </li>
       </ul>
@@ -4632,34 +4632,34 @@ var[data-type]:hover::before {
         <section class="notoc">
           <h5 id="generatedID-11">예제<a class="self-link" aria-label="§" href="#generatedID-11"></a></h5>
 
-          <p><a href="examples/landmarks/region.html">Region 랜드마크 예제</a></p>
+          <p><a href="examples/landmarks/region.html">Region 랜드마크 예</a></p>
         </section>
       </section>
 
       <section id="aria_lh_search">
         <h4 class="widget-name" id="x4-3-8-search"><bdi class="secno">4.3.8 </bdi>Search<a class="self-link" aria-label="§" href="#aria_lh_search"></a></h4>
 
-        <p>A <a class="role-reference" href="https://w3c.github.io/aria/#search"><code>search</code></a> landmark contains a collection of items and objects that, as a whole, combine to create search functionality.</p>
+        <p><a class="role-reference" href="https://w3c.github.io/aria/#search"><code>search</code></a> 랜드마크는 검색 기능을 만들기 위해 결합 된 항목과 객체들의 전체 집합을 포함합니다.</p>
 
         <ul>
-          <li>Use the <code>search</code> landmark instead of the <code>form</code> landmark when the form is used for search functionality.</li>
+          <li>양식이 검색 기능으로 사용되는 경우 <code>form</code> 랜드마크 대신 <code>search</code> 랜드마크를 사용하세요.</li>
 
-          <li>If a page includes more than one <code>search</code> landmark, each should have a unique label (see <a href="#aria_lh_step3">Step 3</a> above).</li>
+          <li>페이지가 둘 이상의 <code>search</code> 랜드마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다.(위 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
         </ul>
 
         <section class="notoc">
-          <h5 id="html-technique">HTML Technique<a class="self-link" aria-label="§" href="#html-technique"></a></h5>
-          <p>There is no HTML element that defines a <code>search</code> landmark.</p>
+          <h5 id="html-6">HTML 기법<a class="self-link" aria-label="§" href="#html-6"></a></h5>
+          <p><code>search</code> 랜드마크를 정의하는 HTML 요소(element)는 없습니다.</p>
 
-          <h5 id="aria-technique">ARIA Technique<a class="self-link" aria-label="§" href="#aria-technique"></a></h5>
+          <h5 id="aria-6">ARIA 기법<a class="self-link" aria-label="§" href="#aria-6"></a></h5>
 
-          <p>The <code>role="search"</code> attribute defines a <code>search</code> landmark.</p>
+          <p><code>role="search"</code> 속성(attribute)이 <code>search</code> 랜드마크를 정의합니다.</p>
         </section>
 
         <section class="notoc">
-          <h5 id="examples-15">Examples<a class="self-link" aria-label="§" href="#examples-15"></a></h5>
+          <h5 id="generatedID-12">예제<a class="self-link" aria-label="§" href="#generatedID-12"></a></h5>
 
-          <p><a href="examples/landmarks/search.html">Search Landmark Example</a></p>
+          <p><a href="examples/landmarks/search.html">Search 랜드마크 예</a></p>
         </section>
       </section>
     </section>
