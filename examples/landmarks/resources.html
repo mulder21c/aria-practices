@@ -1,9 +1,9 @@
 <!DOCTYPE html >
-<html lang="en">
+<html lang="ko">
     <head>
-        <title>Resources: ARIA Landmarks Example</title>
+        <title>참고: ARIA 랜드마크 예제</title>
     <meta charset="utf-8">
-        
+
         <link href="css/bootstrap.css" rel="stylesheet" media="screen"/>
         <link href="css/bootstrap-theme.css" rel="stylesheet" media="screen"/>
         <link href="css/bootstrap-accessibility.css" rel="stylesheet" media="screen"/>
@@ -15,19 +15,19 @@
              <header class="row">
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
                   <img src="images/w3c.png" alt="W3C Logo" />
-                </div> 
+                </div>
                 <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
-                  <h1>ARIA Landmarks Example</h1>
-                  <p id="inst" class="inst">Visually outline the landmarks and/or headings on the page using the following buttons.</p>
-                  <button type="button" onclick="showLandmarks(event)" aria-describedby="inst">Show Landmarks</button>
-                  <button type="button" onclick="showHeadings(event)"  aria-describedby="inst">Show Headings</button>
+                  <h1>ARIA 랜드마크 예제</h1>
+                  <p id="inst" class="inst">다음 버튼을 사용하여 페이지의 랜드마크와/또는 헤딩에 대해 시각적으로 윤곽을 보세요.</p>
+                  <button type="button" onclick="showLandmarks(event)" aria-describedby="inst">랜드마크 보기</button>
+                  <button type="button" onclick="showHeadings(event)"  aria-describedby="inst">헤딩 보기</button>
                 </div>
             </header>
             <div class="row">
                  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
                     <nav>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="index.html">Principles</a></li>
+                            <li><a href="index.html">원칙</a></li>
                             <li><a href="HTML5.html">HTML</a></li>
                             <li><a href="banner.html">Banner</a></li>
                             <li><a href="complementary.html">Complementary</a></li>
@@ -37,52 +37,52 @@
                             <li><a href="navigation.html">Navigation</a></li>
                             <li><a href="region.html">Region</a></li>
                             <li><a href="search.html">Search</a></li>
-                            <li><a href="at.html" aria-label="Assistive Technology">Asst. Tech.</a></li>
-                            <li class="active"><a href="resources.html" aria-current="page">Resources</a></li>
+                            <li><a href="at.html" aria-label="Assistive Technology">보조 기술</a></li>
+                            <li class="active"><a href="resources.html" aria-current="page">참조</a></li>
                         </ul>
                     </nav>
-                </div>    
+                </div>
 
                 <div class="col-xs-12 col-sm-9 col-md-6 col-lg-7">
                     <main>
-                        <h1>ARIA Landmark Resources</h1>
+                        <h1>ARIA 랜드마크 참조 문서</h1>
 
                         <section>
-                          <h2>Read More</h2>
-                          <ul>    
-                            <li><a href="https://www.w3.org/TR/WCAG20-TECHS/aria#ARIA11">ARIA11: Using ARIA landmarks to identify regions of a page</a> (WCAG 2.0 Technique)</li>
-                            <li><a href="https://www.w3.org/TR/WCAG20-TECHS/aria#ARIA20">ARIA20: Using the region role to identify a region of the page</a> (WCAG 2.0 Technique)</li>
-                            <li><a href="https://alistapart.com/column/wai-finding-with-aria-landmark-roles">WAI-finding with ARIA Landmark Roles</a> (A List Apart)</li>
-                            <li><a href="https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/">Using WAI-ARIA Landmarks – 2013</a> (Paciello Group)</li>
-                            <li><a href="https://dequeuniversity.com/assets/html/jquery-summit/html5/slides/landmarks.html">HTML 5 and ARIA Landmarks</a> (Deque University)</li>
-                            <li><a href="https://www.paciellogroup.com/blog/2015/01/basic-screen-reader-commands-for-accessibility-testing/">Basic screen reader commands for accessibility testing</a>  (Paciello Group)</li>
-                            <li><a href="http://webaim.org/projects/screenreadersurvey6/#landmarks">Screen Reader User Survey #6 Results: Landmarks/Regions</a> (WebAIM)</li>
+                          <h2>더 읽어보기</h2>
+                          <ul>
+                            <li><a href="https://www.w3.org/TR/WCAG20-TECHS/aria#ARIA11">ARIA11: 페이지의 영역을 식별하기 위해 ARIA 랜드마크 사용하기</a> (WCAG 2.0 기법)</li>
+                            <li><a href="https://www.w3.org/TR/WCAG20-TECHS/aria#ARIA20">ARIA20: 페이지의 영역을 식별휴ㅏ기 위해 region 역할(role) 사용하기</a> (WCAG 2.0 기법)</li>
+                            <li><a href="https://alistapart.com/column/wai-finding-with-aria-landmark-roles">ARIA 랜드마크 역할(role)로 WAI-찾기</a> (A List Apart)</li>
+                            <li><a href="https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/">WAI-ARIA 랜드마크 사용하기 – 2013</a> (Paciello Group)</li>
+                            <li><a href="https://dequeuniversity.com/assets/html/jquery-summit/html5/slides/landmarks.html">HTML 5와 ARIA 랜드마크</a> (Deque University)</li>
+                            <li><a href="https://www.paciellogroup.com/blog/2015/01/basic-screen-reader-commands-for-accessibility-testing/">접근성 검사를 위핸 기본 스크린리더 명령어</a>  (Paciello Group)</li>
+                            <li><a href="http://webaim.org/projects/screenreadersurvey6/#landmarks">스크린리더 사용자 설문 #6 결과: 랜드마크/영역</a> (WebAIM)</li>
                           </ul>
                         </section>
 
                         <section>
-                          <h2>Tools</h2>
+                          <h2>도구</h2>
 
                           <ul>
-                            <li><a href="http://matatk.agrip.org.uk/landmarks/">Landmarks Browser Extension</a></li>
-                            <li><a href="http://accessibility-bookmarklets.org/">Accessibility Bookmarklets: Landmark Bookmarklet</a></li>
-                            <li><a href="http://whatsock.com/training/matrices/visual-aria.htm">The Visual ARIA Bookmarklet</a></li>
-                            <li><a href="http://paypal.github.io/skipto/">SkipTo, version 2.0</a> (PayPal)</li>
-                            <li><a href="http://ainspector.github.io/">AInspector Sidebar for Firefox</a> (Landmark Rule Category)</li>
-                            <li><a href="https://fae.disability.illinois.edu/">Functional Accessibility Evaluator 2.0</a> (Landmark Rule Category)</li>
+                            <li><a href="http://matatk.agrip.org.uk/landmarks/">랜드마크 브라우저 확장프로그램</a></li>
+                            <li><a href="http://accessibility-bookmarklets.org/">접근성 북마클릿: 랜드마크 북마클릿</a></li>
+                            <li><a href="http://whatsock.com/training/matrices/visual-aria.htm">비주얼 ARIA 북마클릿</a></li>
+                            <li><a href="http://paypal.github.io/skipto/">건너뛰기, 버전 2.0</a> (PayPal)</li>
+                            <li><a href="http://ainspector.github.io/">파이어폭스 접근성 검사기 사이드바</a> (랜드마크 규칙 카테고리)</li>
+                            <li><a href="https://fae.disability.illinois.edu/">기능 접근성 평가기 2.0</a> (랜드마크 규칙 카테고리)</li>
                           </ul>
 
-                        </section>  
+                        </section>
 
 
 
-                    </main>    
-                </div> 
+                    </main>
+                </div>
                  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 
                     <aside aria-labelledby="id4">
-                      <h2 id="id4">Landmarks</h2>
-                      <p>The following landmarks are defined on this page:</p>
+                      <h2 id="id4">랜드마크</h2>
+                      <p>이 페이지에는 다음의 랜드마크들이 정의되어 있습니다:</p>
                       <ul>
                         <li>Banner</li>
                         <li>Complementary</li>
@@ -93,7 +93,7 @@
                     </aside>
 
                     <aside aria-labelledby="id3">
-            <h2 id="id3">Related Documents</h2>
+            <h2 id="id3">관련 문서</h2>
             <ul>
               <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/">WAI-ARIA Authoring Practices 1.1</a></li>
               <li><a href="http://www.w3.org/TR/2014/REC-wai-aria-20140320/">WAI-ARIA 1.0 Specification</a></li>
@@ -108,7 +108,7 @@
             </ul>
           </aside>
         </div>
-      </div>    
+      </div>
             <div class="well well-sm">
               <footer class="row">
                   <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
@@ -120,13 +120,13 @@
               </footer>
             </div>
         </div>
-        
-        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>        
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>        
+
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/bootstrap-accessibility.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap-accessibility-2.js"></script>       
-        <script type="text/javascript" src="js/visua11y.js"></script>        
-        <script type="text/javascript" src="js/show.js"></script>        
+        <script type="text/javascript" src="js/bootstrap-accessibility-2.js"></script>
+        <script type="text/javascript" src="js/visua11y.js"></script>
+        <script type="text/javascript" src="js/show.js"></script>
 
 
         <script type="text/javascript" >
@@ -141,7 +141,7 @@
               }
             };
         </script>
-        
-        <script type="text/javascript" src="js/SkipTo.min.js"></script>      
+
+        <script type="text/javascript" src="js/SkipTo.min.js"></script>
     </body>
 </html>
