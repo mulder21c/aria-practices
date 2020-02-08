@@ -3732,39 +3732,39 @@
   </section>
 
   <section id="names_and_descriptions">
-    <h2>Providing Accessible Names and Descriptions</h2>
+    <h2>접근 가능한 이름과 설졍 제공</h2>
     <p>
-      Providing elements with accessible names, and where appropriate, accessible descriptions is one of the most important responsibilities authors have when developing accessible web experiences.
-      While doing so is straightforward for most elements, technical mistakes that can completely block users of assistive technologies are easy to make and unfortunately common.
-      To help authors effectively provide accessible names and descriptions, this section explains their purpose, when authors need to provide them, how browsers assemble them, and rules for coding and composing them.
-      It also guides authors in the use of the following naming and describing techniques and WAI-ARIA properties:
+      접근 가능한 이름과 적절한 경우 접근 가능한 설명을 가진 요소(element)를 제공하는 것은 접근 가능한 웹 경험을 개발할 때 작성자가 가져야 할 가장 중요한 책임 중 하나입니다.
+      대부분의 요소(element)에서는 그렇게 하는 것이 간단한 반면, 보조 기술 사용자들을 완전히 차단할 수 있는 기술적 실수 역시 쉽게 만들 수 있고 불행하게도 흔하게 일어납니다.
+      작성자가 접근 가능한 이름과 설명을 효과적으로 제공할 수 있도록 돕기 위해, 이 섹션에서는 그 목적과, 작성자가 그것들을 제공해야 하는 경우, 브라우저가 그것들을 모으는 방법, 그것들을 코드화하고 구성하기 위한 규칙을 설명합니다.
+      또한 작성자에게 다음의 이름 붙이기와 설명 붙이기 기법 및 WAI-ARIA 속성 사용에 대해서도 안내합니다:
     </p>
     <ul>
-      <li>Naming:
+      <li>이름 붙이기:
         <ul>
-          <li>Naming with child content.</li>
-          <li>Naming with a string attribute via <code>aria-label</code>.</li>
-          <li>Naming by referencing content with <code>aria-labelledby</code>.</li>
-          <li>Naming form controls with the label element.</li>
-          <li>Naming fieldsets with the legend element.</li>
-          <li>Naming tables and figures with captions.</li>
-          <li>Fallback names derived from titles and placeholders.</li>
+          <li>자식 콘텐트로 이름 붙이기.</li>
+          <li><code>aria-label</code>을 통해 문자열 속성으로 이름 붙이기.</li>
+          <li><code>aria-labelledby</code>로 콘텐트를 참조하여 이름 붙이기.</li>
+          <li>label 요소(element)로 폼 컨트롤 이름 붙이기.</li>
+          <li>요소(element)로 필드셋 이름 붙이기.</li>
+          <li>캡션으로 표와 삽화 이름 붙이기.</li>
+          <li>제목과 자리 표시자로부터 파생된 폴백 이름.</li>
         </ul>
       </li>
-      <li>Describing:
+      <li>설명 붙이기:
         <ul>
-          <li>Describing by referencing content with <code>aria-describedby</code>.</li>
-          <li>Describing tables and figures with captions.</li>
-          <li>Descriptions derived from titles.</li>
+          <li><code>aria-describedby</code>로 콘텐츠를 참조하여 설명 붙이기.</li>
+          <li>캡션으로 표와 삽화에 설명 붙이기.</li>
+          <li>제목으로부터 파생된 설명.</li>
         </ul>
       </li>
     </ul>
 
     <section id="names_and_descriptions_definition">
-      <h3>What ARE Accessible Names and Descriptions?</h3>
+      <h3>접근 가능한 이름과 설명이란?</h3>
       <p>
-        An accessible name is a short string, typically 1 to 3 words,  that authors associate with an element to provide users of assistive technologies with a label for the element.
-        For example, an input field might have an accessible name of &quot;User ID&quot; or a button might be named &quot;Submit&quot;.
+        접근 가능한 이름은 일반적으로 1 ~ 3개 단어의 짧은 문자열로, 작성자가 보조 기술 사용자에게 요소(element)에 대한 레이블을 제공하기 위해 요소(element)와 연관시킨 문자열입니다.
+        예를 들어, 입력 필드는 접근 가능한 &quot;User ID&quot;이라는 이름을 가지거나, 버튼은 &quot;Submit&quot;으로 이름 지을 수 있습니다.
       </p>
       <p>An accessible name serves two primary purposes for users of assistive technologies, such as screen readers:</p>
       <ol>
