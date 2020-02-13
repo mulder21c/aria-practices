@@ -5008,8 +5008,8 @@
       <section id="name_calculation">
         <h4>접근 가능한 이름 계산</h4>
         <p>
-          유저 에이전트는 잠재적인 이름 지정 방법의 목록을 단계별로 통과하여 이름을 생성하는 첫 방법을 사용하여 요소(element)에 대한 접근 가능한 이름 문자열을 구성합니다.
-          그들이 따르는 알고리즘은 <a href="" class="accname">접근 가능한 이름 명세</a>에 정의되어 있습니다.
+          유저 에이전트는 잠재적인 이름 지정 방법의 목록을 단계별로 통과하면서 이름을 생성하는 첫 방법을 사용하여 요소(element)에 대한 접근 가능한 이름 문자열을 구성합니다.
+          이 알고리즘은 <a href="" class="accname">접근 가능한 이름 명세</a>에 정의되어 있습니다.
           대략 다음과 같습니다:
         </p>
         <ol>
@@ -5168,125 +5168,123 @@
     </section>
 
     <section id="accessible_descriptions">
-      <h3>Accessible Descriptions</h3>
+      <h3>접근 가능한 설명</h3>
       <section id="describing_techniques">
-        <h4>Describing Techniques</h4>
+        <h4>설명 기법</h4>
         <section id="describing_with_aria-describedby">
-          <h5>Describing by referencing content with <code>aria-describedby</code></h5>
+          <h5><code>aria-describedby</code>로 내용을 참조하여 설명하기</h5>
           <p>
-            The <code>aria-describedby</code> property works similarly to the <code>aria-labelledby</code> property.
-            For example, a button could be described by a sibling paragraph.
+            <code>aria-describedby</code> 속성(property)은 <code>aria-labelledby</code> 속성(property)과 비슷하게 동작합니다.
+            예를 들어, 버튼은 형태 단락에 의해 설명 될 수 있습니다.
           </p>
 
-          <pre><code>&lt;button aria-describedby="trash-desc">Move to trash&lt;/button>
+          <pre><code>&lt;button aria-describedby="trash-desc">휴지통으로 이동&lt;/button>
 ...
-&lt;p id="trash-desc">Items in the trash will be permanently removed after 30 days.&lt;/p></code></pre>
+&lt;p id="trash-desc">휴지통의 항목은 30일 후 영구적으로 제거될 것입니다.&lt;/p></code></pre>
 
-          <p>Descriptions are reduced to text strings. For example, if the description contains an HTML <code>img</code> element, a text equivalent of the image is computed.</p>
+          <p>설명은 텍스트 문자열로 조정 됩니다. 예를 들어, 설명이 <code>img</code> 요소(element)를 포함하는 경우, 이미지에 해당하는 텍스트가 계산됩니다.</p>
 
-          <pre><code>&lt;button aria-describedby="trash-desc"> Move to &lt;img src="bin.svg" alt="trash">&lt;/button>
+          <pre><code>&lt;button aria-describedby="trash-desc"> &lt;img src="bin.svg" alt="휴지통">으로 이동&lt;/button>
 ...
-&lt;p id="trash-desc">Items in &lt;img src="bin.svg" alt="the trash"> will be permanently removed after 30 days.&lt;/p></code></pre>
+&lt;p id="trash-desc">&lt;img src="bin.svg" alt="휴지통">의 항목은 30일 후 영구적으로 제거 될 것입니다.&lt;/p></code></pre>
 
           <p>
-            As with <code>aria-labelledby</code>, it is possible to reference an element using <code>aria-describedby</code> even if that element is hidden.
-            For example, a text field in a form could have a description that is hidden by default, but can be revealed on request using a disclosure widget.
-            The description could also be referenced from the text field directly with <code>aria-describedby</code>.
-            In the following example, the accessible description for the <code>input</code> element is <q>Your username is the name that you use to log in to this service.</q>
+            <code>aria-labelledby</code>와 마찬가지로, 요소가 숨겨져 있어도 <code>aria-describedby</code>를 사용하여 요소를 참조할 수 있습니다.
+            예를 들어, 양식의 텍스트 필드는 기본적으로 숨겨진 설명을 가질 수 있지만, 공개 위젯을 사용하여 요청 시 나타낼 수 있습니다.
+            설명은 <code>aria-describedby</code>로 직접적으로 텍스트 필드로부터 참조될 수도 있습니다.
+            다음 예에서, <code>input</code> 요소(element)에 대한 접근 가능한 설명은 <q>username은 이 서비스에 로그인하는데 사용되는 이름입니다.</q> 입니다.
           </p>
 
           <pre><code>&lt;label for="username">Username&lt;/label>
 &lt;input id="username" name="username" aria-describedby="username-desc">
 &lt;button aria-expanded="false" aria-controls="username-desc" aria-label="Help about username">?&lt;/button>
 &lt;p id="username-desc" hidden>
-  Your username is the name that you use to log in to this service.
+  username은 이 서비스에 로그인하는데 사용되는 이름입니다.
 &lt;/p></code></pre>
         </section>
 
         <section id="describing_with_captions">
-          <h5>Describing Tables and Figures with Captions</h5>
+          <h5>캡션으로 표 및 삽화에 설명 지정</h5>
           <p>
-            In HTML, if the <code>table</code> is named using <code>aria-label</code> or <code>aria-labelledby</code>, a child <code>caption</code> element becomes an accessible description.
-            For example, a preceding heading might serve as an appropriate accessible name, and the <code>caption</code> element might contain a longer description.
-            In such a situation, <code>aria-labelledby</code> could be used on the <code>table</code> to set the accessible name to the heading content and the <code>caption</code> would become the accessible description.
+            HTML에서, <code>table</code>은 <code>aria-label</code>나 <code>aria-labelledby</code>를 사용하여 이름이 지정되고, 자식 <code>caption</code> 요소(element)는 접근 가능한 설명이 됩니다.
+            예를 들어, 앞선 제목은 적절한 접근 가능한 이름으로 제공될 수 있고, <code>caption</code> 요소(element)는 더 긴 설명을 포함할 수 있습니다.
+            이러한 상황에서, <code>aria-labelledby</code>은 접근 가능한 이름을 제목 콘텐츠로 설정하기 위해 <code>table</code>에 사용 될 수 있고, <code>caption</code>은 접근 가능한 설명이 될 것입니다.
           </p>
-          <pre><code>&lt;h2 id="events-heading">Upcoming events&lt;/h2>
+          <pre><code>&lt;h2 id="events-heading">다가오는 일정&lt;/h2>
 &lt;table aria-labelledby="events-heading">
  &lt;caption>
-  Calendar of upcoming events, weeks 27 through 31, with each week starting with
-  Monday. The first column is the week number.
+  다가오는 일정의 달력, 27주에서 31주까지, 매주 월요일에 시작합니다. 첫 번째 열은 주차입니다.
  &lt;/caption>
- &lt;tr>&lt;th>Week&lt;th>Monday&lt;th>Tuesday&lt;th>Wednesday&lt;th>Thursday&lt;th>Friday&lt;th>Saturday&lt;th>Sunday
+ &lt;tr>&lt;th>주차&lt;th>월&lt;th>화&lt;th>수&lt;th>목&lt;th>금&lt;th>토&lt;th>일
  &lt;tr>&lt;td>27&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>
- &lt;tr>&lt;td>28&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;a href="/events/9856">Crown Princess's birthday&lt;/a>
+ &lt;tr>&lt;td>28&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;a href="/events/9856">왕세자비 생일&lt;/a>
  &lt;tr>&lt;td>29&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>
  &lt;tr>&lt;td>30&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>
  &lt;tr>&lt;td>31&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>
 &lt;/table></code></pre>
-          <p>The HTML <code>figure</code> element can get its accessible <em>name</em> from its <code>figcaption</code> element, but it will not be used as the accessible <em>description</em>, even if it was not used as the accessible name. If the <code>figcaption</code> element is appropriate as an accessible description, and the accessible name is set using <code>aria-labelledby</code> or <code>aria-label</code>, then the <code>figcaption</code> can be explicitly set as the accessible description using the <code>aria-describedby</code> attribute.</p>
-          <pre><code>&lt;h2 id="neutron">Neutron&lt;/h2>
+          <p>HTML <code>figure</code> 요소(element)은 <code>figcaption</code> 요소(element)로부터 접근 가능한 <em>이름</em>을 얻을 수 있지만, 접근 가능한 이름으로 사용되지 않더라도 접근 가능한 <em>설명</em>으로는 사용되지 않습니다. <code>figcaption</code> 요소(element)가 접근 가능한 설명으로 적절하고, 접근 가능한 이름이 <code>aria-labelledby</code>나 <code>aria-label</code>를 사용하여 지정되는 경우, <code>figcaption</code>은 <code>aria-describedby</code> 속성(attribute)을 사용하여 접근 가능한 설명으로 명시적으로 설정 될 수 있습니다.</p>
+          <pre><code>&lt;h2 id="neutron">중성자&lt;/h2>
 &lt;figure aria-labelledby="neutron" aria-describedby="neutron-caption">
- &lt;img src="neutron.svg" alt="Within the neutron are three quarks (blue 'u',
- red 'd', green 'd') that are interconnected.">
+ &lt;img src="neutron.svg" alt="중성자 내에는 상호 연결된 3개의 쿼크 (파란색 'u',
+ 빨간색 'd', 녹색 'd')가 있습니다.">
  &lt;figcaption id="neutron-caption">
-  The quark content of the neutron. The color assignment of individual quarks is
-  arbitrary, but all three colors must be present. Forces between quarks are
-  mediated by gluons.
+  중성자의 쿼크. 개별 쿼크의 색상 배정은 임의이지만, 세 가지 모든 색상이 표현되어야 합니다.
+  쿼크 사이의 힘은 글루온에 의해 매개 됩니다.
  &lt;/figcaption>
 &lt;/figure></code></pre>
          </section>
 
         <section id="describing_with_title">
-          <h5>Descriptions Derived from Titles</h5>
-          <p>If an accessible description was not provided using the <code>aria-describedby</code> attribute or one of the primary host-language-specific attributes or elements (e.g., the <code>caption</code> element for <code>table</code>), then, for HTML, if the element has a <code>title</code> attribute, that is used as the accessible description.</p>
-          <p>A visible description together with <code>aria-describedby</code> is generally recommended. If a description that is not visible is desired, then the <code>title</code> attribute can be used, for any HTML element that can have an accessible description.</p>
-          <p>Note that the <code>title</code> attribute might not be accessible to some users, in particular sighted users not using a screen reader and not using a pointing device that supports hover (e.g., a mouse).</p>
-          <p>For example, an <code>input</code> element with input constrained using the <code>pattern</code> attribute can use the <code>title</code> attribute to describe what the expected input is.</p>
-          <pre><code>&lt;label> Part number:
+          <h5>제목으로부터 파생된 설명</h5>
+          <p>접근 가능한 설명이 <code>aria-describedby</code> 속성(attribute)을 사용하여 또는 주 호스트 언어별 속성(attribute)이나 요소(element) 중 하나를 (예를 들어, <code>table</code>에 대한 <code>caption</code> 요소) 사용하여 제공되지 않았다면, HTML의 경우 요소(element)가 <code>title</code> 속성(attribute)을 가지고 있다면 그것이 접근 가능한 설명으로 사용됩니다.</p>
+          <p><code>aria-describedby</code>와 함께 가시적으로 보이는 설명이 일반적으로 권장됩니다. 보이지 않는 설명이 필요한 경우, 접근 가능한 설명을 가질 수 있는 HTML 요소(element)에 대해, <code>title</code> 속성(attribute)이 사용될 수 있습니다.</p>
+          <p><code>title</code> 속성(attribute)은 일부 사용자, 특히 hover를 지원하는 포인팅 기기 (예를 들어, 마우스)를 사용하지 않고 스크린 리더를 사용하지 않는 정상 시력 사용자에게 접근 가능하지 않을 수 있음을 주의하세요</p>
+          <p>예를 들어, <code>pattern</code> 속성(attribute)를 사용하여 제한된 입력을 가지는 <code>input</code> 요소(element)는 예상되는 입력이 무엇인지를 설명하도록 <code>title</code> 속성(attribute)를 사용 할 수 있습니다.</p>
+          <pre><code>&lt;label> 부품 번호:
  &lt;input pattern="[0-9][A-Z]{3}" name="part"
-        title="A part number is a digit followed by three uppercase letters."/>
+        title="부품 번호는 숫자 다음에 대문제 3개가 오는 숫자입니다."/>
 &lt;/label></code></pre>
-          <p>The <code>title</code> attribute in this case can be shown to the user as a tooltip when the user hovers or focuses the control, but also as part of the error message when the user agent validates the form, if the <code>input</code> element's value doesn't match the <code>pattern</code>.</p>
-          <p>As another example, a link can use the <code>title</code> attribute to describe the link in more detail.</p>
+          <p>이 경우 <code>title</code> 속성(attribute)은 사용자가 컨트롤에 호버하거나 초점을 줄 때 툴팁으로 사용자에게 보여질 수 있지만, 유저 에이전트가 양식을 검증할 때 <code>input</code> 요소(element)의 값이 <code>pattern</code>과 일치하지 않는 경우 오류 메세지의 일부로도 보여질 수 있습니다.</p>
+          <p>다른 예로, 링크는  <code>title</code> 속성(attribute)을 링크를 보다 자세히 설명하는데 사용할 수 있습니다.</p>
           <pre><code>&lt;a href="http://twitter.com/W3C"
-   title="Follow W3C on Twitter">
+   title="W3C 트위터를 팔로우 하세요">
    &lt;img src="/2008/site/images/Twitter_bird_logo_2012.svg"
-        alt="Twitter" class="social-icon" height="40" />
+        alt="트위터" class="social-icon" height="40" />
 &lt;/a></code></pre>
         </section>
       </section>
 
       <section id="description_calculation">
-        <h4>Accessible description calculation</h4>
+        <h4>접근 가능한 설명 계산</h4>
         <p>
-          Like the <a href="#name_calculation">accessible name calculation</a>, the accessible description calculation produces a text string.
+          <a href="#name_calculation">접근 가능한 이름 계산</a>과 같이, 접근 가능한 설명 계산은 테스트 문자열을 생성합니다.
         </p>
         <p>
-          The accessible description calculation algorithm is the same as the accessible name calculation algorithm except for a few branch points that depend on whether a name or description is being calculated.
-          In particular, when accumulating text for an accessible description, the algorithm uses <code>aria-describedby</code> instead of <code>aria-labelledby</code>.
+          접근 가능한 설명 계산 알고리즘은 이름이나 설명이 계산 여부에 따라 몇 가지 지점을 제외하고 접근 가능한 이름 계산 알고리즘과 동일합니다.
+          특히, 접근 가능한 설명을 위해 텍스트를 누적할 경우, 알고리즘은 <code>aria-labelledby</code> 대신 <code>aria-describedby</code>를 사용핳ㅂ니다.
         </p>
         <p>
-          User agents construct an accessible description string for an element by walking through a list of potential description methods and using the first that generates a description.
-          The algorithm they follow is defined in the <a href="" class="accname">accessible name specification</a>.
-          It is roughly like the following:
+          유저 에이전트는 잠잭적인 설명 방법의 목록을 단계별로 통과하면서 설명을 생성하는 첫 방법을 사용하여 요소에 대해 접근 가능한 설명 문자열을 구성합니다.
+          이 알고리즘은 <a href="" class="accname">접근 가능한 이름 명세</a>에 정의되어 있습니다.
+          대략 다음과 같습니다:
         </p>
         <ol>
-          <li><p>The <code>aria-describedby</code> property is used if present.</p></li>
+          <li><p><code>aria-describedby</code> 속성(property)이 있다면 이것이 사용됩니다.</p></li>
           <li>
-            <p>If the description is still empty, then host-language-specific attributes or elements are used if present, if it wasn't already used as the accessible name. For HTML, these are, depending on the element:</p>
+            <p>설명이 여전히 비어있다면, 호스트 언어별 속성(attribute)이나 요소(element)가 존재한다면, 그것이 접근 가능한 이름으로 이미 사용되지 않았다면, 이것이 사용됩니다. HTML의 경우, 요소(element)에 다라 다음과 같습니다:</p>
             <dl class="switch">
-              <dt><code>input</code> whose <code>type</code> attribute is in the Button, Submit Button, or Reset Button state</dt>
-              <dd>The <code>value</code> attribute.</dd>
+              <dt><code>type</code> 속성(attribute)이 Button, Submit Button, 또는 Reset Button 상태에 있는 <code>input</code></dt>
+              <dd><code>value</code> 속성(attribute).</dd>
 
               <dt><code>summary</code></dt>
-              <dd>The element's subtree.</dd>
+              <dd>요소(element)의 하위 트리.</dd>
 
               <dt><code>table</code></dt>
-              <dd>The first child <code>caption</code> element.</dd>
+              <dd>첫 번째 자식 <code>caption</code> 요소(element).</dd>
             </dl>
           </li>
           <li>
-            <p>Finally, if the description is still empty, then other host-language-specific attributes or elements are used if present, if it wasn't already used for the accessible name. For HTML, this is the <code>title</code> attribute.</p>
+            <p>마지막으로 설명이 여전히 비어있다면, 다른 호스트 언어별 속성(attribute)이나 요소(element)가 있고, 그것이 접근 가능한 이름으로 이미 사용 되지 않았다면 이것이 사용됩니다. HTML의 경우 이것은 <code>title</code> 속성(attribute)입니다.</p>
           </li>
         </ol>
       </section>
