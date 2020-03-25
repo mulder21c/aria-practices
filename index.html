@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.1.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.4.2"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 .issue-label {
     text-transform: initial;
 }
@@ -51,16 +51,6 @@ input.task-list-item-checkbox {
   bottom: 2px;
   border: none;
   display: inline-block;
-}
-
-.issue a.respec-label-dark {
-  color: #fff;
-  background-color: #000;
-}
-
-.issue a.respec-label-light {
-  color: #000;
-  background-color: #fff;
 }
 </style><style>/* dfn popup panel that list all local references to a dfn */
 dfn {
@@ -212,7 +202,7 @@ cite .bibref {
 }
 
 code {
-  color: #c83500;
+  color: #c63501;
 }
 
 th code {
@@ -425,7 +415,7 @@ h6 > a.self-link::before {
 <meta name="description" content="이 문서는 독자에게 접근 가능한 리치 인터넷 어플리케이션을 만드는데 WAI-ARIA 1.2 [WAI-ARIA]를 어떻게 사용하는지에 대한 이해를 제공합니다.
       WAI-ARIA 명세만으로는 대다수의 작성자에게 명확하지 않을 수 있는 고려 사항들을 설명하고 WAI-ARIA 역할(role), 상태(state), 속성(property)을 사용하여 위젯, 내비게이션, 동작을 접근 가능하게 할 수 있는 처리 방법을 추천합니다.
       이 문서는 주로 웹 어플리케이션 개발자들을 대상으로 하지만, 지침은 유저 에이전트와 보조 기술 개발자에게도 유용합니다."><link rel="canonical" href="https://www.w3.org/TR/wai-aria-practices-1.2/"><style>/*
-Atom One Light by Daniel Gamage
+Adapted from Atom One Light by Daniel Gamage for ReSpec, with better color contrast
 Original One Light Syntax theme from https://github.com/atom/one-light-syntax
 base:    #fafafa
 mono-1:  #383a42
@@ -451,7 +441,7 @@ hue-6-2: #c18401
 
 .hljs-comment,
 .hljs-quote {
-  color: #a0a1a7;
+  color: #717277;
   font-style: italic;
 }
 
@@ -466,11 +456,12 @@ hue-6-2: #c18401
 .hljs-selector-tag,
 .hljs-deletion,
 .hljs-subst {
-  color: #e45649;
+  color: #ca4706;
+  font-weight: bold;
 }
 
 .hljs-literal {
-  color: #0184bb;
+  color: #0b76c5;
 }
 
 .hljs-string,
@@ -478,12 +469,12 @@ hue-6-2: #c18401
 .hljs-addition,
 .hljs-attribute,
 .hljs-meta-string {
-  color: #50a14f;
+  color: #42803C;
 }
 
 .hljs-built_in,
 .hljs-class .hljs-title {
-  color: #c18401;
+  color: #9a6a01;
 }
 
 .hljs-attr,
@@ -503,7 +494,7 @@ hue-6-2: #c18401
 .hljs-meta,
 .hljs-selector-id,
 .hljs-title {
-  color: #4078f2;
+  color: #336ae3;
 }
 
 .hljs-emphasis {
@@ -663,190 +654,55 @@ var[data-type]:hover::before {
   "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/83726/status",
   "maxTocLevel": 4,
   "localBiblio": {
-    "HTML": {
-      "authors": [
-        "Anne van Kesteren",
-        "Domenic Denicola",
-        "Ian Hickson",
-        "Philip Jägenstedt",
-        "Simon Pieters"
-      ],
-      "href": "https://html.spec.whatwg.org/multipage/",
-      "title": "HTML Standard",
-      "status": "Living Standard",
-      "publisher": "WHATWG",
-      "repository": "https://github.com/whatwg/html",
-      "id": "HTML"
+    "ACCNAME-AAM": {
+      "aliasOf": "ACCNAME-AAM-1.1"
     },
-    "HTML-ARIA": {
-      "aliasOf": "html-aria",
-      "id": "HTML-ARIA"
+    "ARIA-PRACTICES": {
+      "aliasOf": "WAI-ARIA-PRACTICES-1.1"
     },
-    "html-aria": {
-      "authors": [
-        "Steve Faulkner",
-        "Scott O'Hara"
-      ],
-      "href": "https://www.w3.org/TR/html-aria/",
-      "title": "ARIA in HTML",
-      "status": "WD",
-      "publisher": "W3C",
-      "deliveredBy": [
-        {
-          "url": "https://www.w3.org/2019/webapps/",
-          "shortname": "webapps"
-        }
-      ],
-      "versions": [
-        "html-aria-20191206",
-        "html-aria-20191203",
-        "html-aria-20191122",
-        "html-aria-20191119",
-        "html-aria-20191018",
-        "html-aria-20191008",
-        "html-aria-20191007",
-        "html-aria-20191002",
-        "html-aria-20191001",
-        "html-aria-20190929",
-        "html-aria-20190928",
-        "html-aria-20190925",
-        "html-aria-20190705",
-        "html-aria-20190701",
-        "html-aria-20190531",
-        "html-aria-20190530",
-        "html-aria-20181214",
-        "html-aria-20181018",
-        "html-aria-20180926",
-        "html-aria-20180708",
-        "html-aria-20180701",
-        "html-aria-20180519",
-        "html-aria-20180423",
-        "html-aria-20180414",
-        "html-aria-20180310",
-        "html-aria-20180226",
-        "html-aria-20180221",
-        "html-aria-20180131",
-        "html-aria-20171013",
-        "html-aria-20170929",
-        "html-aria-20170926",
-        "html-aria-20170909",
-        "html-aria-20170908",
-        "html-aria-20170829",
-        "html-aria-20170323",
-        "html-aria-20170313",
-        "html-aria-20170103",
-        "html-aria-20161121",
-        "html-aria-20161116",
-        "html-aria-20161110",
-        "html-aria-20161108",
-        "html-aria-20161030",
-        "html-aria-20161005",
-        "html-aria-20160919",
-        "html-aria-20160902",
-        "html-aria-20160525",
-        "html-aria-20160511",
-        "html-aria-20160310",
-        "html-aria-20160115",
-        "html-aria-20151216",
-        "html-aria-20151214",
-        "html-aria-20151210",
-        "html-aria-20151010",
-        "html-aria-20150902",
-        "html-aria-20150514",
-        "html-aria-20150414"
-      ],
-      "edDraft": "https://w3c.github.io/html-aria/",
-      "repository": "https://github.com/w3c/html-aria",
-      "id": "html-aria",
-      "date": "6 December 2019"
+    "CORE-AAM": {
+      "aliasOf": "CORE-AAM-1.1"
     },
-    "SVG2": {
-      "authors": [
-        "Amelia Bellamy-Royds",
-        "Bogdan Brinza",
-        "Chris Lilley",
-        "Dirk Schulze",
-        "David Storey",
-        "Eric Willigers"
-      ],
-      "href": "https://www.w3.org/TR/SVG2/",
-      "title": "Scalable Vector Graphics (SVG) 2",
-      "status": "CR",
-      "publisher": "W3C",
-      "deliveredBy": [
-        {
-          "url": "https://www.w3.org/Graphics/SVG/WG/",
-          "shortname": "svg"
-        }
-      ],
-      "versions": [
-        "SVG2-20181004",
-        "SVG2-20180807",
-        "SVG2-20160915",
-        "SVG2-20150915",
-        "SVG2-20150709",
-        "SVG2-20150409",
-        "SVG2-20140211",
-        "SVG2-20130618",
-        "SVG2-20130409",
-        "SVG2-20120828"
-      ],
-      "edDraft": "https://svgwg.org/svg2-draft/",
-      "repository": "https://github.com/w3c/svgwg",
-      "id": "SVG2",
-      "date": "4 October 2018"
+    "DPUB-ARIA": {
+      "aliasOf": "DPUB-ARIA-1.0"
+    },
+    "GRAPHICS-ARIA": {
+      "aliasOf": "GRAPHICS-ARIA-1.0"
+    },
+    "GRAPHICS-AAM": {
+      "aliasOf": "GRAPHICS-AAM-1.0"
+    },
+    "EPUB-Content": {
+      "href": "http://www.idpf.org/epub/31/spec/epub-contentdocs.html",
+      "title": "EPUB Content Documents 3.1",
+      "publisher": "IDPF"
+    },
+    "HTML-AAM": {
+      "aliasOf": "HTML-AAM-1.0"
+    },
+    "SVG-AAM": {
+      "aliasOf": "SVG-AAM-1.0"
+    },
+    "SVG1": {
+      "aliasOf": "SVG"
     },
     "WAI-ARIA": {
-      "aliasOf": "wai-aria",
-      "id": "WAI-ARIA"
-    },
-    "wai-aria": {
-      "authors": [
-        "James Craig",
-        "Michael Cooper"
-      ],
-      "etAl": true,
-      "href": "https://www.w3.org/TR/wai-aria/",
-      "title": "Accessible Rich Internet Applications (WAI-ARIA) 1.0",
-      "status": "REC",
-      "publisher": "W3C",
-      "deliveredBy": [
-        {
-          "url": "https://www.w3.org/WAI/PF/",
-          "shortname": "wai_pf"
-        }
-      ],
-      "versions": [
-        "wai-aria-20140320",
-        "wai-aria-20140206",
-        "wai-aria-20110118",
-        "wai-aria-20100916",
-        "wai-aria-20091215",
-        "wai-aria-20090224",
-        "wai-aria-20080806",
-        "wai-aria-20080204",
-        "wai-aria-20071019",
-        "wai-aria-20070601",
-        "wai-aria-20061220",
-        "wai-aria-20060926"
-      ],
-      "id": "wai-aria",
-      "date": "20 March 2014"
+      "aliasOf": "WAI-ARIA-1.1"
     }
   },
   "preProcess": [
     null
   ],
-  "publishDate": "2020-01-23",
-  "publishISODate": "2020-01-23T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 23 January 2020"
+  "publishDate": "2020-03-25",
+  "publishISODate": "2020-03-25T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 25 March 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 <body class="h-entry informative"><div class="head">
-      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">WAI-ARIA 작성 방법 1.2</h1>
+      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">WAI-ARIA 작성 방법 1.2</h1>
       
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2020-01-23">23 January 2020</time>
+        <time class="dt-published" datetime="2020-03-25">25 March 2020</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -911,7 +767,7 @@ var[data-type]:hover::before {
   </p>
   <section id="abstract" class="introductory"><h2>Abstract</h2>
     <p>
-      이 문서는 독자에게 접근 가능한 리치 인터넷 어플리케이션을 만드는데 <cite><a href="https://www.w3.org/TR/wai-aria-1.2/"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 1.2</a></cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.0">WAI-ARIA</a></cite>]를 어떻게 사용하는지에 대한 이해를 제공합니다.
+      이 문서는 독자에게 접근 가능한 리치 인터넷 어플리케이션을 만드는데 <cite><a href="https://www.w3.org/TR/wai-aria-1.2/"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 1.2</a></cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.1">WAI-ARIA</a></cite>]를 어떻게 사용하는지에 대한 이해를 제공합니다.
       <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 명세만으로는 대다수의 작성자에게 명확하지 않을 수 있는 고려 사항들을 설명하고 <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 역할(role), 상태(state), 속성(property)을 사용하여 위젯, 내비게이션, 동작을 접근 가능하게 할 수 있는 처리 방법을 추천합니다.
       이 문서는 주로 웹 어플리케이션 개발자들을 대상으로 하지만, 지침은 유저 에이전트와 보조 기술 개발자에게도 유용합니다.
     </p>
@@ -4396,7 +4252,7 @@ var[data-type]:hover::before {
             <li>HTML <code>header</code> 요소(element)는 그것의 컨텍스트가 <code>body</code> 요소(element)인 경우 <code>banner</code> 랜드마크를 정의합니다.</li>
 
             <li>
-              HTML <code>header</code> 요소(element)는 다음 요소(element)들 중 하나의 후손일 경우 <code>banner</code> 랜드마크로 간주되지 않습니다 (<a href="https://w3c.github.io/html-aam/" class="html-mapping">HTML 접근성 매핑</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-html-aam">HTML-AAM</a></cite>] 참고):
+              HTML <code>header</code> 요소(element)는 다음 요소(element)들 중 하나의 후손일 경우 <code>banner</code> 랜드마크로 간주되지 않습니다 (<a href="https://w3c.github.io/html-aam/" class="html-mapping">HTML 접근성 매핑</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-html-aam" title="HTML Accessibility API Mappings 1.0">HTML-AAM</a></cite>] 참고):
               <ul>
                 <li><code>article</code></li>
                 <li><code>aside</code></li>
@@ -4476,7 +4332,7 @@ var[data-type]:hover::before {
             <li>HTML <code>footer</code> 요소(element)는 그것의 컨텍스트가 <code>body</code> 요소(element)인 경우 <code>contentinfo</code> 랜드마크를 정의합니다.</li>
 
             <li>
-              HTML <code>footer</code> 요소(element)는 다음 요소(element)들 중 하나의 후손일 경우 <code>contentinfo</code> 랜드마크로 간주되지 않습니다 (<a href="https://w3c.github.io/html-aam/" class="html-mapping">HTML 접근성 매핑</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-html-aam">HTML-AAM</a></cite>] 참고):
+              HTML <code>footer</code> 요소(element)는 다음 요소(element)들 중 하나의 후손일 경우 <code>contentinfo</code> 랜드마크로 간주되지 않습니다 (<a href="https://w3c.github.io/html-aam/" class="html-mapping">HTML 접근성 매핑</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-html-aam" title="HTML Accessibility API Mappings 1.0">HTML-AAM</a></cite>] 참고):
               <ul>
                 <li><code>article</code></li>
                 <li><code>aside</code></li>
@@ -7932,5 +7788,5 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
 <section id="references" class="appendix"><h2 id="d-references"><bdi class="secno">D. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="informative-references">
         <h3 id="d-1-informative-references"><bdi class="secno">D.1 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
       <dl class="bibliography">
-        <dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-html-aam">[HTML-AAM]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-html-aria">[HTML-ARIA]</dt><dd><a href="https://www.w3.org/TR/html-aria/"><cite>ARIA in HTML</cite></a>. Steve Faulkner; Scott O'Hara.  W3C. 6 December 2019. W3C Working Draft. URL: <a href="https://www.w3.org/TR/html-aria/">https://www.w3.org/TR/html-aria/</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.0</cite></a>. James Craig; Michael Cooper et al.  W3C. 20 March 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria/">https://www.w3.org/TR/wai-aria/</a></dd>
+        <dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-html-aam">[HTML-AAM]</dt><dd><a href="https://www.w3.org/TR/html-aam-1.0/"><cite>HTML Accessibility API Mappings 1.0</cite></a>. Steve Faulkner; Alexander Surkov; Scott O'Hara; Bogdan Brinza; Jason Kiss; Cynthia Shelly.  W3C. 17 December 2019. W3C Working Draft. URL: <a href="https://www.w3.org/TR/html-aam-1.0/">https://www.w3.org/TR/html-aam-1.0/</a></dd><dt id="bib-html-aria">[HTML-ARIA]</dt><dd><a href="https://www.w3.org/TR/html-aria/"><cite>ARIA in HTML</cite></a>. Steve Faulkner; Scott O'Hara.  W3C. 15 February 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/html-aria/">https://www.w3.org/TR/html-aria/</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd>
       </dl></section></section><p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
