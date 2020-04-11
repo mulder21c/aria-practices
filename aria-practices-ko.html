@@ -3528,7 +3528,7 @@
 
           <li><code>contentinfo</code> 랜드마크는 최상위 랜드마크여야 합니다.</li>
 
-          <li>페이지가 중첩된 <code>document</code>와/또는 <code>application</code> 역할(role)을 포함하는 경우 (예를 들어, 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(element)의 사용을 통해), 각 <code>document</code>나 <code>application</code> 역할(role)은
+          <li>페이지가 중첩된 <code>document</code>와/또는 <code>application</code> 역할(role)을 포함하는 경우 (예를 들어, 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(element)의 사용을 통해), 각 <code>document</code>나 <code>application</code> ���할(role)은
             하나의 <code>contentinfo</code> 랜드마크를 가질 수 있습니다.</li>
 
           <li>페이지가 두 개 이상의 <code>contentinfo</code> 랜드마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다 (위 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
@@ -3961,6 +3961,7 @@
           <pre><code>&lt;span id="night-mode-label">Night mode&lt;/span&gt;
 &lt;span role="switch" aria-checked="false" tabindex="0" aria-labelledby="night-mode-label">&lt;/span&gt;</code></pre>
           <p>
+            이 상황에서 <code>aria-labelledby</code>를 사용하는 것이 <code>for</code> 속성(attribute)을 가진 HTML <code>label</code>을 사용하는 것과 유사한 반면, 한 가지 중요한 차이점은 브라우저가 라벨링 하는 요소를 클릭하는 것이 라벨링 된 요소를 자동으로 활성화 하지 않는 다는 것에 주목하세요. 그것은 작성자의 책임입니다.
             Note that while using <code>aria-labelledby</code> is similar in this situation to using an HTML <code>label</code> element with the <code>for</code> attribute, one significant difference is that browsers do not automatically make clicking on the labeling element activate the labeled element; that is an author responsibility.
             However, HTML <code>label</code> cannot be used to label a <code>span</code> element.
             Fortunately, an HTML <code>input</code> with <code>type="checkbox"</code> allows the ARIA <code>switch</code> role, so when feasible, using the following approach creates a more robust solution.
