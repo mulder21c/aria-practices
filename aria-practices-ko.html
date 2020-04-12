@@ -3827,7 +3827,7 @@
           </p>
           <p>
             입력 상자나 버튼과 같은 대화형 요소(interactive element)가 시각적으로 사라지지 않는 텍스트 레이블이 없는 경우, 이를 포함하도록 디자인을 조정하세요.
-            접근 가능한 이름에 대해 더 확실한 소스를 제공하는 것 외에, 보이는 텍스트 레이블은 보이지 않는 이름을 나타내는 보조 기술을 사용하지 않는 많은 장애인들에 대한 접근성을 향상시킵니다.
+            접근 가능한 이름에 대해 더 견고한 소스를 제공하는 것 외에, 보이는 텍스트 레이블은 보이지 않는 이름을 나타내는 보조 기술을 사용하지 않는 많은 장애인들에 대한 접근성을 향상시킵니다.
             대부분의 상황에서, 보이는 텍스트 레이블은 또한 유저 인터페이스를 모든 사용자들이 이해하기 더 쉽게 만듭니다.
           </p>
         </section>
@@ -3836,7 +3836,7 @@
           <h5>규칙 3: 기본 기술 선호</h5>
           <p>
             HTML 문서에서, 가능할때마다, 폼 요소에 대한 HTML <code>label</code> 요소와 표에 대한 <code>caption</code> 요소와 같은 HTML 이름 지정 기법을 사용하세요.
-            유연성은 떨어지지만, 보이는 텍스트에 대한 단순성과 의존성은 강력한 접근 가능한 환경을 보장하는데 도움이 됩니다.
+            유연성은 떨어지지만, 보이는 텍스트에 대한 단순성과 의존성은 견고한 접근 가능한 환경을 보장하는데 도움이 됩니다.
             몇 몇 <a href="#naming_techniques">이름 지정 기법</a>은 ARIA 속성 대신 HTML 기능을 사용하는 것의 특정 접근성 장점을 강조합니다.
           </p>
         </section>
@@ -3961,81 +3961,80 @@
           <pre><code>&lt;span id="night-mode-label">Night mode&lt;/span&gt;
 &lt;span role="switch" aria-checked="false" tabindex="0" aria-labelledby="night-mode-label">&lt;/span&gt;</code></pre>
           <p>
-            이 상황에서 <code>aria-labelledby</code>를 사용하는 것이 <code>for</code> 속성(attribute)을 가진 HTML <code>label</code>을 사용하는 것과 유사한 반면, 한 가지 중요한 차이점은 브라우저가 라벨링 하는 요소를 클릭하는 것이 라벨링 된 요소를 자동으로 활성화 하지 않는 다는 것에 주목하세요. 그것은 작성자의 책임입니다.
-            Note that while using <code>aria-labelledby</code> is similar in this situation to using an HTML <code>label</code> element with the <code>for</code> attribute, one significant difference is that browsers do not automatically make clicking on the labeling element activate the labeled element; that is an author responsibility.
-            However, HTML <code>label</code> cannot be used to label a <code>span</code> element.
-            Fortunately, an HTML <code>input</code> with <code>type="checkbox"</code> allows the ARIA <code>switch</code> role, so when feasible, using the following approach creates a more robust solution.
+            이 상황에서 <code>aria-labelledby</code>를 사용하는 것이 <code>for</code> 속성(attribute)을 가진 HTML <code>label</code>을 사용하는 것과 유사한 반면, 한 가지 중요한 차이점은 브라우저가 레이블을 지정하는 요소를 클릭하는 것이 레이블이 지정된 요소를 자동으로 활성화 하지 않는 다는 것에 주목하세요. 그것은 작성자의 책임입니다.
+            하지만, HTML <code>label</code>은 <code>span</code> 요소에 레이블을 지정하는데 사용될 수 없습니다. 다행히 HTML <code>type="checkbox"</code>을 가진 <code>input</code>은 ARIA <code>switch</code> 역할(role)을 허용하므로 가능한 경우 다음 접근법을 사용하는 것이 더 견고한 해결책을 만듭니다.
           </p>
           <pre><code>&lt;label for="night-mode">Night mode&lt;/label>
 &lt;input type="checkbox" role="switch" id="night-mode"></code></pre>
-  <p>The <code>aria-labelledby</code> property is useful in a wide variety of situations because:</p>
+          <div class="translator-comment">
+            텍스트가 복잡하여 부연 설명을 덧붙이면, HTML의 기본 기능으로 <code>label</code>을 클릭하면 이 <code>label</code>의 <code>for</code> 속성(attribute)으로 연결된 요소를 활성화 하도록 동작하는데, 위 예제에서와 같이 ARIA의 작성하는 것은 label의 동작과 같은 HTML 네이티브 동작을 제공하지 않음을 의미합니다. 따라서, HTML 네이티브와 동등하게 동작하게 하는 것은 작성자의 몫으로 남겨집니다.
+          </div>
+  <p><code>aria-labelledby</code> 속성(property)은 다음의 이유로 여러 상황에서 유용합니다:</p>
   <ul>
-    <li><p>It has the highest precedence when browsers calculate accessible names, i.e., it overrides names from child content and all other naming attributes, including <code>aria-label</code>.</p></li>
-    <li><p>It can concatenate content from multiple elements into a single name string.</p></li>
+    <li><p>브라우저가 접근 가능한 이름을 계산할 때 가장 높은 우선 순위를 가집니다. 즉, 자식 콘텐트로부터의 이름과 <code>aria-label</code>를 포함하여 모든 다른 이름 속성들 보다 우선됩니다. </p></li>
+    <li><p>여러 요소의 콘텐츠를 단일 이름 문자열로 연결할 수 있습니다.</p></li>
     <li>
-      <p>It incorporates content from elements regardless of their visibility, i.e., it even includes content from elements with the HTML <code>hidden</code> attribute, CSS <code>display: none</code>, or CSS <code>visibility: hidden</code> in the calculated name string.</p>
+      <p>가시성과 관계 없이 요소의 콘텐트를 포함합니다. 즉, 계산된 이름 문자열에 <code>hidden</code> 속성(attribute), CSS <code>display: none</code>이나 CSS <code>visibility: hidden</code>을 가진 요소의 콘텐트도 포함합니다.</p>
     </li>
-    <li><p>It incorporates the value of input elements, i.e., if it references a textbox, the value of the textbox is included in the calculated name string.</p></li>
+    <li><p>input 요소의 값을 통합합니다. 즉, 텍스트 상자를 참조하는 경우, 텍스트 상자의 값이 계산 된 이름 문자열에 포함됩니다.</p></li>
   </ul>
-  <p>An example of referencing a hidden element with <code>aria-labelledby</code> could be a label for a night switch control:</p>
+  <p><code>aria-labelledby</code>를 가진 숨겨진 요소를 참조하는 예는 야간 스위치 제어에 대한 레이블 일 수 있습니다:</p>
       <pre><code>&lt;span id="night-mode-label" hidden>Night mode&lt;/span>
 &lt;input type="checkbox" role="switch" aria-labelledby="night-mode-label"></code></pre>
 
           <p>
-            In some cases, the most effective name for an element is its own content combined with the content of another element.
-            Because <code>aria-labelledby</code> has highest precedence in name calculation, in those situations, it is possible to use <code>aria-labelledby</code> to reference both the element itself and the other element.
-            In the following example, the &quot;Read more...&quot; link is named by the element itself and the article’s heading, resulting in a name for the link of &quot;Read more... 7 ways you can help save the bees&quot;.
+            경우에 따라, 요소에 대한 가장 효과적인 이름은 다른 요소의 콘텐트와 자체 콘텐츠가 결합된 것입니다.
+            <code>aria-labelledby</code>는 이름 계산에서 가장 높은 우선 순위를 가지기 때문에, 그 경우 자체 요소와 다른 요소를 모두 참조하도록 <code>aria-labelledby</code>를 사용할 수 있습니다.
+            다음 예에서, &quot;Read more...&quot; 링크는 요소 자신과 게시글의 제목에 의해 이름이 지정되어 결과적으로 &quot;Read more... 7 ways you can help save the bees&quot;의 링크 이름이 됩니다.
           </p>
           <pre><code>&lt;h2 id="bees-heading"&gt;7 ways you can help save the bees&lt;/h2&gt;
 &lt;p&gt;Bees are disappearing rapidly. Here are seven things you can do to help.&lt;/p&gt;
 &lt;p&gt;&lt;a id="bees-read-more" aria-labelledby="bees-read-more bees-heading"&gt;Read more...&lt;/a&gt;&lt;/p&gt;</code></pre>
           <p>
-            When multiple elements are referenced by <code>aria-labelledby</code>, text content from each referenced element is concatenated in the order specified in the <code>aria-labelledby</code> value.
-            If an element is referenced more than one time, only the first reference is processed.
-            When concatenating content from multiple elements, browsers trim leading and trailing white space and separate content from each element with a single space.
+            여러 요소들이 <code>aria-labelledby</code>로 참조되는 경우, 각 참조 된 요소들의 텍스트 콘텐트는 <code>aria-labelledby</code> 값에 정의된 순서로 연결됩니다.
+            요소가 두 번 이상 참조되는 경우, 첫 번째 참조만 처리됩니다.
+            여러 요소들의 콘텐트를 연결하는 경우, 브라우저는 선행, 후행 공백을 제거하고 각 요소의 콘텐트를 단일 공백으로 분리합니다.
           </p>
           <pre><code>&lt;button id="download-button" aria-labelledby="download-button download-details">Download&lt;/button>
 &lt;span id="download-details">PDF, 2.4 MB&lt;/span></code></pre>
-          <p>In the above example, the accessible name of the button will be "Download PDF, 2.4 MB", with a space between "Download" and "PDF", and not "DownloadPDF, 2.4 MB".</p>
+          <p>위 예에서, 버튼의 접근 가능한 이름은 "DownloadPDF, 2.4 MB"가 아니라 "Download"와 "PDF" 사이에 공백이 있는 "Download PDF, 2.4 MB"가 될 것입니다.</p>
           <ol class="warning">
-            <li>The <code>aria-labelledby</code> property cannot be chained, i.e., if an element with <code>aria-labelledby</code> references another element that also has <code>aria-labelledby</code>, the <code>aria-labelledby</code> attribute on the referenced element will be ignored.</li>
-            <li>If an element is referenced by <code>aria-labelledby</code> more than one time during a name calculation, the second and any subsequent references will be ignored.</li>
-            <li>There are certain types of elements, such as paragraphs and list items,  that should not be named with <code>aria-labelledby</code>. They are identified in the table in the <a href="#naming_role_guidance">Accessible Name Guidance by Role</a> section.</li>
+            <li><code>aria-labelledby</code> 속성(property)은 체이닝 될 수 없습니다. 즉, <code>aria-labelledby</code>를 가진 요소가 <code>aria-labelledby</code>를 가진 다른 요소를 참조하는 경우, 참조된 요소의 <code>aria-labelledby</code> 속성(attribute)은 무시될 것입니다.</li>
+            <li>이름 계산 중에 요소가 두 번 이상 <code>aria-labelledby</code>에 의해 참조되는 경우, 두 번째 및 이후의 참조는 무시될 것입니다.</li>
+            <li><code>aria-labelledby</code>로 이름을 지정하지 않아야 하는 문단이나 목록 항목과 같은 특정 유형의 요소가 있습니다. 그것들은 <a href="#naming_role_guidance">역할에 따른 접근 가능한 이름 지정 지침</a> 섹션의 표에 나와있습니다.</li>
             <li>
-          If <code>aria-labelledby</code> is applied to an element with one of the roles that supports <a href="#naming_with_child_content">naming from child content</a>, content contained in the element and its descendants is hidden from assistive technology users unless it is also referenced by <code>aria-labelledby</code>.
-          It is strongly recommended to avoid using this attribute to override content of one of these elements except in rare circumstances where hiding content from assistive technology users is beneficial.
+          <code>aria-labelledby</code>가 <a href="#naming_with_child_content">자식 콘텐츠로부터 이름 지정</a>을 지원하는 역할(role)의 하나를 가진 요소에 적용되는 경우, 요소와 그 요소의 후손에 포함된 콘텐트는 <code>aria-labelledby</code>에 의해 참조되지 않는 한, 보조 기술 사용자에게 숨겨집니다.
+          보조 기술 사용자에게 콘텐트를 숨기는 것이 이로운 드문 경우를 제외하고 이 속성(attribute)를 사용하여 이 요소들 중 하나의 콘텐트를 무시하게 하는 것을 방지하는 것이 강력하게 권장됩니다.
         </li>
-            <li>Because calculating the name of an element with <code>aria-labelledby</code> can be complex and reference hidden content, testing with assistive technologies to ensure the expected name is presented to users is particularly important.</li>
+            <li><code>aria-labelledby</code>를 가진 요소의 이름을 계산하는 것은 복잡하고 숨겨진 콘텐트를 참조할 수 있기 때문에, 기대하는 이름이 사용자에게 노출되는지를 보장하도록 보조 기술을 가지고 테스트 하는 것이 특히 중요합니다.</li>
           </ol>
         </section>
 
         <section id="naming_with_labels">
-          <h5>Naming Form Controls with the Label Element</h5>
+          <h5>Label 요소로 폼 컨트롤 이름 지정</h5>
           <p>
-            The HTML <code>label</code> element enables authors to identify content that serves as a label and associate it with a form control.
-            When a <code>label</code> element is associated with a form control, browsers calculate an accessible name for the form control from the <code>label</code> content.
+            HTML <code>label</code> 요소는 작성자가 레이블로 제공하는 콘텐트를 식별하고 폼 컨트롤과 연결할 수 있게 합니다.
+            <code>label</code> 요소가 폼 컨트롤과 연결 될 경우, 브라우저는 <code>label</code> 콘텐트로부터 폼 컨트롤에 대한 접근 가능한 이름을 계산합니다.
           </p>
           <p>
-            For example, text displayed adjacent to a checkbox may be visually associated with the checkbox, so it is understood as the checkbox label by users who can perceive that visual association.
-            However, unless the text is programmatically associated with the checkbox, assistive technology users will experience a checkbox without a label.
-            Wrapping the checkbox and the labeling text in a <code>label</code> element as follows gives the checkbox an accessible name.
+            예를 들어, 체크 박스와 나란히 표시되는 텍스트는 체크박스와 시각적으로 연결 될 수 있으므로, 시각적 연관성을 인식할 수 있는 사용자에 의해 체크박스 레이블로 이해됩니다.
+            하지만, 텍스트가 프로그래밍 방식으로 체크박스와 연결되어 있지 않으면, 보조 기술 사용자는 레이블이 없는 체크박스를 경험하게 될 것입니다. 다음과 같이 체크박스와 <code>label</code> 요소에 체크박스와 레이블 텍스트를 감싸는 것은 체크박스에 접근 가능한 이름을 제공합니다.
           </p>
           <pre><code>&lt;label>
   &lt;input type="checkbox" name="subscribe">
   subscribe to our newsletter
 &lt;/label></code></pre>
           <p>
-            A form control can also be associated with a label by using the <code>for</code> attribute on the <code>label</code> element.
-            This allows the label and the form control to be siblings or have different parents in the DOM, but requires adding an <code>id</code> attribute to the form control, which can be error-prone.
-            When possible, use the above encapsulation technique for association instead of the following <code>for</code> attribute technique.
+            폼 컨트롤은 <code>label</code> 요소의 <code>for</code> 속성(attribute)을 사용하여 레이블과 연결될 수도 있습니다.
+            이는 레이블과 폼 컨트롤이 형제가 되게하거나 DOM에서 부모가 다르지만 폼 컨트롤에 <code>id</code> 속성(attribute)을 추가하는 것을 요구하므로 오류가 발생하게 할 수 있습니다.
+            가능하다면, 연결을 위해 다음의 <code>for</code> 속성(attribute) 기법 대신 위의 캡슐화 기법을 사용하세요.
           </p>
           <pre><code>&lt;input type="checkbox" name="subscribe" id="subscribe_checkbox">
 &lt;label for="subscribe_checkbox">subscribe to our newsletter&lt;/label></code></pre>
           <p>
-            Using the <code>label</code> element is an effective technique for satisfying <a href="#naming_rule_visible_text">Rule 2: Prefer Visible Text</a>.
-            It also satisfies <a href="#naming_rule_native_techniques">Rule 3: Prefer Native Techniques</a>.
-            Native HTML labels offer an important usability and accessibility advantage over ARIA labeling techniques: browsers automatically make clicking the label equivalent to clicking the form control.
-            This increases the hit area of the form control.
+            <code>label</code> 요소를 사용하는 것은 <a href="#naming_rule_visible_text">규칙 2: 보이는 텍스트 선호</a>를 만족시키는 효과적인 기법입니다. 또한 <a href="#naming_rule_native_techniques">규칙 3: 기본 기술 선호</a>를 만족시킵니다.
+            네이티브 HTML 레이블은 ARIA 레이블링 기법보다 중요한 사용성과 접근성의 이점을 제공합니다: 브라우저는 자동으로 레이블을 클릭하는 것이 폼 컨트롤을 클릭한 것과 동일하게 합니다.
+            이는 폼 컨트롤의 누르는 영역을 증가시킵니다.
           </p>
         </section>
 
