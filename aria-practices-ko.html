@@ -3420,7 +3420,7 @@
           이 경우에, 두 인스턴스를 구별하는 추가 정보를 레이블에 추가하는 것은 도움이 되기 보다는 주의가 산만해질 수 있습니다.
         </li>
 
-        <li>페이지에 랜드마크가 오직 하나만 사용된다면 레이블은 필요하지 않을 수 있습니다. 아래 랜드마크 영역 섹션을 참조하세요.</li>
+        <li>페이지에 랜드마크가 오직 하나만 사용된다면 레이블은 필요하지 않을 수 있습니다. 아래 랜드마크 영역 섹션을 참고하세요.</li>
 
         <li>영역이 헤딩 요소(예를 들어 <code>h1-h6</code>)로 시작한다면, <code>aria-labelledby</code> 속성(attribute)을 사용하여 영역에 대한 레이블로 사용될 수 있습니다.</li>
 
@@ -3453,7 +3453,7 @@
           <li>페이지가 중첩된 <code>document</code>와/또는 <code>application</code> 역할(role)을 포함하는 경우 (예를 들어, 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(element)의 사용을 통해), 각 <code>document</code>나 <code>application</code> 역할(role)은
             하나의 <code>banner</code> 랜드마크를 가질 수 있습니다. </li>
 
-          <li>페이지가 두 개 이상의 <code>banner</code> 랜드 마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다 (위의 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
+          <li>페이지가 둘 이상의 <code>banner</code> 랜드 마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다 (위의 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
         </ul>
 
         <section class="notoc">
@@ -3531,7 +3531,7 @@
           <li>페이지가 중첩된 <code>document</code>와/또는 <code>application</code> 역할(role)을 포함하는 경우 (예를 들어, 일반적으로 <code>iframe</code>과 <code>frame</code> 요소(element)의 사용을 통해), 각 <code>document</code>나 <code>application</code> ���할(role)은
             하나의 <code>contentinfo</code> 랜드마크를 가질 수 있습니다.</li>
 
-          <li>페이지가 두 개 이상의 <code>contentinfo</code> 랜드마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다 (위 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
+          <li>페이지가 둘 이상의 <code>contentinfo</code> 랜드마크를 포함한다면, 각각은 고유한 레이블을 가져야 합니다 (위 <a href="#aria_lh_step3">3 단계</a> 참고).</li>
         </ul>
 
         <section class="notoc">
@@ -3820,7 +3820,7 @@
         </section>
 
         <section id="naming_rule_visible_text">
-          <h5>규칙 2: 보이는 텍스트 선호</h5>
+          <h5>규칙 2: 보이는 텍스트 선택</h5>
           <p>
             유저 인터페이스가 적절한 접근 가능한 이름을 제공하는데 사용될 수 있는 보이는 텍스트를 포함하는 경우,  접근 가능한 이름에 대한 보이는 텍스트를 사용하는 것이 유지보수를 간소화하고, 오류를 방지하며 언어 번역 요구 사항을 줄입니다.
             이름이 시각적으로 표시되지 않고 마크업 안에만 존재하는 텍스트로부터 생성되는 경우, 유저 인터페이스 설계나 콘텐츠가 변경될 경우 접근 가능한 이름은 업데이트 되지 않을 소지가 높습니다.
@@ -3833,7 +3833,7 @@
         </section>
 
         <section id="naming_rule_native_techniques">
-          <h5>규칙 3: 기본 기술 선호</h5>
+          <h5>규칙 3: 기본 기술 선택</h5>
           <p>
             HTML 문서에서, 가능할때마다, 폼 요소에 대한 HTML <code>label</code> 요소와 표에 대한 <code>caption</code> 요소와 같은 HTML 이름 지정 기법을 사용하세요.
             유연성은 떨어지지만, 보이는 텍스트에 대한 단순성과 의존성은 견고한 접근 가능한 환경을 보장하는데 도움이 됩니다.
@@ -3901,14 +3901,14 @@
           <p>
             요소에 대한 콘텐트로부터 이름을 계산할 경우, 유저 에이전트는 각 후손 요소를 재귀적으로 확인하고 각 후손에 대한 이름 문자열을 계산하고, 결과 문자열을 연결합니다.
             두 가지 특정한 경우, 특정 후손들은 무시됩니다:  descendants of <code>treeitem</code> 요소의 후손인 <code>group</code>과 <code>menuitem</code> 요소의 후손인 <code>menu</code>는 계산에서 생략됩니다.
-            예를 들어, 다음 <code>tree</code>에서 첫 번째 트리 항목의 이름은 <q>Fruits</q>입니다; <q>Apples</q>, <q>Bananas</q>, and <q>Oranges</q>는 생략됩니다.
+            예를 들어, 다음 <code>tree</code>에서 첫 번째 트리 항목의 이름은 <q>과일</q>입니다; <q>사과</q>, <q>바나나</q>, and <q>오렌지</q>는 생략됩니다.
           </p>
         <pre><code>&lt;ul role="tree">
-  &lt;li role="treeitem">Fruits
+  &lt;li role="treeitem">과일
     &lt;ul role="group">
-      &lt;li role="treeitem">Apples&lt;/li>
-      &lt;li role="treeitem">Bananas&lt;/li>
-      &lt;li role="treeitem">Oranges&lt;/li>
+      &lt;li role="treeitem">사과&lt;/li>
+      &lt;li role="treeitem">바나나&lt;/li>
+      &lt;li role="treeitem">오렌지&lt;/li>
     &lt;/ul>
   &lt;/li>
 &lt;/ul></code></pre>
@@ -3958,13 +3958,13 @@
             <a href="#aria-labelledby" class="property-reference">aria-labelledby 속성</a>은 작성자가 접근 가능한 이름을 정의하기 위해 페이지의 다른 요소들을 참조할 수 있게 합니다.
             예를 들어, 다음 스위치는 이전 형제 요소의 텍스트 콘텐트로 이름이 지정됩니다.
           </p>
-          <pre><code>&lt;span id="night-mode-label">Night mode&lt;/span&gt;
+          <pre><code>&lt;span id="night-mode-label">야간 모드&lt;/span&gt;
 &lt;span role="switch" aria-checked="false" tabindex="0" aria-labelledby="night-mode-label">&lt;/span&gt;</code></pre>
           <p>
             이 상황에서 <code>aria-labelledby</code>를 사용하는 것이 <code>for</code> 속성(attribute)을 가진 HTML <code>label</code>을 사용하는 것과 유사한 반면, 한 가지 중요한 차이점은 브라우저가 레이블을 지정하는 요소를 클릭하는 것이 레이블이 지정된 요소를 자동으로 활성화 하지 않는 다는 것에 주목하세요. 그것은 작성자의 책임입니다.
             하지만, HTML <code>label</code>은 <code>span</code> 요소에 레이블을 지정하는데 사용될 수 없습니다. 다행히 HTML <code>type="checkbox"</code>을 가진 <code>input</code>은 ARIA <code>switch</code> 역할(role)을 허용하므로 가능한 경우 다음 접근법을 사용하는 것이 더 견고한 해결책을 만듭니다.
           </p>
-          <pre><code>&lt;label for="night-mode">Night mode&lt;/label>
+          <pre><code>&lt;label for="night-mode">야간 모드&lt;/label>
 &lt;input type="checkbox" role="switch" id="night-mode"></code></pre>
           <div class="translator-comment">
             텍스트가 복잡하여 부연 설명을 덧붙이면, HTML의 기본 기능으로 <code>label</code>을 클릭하면 이 <code>label</code>의 <code>for</code> 속성(attribute)으로 연결된 요소를 활성화 하도록 동작하는데, 위 예제에서와 같이 ARIA의 작성하는 것은 label의 동작과 같은 HTML 네이티브 동작을 제공하지 않음을 의미합니다. 따라서, HTML 네이티브와 동등하게 동작하게 하는 것은 작성자의 몫으로 남겨집니다.
@@ -3979,17 +3979,17 @@
     <li><p>input 요소의 값을 통합합니다. 즉, 텍스트 상자를 참조하는 경우, 텍스트 상자의 값이 계산 된 이름 문자열에 포함됩니다.</p></li>
   </ul>
   <p><code>aria-labelledby</code>를 가진 숨겨진 요소를 참조하는 예는 야간 스위치 제어에 대한 레이블 일 수 있습니다:</p>
-      <pre><code>&lt;span id="night-mode-label" hidden>Night mode&lt;/span>
+      <pre><code>&lt;span id="night-mode-label" hidden>야간 모드&lt;/span>
 &lt;input type="checkbox" role="switch" aria-labelledby="night-mode-label"></code></pre>
 
           <p>
             경우에 따라, 요소에 대한 가장 효과적인 이름은 다른 요소의 콘텐트와 자체 콘텐츠가 결합된 것입니다.
             <code>aria-labelledby</code>는 이름 계산에서 가장 높은 우선 순위를 가지기 때문에, 그 경우 자체 요소와 다른 요소를 모두 참조하도록 <code>aria-labelledby</code>를 사용할 수 있습니다.
-            다음 예에서, &quot;Read more...&quot; 링크는 요소 자신과 게시글의 제목에 의해 이름이 지정되어 결과적으로 &quot;Read more... 7 ways you can help save the bees&quot;의 링크 이름이 됩니다.
+            다음 예에서, &quot;더 보기...&quot; 링크는 요소 자신과 게시글의 제목에 의해 이름이 지정되어 결과적으로 &quot;더 보기... 벌을 구할 수 있는 7가지 방법&quot;의 링크 이름이 됩니다.
           </p>
-          <pre><code>&lt;h2 id="bees-heading"&gt;7 ways you can help save the bees&lt;/h2&gt;
-&lt;p&gt;Bees are disappearing rapidly. Here are seven things you can do to help.&lt;/p&gt;
-&lt;p&gt;&lt;a id="bees-read-more" aria-labelledby="bees-read-more bees-heading"&gt;Read more...&lt;/a&gt;&lt;/p&gt;</code></pre>
+          <pre><code>&lt;h2 id="bees-heading"&gt;벌을 구할 수 있는 7가지 방법&lt;/h2&gt;
+&lt;p&gt;벌이 빠르게 사라지고 있습니다. 여기 당신이 도울 수 있는 7가지가 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;a id="bees-read-more" aria-labelledby="bees-read-more bees-heading"&gt;더 보기...&lt;/a&gt;&lt;/p&gt;</code></pre>
           <p>
             여러 요소들이 <code>aria-labelledby</code>로 참조되는 경우, 각 참조 된 요소들의 텍스트 콘텐트는 <code>aria-labelledby</code> 값에 정의된 순서로 연결됩니다.
             요소가 두 번 이상 참조되는 경우, 첫 번째 참조만 처리됩니다.
@@ -4022,7 +4022,7 @@
           </p>
           <pre><code>&lt;label>
   &lt;input type="checkbox" name="subscribe">
-  subscribe to our newsletter
+  뉴스레터 구독
 &lt;/label></code></pre>
           <p>
             폼 컨트롤은 <code>label</code> 요소의 <code>for</code> 속성(attribute)을 사용하여 레이블과 연결될 수도 있습니다.
@@ -4030,442 +4030,441 @@
             가능하다면, 연결을 위해 다음의 <code>for</code> 속성(attribute) 기법 대신 위의 캡슐화 기법을 사용하세요.
           </p>
           <pre><code>&lt;input type="checkbox" name="subscribe" id="subscribe_checkbox">
-&lt;label for="subscribe_checkbox">subscribe to our newsletter&lt;/label></code></pre>
+&lt;label for="subscribe_checkbox">뉴스레터 구독&lt;/label></code></pre>
           <p>
-            <code>label</code> 요소를 사용하는 것은 <a href="#naming_rule_visible_text">규칙 2: 보이는 텍스트 선호</a>를 만족시키는 효과적인 기법입니다. 또한 <a href="#naming_rule_native_techniques">규칙 3: 기본 기술 선호</a>를 만족시킵니다.
+            <code>label</code> 요소를 사용하는 것은 <a href="#naming_rule_visible_text">규칙 2: 보이는 텍스트 선택</a>을 만족시키는 효과적인 기법입니다. 또한 <a href="#naming_rule_native_techniques">규칙 3: 기본 기술 선택</a>을 만족시킵니다.
             네이티브 HTML 레이블은 ARIA 레이블링 기법보다 중요한 사용성과 접근성의 이점을 제공합니다: 브라우저는 자동으로 레이블을 클릭하는 것이 폼 컨트롤을 클릭한 것과 동일하게 합니다.
             이는 폼 컨트롤의 누르는 영역을 증가시킵니다.
           </p>
         </section>
 
         <section id="naming_with_legends">
-          <h5>Naming Fieldsets with the Legend Element</h5>
+          <h5>legend 요소로 필드셋 이름 지정</h5>
           <p>
-            The HTML <code>fieldset</code> element can be used to group form controls, and the <code>legend</code> element can be used to give the group a name.
-            For example, a group of radio buttons can be grouped together in a <code>fieldset</code>, where the <code>legend</code> element labels the group for the radio buttons.
+            HTML <code>fieldset</code> 요소는 폼 컨트롤을 그룹핑하는데 사용될 수 있고, <code>legend</code> 요소는 그룹에 이름을 제공하는데 사용될 수 있습니다.
+            예를 들어, 라디오 버튼 그룹은 <code>legend</code> 요소가 라디오 버튼들에 대한 그룹에 레이블을 지정하는 <code>fieldset</code> 안에 함께 그룹핑 될 수 있습니다.
           </p>
           <pre><code>&lt;fieldset>
-  &lt;legend>Select your starter class&lt;/legend>
+  &lt;legend>시작 클래스 선택&lt;/legend>
   &lt;label>&lt;input type="radio" name="starter-class" value="green"> Green&lt;/label>
   &lt;label>&lt;input type="radio" name="starter-class" value="red"> Red&lt;/label>
   &lt;label>&lt;input type="radio" name="starter-class" value="blue"> Blue&lt;/label>
 &lt;/fieldset></code></pre>
           <p>
-            This grouping technique is particularly useful for presenting multiple choice questions.
-            It enables authors to associate a question with a group of answers.
-            If a question is not programmatically associated with its answer options, assistive technology users may access the answers without being aware of the question.
+            이 그룹핑 기법은 다중 선택 문제를 표현하는데 특히 유용합니다.
+            작성자들이 질문과 답변 그룹을 연결 시킬 수 있게 합니다.
+            질문이 프로그램적으로 답변 그룹과 연결되지 않는 경우, 보조 기술 사용자는 질문을 알지 못한 채 답변에 접근할 것입니다.
           </p>
           <p>
-            Similar benefits can be gained from grouping and naming other types of related form fields using <code>fieldset</code> and <code>legend</code>.
+            <code>fieldset</code>과 <code>legend</code>를 사용하여 다른 유형의 폼 필드를 그룹핑 하고 이름을 지정하는 경우에도 유사한 이점을 얻을 수 있습니다.
           </p>
           <pre><code>&lt;fieldset>
-  &lt;legend>Shipping address&lt;/legend>
-  &lt;p>&lt;label>Full name &lt;input name="name" required>&lt;/label>&lt;/p>
-  &lt;p>&lt;label>Address line 1 &lt;input name="address-1" required>&lt;/label>&lt;/p>
-  &lt;p>&lt;label>Address line 2 &lt;input name="address-2">&lt;/label>&lt;/p>
+  &lt;legend>배송 주소&lt;/legend>
+  &lt;p>&lt;label>이름 &lt;input name="name" required>&lt;/label>&lt;/p>
+  &lt;p>&lt;label>주소 1 &lt;input name="address-1" required>&lt;/label>&lt;/p>
+  &lt;p>&lt;label>주소 2 &lt;input name="address-2">&lt;/label>&lt;/p>
   ...
 &lt;/fieldset>
 &lt;fieldset>
-  &lt;legend>Billing address&lt;/legend>
+  &lt;legend>청구서 받을 주소&lt;/legend>
   ...
 &lt;/fieldset></code></pre>
-          <p>Using the <code>legend</code> element to name a <code>fieldset</code> element satisfies <a href="#naming_rule_visible_text">Rule 2: Prefer Visible Text</a> and <a href="#naming_rule_native_techniques">Rule 3: Prefer Native Techniques</a>.</p>
+          <p><code>fieldset</code> 요소에 이름을 지정하기 위해 <code>legend</code> 요소를 사용하는 것이 <a href="#naming_rule_visible_text">규칙 2: 보이는 텍스트 선택</a>과 <a href="#naming_rule_native_techniques">규칙 3: 기본 기술 선택</a>을 만족시킵니다.</p>
         </section>
 
         <section id="naming_with_captions">
-          <h5>Naming Tables and Figures with Captions</h5>
+          <h5>캡션으로 표와 삽화 이름 지정</h5>
           <p>
-            The accessible name for HTML <code>table</code> and <code>figure</code> elements can be derived from a child <code>caption</code> or <code>figcaption</code> element, respectively.
-            Tables and figures often have a caption to explain what they are about, how to read them, and sometimes giving them numbers used to refer to them in surrounding prose.
-            Captions can help all users better understand content, but are especially helpful to users of assistive technologies.
+            HTML <code>table</code>과 <code>figure</code>에 대한 접근 가능한 이름은 각각 자식 <code>caption</code>이나 <code>figcaption</code>으로부터 파생될 수 있습니다.
+            표와 삽화는 종종 그것이 무엇에 관한 것인지, 어떻게 읽는지를 설명하기 위해, 그리고 간혹 주변 글에서 그것들을 가리키는데 사용되는 숫자를 제공하는 캡션을 가집니다.
+            캡션은 모든 사용자가 콘텐츠를 더 잘 이해하는데 도움이 되지만, 특히 보조 기술 사용자에게 도움이 됩니다.
           </p>
           <p>
-            In HTML, the <code>table</code> element marks up a data table, and can be provided with a caption using the <code>caption</code> element.
-            If the <code>table</code> element does not have <code>aria-label</code> or <code>aria-labelledby</code>, then the <code>caption</code> will be used as the accessible name.
-            For example, the accessible name of the following table is <q>Special opening hours</q>.
+            HTML에서, <code>table</code> 요소는 데이터 테이블을 마크업하고 <code>caption</code> 요소를 사용하여 캡션이 함께 제공될 수 있습니다.
+            <code>table</code> 요소가 <code>aria-label</code>나 <code>aria-labelledby</code>를 가지지 않은 경우, <code>caption</code>이 접근 가능한 이름으로 사용 될 것입니다.
+            예를 들어 다음 표의 접근 가능한 이름은 <q>특별 영업 시간</q>입니다.
           </p>
           <pre><code>&lt;table>
- &lt;caption>Special opening hours&lt;/caption>
- &lt;tr>&lt;td>30 May &lt;td>Closed
- &lt;tr>&lt;td>6 June &lt;td>11:00-16:00
+ &lt;caption>특별 영업 시간&lt;/caption>
+ &lt;tr>&lt;td>5월 30일 &lt;td>휴무
+ &lt;tr>&lt;td>6월 6일 &lt;td>11:00-16:00
 &lt;/table></code></pre>
-          <p>The following example gives the table a number (<q>Table 1</q>) so it can be referenced. </p>
+          <p>다음 예는 참조 할 수 있도록 표 번호를 (<q>표 1</q>)을 제공합니다.</p>
           <pre><code>&lt;table>
- &lt;caption>Table 1. Traditional dietary intake of Okinawans and other Japanese circa 1950&lt;/caption>
+ &lt;caption>표 1. 1950년 오키나와인과 다른 일본인의 전통적인 식이 섭취&lt;/caption>
  &lt;thead>
   &lt;tr>
    &lt;th>
-   &lt;th>Okinawa, 1949
-   &lt;th>Japan, 1950
+   &lt;th>오키나와, 1949
+   &lt;th>일본, 1950
  &lt;tbody>
   &lt;tr>
-   &lt;th>Total calories
+   &lt;th>총 칼로리
    &lt;td>1785
    &lt;td>2068
 
   [...]
 
 &lt;/table></code></pre>
-          <p>Note: Above table content is from <a href="https://www.ncbi.nlm.nih.gov/pubmed/17986602">Caloric restriction, the traditional Okinawan diet, and healthy aging: the diet of the world's longest-lived people and its potential impact on morbidity and life span</a>.</p>
+          <p>참고: 위 표는 <a href="https://www.ncbi.nlm.nih.gov/pubmed/17986602">Caloric restriction, the traditional Okinawan diet, and healthy aging: the diet of the world's longest-lived people and its potential impact on morbidity and life span</a>에서 가져옴.</p>
           <p>
-            If a <code>table</code> is named using <code>aria-label</code> or <code>aria-labelledby</code>, then a <code>caption</code> element, if present, will become an accessible description.
-            For an example, see <a href="#describing_with_captions">Describing Tables and Figures with Captions</a>.
+            <code>table</code>가 <code>aria-label</code>나 <code>aria-labelledby</code>를 사용하여 지름이 지정되고, <code>caption</code> 요소가 있다면 이는 접근 가능한 설명이 될 것입니다.
+            예를 들어, <a href="#describing_with_captions">캡션으로 표와 삽화를 설명하기</a>를 참고하세요.
           </p>
           <p>
-            Similarly, an HTML <code>figure</code> element can be given a caption using the <code>figcaption</code> element.
-            The caption can appear before or after the figure, but it is more common for figures to have the caption after.
+            유사하게, HTML <code>figure</code> 요소는 <code>figcaption</code> 요소를 사용하여 캡션이 제공 될 수 있습니다.
+            캡션은 삽화의 앞 혹은 뒤에 나타날 수 있지만, 삽화 뒤에 캡션이 있는 것이 더 일반적입니다.
           </p>
           <pre><code>&lt;figure>
- &lt;img alt="Painting of a person walking in a desert." src="Hole_JesusalDesierto.jpg">
- &lt;figcaption>Jesus entering the desert as imagined by William Hole, 1908&lt;/figcaption>
+ &lt;img alt="사막에서 걷고 있는 사람의 그림." src="Hole_JesusalDesierto.jpg">
+ &lt;figcaption>윌리엄 홀이 상상한 사막으로 들어가는 예수, 1908&lt;/figcaption>
 &lt;/figure></code></pre>
           <p>
-            Like with <code>table</code> elements, if a <code>figure</code> is not named using <code>aria-label</code> or <code>aria-labelledby</code>, the content of the <code>figcaption</code> element will be used as the accessible name.
-            However unlike <code>table</code> elements, if the <code>figcaption</code> element is not used for the name, it does not become an accessible description unless it is referenced by <code>aria-describedby</code>.
-            Nevertheless, assistive technologies will render the content of a <code>figcaption</code> regardless of whether it is used as a name, description, or neither.
+            <code>table</code> 요소와 같이, <code>figure</code>가 <code>aria-label</code>이나 <code>aria-labelledby</code>를 사용하여 이름이 지정되지 않은 경우, <code>figcaption</code> 요소의 콘텐츠가 접근 가능한 이름으로 사용될 것입니다.
+            하지만 <code>table</code> 요소와 달리, <code>figcaption</code> 요소가 이름으로 사용되지 않은 경우, <code>aria-describedby</code>로 참조되지 않는 한 접근 가능한 설명이 되지는 않습니다.
+            그럼에도 불구하고, 보조 기술은 그것이 이름이나 설명 또는 둘 다로 사용되는지 여부에 관계 없이 <code>figcaption</code>의 콘텐트를 렌더링 합니다.
           </p>
-          <p>Using the <code>caption</code> element to name a <code>table</code> element, or a <code>figcaption</code> element to name a <code>figure</code> element, satisfies <a href="#naming_rule_visible_text">Rule 2: Prefer Visible Text</a> and <a href="#naming_rule_native_techniques">Rule 3: Prefer Native Techniques</a>.</p>
+          <p><code>table</code> 요소에 이름을 지정하기 위해 <code>caption</code> 요소를 사용하거나, <code>figure</code> 요소에 이름을 지정하기 위해 <code>figcaption</code> 요소를 사용하는 것은 <a href="#naming_rule_visible_text">규칙 2: 보이는 텍스트 선택</a>과 <a href="#naming_rule_native_techniques">규칙 3: 기본 기술 선택</a>을 만족시킵니다.</p>
         </section>
 
         <section id="naming_with_fallback">
-          <h5>Fallback Names Derived from Titles and Placeholders</h5>
+          <h5>title 및 placeholder로부터 파생 된 대체 이름</h5>
           <p>
-            When an accessible name is not provided using one of the primary techniques (e.g., the <code>aria-label</code> or <code>aria-labelledby</code> attributes), or native markup techniques (e.g., the HTML <code>label</code> element, or the <code>alt</code> attribute of the HTML <code>img</code> element), browsers calculate an accessible name from other attributes as a fallback mechanism.
-            Because the attributes used in fallback name calculation are not intended for naming, they typically yield low quality accessible names that are not effective.
-So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fallback</a>, prefer the explicit labeling techniques described above over fallback techniques described in this section.
+            접근 가능한 이름이 주요 기법들 중 하나 (예를 들어, <code>aria-label</code>나 <code>aria-labelledby</code> 속성(attribute)) 또는, 네이티브 마크업 기법을 (예를 들어, HTML <code>label</code> 요소나, HTML <code>img</code> 요소의 <code>alt</code> 속성(attribute)) 사용하여 제공되지 않은 경우, 브라우저는 대체 매커니즘으로 다른 속성(attribute)으로부터 접근 가능한 이름을 계산합니다.
+            대체 이름 계산으로 사용되는 속성(attribute)은 이름 지정을 위해 의도되지 않았기 때문에, 일반적으로 유효하지 않은 낮은 품질의 접근 가능한 이름을 생성합니다.
+            따라서, <a href="#naming_rule_avoid_fallback">규칙 4: 브라우저 폴백 방지</a>에 설명된 대로 이 섹션에 설명된 대체 기술 보다 위에서 설명된 명시적 레이블링 기법을 우선하세요.
           </p>
 
           <p>
-            Any HTML element can have a <code>title</code> attribute specified.
-            The <code>title</code> attribute may be used as the element's fallback accessible name.
-            The <code>title</code> attribute is commonly presented visually as a tooltip when the user hovers over the element with a pointing device, which is not particularly discoverable, and is also not accessible to visual users without a pointing device.
+            HTML 요소는 지정된 <code>title</code> 속성(attribute)을 가질 수 있습니다.
+            <code>title</code> 속성(attribute)은 요소의 대체 접근 가능한 이름으로 사용될 수 있습니다.
+            <code>title</code> 속성(attribute)은 일반적으로 사용자가 포인팅 기기로 요소 위를 맴돌 때 툴팁으로 시작적으로 표시되어 특별히 쉽게 찾을 수 없고, 포인팅 기기가 없은 시각 사용자에게도 접근 가능하지 않습니다.
           </p>
 
-          <p>For example, a <code>fieldset</code> element without a <code>legend</code> element child, but with a <code>title</code> attribute, gets its accessible name from the <code>title</code> attribute.</p>
+          <p>예를 들어, 자식 <code>legend</code> 요소가 없지만 <code>title</code> 속성(attribute)이 있는  <code>fieldset</code> 요소는 <code>title</code> 속성(attribute)으로부터 접근 가능한 이름을 가져옵니다.</p>
 
-          <pre><code>&lt;fieldset title="Select your starter class">
+          <pre><code>&lt;fieldset title="시작 클래스 선택">
   &lt;label>&lt;input type="radio" name="starter-class" value="green"> Green&lt;/label>
   &lt;label>&lt;input type="radio" name="starter-class" value="red"> Red&lt;/label>
   &lt;label>&lt;input type="radio" name="starter-class" value="blue"> Blue&lt;/label>
 &lt;/fieldset></code></pre>
 
           <p>
-            For the HTML <code>input</code> and <code>textarea</code> elements, the <code>placeholder</code> attribute is used as a fallback labeling mechanism if nothing else (including the <code>title</code> attribute) results in a label.
-            It is better to use a <code>label</code> element, since it does not disappear visually when the user focuses the form control.
+            HTML <code>input</code>과 <code>textarea</code> 요소에 대해, <code>placeholder</code> 속성(attribute)은 다른 (<code>title</code> 속성(attribute)을 포함하여) 레이블을 생성하는 것이 없다면 대체 레이블링 메커니즘으로 사용됩니다.
+            사용자가 폼 컨트롤에 초점을 주었을 때 시각적으로 사라지지 않기 때문에 <code>label</code> 요소를 사용하는 것이 더 좋습니다.
           </p>
 
-          <pre><code>&lt;!-- Using a &lt;label> is recommended -->
-&lt;label>Search &lt;input type=search name=q>&lt;/label>
+          <pre><code>&lt;!-- &lt;label>을 사용하는 것이 권장됩니다 -->
+&lt;label>검색 &lt;input type=search name=q>&lt;/label>
 
-&lt;!-- A placeholder is used as fallback -->
-&lt;input type=search name=q placeholder="Search"></code></pre>
+&lt;!-- placeholder가 폴백으로 사용됩니다 -->
+&lt;input type=search name=q placeholder="검색"></code></pre>
         </section>
       </section>
 
       <section id="naming_effectively">
-        <h4>Composing Effective and User-friendly Accessible Names</h4>
+        <h4>효과적이고 사용자 친화적인 접근 가능한 이름 구성</h4>
         <p>
-          For assistive technology users, especially screen reader users, the quality of accessible names is one of the most  significant contributors to usability.
-          Names that do not provide enough information reduce users' effectiveness while names that are too long reduce efficiency.
-          And, names that are difficult to understand reduce effectiveness, efficiency, and enjoyment.
+          보조 기술 사용자, 특히 스크린리더 사용자의 경우, 접근 가능한 이름의 품질은 사용성에 가장 중요한 기여자 중 하나입니다.
+          충분한 정보를 제공하지 않는 이름이 사용자의 효과성(effectiveness)을 떨어뜨리는 반면 너무 긴 이름은 효율성(efficiency)을 떨어뜨립니다.
+          그리고 이해하기 어려운 이름은 효과성(effectiveness), 효율성(efficiency), 흥미를 떨어뜨립니다.
         </p>
-        <p>The following guidelines provide a starting point for crafting user friendly names.</p>
+        <p>다음 지침은 사용자 친화적인 이름에 대한 시작점을 제공합니다.</p>
         <ul>
           <li>
-            Convey function or purpose, not form.
-            For example, if an icon that looks like the letter <q>X</q> closes a dialog, name it <q>Close</q>, not <q>X</q>.
-            Similarly, if a set of navigation links in the left side bar navigate among the product pages in a shopping site, name the navigation region <q>Product</q>, not <q>Left</q>.
+            형태가 아닌 기능이나 목적을 전달하세요.
+            예를 들어, <q>X</q> 문자처럼 보이는 아이콘이 대화상자를 닫는 경우, <q>X</q> 가 아니라 <q>닫기</q>로 이름을 지정하세요.
+            유사하게, 왼쪽 사이드바의 내비게이션 링크 세트가 쇼핑몰 사이트의 상품 페이지를 탐색하는 경우, 내비게이션 영역을 <q>왼쪽</q>이 아니라 <q>상품</q>으로 이름을 지정하세요.
           </li>
           <li>
-            Put the most distinguishing and important words first.
-            Often, for interactive elements that perform an action, this means a verb is the first word.
-            For instance, if a list of contacts displays <q>Edit</q>, <q>Delete</q>, and <q>Actions</q> buttons for each contact,
-            then <q>Edit John Doe</q>, <q>Delete John Doe</q>, and <q>Actions for John Doe</q> would be better accessible names than <q>John Doe edit</q>, <q>John Doe delete</q>, and <q>John Doe actions</q>.
-            By placing the verb first in the name, screen reader users can more easily and quickly distinguish the buttons from one another as well as from the element that opens the contact card for John Doe.
+            가장 특징적이고 중요한 단어를 먼저 넣으세요.
+            종종 동작을 수행하는 대화형 요소(interactive element)의 경우, 동사가 첫 번째 단어라는 것을 의미합니다.
+            예를 들어, 연락처 목록이 각 연락처에 대한 <q>편집</q>, <q>삭제</q>, <q>작업</q> 버튼을 표기하는 경우, <q>편집 John Doe</q>, <q>삭제 John Doe</q>, <q>작업 John Doe</q>가 <q>John Doe 수정</q>, <q>John Doe 삭제</q>, <q>John Doe 작업</q>보다 더 좋은 접근 가능한 이름일 것 입니다.
+            이름의 처음에 동사를 배치하여, 스크린리더 사용자는 더 쉽고 빠르게 John Doe에 대한 연락처 카드를 여는 요소뿐 아니라 다른 것들로부터 버튼을 구별할 수 있습니다.
           </li>
           <li>
-            Be concise. For many elements, one to three words is sufficient.
-            Only add more words when necessary.
+            간결하게 하세요. 많은 요소들의 경우, 1 ~ 3 단어면 충분합니다.
+            필요할 경우에만 더 많은 단어를 추가하세요.
           </li>
           <li>
-            Do NOT include a WAI-ARIA role name in the accessible name.
-            For example, do not include the word <q>button</q> in the name of a button, the word <q>image</q> in the name of an image, or the word <q>navigation</q> in the name of a navigation region.
-            Doing so would create duplicate screen reader output since screen readers convey the role of an element in addition to its name.
+            접근 가능한 이름에 WAI-ARIA 역할(role) 이름을 포함시키지 마세요.
+            예를 들어, 버튼 이름에 <q>버튼</q>이라는 단어를 포함 시키거나, 이미지 이름에 <q>이미지</q>라는 단어를 포함시키거나, 내비게이션 영역 이름에 <q>내비게이션</q>이라는 단어를 포함시키지 마세요.
+            그렇게 하는 것은 스크린리더가 이름에 요소의 역할(role)을 추가로 전달하므로 스크린리더 출력이 중복되게 만들게 됩니다.
           </li>
           <li>
-            Create unique names for elements with the same role unless the elements are actually identical.
-            For example, ensure every link on a page has a different name except in cases where multiple links reference the same location.
-            Similarly, give every navigation region on a page a different name unless there are regions with identical content that performs identical navigation functions.
+            요소가 정말로 동일하지 않는 한 동일한 역할을 가진 요소에 대해 고유한 이름을 생성하세요.
+            예를 들어, 동일한 위치를 참조하는 여러 링크가 있는 경우를 제외하고 페이지의 모든 링크는 서로 다른 이름을 가지도록 해야 합니다.
+            마찬가지로, 동일한 탐색 기능을 수행하는 동일한 콘텐트를 가진 영역이 없는 한 페이지의 모든 내비게이션 영역에 다른 이름을 지정하세요.
           </li>
           <li>
-            Start names with a capital letter; it helps some screen readers speak them with appropriate inflection.
-            Do not end names with a period; they are not sentences.
+            대문자로 이름을 시작하세요; 이는 일부 스크린리더가 적절한 어조로 말하게 하는데 도움을 줍니다.
+            마침표로 이름을 끝내지 마세요; 이름은 문장이 아닙니다.
           </li>
         </ul>
       </section>
 
       <section id="naming_role_guidance">
-        <h4><span id="naming_role_guidance_heading">Accessible Name Guidance by Role</span></h4>
+        <h4><span id="naming_role_guidance_heading">역할(role)에 의한 접근 가능한 이름 지정 지침</span></h4>
         <p>
-          Certain elements always require a name, others may usually or sometimes require a name, and still others should never be named.
-          The table below lists all ARIA roles and provides the following information for each :
+          어떤 요소는 항상 이름을 요구하고, 어떤 요소는 보통 또는 종종 이름을 요구하고, 그러나 어떤 요소들은 결코 이름이 지정되지 않아야 합니다.
+          다음 표는 ARIA 역할(role)을 나열하고 각각에 대한 다음 정보를 제공합니다:
         </p>
         <dl>
-          <dt>Necessity of Naming</dt>
+          <dt>이름 지정 필요성</dt>
           <dd>
-            Indicates how necessary it is for authors to add a naming attribute or element to supplement or override the content of an element with the specified role.
-            This column may include one of the following values:
+            작성자가 지정된 역할(role)을 가진 요소의 콘텐트를 보완하거나 대체하도록 하기 위해 이름을 지정하는 속성(attribute)나 요소(element)를 추가할 필요성의 정도를 나타냅니다.
+            이 열은 다음 값들 중 하나를 포함할 수 있습니다:
             <ul>
               <li>
-                Required <strong>Only If</strong> Content Insufficient: An element with this role is named by its descendant content.
-                If <code>aria-label</code> or <code>aria-labelledby</code> is applied, content contained in the element and its descendants is hidden from assistive technology users unless it is also referenced by <code>aria-labelledby</code>.
-                Avoid hiding descendant content except in the rare circumstances where doing so benefits assistive technology users.
+                내용이 불충분한 <strong>경우에만</strong> 필요: 이 역할(roel)을 가진 요소는 하위 콘텐츠에 의해 이름이 지정됩니다.
+                <code>aria-label</code>나 <code>aria-labelledby</code>가 적용된 경우, 요소와 요손의 후손에 포함된 콘텐트는 <code>aria-labelledby</code>에 의해 다시 참조되지 않는 한 보조 기술 사용자에게 숨겨집니다.
+                그렇게 하는 것이 보조 기술 사용자에게 도움이 되는 드문 경우를 제외하고 후손 콘텐트가 숨겨지는 것을 방지하세요.
               </li>
-              <li>Required: The ARIA specification requires authors to provide a name; a missing name causes accessibility validators to report an error.</li>
-              <li>Recommended: Providing a name is strongly recommended.</li>
-              <li>Discretionary: Naming is either optional or, in the circumstances described in the guidance column, is discouraged.</li>
-              <li>Do Not Name: Naming is strongly discouraged even if it is technically permitted; often assistive technologies do not render a name even if provided.</li>
-              <li>Prohibited: The ARIA specification does not permit the element to be named; If a name is specified, accessibility validators will report an error.</li>
+              <li>필수: ARIA 명세는 작성자가 이름을 제공하도록 요구합니다; 이름이 누락되는 것은 접근성 검사기가 오류를 보고합니다.</li>
+              <li>권장: 이름을 제공하는 것이 강력히 권장됩니다.</li>
+              <li>재량: 이름을 지정하는 것이 선택적이거나, 지침 컬럼에 설명된 상황에서는 사용되지 않아야 합니다.</li>
+              <li>이름을 지정하지 말것: 기술적으로 허용된다 하더라도 이름을 지정하는 것은 강력히 권장되지 않습니다; 종종 보조 기술은 이름이 제공 된다 하더라도 이름을 표시하지 않습니다.</li>
+              <li>금지: ARIA 명세는 요소에 이름지 지정되는 것을 허용하지 않습니다; 이름이 지정되는 경우, 접근성 검사기는 오류를 보고할 것입니다.</li>
             </ul>
           </dd>
-          <dt>Guidance:</dt>
+          <dt>지침:</dt>
           <dd>
-            Provides information to help determine if providing a name is beneficial, and if so, describes any recommended techniques.
+            이름을 제공하는 것이 유익한지 여부를 결정하는데 도움이 되는 정보를 제공하고, 권장 기술을 설명합니다.
           </dd>
         </dl>
         <table aria-labelledby="naming_role_guidance_heading">
           <thead>
             <tr>
-              <th>role</th>
-              <th>Necessity of Naming</th>
-              <th>Guidance</th>
+              <th>역할(role)</th>
+              <th>이름 지정 필요성</th>
+              <th>지침</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><a href="#alert" class="role-reference"><code>alert</code></a></td>
-              <td>Discretionary</td>
+              <td>재량</td>
               <td>
-                Some screen readers announce the name of an alert before announcing the content of the alert.
-                Thus, <code>aria-label</code> provides a method for prefacing the visible content of an alert with text that is not displayed as part of the alert.
-                Using <code>aria-label</code> is functionally equivalent to providing off-screen text in the contents of the alert, except off-screen text would be announced by screen readers that do not support <code>aria-label</code> on <code>alert</code> elements.
+                일부 스크린리더는 경고 콘텐트를 낭독하기 전에 경로 이름을 낭독합니다.
+                따라서, <code>aria-label</code>은 경고의 내용으로 표시되지 않는 텍스트로 경고의 가시적 콘텐트에 대한 말문을 여는 방법을 제공합니다.
+                <code>aria-label</code>을 사용하는 것은, <code>alert</code> 요소의 <code>aria-label</code>을 지원하지 않는 스크린리더에서는 오프스크린(off-screen) 텍스트가 낭독 될 것이라는 것을 제외하고, 경고의 콘텐트의 오프스크린(off-screen) 텍스트를 제공하는 것과 기능적으로 동일합니다.
               </td>
             </tr>
             <tr>
               <td><a href="#alertdialog" class="role-reference"><code>alertdialog</code></a></td>
-              <td>Required</td>
-              <td>Use <code>aria-labelledby</code> if a visible label is present, otherwise use <code>aria-label</code>.</td>
+              <td>필수</td>
+              <td>시각적으로 보이는 레이블이 존재한다면 <code>aria-labelledby</code>를 사용하고, 그렇지 않으면 <code>aria-label</code>을 사용하세요.</td>
           </tr>
             <tr>
               <td><a href="#application" class="role-reference"><code>application</code></a></td>
-              <td>Required</td>
-              <td>Use <code>aria-labelledby</code> if a visible label is present, otherwise use <code>aria-label</code>.</td>
+              <td>필수</td>
+              <td>시각적으로 보이는 레이블이 존재한다면 <code>aria-labelledby</code>를 사용하고, 그렇지 않으면 <code>aria-label</code>을 사용하세요.</td>
             </tr>
             <tr>
               <td><a href="#article" class="role-reference"><code>article</code></a></td>
-              <td>Recommended</td>
+              <td>권장</td>
               <td>
                 <ul>
-                  <li>Recommended to distinguish articles from one another; helps users when navigating among articles.</li>
-                  <li>Use <code>aria-labelledby</code> if a visible label is present, otherwise use <code>aria-label</code>.</li>
+                  <li>아티클을 서로 구별할 것이 권장됩니다; 아티클을 탐색할 때 사용자를 돕습니다.</li>
+                  <li>시각적으로 보이는 레이블이 존재한다면 <code>aria-labelledby</code>를 사용하고, 그렇지 않으면 <code>aria-label</code>을 사용하세요.</li>
                 </ul>
               </td>
             </tr>
             <tr>
               <td><a href="#banner" class="role-reference"><code>banner</code></a></td>
-              <td>Discretionary</td>
+              <td>재량</td>
               <td>
                 <ul>
-                  <li>Necessary in the uncommon circumstance where two banner landmark regions are present on the same page. It is otherwise optional.</li>
-                  <li>Named using <code>aria-labelledby</code> if a visible label is present, otherwise with <code>aria-label</code>.</li>
-                  <li>See the <a href="#aria_lh_banner">Banner Landmark</a> section.</li>
+                  <li>동일한 페이지에 두 개의 banner 랜드마크 영역이 존재하는 일반적이지 않은 상황에 필요합니다. 그렇지 않으면 선택적입니다.</li>
+                  <li>시각적으로 보이는 레이블이 존재한다면 <code>aria-labelledby</code>를 사용하고, 그렇지 않으면 <code>aria-label</code>을 사용하여 이름이 지정됩니다.</li>
+                  <li><a href="#aria_lh_banner">Banner 랜드마크</a> 섹션을 참고하세요.</li>
                 </ul>
               </td>
             </tr>
             <tr>
               <td><a href="#blockquote" class="role-reference"><code>blockquote</code></a></td>
-              <td>Discretionary</td>
+              <td>재량</td>
               <td>
-                If a visible label is present, associating it with the blockquote by using <code>aria-labelledby</code> could benefit some assistive technology users.
+                시각적으로 보이는 레이블이 존재하는 경우, <code>aria-labelledby</code>를 사용하여 인용구를 연결시키는 것은 일부 보조 기술 사용자들에게 이로울 수 있습니다.
               </td>
             </tr>
             <tr>
               <td><a href="#button" class="role-reference"><code>button</code></a></td>
-              <td>Required <strong>Only If</strong> Content Insufficient</td>
+              <td>내용이 불충분한 <strong>경우에만</strong> 필요</td>
               <td>
                 <ul>
-                  <li>Warning! Using <code>aria-label</code> or <code>aria-labelledby</code> will hide descendant content from assistive technologies.</li>
-                  <li>Ideally named by visible, descendant content.</li>
+                  <li>경고! <code>aria-label</code>이나 <code>aria-labelledby</code>를 사용하는 것은 보조 기술에게 후손 콘텐트를 숨길 것입니다.</li>
+                  <li>시각적 하위 콘텐트에 의해 이름이 지정되는 것이 이상적입니다.</li>
                 </ul>
               </td>
             </tr>
             <tr>
               <td><a href="#caption" class="role-reference"><code>caption</code></a></td>
-              <td>Prohibited</td>
+              <td>금지</td>
               <td></td>
             </tr>
             <tr>
               <td><a href="#cell" class="role-reference"><code>cell</code></a></td>
-              <td>Required <strong>Only If</strong> Content Insufficient</td>
+              <td>내용이 불충분한 <strong>경우에만</strong> 필요</td>
               <td>
                 <ul>
-                  <li>Warning! Using <code>aria-label</code> or <code>aria-labelledby</code> will hide descendant content from assistive technologies.</li>
-                  <li>Ideally named by visible, descendant content.</li>
-                  <li>Note that a name is not required; assistive technologies expect an empty cell in a table to be represented by an empty name.</li>
-                  <li>Note that associated row or column headers do not name a <code>cell</code>; the name of a cell in a table is its content. Headers are complementary information.</li>
+                  <li>경고! <code>aria-label</code>이나 <code>aria-labelledby</code>를 사용하는 것은 보조 기술에게 후손 콘텐트를 숨길 것입니다.</li>
+                  <li>시각적 하위 콘텐트에 의해 이름이 지정되는 것이 이상적입니다.</li>
+                  <li>이름이 요구되지 않는 다는 것에 주목하세요; 보조 기술은 표의 빈 셀은 빈 이름으로 표현될 것으로 기대합니다.</li>
+                  <li>연관된 행 또는 컬럼 헤더가 <code>cell</code> 이름을 지정하지 않는 다는 것에 주목하세요; 표에서 셀의 이름은 그것의 내용 입니다. 헤더는 보완 정보입니다.</li>
                 </ul>
               </td>
             </tr>
             <tr>
               <td><a href="#checkbox" class="role-reference"><code>checkbox</code></a></td>
-              <td>Required <strong>Only If</strong> Content Insufficient</td>
+              <td>내용이 불충분한 <strong>경우에만</strong> 필요</td>
               <td>
                 <ul>
-                  <li>Warning! Using <code>aria-label</code> or <code>aria-labelledby</code> will hide any descendant content from assistive technologies.</li>
-                  <li>If based on HTML <code>type="checkbox"</code>, use a <code>label</code> element.</li>
-                  <li>Otherwise, reference visible content via <code>aria-labelledby</code>.</li>
+                  <li>경고! <code>aria-label</code>이나 <code>aria-labelledby</code>를 사용하는 것은 보조 기술에게 후손 콘텐트를 숨길 것입니다.</li>
+                  <li>HTML <code>type="checkbox"</code> 기반인 경우, <code>label</code> 요소를 사용하세요.</li>
+                  <li>그렇지 않으면, <code>aria-labelledby</code>를 통해 가시적인 콘텐트를 참조시키세요.</li>
                 </ul>
               </td>
             </tr>
             <tr>
               <td><a href="#code" class="role-reference"><code>code</code></a></td>
-              <td>Prohibited</td>
+              <td>금지</td>
               <td></td>
             </tr>
             <tr>
               <td><a href="#columnheader" class="role-reference"><code>columnheader</code></a></td>
-              <td>Required <strong>Only If</strong> Content Insufficient</td>
+              <td>내용이 불충분한 <strong>경우에만</strong> 필요</td>
               <td>
                 <ul>
-                  <li>Warning! Using <code>aria-label</code> or <code>aria-labelledby</code> will hide descendant content from assistive technologies.</li>
-                  <li>Ideally named by visible, descendant content.</li>
-                  <li>If the <code>columnheader</code> role is implied from an HTML <code>th</code>, the HTML <code>abbr</code> attribute can be used to specify an abbreviated version of the name that is only announced when screen readers are reading an associated <code>cell</code> within the <code>table</code>, <code>grid</code>, or <code>treegrid</code>.</li>
+                  <li>경고! <code>aria-label</code>이나 <code>aria-labelledby</code>를 사용하는 것은 보조 기술에게 후손 콘텐트를 숨길 것입니다.</li>
+                  <li>시각적 하위 콘텐트에 의해 이름이 지정되는 것이 이상적입니다.</li>
+                  <li><code>columnheader</code> 역할(role)이 HTML <code>th</code>에서 암시된 것이라면, HTML <code>abbr</code> 속성(attribute)이 스크린리더가 <code>table</code>, <code>grid</code>, <code>treegrid</code> 내의 연관된 <code>cell</code>을 읽을 때 낭독되기만 하는  이름의 축약 버전을 지정하는데 사용될 수 있습니다.</li>
                 </ul>
               </td>
             </tr>
             <tr>
               <td><a href="#combobox" class="role-reference"><code>combobox</code></a></td>
-              <td>Required</td>
+              <td>필수</td>
               <td>
                 <ul>
-                  <li>If the <code>combobox</code> role is applied to an HTML <code>select</code> or <code>input</code> element, can be named with an HTML <code>label</code> element.</li>
-                  <li>Otherwise use <code>aria-labelledby</code> if a visible label is present.</li>
-                  <li>Use <code>aria-label</code> if a visible label is not present.</li>
+                  <li><code>combobox</code> 역할(role)이 HTML <code>select</code>나 <code>input</code> 요소에 적용된 경우, HTML <code>label</code> 요소로 이름이 지정될 수 있습니다.</li>
+                  <li>그렇지 않으면 가시적인 레이블이 존재할 경우 <code>aria-labelledby</code>을 사용하세요.</li>
+                  <li>가시적인 레이블이 존재하지 않는다면 <code>aria-label</code>을 사용하세요.</li>
                 </ul>
               </td>
             </tr>
             <tr>
               <td><a href="#complementary" class="role-reference"><code>complementary</code></a></td>
-              <td>Recommended</td>
+              <td>권장</td>
               <td>
                 <ul>
-                  <li>Naming is necessary when two complementary landmark regions are present on the same page.</li>
-                  <li>Naming is recommended even when one complementary region is present to help users understand the purpose of the region's content when navigating among landmark regions.</li>
-                  <li>Use <code>aria-labelledby</code> if a visible label is present, otherwise use <code>aria-label</code>.</li>
-                  <li>See the <a href="#aria_lh_complementary">Complementary Landmark</a> section.</li>
+                  <li>동일한 페이지에 둘 이상의 complementary 랜드마크가 존재하는 경우 이름 지정이 필요합니다.</li>
+                  <li>랜드마크 영역을 탐색할 때 사용자가 영역 내용의 목적을 이해하는데 도움을 주기 위해 하나의 영역이 존재할 경우에도 이름을 지정하는 것이 권장됩니다.</li>
+                  <li>시각적으로 보이는 레이블이 존재한다면 <code>aria-labelledby</code>를 사용하고, 그렇지 않으면 <code>aria-label</code>을 사용하세요.</li>
+                  <li><a href="#aria_lh_complementary">Complementary 랜드마크</a> 섹션을 참고하세요.</li>
                 </ul>
               </td>
             </tr>
             <tr>
               <td><a href="#contentinfo" class="role-reference"><code>contentinfo</code></a></td>
-              <td>Discretionary</td>
+              <td>재량</td>
               <td>
                 <ul>
-                  <li>Necessary in the uncommon circumstance where two contentinfo landmark regions are present on the same page. It is otherwise optional.</li>
-                  <li>Named using <code>aria-labelledby</code> if a visible label is present, otherwise with <code>aria-label</code>.</li>
+                  <li>동일한 페이지에 둘 이상의 contentinfo 랜드마크 영역이 존재하는 일반적이지 않은 상황에 필요합니다. 그렇지 않으면 선택적입니다.</li>
+                  <li>시각적으로 보이는 레이블이 존재한다면 <code>aria-labelledby</code>를 사용하고, 그렇지 않으면 <code>aria-label</code>을 사용하세요.</li>
                 </ul>
               </td>
             </tr>
             <tr>
               <td><a href="#definition" class="role-reference"><code>definition</code></a></td>
-              <td>Recommended</td>
-              <td>Reference the term being defined with <code>role="term"</code>, using <code>aria-labelledby</code>.</td>
+              <td>권장</td>
+              <td><code>aria-labelledby</code>를 사용하여, <code>role="term"</code>를 가진 정의되는 용어를 참조시키세요.</td>
             </tr>
             <tr>
               <td><a href="#deletion" class="role-reference"><code>deletion</code></a></td>
-              <td>Prohibited</td>
+              <td>금지</td>
               <td></td>
             </tr>
             <tr>
               <td><a href="#dialog" class="role-reference"><code>dialog</code></a></td>
-              <td>Required</td>
-              <td>Use <code>aria-labelledby</code> if a visible label is present, otherwise use <code>aria-label</code>.</td>
+              <td>필수</td>
+              <td>시각적으로 보이는 레이블이 존재한다면 <code>aria-labelledby</code>를 사용하고, 그렇지 않으면 <code>aria-label</code>을 사용하세요.</td>
             </tr>
             <tr>
               <td><a href="#directory" class="role-reference"><code>directory</code></a></td>
-              <td>Discretionary</td>
+              <td>재량</td>
               <td>
                 <ul>
-                  <li>Naming can help users understand the purpose of the directory.</li>
-                  <li>Use <code>aria-labelledby</code> if a visible label is present, otherwise use <code>aria-label</code>.</li>
+                  <li>이름을 지정하는 것은 사용자가 디렉토리의 목적을 이해하는데 도움이 될 수 있습니다.</li>
+                  <li>시각적으로 보이는 레이블이 존재한다면 <code>aria-labelledby</code>를 사용하고, 그렇지 않으면 <code>aria-label</code>을 사용하세요.</li>
                 </ul>
               </td>
             </tr>
             <tr>
               <td><a href="#document" class="role-reference"><code>document</code></a></td>
-              <td>Discretionary</td>
+              <td>재량</td>
               <td>
-                Elements with the <code>document</code> role are contained within an element with the <code>application</code> role, which is required to have a name.
-                Typically, the name of the <code>application</code> element will provide sufficient context and identity for the <code>document</code> element.
-                Because the <code>application</code> element is used only to create unusual, custom widgets, careful assessment is necessary to determine whether or not adding an accessible name is beneficial.
+                <code>document</code> 역할(role)을 가진 요소는 <code>application</code> 역할(role)을 가진 요소 내에 포함되며, 이름을 가져야 할 필요가 있습니다.
+                일반적으로, <code>application</code> 요소의 이름은 <code>document</code> 요소에 대한 충분한 컨텍스트와 정체성을 제공할 것입니다.
+                <code>application</code> 요소는 흔치 않은 사용자 정의 위젯을 생성하는데에만 사용되기 때문에, 주의 깊은 평가가 접근 가능한 이름을 추가할지의 여부가 유익한지 결정하는데 필요합니다.
               </td>
             </tr>
             <tr>
               <td><a href="#emphasis" class="role-reference"><code>emphasis</code></a></td>
-              <td>Prohibited</td>
+              <td>금지</td>
               <td></td>
             </tr>
             <tr>
               <td><a href="#feed" class="role-reference"><code>feed</code></a></td>
-              <td>Recommended</td>
+              <td>권장</td>
               <td>
                 <ul>
-                  <li>Helps screen reader users understand the context and purpose of the feed.</li>
-                  <li>Use <code>aria-labelledby</code> if a visible label is present, otherwise use <code>aria-label</code>.</li>
-                  <li>See the <a href="#feed">Feed Design Pattern</a>.</li>
+                  <li>스크린리더 사용자가 컨텍스트와 피드의 목적을 이해하도록 도와줍니다.</li>
+                  <li>시각적으로 보이는 레이블이 존재한다면 <code>aria-labelledby</code>를 사용하고, 그렇지 않으면 <code>aria-label</code>을 사용하세요.</li>
+                  <li><a href="#feed">Feed 설계 패턴</a>을 참고하세요.</li>
                 </ul>
               </td>
             </tr>
             <tr>
               <td><a href="#figure" class="role-reference"><code>figure</code></a></td>
-              <td>Recommended</td>
+              <td>권장</td>
               <td>
                 <ul>
-                  <li>For HTML, use the <code>figure</code> and <code>figcaption</code> elements. The <code>figcaption</code> will serve as the accessible name for the <code>figure</code>. See the <a href="#naming_with_captions">Naming Tables and Figures with Captions</a> section.</li>
-                  <li>When not using HTML, or when retrofitting legacy HTML, use the <code>aria-labelledby</code> on the figure, pointing to the figure's caption.</li>
-                  <li>If there is no visible caption, <code>aria-label</code> can be used.</li>
+                  <li>HTML의 경우, <code>figure</code>와 <code>figcaption</code> 요소를 사용하세요.  <code>figcaption</code>은 <code>figure</code>에 대한 접근 가능한 이름으로서 제공할 것입니다. <a href="#naming_with_captions">캡션으로 표와 삽화 이름 지정</a> 섹션을 참고하세요.</li>
+                  <li>HTML을 사용하지 않는 경우, 혹은 레거시 HTML을 개조하는 경우 figure의 캡션을 가리키게 하여 figure에 <code>aria-labelledby</code>를 사용하세요.</li>
+                  <li>시각적으로 보이는 캡션이 없는 경우 <code>aria-label</code>이 사용될 수 있습니다.</li>
                 </ul>
               </td>
             </tr>
             <tr>
               <td><a href="#form" class="role-reference"><code>form</code></a></td>
-              <td>Recommended</td>
+              <td>권장</td>
               <td>
                 <ul>
-                  <li>Helps screen reader users understand the context and purpose of the form landmark.</li>
-                  <li>Use <code>aria-labelledby</code> if a visible label is present, otherwise use <code>aria-label</code>.</li>
-                  <li>See the <a href="#aria_lh_form">Form Landmark</a> section.</li>
+                  <li>스크린리더 사용자가 컨텍스트와 form 랜드마크의 목적을 이해하도록 도와줍니다.</li>
+                  <li>시각적으로 보이는 레이블이 존재한다면 <code>aria-labelledby</code>를 사용하고, 그렇지 않으면 <code>aria-label</code>을 사용하세요.</li>
+                  <li><a href="#aria_lh_form">Form 랜드마크</a> 섹션을 참고하세요.</li>
                 </ul>
               </td>
             </tr>
             <tr>
               <td><a href="#generic" class="role-reference"><code>generic</code></a></td>
-              <td>Prohibited</td>
+              <td>금지</td>
               <td></td>
             </tr>
             <tr>
               <td><a href="#grid" class="role-reference"><code>grid</code></a></td>
-              <td>Required</td>
+              <td>권장</td>
               <td>
                 <ul>
-                  <li>If the <code>grid</code> is applied to an HTML <code>table</code> element, then the accessible name can be derived from the table's <code>caption</code> element.</li>
-                  <li>Otherwise, use <code>aria-labelledby</code> if a visible label is present, otherwise use <code>aria-label</code>.</li>
+                  <li>HTML <code>table</code> 요소에 <code>grid</code>가 적용된 경우, 접근 가능한 이름은 표의 <code>caption</code> 요소로부터 파생될 수 있습니다.</li>
+                  <li>그렇지 않으면, 시각적으로 보이는 레이블이 존재한다면 <code>aria-labelledby</code>를 사용하고, 그렇지 않으면 <code>aria-label</code>을 사용하세요.</li>
                 </ul>
               </td>
             </tr>
             <tr>
               <td><a href="#gridcell" class="role-reference"><code>gridcell</code></a></td>
-              <td>Required <strong>Only If</strong> Content Insufficient</td>
+              <td>내용이 불충분한 <strong>경우에만</strong> 필요</td>
               <td>
                 <ul>
                   <li>Warning! Using <code>aria-label</code> or <code>aria-labelledby</code> will hide descendant content from assistive technologies.</li>
