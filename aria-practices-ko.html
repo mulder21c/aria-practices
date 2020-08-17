@@ -47,7 +47,7 @@
       <li>다양한 유형의 리치 웹 콘텐츠를 다루는가? </li>
       <li>WAI-ARIA 사용 이외의 고려 사항이 충분히 설명되었는가? </li>
       <li>이 문서와 WAI-ARIA 명세의 관계가 명확한가? </li>
-      <li><a href="#aria_ex">디자인 패턴</a>이 명확한가?</li>
+      <li><a href="#aria_ex">설계 패턴</a>이 명확한가?</li>
     </ul>
     <p>
       의견을 남기려면, <a href="https://github.com/w3c/aria-practices/issues/"><abbr title="World Wide Web Consortium">W3C</abbr> ARIA Practices GitHub repository</a>에 이슈를 남기거나,
@@ -135,7 +135,7 @@
       <h3>브라우저와 보조 기술 지원</h3>
       <p>
         <strong>제품에 이 가이드의 코드를 사용하기 이전에 보조 기술 상호 운용성 테스트가 필수적입니다.</strong>
-        이 지침의 목적은 ARIA 명세에 정의 된 대로 ARIA 1.2의 적절한 사용을 실제로 보여주는 것이기 때문에, 디자인 패턴, 참고 예제, 샘플 코드는 일부러 브라우저와 보조 기술들의 ARIA 1.2에 대한 지원의 격차에 따른 문제를 해결하기 위한 코딩 기법을 기술하고 구현하지 <strong>않습니다</strong>.
+        이 지침의 목적은 ARIA 명세에 정의 된 대로 ARIA 1.2의 적절한 사용을 실제로 보여주는 것이기 때문에, 설계 패턴, 참고 예제, 샘플 코드는 일부러 브라우저와 보조 기술들의 ARIA 1.2에 대한 지원의 격차에 따른 문제를 해결하기 위한 코딩 기법을 기술하고 구현하지 <strong>않습니다</strong>.
         따라서, 대상 고객과 관련된 각 브라우저와 보조 기술 조합으로 구현을 철저하게 테스트 하는 것이 바람직합니다.
       </p>
       <p>
@@ -159,7 +159,7 @@
   </section>
 
   <section id="aria_ex">
-    <h2>디자인 패턴과 위젯</h2>
+    <h2>설계 패턴과 위젯</h2>
     <p>이 섹션은 WAI-ARIA 역할(role), 상태(state), 속성(property)을 적용하고 키보드 지원을 구현하여 일반적인 리치 인터넷 어플리케이션 패턴과 위젯을 접근 가능하게 만드는 방법을 보여줍니다.</p>
     <section class="widget" id="accordion">
       <h3>아코디언 (Show/Hide 기능이 있는 섹션)</h3>
@@ -5292,58 +5292,55 @@
   </section>
 
   <section id="keyboard">
-    <h2>Developing a Keyboard Interface</h2>
+    <h2>키보드 인터페이스 개발</h2>
     <p>
-      Unlike native HTML form elements, browsers do not provide keyboard support for graphical user interface (GUI) components that are made accessible with ARIA; authors have to provide the keyboard support in their code.
-      This section describes the principles and methods for making the functionality of a web page that includes ARIA widgets, such as menus and grids, as well as interactive components, such as toolbars and dialogs, operable with a keyboard.
-      Along with the basics of focus management, this section offers guidance toward the objective of providing experiences to people who rely on a keyboard that are as efficient and enjoyable as the experiences available to others.
+      네이티브 HTML 양식 요소(element)들과 달리, 브라우저는 ARIA로 접근 가능하게 만들어진 그래픽 유저 인터페이스(GUI) 컴포넌트에 대한 키보드 지원을 제공하지 않습니다; 작성자는 코드에 키보드 지원을 제공해야 합니다.
+      이 섹션은 메뉴와 그리드 같은 ARIA 위젯 뿐 아니라 키보드로 운용할 수 있는 툴바와 대화상자 같은 인터랙티브 컴포넌트를 포함하는 웹 페이지의 기능을 만드는 원칙과 방법을 설명합니다.
+      초점 관리의 기본 사항과 함께, 이 섹션은 키보드 사용자들에게 다른 사람들이 사용할 수 있는 경험 만큼 효율적이고 즐거운 경험을 제공한다는 목표에 대한 지침을 제공합니다.
     </p>
-      <p>This section covers: </p>
+      <p>이 섹션은 다음을 다룹니다: </p>
     <ol>
-      <li>Understanding fundamental principles of focus movement conventions used in ARIA design patterns.</li>
-      <li>Maintaining visible focus, predictable focus movement, and distinguishing between keyboard focus and the selected state.</li>
-      <li>Managing movement of keyboard focus between components, e.g., how the focus moves when the <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> keys are pressed.</li>
-      <li>Managing movement of keyboard focus inside components that contain multiple focusable elements, e.g., two different methods for programmatically exposing focus inside widgets like radio groups, menus, listboxes, trees, and grids.</li>
-      <li>Determining when to make disabled interactive elements focusable.</li>
-      <li>Assigning and revealing keyboard shortcuts, including guidance on how to avoid problematic conflicts with keyboard commands of assistive technologies, browsers, and operating systems.</li>
+      <li>ARIA 설계 패턴에 사용되는 초점 이동 규칙의 기본 원칙 이해.</li>
+      <li>
+        가시적 초점 유지, 예측 가능한 초점 이동, 키보드 초점과 선택 상태 구분.</li>
+      <li>컴포넌트 간 초점 이동 관리, 예를 들어 <kbd>Tab</kbd> 키와 <kbd>Shift+Tab</kbd> 키가 눌렸을 때 초점 이동 방법.</li>
+      <li>초점을 얻을 수 있는 여러 요소들을 포함하는 컴포넌트 내부에서 키보드 초점 이동 관리, 예를 들어 라디오 그룹, 메뉴, 목록 상자, 트리, 그리드와 같이 위젯 내부에 프로그램적으로 초점을 노출하는 두 가지 다른 방식</li>
+      <li>비활성화 된 인터랙티브 요소(element)가 초점을 얻을 수 있게 만드는 시점 결정</li>
+      <li>보조 기술, 브라우저, 운영 체제의 키보드 명령과의 충동 문제를 방지하는 방법에 대한 지침을 포함하여, 키보드 단축키를 지정하고 표시</li>
     </ol>
     <section id="kbd_generalnav">
-      <h3>Fundamental Keyboard Navigation Conventions</h3>
+      <h3>기본 키보드 탐색 규칙</h3>
 
       <p>
-        ARIA roles, states, and properties model accessibility behaviors and features shared among GUI components of popular desktop GUIs, including Microsoft Windows, macOS, and GNOME.
-        Similarly, ARIA design patterns borrow user expectations and keyboard conventions from those platforms, consistently incorporating common conventions with the aim of facilitating easy learning and efficient operation of keyboard interfaces across the web.
+        ARIA 역할(role), 상태(state), 속성(property)은 마이크로소프트 윈도우, 맥 OS, 그놈을 비롯하여 대중적인 데스스톱 GUI의 GUI 컴포넌트 간에 공유되는 동작과 기능을 모델링 합니다.
+        마찬가지로, ARIA 설계 패턴은 웹에서 키보드 인터페이스의 쉬운 학습과 효율적인 운영을 용이하게 하는 목적을 가진 공통 규약을 일관되게 포함하여 이 플랫폼들로부터 사용자 기대치와 키보드 규칙을 차용합니다.
       </p>
 
       <p>
-        For a web page to be accessible, all interactive elements must be operable via the keyboard.
-        In addition, consistent application of the common GUI keyboard interface conventions described in the <a href="#aria_ex">ARIA design patterns</a> is important, especially for assistive technology users.
-        Consider, for example, a screen reader user operating a tree.
-        Just as familiar visual styling helps users discover how to expand a tree branch with a mouse, ARIA attributes give the tree the sound and feel of a tree in a desktop application.
-        So, screen reader users will commonly expect that pressing the right arrow key will expand a collapsed node.
-        Because the screen reader knows the element is a tree, it also has the ability to instruct a novice user how to operate it.
-        Similarly, voice recognition software can implement commands for expanding and collapsing branches because it recognizes the element as a tree and can execute appropriate keyboard commands.
-        All this is only possible if the tree implements the GUI keyboard conventions as described in the <a href="#TreeView">ARIA tree pattern</a>.
+        웹 페이지가 접근 가능하도록, 모든 인터랙티브 요소(element)들은 키보드를 통해 운용 가능해야 합니다.
+        또한, <a href="#aria_ex">ARIA 설계 패턴</a>에 기술된 공통 GUI 키보드 인터페이스 규칙의 일관된 적용은 특히 보조 기술 사용자에게 중요합니다.
+        예를 들어, 스크린리더 사용자가 트리를 운용한다고 가정해보세요.
+        익숙한 시각적 스타일이 사용자가 마우스로 트리 가지를 확장하는 방법을 발견하는데 도움이 되는 것 처럼, ARIA 속성(attribute)은 데스크톱 어플리케이션에서 트리의 소리와 느낌을 제공합니다.
+        따라서, 스크린리더 사용자는 일반적으로 오른쪽 방향키를 누르는 것이 축소된 노드를 확장할 것이라고 예상할 것입니다.
+        스크린리더는 요소(element)가 트리임을 알고 있기 때문에, 초보자에게 운용하는 방법을 지시하는 기능을 가질 수도 있습니다.
+        마찬가지로, 음성 인식 소프트웨어는 요소(element)를 트리로 인식하기 때문에 가지를 확장하고 축소하는 기능을 구현할 수 있고, 적절한 키보드 명령을 실행 할 수 있습니다.
+        이 모든 것들은 트리가 <a href="#TreeView">ARIA 트리 패턴</a>에 기술된 대로 GUI 키보드 규약이 구현될 경우에만 가능합니다.
       </p>
 
       <p>
-        A primary keyboard navigation convention common across all platforms is that the <kbd>tab</kbd> and <kbd>shift+tab</kbd> keys move focus from one UI component to another while other keys, primarily the arrow keys, move focus inside of components that include multiple focusable elements.
-        The path that the focus follows when pressing the <kbd>tab</kbd> key is known as the tab sequence or tab ring.
+        보통 모든 플랫폼에서 주요 키보드 탐색 규칙은 다른 키들, 주로 화살표 키가 여러 초점 가능한 요소들을 포함하는 컴포넌트의 내부로 초점을 이동시키는 반면 <kbd>tab</kbd>과 <kbd>shift+tab</kbd> 키는 한 UI 컴포넌트에서 다른 컴포넌트로 초점을 이동시킨다는 것입니다.
+        <kbd>tab</kbd> 키를 누를 때 초점이 따르는 경로를 탭 시퀀스 혹은 탭 링이라고 부릅니다.
       </p>
 
       <p>
-        Common examples of UI components that contain multiple focusable elements are radio groups, tablists, menus, and grids.
-        A radio group, for example, contains multiple radio buttons, each of which is focusable.
-        However, only one of the radio buttons is included in the tab sequence.
-        After pressing the <kbd>Tab</kbd> key moves focus to a radio button in the group, pressing arrow keys moves focus among the radio buttons in the group, and pressing the <kbd>Tab</kbd> key moves focus out of the radio group to the next element in the tab sequence.
+        초점을 얻을 수 있는 여러 요소들을 포함하는 UI 컴포넌트의 일반적이 예는 라디오 그룹, 탭 목록, 메뉴, 그리드입니다.
+        예를 들어, 라디오 그룹은 각각이 초점을 얻을 수 있는 여러 라디오 버튼을 포함합니다.
+        하지만 오직 한 개 라디오 버튼만이 탭 시퀀스에 포함됩니다.
+        <kbd>Tab</kbd> 키를 누른 후 초점은 그룹 내의 라디오 버튼으로 이동하고, 화살표 키를 누르면 그룹 내의 라디오 버튼 간에 초점이 이동하며, 다시 <kbd>Tab</kbd> 키를 누르면 라디오 그룹을 벗어나 탭 시퀀스 내의 다음 요소로 초점이 이동됩니다.
       </p>
 
       <p>
-        The ARIA specification refers to a discrete UI component that contains multiple
-        focusable elements as a <a href="#composite" class="role-reference">composite</a>
-        widget. The process of controlling focus movement inside a composite is called
-        managing focus. Following are some ARIA design patterns with example implementations
-        that demonstrate focus management:
+        ARIA 명세는 <a href="#composite" class="role-reference">composite</a> 위젯으로 여러 초점을 얻을 수 있는 요소(element)를 포함하는 개별 UI 컴포넌트를 참조합니다. composite 내에서 초점 이동을 제어하는 프로세스를 초점 관리라고 합니다. 다음은 초점 관리를 보여주는 예제 구현이 포함된 일부 ARIA 설계 패턴입니다:
       </p>
 
       <ul>
