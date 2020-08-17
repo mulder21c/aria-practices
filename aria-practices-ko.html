@@ -5357,52 +5357,51 @@
     </section>
 
     <section id="kbd_focus_discernable_predictable">
-      <h3>Discernible and Predictable Keyboard Focus</h3>
-      <p>Work to complete this section is tracked by <a href="https://github.com/w3c/aria-practices/issues/217">issue 217.</a></p>
+      <h3>식별 가능하고 예측 가능한 키보드 초점</h3>
+      <p>이 섹션을 완료하기 위한 작업은 <a href="https://github.com/w3c/aria-practices/issues/217">issue 217</a>에서 추적됩니다.</p>
       <p>
-        When operating with a keyboard, two essentials of a good experience are the abilities to easily discern the location of the keyboard focus and to discover where focus landed after a navigation key has been pressed.
-        The following factors affect to what extent a web page affords users these capabilities.
+        키보드로 조작할 경우, 좋은 경험의 두 가지 필수 요소는 키보드 초점의 위치를 쉽게 식별할 수 있고 탐색 키가 눌린 후 초점이 놓인 위치를 예측 할 수 있는 기능입니다.
+        다음 요인들은 웹 페이지가 사용자에게 이러한 기능을 제공하는 정도에 영향을 줍니다.
       </p>
 
       <ol>
-        <li>Visibility of the focus indicator: Users need to be able to easily distinguish the keyboard focus indicator from other features of the visual design. Just as a mouse user may move the mouse to help find the mouse pointer, a keyboard user may press a navigation key to watch for movement. If visual changes in response to focus movement are subtle, many users will lose track of focus and be unable to operate. Authors are advised to rely on the default focus indicators provided by browsers. If overriding the default, consider:
+        <li>초점 표시의 가시성: 사용자는 키보드 초첨 표시를 다른 시각적 디자인 기능과 쉽게 구별 할 수 있어야 합니다. 마우스 사용자가 마오스 포인터를 찾기 위해 마우스를 움직이는 것 처럼, 키보드 사용자는 움직임을 보기 위해 탐색 키를 눌러 볼 수 있습니다. 초점 이동에 대한 시각적 변화가 감지하기 어려우면, 많은 사용자들은 초점을 잃어버리고 조작 할 수 없게 됩니다. 작성자들은 브라우저에서 제공되는 기본 초점 표시기를 사용하는 것이 좋습니다. 기본값을 재정의하려면 다음을 고려하세요:
           <ul>
-            <li>something about ... Colors and gradients can disappear in high contrast modes.</li>
-            <li>Users need to be able to easily distinguish between focus and selection as described in <a href="#kbd_focus_vs_selection"></a>, especially when a component that contains selected elements does not contain the focus.</li>
-            <li>... other considerations to be added ...</li>
+            <li>어떤 것들은... 고대비 모드에서 색상과 그라디언트가 사라질 수 있습니다.</li>
+            <li>사용자는 <a href="#kbd_focus_vs_selection">초첨 vs 선택 그리고 이중 초점의 인식</a>에 기술된 대로 초점과 선택 사이를 쉽게 구별할 수 있어야 합니다. 특히, 선택된 요소들을 포함하는 컴포넌트가 초점을 포함하고 있지 않은 경우.</li>
+            <li>... 다른 추가 고려 사항들 ...</li>
           </ul>
         </li>
 
-        <li> Persistence of focus: It is essential that there is always a component within the user interface that is active (document.activeElement is not null or is not the body element) and that the active element has a visual focus indicator. Authors need to manage events that effect the currently active element so focus remains visible and moves logically. For example, if the user closes a dialog or performs a destructive operation like deleting an item from a list, the active element may be hidden or removed from the DOM. If such events are not managed to set focus on the button that triggered the dialog or on the list item following the deleted item, browsers move focus to the body element, effectively causing a loss of focus within the user interface. </li>
+        <li> 초점의 지속성: 유저 인터페이스 내에 활성화 된 컴포넌트가 항상 있고 (document.activeElement가 null이 아니거나 body 요소가 아닌) 활성 요소(element)는 시각적인 초점 표시기를 가져야 하는 것이 필수적입니다. 작성자는 현재 활성 요소(element)에 영향을 주는 이벤트를 관리하여 초점이 여전히 표시되고 논리적으로 이동하도록 해야 합니다. 예를 들어, 사용자가 대화 상자를 닫거나 목록에서 항목을 삭제하는 것과 같이 파괴적인 작업을 수행하는 경우, 활성 요소(element)는 숨겨지거나 DOM에서 제거될 것입니다. 이러한 이벤트가 대화상자를 발생시킨 버튼이나 삭제된 항목 다음의 목록 항목으로 초점을 설정하지 않으면, 브라우저는 body 요소(element)로 초점을 설정하여, 사실상 유저 인터페이스 내에서 초점을 잃게 만듭니다.</li>
 
         <li>
-          Predictability of movement: Usability of a keyboard interface is heavily influenced by how readily users can guess where focus will land after a navigation key is pressed.
-          Some possible approaches to optimizing predictability include:
+          이동의 예측 가능성: 키보드 인터페이스의 사용성은 사용자가 탐색 키를 누른 이후 초점이 어디로 놓일 지 얼마나 손쉽게 추측할 수 있는가에 따라 크게 영향을 받습니다.
+          예측 가능성을 최적화 하는 몇 가지 가능한 접근 방식은 다음과 같습니다:
 
           <ul>
             <li>
-              Move focus in a pattern that matches the reading order of the page's language. In left to right languages, for example, create a tab sequence that moves focus left to right and then top to bottom.
+              페이지 언어의 읽기 순서와 일치하는 패턴으로 초점을 이동시킵니다. 예를 들어, 왼쪽에서 오른쪽 방향의 언어에서는 왼쪽에서 오른쪽으로, 위에서 아래로 초점이 이동하는 탭 시퀀스를 만드세요.
             </li>
 
             <li>
-              Incorporate all elements of a section of the page in the tab sequence before moving focus to another section. For instance, in a page
-              with multiple columns that has content in a left side bar, center region, and right side bar, build a tab sequence that covers all elements in the left sidebar before focus moves to the first focusable element in the center column.
+              다른 섹션으로 초점을 이동시키기 전에 페이지의 섹션의 모든 요소(element)를 탭 시퀀스에 포함시키세요. 예를 들어, 왼쪽 사이드 바, 가운데 영역, 오른쪽 사이드 바에 콘텐트가 있는 여러 열을 가진 페이지에서, 가운데 열의 첫 번째 초점을 얻을 수 있는 요소(element)로 초점을 이동시키기 전에 왼쪽 사이드 바의 모든 요소를 포함하는 탭 시퀀스를 만드세요.
             </li>
 
             <li>
-              When the distance between two consecutive elements in the tab sequence is significant, avoid movement that would be perceived as backward.
-              For example, on a page with a left to right language, a jump from the last element in the bottom right of the main content to the top element in a left-hand sidebar is likely to be less predictable and more difficult to follow, especially for users with a narrow field of view.
+              탭 시퀀스에서 연속된 두 요소(element)간의 거리가 중요한 경우, 뒤로 이동으로 인식 되는 이동을 피하세요.
+              예를 들어, 왼쪽에서 오른쪽 방향의 언어를 가진 페이지에서, 메인 콘텐트의 우측 하단에 있는 마지막 요소(element)에서 왼쪽 사이드바의 상위 요소(element)로 점프하는 것은, 특히 시야가 좁은 사용자에게, 예측하기 어렵고 따라가기가 더 어렵습니다.
             </li>
 
             <li>
-              Follow consistent patterns across a site.
-              The keyboard experience is more predictable when similar pages have similar focus movement patterns.
+              사이트 전체적으로 일관적인 패턴을 따르세요.
+              유사한 페이지에 유사한 초점 이동 패턴이 있을 때 키보드 경험은 더 예측 가능합니다.
             </li>
 
-            <li>Do not set initial focus when the page loads except in cases where:
+            <li>다음과 같은 경우를 제외하고 페이지가 로드 될 때 초기 초점을 설정하지 마세요:
               <ul>
-                <li>The page offers a single, primary function that nearly all users employ immediately after page load.</li>
-                <li>Any given user is likely to use the page often.</li>
+                <li>페이지가 로드 된 직후 거의 모든 사용자가 사용하는 단일의 주요 기능만을 제공하는 경우</li>
+                <li>일부 특정 사용자가 페이지를 자주 사용할 가능성이 높은 경우</li>
               </ul>
             </li>
           </ul>
