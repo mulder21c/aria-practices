@@ -5410,39 +5410,45 @@
     </section>
 
     <section id="kbd_focus_vs_selection">
-      <h3>Focus VS Selection and the Perception of Dual Focus</h3>
+      <h3>초점 vs 선택, 이중 초점 인식</h3>
 
       <p>
-        Occasionally, it may appear as if two elements on the page have focus at the same time.
-        For example, in a multi-select list box, when an option is selected it may be greyed.
-        Yet, the focus indicator can still be moved to other options, which may also be selected.
-        Similarly, when a user activates a tab in a tablist, the selected state is set on the tab and its visual appearance changes.
-        However, the user can still navigate, moving the focus indicator elsewhere on the page while the tab retains its selected appearance and state.
+        경우에 따라, 동시에 한 페이지에 두 요소가 초점을 가지는 것처럼 나타날 수 있습니다.
+        예를 들어, 다중 선택 목록 상자에서, 옵션이 선택되는 경우 회색으로 표시 될 것입니다.
+        그러나, 초점 표시기는 선택 될 수 있는 다른 옵션으로 여전히 이동 될 수 있습니다.
+        마찬가지로, 사용자가 탭 목록에서 탭을 활성화시키면, 선택된 상태가 탭에 설정되고 시각적 모양이 변경됩니다.
+        하지만 사용자는 탭이 선택 된 모양과 상태를 유지하면서 페이지의 다른 곳으로 초점 포시기를 이동하면서 여전히 탐색 할 수 있습니다.
       </p>
 
       <p>
-        Focus and selection are quite different.
-        From the keyboard user's perspective, focus is a pointer, like a mouse pointer; it tracks the path of navigation.
-        There is only one point of focus at any time and all operations take place at the point of focus.
-        On the other hand, selection is an operation that can be performed in some widgets, such as list boxes, trees, and tablists.
-        If a widget supports only single selection, then only one item can be selected and very often the selected state will simply follow the focus when focus is moved inside of the widget.
-        That is, in some widgets, moving focus may also perform the select operation.
-        However, if the widget supports multiple selection, then more than one item can be in a selected state, and keys for moving focus do not perform selection.
-        Some multi-select widgets do support key commands that both move focus and change selection, but those keys are different from the normal navigation keys.
-        Finally, when focus leaves a widget that includes a selected element, the selected state persists.
+        초점과 선택은 상당히 다릅니다.
+        키보드 사용자의 관점에서, 초점은 마우스 포인터와 같은 포인터 입니다; 탐색 경로를 추적합니다.
+        초점 포인트는 항상 하나 뿐이며 모든 작업은 초점 포인트에서 이루어집니다.
+        반면에, 선택은 목록 상자, 트리, 탭 목록과 같은 일부 위젯에서 수행될 수 있는 작업입니다.
+        위젯이 단 한 개 선택만 지원하는 경우, 단 한 개 항목만 선택 가능하고 초점이 위젯 내부를 이동할 때 선택 된 상태가 단순히 초점을 따라가는 경우가 많습니다.
+        즉, 일부 위젯에서, 초점 이동이 선택 작업을 수행 할 수도 있습니다.
+        하지만, 위젯이 다중 선택을 지원하는 경우, 선택된 상태는 한 개 이상이 될 수 있고, 초점 이동에 대한 키는 선택을 수행하지 않습니다.
+        일부 다중 선택 위젯은 초점 이동과 선택 변경 키 명령을 지원하지만, 이러한 키는 일반 탐색 키와는 다릅니다.
+        마지막으로 초점이 선택된 요소를 포함하는 위젯을 떠날 때, 선택 된 상태는 지속됩니다.
       </p>
 
       <p>
-        From the developer's perspective, the difference is simple -- the focused element is the active element (document.activeElement).
-        Selected elements are elements that have <code>aria-selected="true"</code>.
+        개발자 관점에서, 차이점은 간단합니다 -- 초점을 얻은 요소(element)는 활성 요소 (document.activeElement)입니다.
+        선택된 요소(element)는  <code>aria-selected="true"</code>를 가지는 요소(element)입니다.
       </p>
 
-      <p>With respect to focus and the selected state, the most important considerations for designers and developers are:</p>
+      <p>초점과 선택 된 상태와 관련하여, 디자이너와 개발자에게 중요한 고려사항은 다음과 같습니다:</p>
 
       <ul>
-        <li>The visual focus indicator must always be visible.</li>
-        <li>The selected state must be visually distinct from the focus indicator.</li>
+        <li>시각적 초점 표시기는 항상 표시되어야 합니다.</li>
+        <li>선택된 상태는 초점 표시기와 시각적으로 구별되어야 합니다.</li>
       </ul>
+
+      <div class="translator-comment">
+        바로 위 "시각적으로 구별"에 대해서 한 가지 언급해보면, 단순히 "디자이너의 눈으로
+        보기에" 구별되는게 아니라, 색맹·색약·저시력자의 눈에도 시각적으로 구분이 가능해야
+        함을 의미한다.
+      </div>
     </section>
 
     <section id="kbd_selection_follows_focus">
