@@ -148,16 +148,16 @@
   "preProcess": [
     null
   ],
-  "publishDate": "2020-10-04",
-  "publishISODate": "2020-10-04T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 04 October 2020"
+  "publishDate": "2020-10-09",
+  "publishISODate": "2020-10-09T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 09 October 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 <body class="h-entry informative"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">WAI-ARIA 작성 방법 1.2</h1>
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2020-10-04">04 October 2020</time>
+      <time class="dt-published" datetime="2020-10-09">09 October 2020</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -283,7 +283,7 @@
   </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>소개</a></li><li class="tocline"><a class="tocxref" href="#read_me_first"><bdi class="secno">2. </bdi>먼저 읽어주세요</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#no_aria_better_bad_aria"><bdi class="secno">2.1 </bdi>잘못된 ARIA보다 ARIA를 안쓰는게 낫다</a></li><li class="tocline"><a class="tocxref" href="#browser_and_AT_support"><bdi class="secno">2.2 </bdi>브라우저와 보조 기술 지원</a></li><li class="tocline"><a class="tocxref" href="#mobile_and_touch_support"><bdi class="secno">2.3 </bdi>모바일과 터치 지원</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_ex"><bdi class="secno">3. </bdi>설계 패턴과 위젯</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accordion"><bdi class="secno">3.1 </bdi>아코디언 (Show/Hide 기능이 있는 섹션)</a></li><li class="tocline"><a class="tocxref" href="#alert"><bdi class="secno">3.2 </bdi>경고</a></li><li class="tocline"><a class="tocxref" href="#alertdialog"><bdi class="secno">3.3 </bdi>Alert and Message Dialogs</a></li><li class="tocline"><a class="tocxref" href="#breadcrumb"><bdi class="secno">3.4 </bdi>Breadcrumb</a></li><li class="tocline"><a class="tocxref" href="#button"><bdi class="secno">3.5 </bdi>Button</a></li><li class="tocline"><a class="tocxref" href="#carousel"><bdi class="secno">3.6 </bdi>Carousel (Slide Show or Image Rotator)</a></li><li class="tocline"><a class="tocxref" href="#checkbox"><bdi class="secno">3.7 </bdi>Checkbox</a></li><li class="tocline"><a class="tocxref" href="#combobox"><bdi class="secno">3.8 </bdi>Combobox</a></li><li class="tocline"><a class="tocxref" href="#dialog_modal"><bdi class="secno">3.9 </bdi>Dialog (Modal)</a></li><li class="tocline"><a class="tocxref" href="#disclosure"><bdi class="secno">3.10 </bdi>Disclosure (Show/Hide)</a></li><li class="tocline"><a class="tocxref" href="#feed"><bdi class="secno">3.11 </bdi>Feed</a></li><li class="tocline"><a class="tocxref" href="#grid"><bdi class="secno">3.12 </bdi>Grids : Interactive Tabular Data and Layout Containers</a></li><li class="tocline"><a class="tocxref" href="#link"><bdi class="secno">3.13 </bdi>Link</a></li><li class="tocline"><a class="tocxref" href="#Listbox"><bdi class="secno">3.14 </bdi>Listbox</a></li><li class="tocline"><a class="tocxref" href="#menu"><bdi class="secno">3.15 </bdi>Menu or Menu bar</a></li><li class="tocline"><a class="tocxref" href="#menubutton"><bdi class="secno">3.16 </bdi>Menu Button</a></li><li class="tocline"><a class="tocxref" href="#meter"><bdi class="secno">3.17 </bdi>Meter</a></li><li class="tocline"><a class="tocxref" href="#radiobutton"><bdi class="secno">3.18 </bdi>Radio Group</a></li><li class="tocline"><a class="tocxref" href="#slider"><bdi class="secno">3.19 </bdi>Slider</a></li><li class="tocline"><a class="tocxref" href="#slidertwothumb"><bdi class="secno">3.20 </bdi>Slider (Multi-Thumb)</a></li><li class="tocline"><a class="tocxref" href="#spinbutton"><bdi class="secno">3.21 </bdi>Spinbutton</a></li><li class="tocline"><a class="tocxref" href="#table"><bdi class="secno">3.22 </bdi>Table</a></li><li class="tocline"><a class="tocxref" href="#tabpanel"><bdi class="secno">3.23 </bdi>Tabs</a></li><li class="tocline"><a class="tocxref" href="#toolbar"><bdi class="secno">3.24 </bdi>Toolbar</a></li><li class="tocline"><a class="tocxref" href="#tooltip"><bdi class="secno">3.25 </bdi>Tooltip Widget</a></li><li class="tocline"><a class="tocxref" href="#TreeView"><bdi class="secno">3.26 </bdi>Tree View</a></li><li class="tocline"><a class="tocxref" href="#treegrid"><bdi class="secno">3.27 </bdi>Treegrid</a></li><li class="tocline"><a class="tocxref" href="#windowsplitter"><bdi class="secno">3.28 </bdi>Window Splitter</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_landmark"><bdi class="secno">4. </bdi>랜드마크 영역</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#html-element"><bdi class="secno">4.1 </bdi>HTML 섹션화 요소(element)</a></li><li class="tocline"><a class="tocxref" href="#generatedID"><bdi class="secno">4.2 </bdi>랜드마크 설계 일반 원칙</a></li><li class="tocline"><a class="tocxref" href="#generatedID-0"><bdi class="secno">4.3 </bdi>랜드마크 영역</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aria_lh_banner"><bdi class="secno">4.3.1 </bdi>Banner</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_complementary"><bdi class="secno">4.3.2 </bdi>Complementary</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_contentinfo"><bdi class="secno">4.3.3 </bdi>Contentinfo</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_form"><bdi class="secno">4.3.4 </bdi>Form</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_main"><bdi class="secno">4.3.5 </bdi>Main</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_navigation"><bdi class="secno">4.3.6 </bdi>Navigation</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_region"><bdi class="secno">4.3.7 </bdi>Region</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_search"><bdi class="secno">4.3.8 </bdi>Search</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions"><bdi class="secno">5. </bdi>접근 가능한 이름과 설명 제공</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#names_and_descriptions_definition"><bdi class="secno">5.1 </bdi>접근 가능한 이름과 설명이란?</a></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions_derivation"><bdi class="secno">5.2 </bdi>이름과 설명 문자열은 어떻게 파생되나요?</a></li><li class="tocline"><a class="tocxref" href="#accessible_names"><bdi class="secno">5.3 </bdi>접근 가능한 이름</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_cardinal_rules"><bdi class="secno">5.3.1 </bdi>이름 지정의 기본 규칙</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_rule_heed_warnings"><bdi class="secno">5.3.1.1 </bdi>규칙 1: 경고에 주의하고 철처하게 테스트</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_visible_text"><bdi class="secno">5.3.1.2 </bdi>규칙 2: 보이는 텍스트 선택</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_native_techniques"><bdi class="secno">5.3.1.3 </bdi>규칙 3: 기본 기술 선택</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_avoid_fallback"><bdi class="secno">5.3.1.4 </bdi>규칙 4: 브라우저 폴백 방지</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_brief_names"><bdi class="secno">5.3.1.5 </bdi>규칙 5: 간단하고 유용한 이름 작성</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_techniques"><bdi class="secno">5.3.2 </bdi>이름 지정 기법</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_with_child_content"><bdi class="secno">5.3.2.1 </bdi>자식 콘텐츠로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-label"><bdi class="secno">5.3.2.2 </bdi><code>aria-label</code>을 통해 문자열 속성으로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-labelledby"><bdi class="secno">5.3.2.3 </bdi><code>aria-labelledby</code>를 통해 참조된 콘텐트로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_labels"><bdi class="secno">5.3.2.4 </bdi>Label 요소로 폼 컨트롤 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_legends"><bdi class="secno">5.3.2.5 </bdi>legend 요소로 필드셋 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_captions"><bdi class="secno">5.3.2.6 </bdi>캡션으로 표와 삽화 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_fallback"><bdi class="secno">5.3.2.7 </bdi>title 및 placeholder로부터 파생 된 대체 이름</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_effectively"><bdi class="secno">5.3.3 </bdi>효과적이고 사용자 친화적인 접근 가능한 이름 구성</a></li><li class="tocline"><a class="tocxref" href="#naming_role_guidance"><bdi class="secno">5.3.4 </bdi><span id="naming_role_guidance_heading">역할(role)별 접근 가능한 이름 지정 지침</span></a></li><li class="tocline"><a class="tocxref" href="#name_calculation"><bdi class="secno">5.3.5 </bdi>접근 가능한 이름 계산</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#name_calculation_non-recursive_ex"><bdi class="secno">5.3.5.1 </bdi>비 재귀적 접근 가능한 이름 계산의 예</a></li><li class="tocline"><a class="tocxref" href="#name_calculation_recursive_ex"><bdi class="secno">5.3.5.2 </bdi>재귀적 접근 가능한 이름 계산의 예</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessible_descriptions"><bdi class="secno">5.4 </bdi>접근 가능한 설명</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_techniques"><bdi class="secno">5.4.1 </bdi>설명 기법</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_with_aria-describedby"><bdi class="secno">5.4.1.1 </bdi><code>aria-describedby</code>로 내용을 참조하여 설명하기</a></li><li class="tocline"><a class="tocxref" href="#describing_with_captions"><bdi class="secno">5.4.1.2 </bdi>캡션으로 표 및 삽화에 설명 지정</a></li><li class="tocline"><a class="tocxref" href="#describing_with_title"><bdi class="secno">5.4.1.3 </bdi>제목으로부터 파생된 설명</a></li></ol></li><li class="tocline"><a class="tocxref" href="#description_calculation"><bdi class="secno">5.4.2 </bdi>접근 가능한 설명 계산</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#keyboard"><bdi class="secno">6. </bdi>키보드 인터페이스 개발</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_generalnav"><bdi class="secno">6.1 </bdi>기본 키보드 탐색 규칙</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_discernable_predictable"><bdi class="secno">6.2 </bdi>식별 가능하고 예측 가능한 키보드 초점</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_vs_selection"><bdi class="secno">6.3 </bdi>초점 vs 선택, 이중 초점 인식</a></li><li class="tocline"><a class="tocxref" href="#kbd_selection_follows_focus"><bdi class="secno">6.4 </bdi>Deciding When to Make Selection Automatically Follow Focus</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_between"><bdi class="secno">6.5 </bdi>Keyboard Navigation Between Components (The Tab Sequence)</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_within"><bdi class="secno">6.6 </bdi> Keyboard Navigation Inside Components</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_roving_tabindex"><bdi class="secno">6.6.1 </bdi>Managing Focus Within Components Using a Roving tabindex</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_activedescendant"><bdi class="secno">6.6.2 </bdi>Managing Focus in Composites Using aria-activedescendant</a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_disabled_controls"><bdi class="secno">6.7 </bdi>Focusability of disabled controls</a></li><li class="tocline"><a class="tocxref" href="#kbd_common_conventions"><bdi class="secno">6.8 </bdi>Key Assignment Conventions for Common Functions</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts"><bdi class="secno">6.9 </bdi>Keyboard Shortcuts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_behavior_design"><bdi class="secno">6.9.1 </bdi>Designing the Scope and Behavior of Keyboard Shortcuts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_basic"><bdi class="secno">6.9.1.1 </bdi>Ensure Basic Access Via Navigation </a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_choose_behavior"><bdi class="secno">6.9.1.2 </bdi>Choose Appropriate Shortcut Behavior</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_where"><bdi class="secno">6.9.1.3 </bdi>Choose Where to Add Shortcuts </a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assigning"><bdi class="secno">6.9.2 </bdi>Assigning Keyboard Shortcuts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_opsys_conflicts"><bdi class="secno">6.9.2.1 </bdi>Operating System Key Conflicts</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_assistivetech_conflicts"><bdi class="secno">6.9.2.2 </bdi>Assistive Technology Key Conflicts</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_browser_conflicts"><bdi class="secno">6.9.2.3 </bdi>Browser Key Conflicts</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_intentional_conflicts"><bdi class="secno">6.9.2.4 </bdi>Intentional Key Conflicts</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties"><bdi class="secno">7. </bdi>Grid and Table Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_rows"><bdi class="secno">7.1 </bdi>Using <code>aria-rowcount</code> and <code>aria-rowindex</code></a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols"><bdi class="secno">7.2 </bdi>Using <code>aria-colcount</code> and <code>aria-colindex</code></a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_contiguous"><bdi class="secno">7.2.1 </bdi>Using <code>aria-colindex</code> When Column Indices Are Contiguous</a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_noncontiguous"><bdi class="secno">7.2.2 </bdi>Using <code>aria-colindex</code> When Column Indices Are Not Contiguous</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_spans"><bdi class="secno">7.3 </bdi>Defining cell spans using <code>aria-colspan</code> and <code>aria-rowspan</code></a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_sort"><bdi class="secno">7.4 </bdi>Indicating sort order with <code>aria-sort</code></a></li></ol></li><li class="tocline"><a class="tocxref" href="#presentation_role"><bdi class="secno">8. </bdi>Intentionally Hiding Semantics with the <code>presentation</code> Role</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#presentation_role_effects"><bdi class="secno">8.1 </bdi>
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>소개</a></li><li class="tocline"><a class="tocxref" href="#read_me_first"><bdi class="secno">2. </bdi>먼저 읽어주세요</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#no_aria_better_bad_aria"><bdi class="secno">2.1 </bdi>잘못된 ARIA보다 ARIA를 안쓰는게 낫다</a></li><li class="tocline"><a class="tocxref" href="#browser_and_AT_support"><bdi class="secno">2.2 </bdi>브라우저와 보조 기술 지원</a></li><li class="tocline"><a class="tocxref" href="#mobile_and_touch_support"><bdi class="secno">2.3 </bdi>모바일과 터치 지원</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_ex"><bdi class="secno">3. </bdi>설계 패턴과 위젯</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accordion"><bdi class="secno">3.1 </bdi>아코디언 (Show/Hide 기능이 있는 섹션)</a></li><li class="tocline"><a class="tocxref" href="#alert"><bdi class="secno">3.2 </bdi>경고</a></li><li class="tocline"><a class="tocxref" href="#alertdialog"><bdi class="secno">3.3 </bdi>Alert and Message Dialogs</a></li><li class="tocline"><a class="tocxref" href="#breadcrumb"><bdi class="secno">3.4 </bdi>Breadcrumb</a></li><li class="tocline"><a class="tocxref" href="#button"><bdi class="secno">3.5 </bdi>Button</a></li><li class="tocline"><a class="tocxref" href="#carousel"><bdi class="secno">3.6 </bdi>Carousel (Slide Show or Image Rotator)</a></li><li class="tocline"><a class="tocxref" href="#checkbox"><bdi class="secno">3.7 </bdi>Checkbox</a></li><li class="tocline"><a class="tocxref" href="#combobox"><bdi class="secno">3.8 </bdi>Combobox</a></li><li class="tocline"><a class="tocxref" href="#dialog_modal"><bdi class="secno">3.9 </bdi>Dialog (Modal)</a></li><li class="tocline"><a class="tocxref" href="#disclosure"><bdi class="secno">3.10 </bdi>Disclosure (Show/Hide)</a></li><li class="tocline"><a class="tocxref" href="#feed"><bdi class="secno">3.11 </bdi>Feed</a></li><li class="tocline"><a class="tocxref" href="#grid"><bdi class="secno">3.12 </bdi>Grids : Interactive Tabular Data and Layout Containers</a></li><li class="tocline"><a class="tocxref" href="#link"><bdi class="secno">3.13 </bdi>Link</a></li><li class="tocline"><a class="tocxref" href="#Listbox"><bdi class="secno">3.14 </bdi>Listbox</a></li><li class="tocline"><a class="tocxref" href="#menu"><bdi class="secno">3.15 </bdi>Menu or Menu bar</a></li><li class="tocline"><a class="tocxref" href="#menubutton"><bdi class="secno">3.16 </bdi>Menu Button</a></li><li class="tocline"><a class="tocxref" href="#meter"><bdi class="secno">3.17 </bdi>Meter</a></li><li class="tocline"><a class="tocxref" href="#radiobutton"><bdi class="secno">3.18 </bdi>Radio Group</a></li><li class="tocline"><a class="tocxref" href="#slider"><bdi class="secno">3.19 </bdi>Slider</a></li><li class="tocline"><a class="tocxref" href="#slidertwothumb"><bdi class="secno">3.20 </bdi>Slider (Multi-Thumb)</a></li><li class="tocline"><a class="tocxref" href="#spinbutton"><bdi class="secno">3.21 </bdi>Spinbutton</a></li><li class="tocline"><a class="tocxref" href="#table"><bdi class="secno">3.22 </bdi>Table</a></li><li class="tocline"><a class="tocxref" href="#tabpanel"><bdi class="secno">3.23 </bdi>Tabs</a></li><li class="tocline"><a class="tocxref" href="#toolbar"><bdi class="secno">3.24 </bdi>Toolbar</a></li><li class="tocline"><a class="tocxref" href="#tooltip"><bdi class="secno">3.25 </bdi>Tooltip Widget</a></li><li class="tocline"><a class="tocxref" href="#TreeView"><bdi class="secno">3.26 </bdi>Tree View</a></li><li class="tocline"><a class="tocxref" href="#treegrid"><bdi class="secno">3.27 </bdi>Treegrid</a></li><li class="tocline"><a class="tocxref" href="#windowsplitter"><bdi class="secno">3.28 </bdi>Window Splitter</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_landmark"><bdi class="secno">4. </bdi>랜드마크 영역</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#html-element"><bdi class="secno">4.1 </bdi>HTML 섹션화 요소(element)</a></li><li class="tocline"><a class="tocxref" href="#generatedID"><bdi class="secno">4.2 </bdi>랜드마크 설계 일반 원칙</a></li><li class="tocline"><a class="tocxref" href="#generatedID-0"><bdi class="secno">4.3 </bdi>랜드마크 영역</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aria_lh_banner"><bdi class="secno">4.3.1 </bdi>Banner</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_complementary"><bdi class="secno">4.3.2 </bdi>Complementary</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_contentinfo"><bdi class="secno">4.3.3 </bdi>Contentinfo</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_form"><bdi class="secno">4.3.4 </bdi>Form</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_main"><bdi class="secno">4.3.5 </bdi>Main</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_navigation"><bdi class="secno">4.3.6 </bdi>Navigation</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_region"><bdi class="secno">4.3.7 </bdi>Region</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_search"><bdi class="secno">4.3.8 </bdi>Search</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions"><bdi class="secno">5. </bdi>접근 가능한 이름과 설명 제공</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#names_and_descriptions_definition"><bdi class="secno">5.1 </bdi>접근 가능한 이름과 설명이란?</a></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions_derivation"><bdi class="secno">5.2 </bdi>이름과 설명 문자열은 어떻게 파생되나요?</a></li><li class="tocline"><a class="tocxref" href="#accessible_names"><bdi class="secno">5.3 </bdi>접근 가능한 이름</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_cardinal_rules"><bdi class="secno">5.3.1 </bdi>이름 지정의 기본 규칙</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_rule_heed_warnings"><bdi class="secno">5.3.1.1 </bdi>규칙 1: 경고에 주의하고 철처하게 테스트</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_visible_text"><bdi class="secno">5.3.1.2 </bdi>규칙 2: 보이는 텍스트 선택</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_native_techniques"><bdi class="secno">5.3.1.3 </bdi>규칙 3: 기본 기술 선택</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_avoid_fallback"><bdi class="secno">5.3.1.4 </bdi>규칙 4: 브라우저 폴백 방지</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_brief_names"><bdi class="secno">5.3.1.5 </bdi>규칙 5: 간단하고 유용한 이름 작성</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_techniques"><bdi class="secno">5.3.2 </bdi>이름 지정 기법</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_with_child_content"><bdi class="secno">5.3.2.1 </bdi>자식 콘텐츠로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-label"><bdi class="secno">5.3.2.2 </bdi><code>aria-label</code>을 통해 문자열 속성으로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-labelledby"><bdi class="secno">5.3.2.3 </bdi><code>aria-labelledby</code>를 통해 참조된 콘텐트로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_labels"><bdi class="secno">5.3.2.4 </bdi>Label 요소로 폼 컨트롤 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_legends"><bdi class="secno">5.3.2.5 </bdi>legend 요소로 필드셋 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_captions"><bdi class="secno">5.3.2.6 </bdi>캡션으로 표와 삽화 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_fallback"><bdi class="secno">5.3.2.7 </bdi>title 및 placeholder로부터 파생 된 대체 이름</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_effectively"><bdi class="secno">5.3.3 </bdi>효과적이고 사용자 친화적인 접근 가능한 이름 구성</a></li><li class="tocline"><a class="tocxref" href="#naming_role_guidance"><bdi class="secno">5.3.4 </bdi><span id="naming_role_guidance_heading">역할(role)별 접근 가능한 이름 지정 지침</span></a></li><li class="tocline"><a class="tocxref" href="#name_calculation"><bdi class="secno">5.3.5 </bdi>접근 가능한 이름 계산</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#name_calculation_non-recursive_ex"><bdi class="secno">5.3.5.1 </bdi>비 재귀적 접근 가능한 이름 계산의 예</a></li><li class="tocline"><a class="tocxref" href="#name_calculation_recursive_ex"><bdi class="secno">5.3.5.2 </bdi>재귀적 접근 가능한 이름 계산의 예</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessible_descriptions"><bdi class="secno">5.4 </bdi>접근 가능한 설명</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_techniques"><bdi class="secno">5.4.1 </bdi>설명 기법</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_with_aria-describedby"><bdi class="secno">5.4.1.1 </bdi><code>aria-describedby</code>로 내용을 참조하여 설명하기</a></li><li class="tocline"><a class="tocxref" href="#describing_with_captions"><bdi class="secno">5.4.1.2 </bdi>캡션으로 표 및 삽화에 설명 지정</a></li><li class="tocline"><a class="tocxref" href="#describing_with_title"><bdi class="secno">5.4.1.3 </bdi>제목으로부터 파생된 설명</a></li></ol></li><li class="tocline"><a class="tocxref" href="#description_calculation"><bdi class="secno">5.4.2 </bdi>접근 가능한 설명 계산</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#keyboard"><bdi class="secno">6. </bdi>키보드 인터페이스 개발</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_generalnav"><bdi class="secno">6.1 </bdi>기본 키보드 탐색 규칙</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_discernable_predictable"><bdi class="secno">6.2 </bdi>식별 가능하고 예측 가능한 키보드 초점</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_vs_selection"><bdi class="secno">6.3 </bdi>초점 vs 선택, 이중 초점 인식</a></li><li class="tocline"><a class="tocxref" href="#kbd_selection_follows_focus"><bdi class="secno">6.4 </bdi>초점을 따라 자동으로 선택되게 하는 시기 결정</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_between"><bdi class="secno">6.5 </bdi>컴포넌트 간 키보드 탐색 (탭 시퀀스)</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_within"><bdi class="secno">6.6 </bdi> 컴포넌트 내부 키보드 탐색</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_roving_tabindex"><bdi class="secno">6.6.1 </bdi>이동(roving) tabindex를 사용하여 컴포넌트에서 초점 관리</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_activedescendant"><bdi class="secno">6.6.2 </bdi>aria-activedescendant를 사용하여 복합 컴포넌트에서 초점 관리</a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_disabled_controls"><bdi class="secno">6.7 </bdi>Focusability of disabled controls</a></li><li class="tocline"><a class="tocxref" href="#kbd_common_conventions"><bdi class="secno">6.8 </bdi>Key Assignment Conventions for Common Functions</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts"><bdi class="secno">6.9 </bdi>Keyboard Shortcuts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_behavior_design"><bdi class="secno">6.9.1 </bdi>Designing the Scope and Behavior of Keyboard Shortcuts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_basic"><bdi class="secno">6.9.1.1 </bdi>Ensure Basic Access Via Navigation </a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_choose_behavior"><bdi class="secno">6.9.1.2 </bdi>Choose Appropriate Shortcut Behavior</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_where"><bdi class="secno">6.9.1.3 </bdi>Choose Where to Add Shortcuts </a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assigning"><bdi class="secno">6.9.2 </bdi>Assigning Keyboard Shortcuts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_opsys_conflicts"><bdi class="secno">6.9.2.1 </bdi>Operating System Key Conflicts</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_assistivetech_conflicts"><bdi class="secno">6.9.2.2 </bdi>Assistive Technology Key Conflicts</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_browser_conflicts"><bdi class="secno">6.9.2.3 </bdi>Browser Key Conflicts</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_intentional_conflicts"><bdi class="secno">6.9.2.4 </bdi>Intentional Key Conflicts</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties"><bdi class="secno">7. </bdi>Grid and Table Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_rows"><bdi class="secno">7.1 </bdi>Using <code>aria-rowcount</code> and <code>aria-rowindex</code></a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols"><bdi class="secno">7.2 </bdi>Using <code>aria-colcount</code> and <code>aria-colindex</code></a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_contiguous"><bdi class="secno">7.2.1 </bdi>Using <code>aria-colindex</code> When Column Indices Are Contiguous</a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_noncontiguous"><bdi class="secno">7.2.2 </bdi>Using <code>aria-colindex</code> When Column Indices Are Not Contiguous</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_spans"><bdi class="secno">7.3 </bdi>Defining cell spans using <code>aria-colspan</code> and <code>aria-rowspan</code></a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_sort"><bdi class="secno">7.4 </bdi>Indicating sort order with <code>aria-sort</code></a></li></ol></li><li class="tocline"><a class="tocxref" href="#presentation_role"><bdi class="secno">8. </bdi>Intentionally Hiding Semantics with the <code>presentation</code> Role</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#presentation_role_effects"><bdi class="secno">8.1 </bdi>
         Effects of Role <code>presentation</code>
       </a></li><li class="tocline"><a class="tocxref" href="#presentation_role_ignored"><bdi class="secno">8.2 </bdi>
         Conditions That Cause Role <code>presentation</code> to be Ignored
@@ -2190,7 +2190,7 @@
           <li>
             When a <code>menu</code> opens, or when a <code>menubar</code> receives focus,
             keyboard focus is placed on the first item.
-            All items are focusable as described in <a href="#kbd_general_within" class="sec-ref">§&nbsp;<bdi class="secno">6.6 </bdi> Keyboard Navigation Inside Components</a>.
+            All items are focusable as described in <a href="#kbd_general_within" class="sec-ref">§&nbsp;<bdi class="secno">6.6 </bdi> 컴포넌트 내부 키보드 탐색</a>.
           </li>
           <li><kbd>Enter</kbd>:
             <ul>
@@ -2302,7 +2302,7 @@
           </li>
           <li>A parent menuitem has <a href="https://w3c.github.io/aria/#aria-haspopup" class="property-reference">aria-haspopup</a> set to either <code>menu</code> or <code>true</code>.</li>
           <li>A parent menuitem has <a href="https://w3c.github.io/aria/#aria-expanded" class="property-reference">aria-expanded</a> set to <code>false</code> when its child menu is not visible and set to <code>true</code> when the child menu is visible.</li>
-          <li>One of the following approaches is used to enable scripts to move focus among items in a menu as described in <a href="#kbd_general_within" class="sec-ref">§&nbsp;<bdi class="secno">6.6 </bdi> Keyboard Navigation Inside Components</a>:
+          <li>One of the following approaches is used to enable scripts to move focus among items in a menu as described in <a href="#kbd_general_within" class="sec-ref">§&nbsp;<bdi class="secno">6.6 </bdi> 컴포넌트 내부 키보드 탐색</a>:
             <ul>
               <li>The menu container has <code>tabindex</code> set to <code>-1</code> or <code>0</code> and <a href="https://w3c.github.io/aria/#aria-activedescendant" class="property-reference">aria-activedescendant</a> set to the ID of the focused item. </li>
               <li>Each item in the menu has <code>tabindex</code> set to <code>-1</code>, except in a menubar, where the first item has <code>tabindex</code> set to <code>0</code>. </li>
@@ -2905,7 +2905,7 @@
             It is recommended that tabs activate automatically when they receive focus as long as their associated tab panels are displayed without noticeable latency.
             This typically requires tab panel content to be preloaded.
             Otherwise, automatic activation slows focus movement, which significantly hampers users' ability to navigate efficiently across the tab list.
-            For additional guidance, see <a href="#kbd_selection_follows_focus" class="sec-ref">§&nbsp;<bdi class="secno">6.4 </bdi>Deciding When to Make Selection Automatically Follow Focus</a>.
+            For additional guidance, see <a href="#kbd_selection_follows_focus" class="sec-ref">§&nbsp;<bdi class="secno">6.4 </bdi>초점을 따라 자동으로 선택되게 하는 시기 결정</a>.
           </li>
           <li>
             When a tab list has its <a href="https://w3c.github.io/aria/#aria-orientation" class="property-reference">aria-orientation</a> set to <code>vertical</code>:
@@ -5564,7 +5564,7 @@
       </p>
 
       <p>
-        보통 모든 플랫폼에서 주요 키보드 탐색 규칙은 다른 키들, 주로 화살표 키가 여러 초점 가능한 요소들을 포함하는 컴포넌트의 내부로 초점을 이동시키는 반면 <kbd>tab</kbd>과 <kbd>shift+tab</kbd> 키는 한 UI 컴포넌트에서 다른 컴포넌트로 초점을 이동시킨다는 것입니다.
+        보통 모든 플랫폼에서 주요 키보드 탐색 규칙은 다른 키들, 주로 방향키가 여러 초점 가능한 요소들을 포함하는 컴포넌트의 내부로 초점을 이동시키는 반면 <kbd>tab</kbd>과 <kbd>shift+tab</kbd> 키는 한 UI 컴포넌트에서 다른 컴포넌트로 초점을 이동시킨다는 것입니다.
         <kbd>tab</kbd> 키를 누를 때 초점이 따르는 경로를 탭 시퀀스 혹은 탭 링이라고 부릅니다.
       </p>
 
@@ -5572,7 +5572,7 @@
         초점을 얻을 수 있는 여러 요소들을 포함하는 UI 컴포넌트의 일반적이 예는 라디오 그룹, 탭 목록, 메뉴, 그리드입니다.
         예를 들어, 라디오 그룹은 각각이 초점을 얻을 수 있는 여러 라디오 버튼을 포함합니다.
         하지만 오직 한 개 라디오 버튼만이 탭 시퀀스에 포함됩니다.
-        <kbd>Tab</kbd> 키를 누른 후 초점은 그룹 내의 라디오 버튼으로 이동하고, 화살표 키를 누르면 그룹 내의 라디오 버튼 간에 초점이 이동하며, 다시 <kbd>Tab</kbd> 키를 누르면 라디오 그룹을 벗어나 탭 시퀀스 내의 다음 요소로 초점이 이동됩니다.
+        <kbd>Tab</kbd> 키를 누른 후 초점은 그룹 내의 라디오 버튼으로 이동하고, 방향키를 누르면 그룹 내의 라디오 버튼 간에 초점이 이동하며, 다시 <kbd>Tab</kbd> 키를 누르면 라디오 그룹을 벗어나 탭 시퀀스 내의 다음 요소로 초점이 이동됩니다.
       </p>
 
       <p>
@@ -5688,175 +5688,180 @@
     </section>
 
     <section id="kbd_selection_follows_focus">
-      <h3 id="x6-4-deciding-when-to-make-selection-automatically-follow-focus"><bdi class="secno">6.4 </bdi>Deciding When to Make Selection Automatically Follow Focus<a class="self-link" aria-label="§" href="#kbd_selection_follows_focus"></a></h3>
-      <p> in composite widgets where only one element may be selected, such as a tablist or single-select listbox, moving the focus may also cause the focused element to become the selected element. This is called having selection follow focus. Having selection follow focus is often beneficial to users, but in some circumstances, it is extremely detrimental to accessibility. </p>
+      <h3 id="x6-4"><bdi class="secno">6.4 </bdi>초점을 따라 자동으로 선택되게 하는 시기 결정<a class="self-link" aria-label="§" href="#kbd_selection_follows_focus"></a></h3>
+      <p>탭 목록이나 단일 선택 목록 상자와 같이 단 하나의 요소(element)만 선택 될 수 있는 복합 위젯에서, 초점 이동은 초점을 얻은 요소(element)가 선택 된 요소(element)가 되게 할 수 있습니다. 이를 초점을 따라 선택 되도록 하는 것이라고 합니다. 초점을 따라 선택 되도록 하는 것은 종종 사용자에게 유익하지만, 일부 상황에서는 접근성에 매우 해롭습니다. </p>
       <p>
-        For example, in a tablist, the selected state is used to indicate which panel is displayed.
-        So, when selection follows focus in a tablist, moving focus from one tab to another automatically changes  which panel is displayed.
-        If the content of panels is present in the DOM, then displaying a new panel is nearly instantaneous.
-        A keyboard user who wishes to display the fourth of six tabs can do so with 3 quick presses of the right arrow.
-        And, a screen reader user who perceives the labels on tabs by navigating through them may efficiently read through the complete list without any latency.
+        예를 들어, 탭 목록에서, 선택 상태는 패널이 노출되어 있음을 나타내는데 사용 됩니다.
+        따라서, 탭 목록에서 선택이 초점을 따르는 경우, 한 탭에서 다른 탭으로 초점 이동은 자동으로 노출되는 패널을 변경시킵니다.
+        DOM에 패널의 콘텐츠가 존재한다면, 새로운 패널의 노출은 거의 즉시 이루어집니다.
+        6개 탭 중 4번째 탭을 노출시키기 원하는 키보드 사용자는 오른쪽 키를 3번 빠르게 눌러 그렇게 할 수 있습니다.
+        그리고 탭의 레이블을 탐색하여 인식하는 스크린리더 사용자는 대기 시간 없이 전체 탭 목록을 효율적을 읽을 수 있습니다.
       </p>
-      <p> However, if displaying a new panel causes a network request and possibly a page refresh, the effect of having selection automatically focus can be devastating to the experience for keyboard and screen reader users. In this case, displaying the fourth tab or reading through the list becomes a tedious and time-consuming task as the user experiences significant latency with each movement of focus. Further, if displaying a new tab refreshes the page, then the user not only has to wait for the new page to load but also return focus to the tab list. </p>
+      <p> 반면에, 새로운 패널을 노출시키는 것이 네트워크 요청을 발생시키고 페이지가 갱신(refresh) 될 수 있는 경우, 초점을 따라 자동으로 선택되게 하는 것은 키보드와 스크린리더 사용자의 경험을 파괴할 수 있습니다. 이 경우, 네 번째 탭을 표시하거나 탭 목록을 읽는 것은 사용자가 각 초점의 이동과 함께 상당한 지연 시간을 경험하기 때문에 지루하고 시간을 낭비하는 작업이 됩니다. 게다가, 새 탭이 페이지를 갱신하면 사용자는 새 페이지가 로드 될 때까지 기다려야 할 뿐만 아니라 탭 목록으로 초점을 다시 보내야 합니다. </p>
       <p>
-        When selection does not follow focus, the user changes which element is selected by pressing the <kbd>Enter</kbd> or <kbd>Space</kbd> key.
+        선택이 초점을 따르지 않는 경우, 사용자는  <kbd>Enter</kbd>나 <kbd>Space</kbd> 키를 눌러 선택 된 요소(element)를 변경합니다.
       </p>
     </section>
 
     <section id="kbd_general_between">
-      <h3 id="x6-5-keyboard-navigation-between-components-the-tab-sequence"><bdi class="secno">6.5 </bdi>Keyboard Navigation Between Components (The Tab Sequence)<a class="self-link" aria-label="§" href="#kbd_general_between"></a></h3>
-
-      <p> As explained in section <a href="#kbd_generalnav" class="sec-ref">§&nbsp;<bdi class="secno">6.1 </bdi>기본 키보드 탐색 규칙</a>, all interactive UI components need to be reachable via the keyboard. This is best achieved by either including them in the tab sequence or by making them accessible from a component that is in the tab sequence, e.g., as part of a composite component. This section addresses building and managing the tab sequence, and subsequent sections cover making focusable elements that are contained within components keyboard accessible. </p>
+      <h3 id="x6-5"><bdi class="secno">6.5 </bdi>컴포넌트 간 키보드 탐색 (탭 시퀀스)<a class="self-link" aria-label="§" href="#kbd_general_between"></a></h3>
+      <div class="translator-comment">
+        여기서 컴포넌트(component)는 구성 요소로의 의미입니다. Front-End 개발에서 이야기하는 컴포넌트 단위와는 차이가 있습니다.
+      </div>
 
       <p>
-        The [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>] <a href="https://html.spec.whatwg.org/multipage/interaction.html#the-tabindex-attribute">tabindex</a> and [<cite><a class="bibref" data-link-type="biblio" href="#bib-svg2" title="Scalable Vector Graphics (SVG) 2">SVG2</a></cite>] <a href="https://www.w3.org/TR/SVG2/struct.html#tabindexattribute">tabindex</a> attributes can be used to add and remove elements from the tab sequence.
-        The value of tabindex can also influence the order of the tab sequence, although authors are strongly advised not to use tabindex for that purpose.
+         <a href="#kbd_generalnav" class="sec-ref">§&nbsp;<bdi class="secno">6.1 </bdi>기본 키보드 탐색 규칙</a> 섹션에 설명된 대로, 모든 대화형 UI 컴포넌트는 키보드를 통해 접근 할 수 있어야 합니다. 이것은 탭 시퀀스에 그것들을 포함시키거나 탭 시퀀스에 있는 컴포넌트에 (예를 들어, 복합 컴포넌트의 일부) 접근 할 수 있도록 함으로써 가장 잘 달성됩니다. 이 섹션에서는 탭 시퀀스를 만들고 관리하는 방법을 다루고, 이후 섹션에서는 컴포넌트 내에 포함된 초점을 얻을 수 있는 요소(element)가 키보드 접근 가능하도록 하는 내용을 다룹니다. </p>
+
+      <p>
+
+        [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>] <a href="https://html.spec.whatwg.org/multipage/interaction.html#the-tabindex-attribute">tabindex</a>와 [<cite><a class="bibref" data-link-type="biblio" href="#bib-svg2" title="Scalable Vector Graphics (SVG) 2">SVG2</a></cite>] <a href="https://www.w3.org/TR/SVG2/struct.html#tabindexattribute">tabindex</a> 속성(attribute)은 탭 시퀀스에 요소(element)를 추가하거나 제거하는데 사용될 수 있습니다.
+        tabindex 값은 탭 시퀀스 순서에도 영향을 미칠 수도 있지만, 그 목적으로 tabindex를 사용하지 않는 것을 강력히 권합니다.
       </p>
 
       <p>
-        In HTML, the default tab sequence of a web page includes only links and HTML form elements, except In macOS, where it includes only form elements.
-        macOS system preferences include a keyboard setting that enables the tab key to move focus to all focusable elements.
+        HTML 에서, 웹 페이지의 기본 탭 시퀀스는 maxOS에서는 form 요소(element)만 포함하는 것을 제외하고, 링크와 form 요소(element)만 포함합니다.
+        macOS 시스템 환경 설정에는 탭 키가 모든 초점을 얻을 수 있는 요소(element)로 초점을 이동할 수 있는 키보드 설정이 포함되어 있습니다.
       </p>
 
       <p>
-        The default order of elements in the tab sequence is the order of elements in the DOM.
-        The DOM order also determines screen reader reading order.
-        It is important to keep the keyboard tab sequence and the screen reader reading order aligned, logical, and predictable as described in <a href="#kbd_focus_discernable_predictable" class="sec-ref">§&nbsp;<bdi class="secno">6.2 </bdi>식별 가능하고 예측 가능한 키보드 초점</a>.
-        The most robust method of manipulating the order of the tab sequence while also maintaining alignment with the reading order that is currently available in all browsers is rearranging elements in the DOM.
+        탭 시퀀스의 기본 요소(element) 순서는 DOM의 요소(element) 순서입니다.
+        DOM 순서는 또한 스크린리더 낭독 순서를 결정합니다.
+        이는 <a href="#kbd_focus_discernable_predictable" class="sec-ref">§&nbsp;<bdi class="secno">6.2 </bdi>식별 가능하고 예측 가능한 키보드 초점</a>에 기술된 대로 키보드 탭 시퀀스와 스크린리더 낭독 순서를 정렬되고, 논리적이고, 예측 가능하게 유지하는데 중요합니다.
+        읽기 순서와 함께 정렬을 유지하면서 탭 시퀀스 순서를 조작하는 모든 브라우저에서 현재 사용 가능한 가장 강력한 방법은 DOM에서 요소(element)를 재정렬 하는 것입니다.
       </p>
 
-      <p>The values of the tabindex attribute have the following effects.</p>
+      <p>tabindex 속성(attribute) 값은 다음 효과를 가집니다.</p>
 
       <dl>
-        <dt>tabindex is not present or does not have a valid value</dt>
+        <dt>tabindex 가 없거나 유효한 값을 가지지 않는 경우</dt>
         <dd>
-          The element has its default focus behavior.
-          In HTML, only form controls and anchors with an HREF attribute are included in the tab sequence.
+          요소(element)는 기본 초점 동작을 가집니다.
+          HTML에서, form 컨트롤과 HREF 속성(attribute)을 가진 앵커만 탭 시퀀스에 포함됩니다.
         </dd>
         <dt>tabindex="0"</dt>
-        <dd>The element is included in the tab sequence based on its position in the DOM.</dd>
+        <dd>요소(element) DOM에서의 위치에 따라 탭 시퀀스에 포함됩니다.</dd>
         <dt>tabindex="-1"</dt>
-        <dd>The element is not included in the tab sequence but is focusable with element.focus().</dd>
-        <dt>tabindex="X" where X is an integer in the range 1 &lt;= X &lt;= 32767</dt>
+        <dd>요소(element)는 탭 시퀀스에 포함되지 않지만 element.focus()로 초점을 얻을 수 있습니다.</dd>
+        <dt>tabindex="X", X는 1 &lt;= X &lt;= 32767 범위의 정수</dt>
         <dd>
-          Authors are strongly advised NOT to use these values.
-          The element is placed in the tab sequence based on the value of tabindex.
-          Elements with a tabindex value of 0 and elements that are focusable by default will be in the sequence after elements with a tabindex value of 1 or greater.
+          이 값을 사용하지 않는 것을 강력히 권합니다.
+          요소(element)는 tabindex의 값에 따라 탭 시퀀스에 배치됩니다.
+          tabindex 값이 0인 요소(element)와 기본적으로 초점을 얻을 수 있는 요소(element)들은 tabindex 값이 1 이상인 요소(element) 이후 시퀀스에 있게 됩니다.
         </dd>
       </dl>
     </section>
 
     <section id="kbd_general_within">
-      <h3 id="x6-6-keyboard-navigation-inside-components"><bdi class="secno">6.6 </bdi> Keyboard Navigation Inside Components<a class="self-link" aria-label="§" href="#kbd_general_within"></a></h3>
+      <h3 id="x6-6"><bdi class="secno">6.6 </bdi> 컴포넌트 내부 키보드 탐색<a class="self-link" aria-label="§" href="#kbd_general_within"></a></h3>
 
       <p>
-        As described in section <a href="#kbd_generalnav" class="sec-ref">§&nbsp;<bdi class="secno">6.1 </bdi>기본 키보드 탐색 규칙</a>, the tab sequence should include only one focusable element of a composite UI component.
-        Once a composite contains focus, keys other than <kbd>Tab</kbd> and <kbd>Shift + Tab</kbd> enable the user to move focus among its focusable elements.
-        Authors are free to choose which keys move focus inside of a composite, but they are strongly advised to use the same key bindings as similar components in common GUI operating systems as demonstrated in <a href="#aria_ex" class="sec-ref">§&nbsp;<bdi class="secno">3. </bdi>설계 패턴과 위젯</a>.
+        <a href="#kbd_generalnav" class="sec-ref">§&nbsp;<bdi class="secno">6.1 </bdi>기본 키보드 탐색 규칙</a> 섹션에 기술된 대로, 탭 시퀀스는 단 하나의 복합 UI 컴포넌트의 초점을 얻을 수 있는 요소(element)만 포함해야 합니다.
+        일단 복합 컴포넌트가 초점을 포함하면, <kbd>Tab</kbd>과 <kbd>Shift + Tab</kbd> 이외의 키들로 사용자가 복합 컴포넌트의 초점 가능한 요소(element) 간에 초점 이동을 할 수 있게 합니다.
+        작성자는 복합 컴포넌트 내부에서 초점을 이동시키는 키를 자유롭게 선택할 수 있지만, <a href="#aria_ex" class="sec-ref">§&nbsp;<bdi class="secno">3. </bdi>설계 패턴과 위젯</a>에 설명 된 대로 공통 GUI 운영 체제의 유사한 컴포넌트와 동일한 키 바인딩을 사용하는 것을 강력히 권합니다.
       </p>
 
-      <p> The convention for where focus lands in a composite when it receives focus as a result of a <kbd>Tab</kbd> key event depends on the type of composite. It is typically one of the following. </p>
+      <p> <kbd>Tab</kbd> 키 이벤트의 결과로 초점을 얻을 때 복합 컴포넌트 내 초점을 얻을 위치에 대한 규칙은 복합 컴포넌트의 유형에 따라 다릅니다. 일반적으로 다음 중 하나입니다.</p>
 
       <ul>
         <li>
-          The element that had focus the last time the composite contained focus.
-          Or, if the composite has not yet contained the focus, the first element.
-          Widgets that usually employ this pattern include grid and tree grid.
+          마지막으로 복합 컴포넌트가 초점을 포함했을 때 초점을 가진 요소(element).
+          또는, 복합 컴포넌트가 초점을 아직 포함하지 않았다면, 첫 번째 요소(element).
+          일반적으로 이 패턴을 사용하는 위젯은 grid 및 tree grid를 포함합니다.
         </li>
 
         <li>
-          The selected element. Or, if there is no selected element, the first element.
-          Widgets where this pattern is commonly implemented include radio groups, tabs, list boxes, and trees.
-          Note: For radio groups, this pattern is referring to the checked radio button; the selected state is not supported for radio buttons.
+          선택 된 요소(element). 또는 선택 된 요소가 없을 경우, 첫 번째 요소(element).
+          일반적으로 이 패턴이 구현되는 위젯은 라디오 그룹, 탭, 목록 상자, 트리를 포함합니다.
+          참고: 라디오 그룹의 경우, 이 패턴은 체크 된 (checked) 라디오 버튼을 가리킵니다; 선택 된 (selected) 상태는 라디오 버튼에 대해 지원되지 않습니다.
         </li>
 
         <li>
-          The first element.
-          Components that typically follow this pattern include menubars and toolbars.
+          첫 번째 요소(element).
+          일반적으로 이 패턴을 따르는 컴포넌트는 메뉴바와 툴바를 포함합니다.
         </li>
       </ul>
 
       <p>
-        The following sections explain two strategies for managing focus inside composite elements: creating a roving tabindex and using the aria-activedescendant property.
+        다음 섹션에서는 복합 요소(element)에서 초점을 관리하기 위한 두가지 전략: 이동(roving) tabindex 생성과 aria-activedescendant 속성(property) 사용에 대해 설명합니다.
       </p>
 
       <section id="kbd_roving_tabindex">
-        <h4 id="x6-6-1-managing-focus-within-components-using-a-roving-tabindex"><bdi class="secno">6.6.1 </bdi>Managing Focus Within Components Using a Roving tabindex<a class="self-link" aria-label="§" href="#kbd_roving_tabindex"></a></h4>
+        <h4 id="x6-6-1-roving-tabindex"><bdi class="secno">6.6.1 </bdi>이동(roving) tabindex를 사용하여 컴포넌트에서 초점 관리<a class="self-link" aria-label="§" href="#kbd_roving_tabindex"></a></h4>
 
         <p>
-          When using roving tabindex to manage focus in a composite UI component, the element that is to be included in the tab sequence has tabindex of "0" and all other focusable elements contained in the composite have tabindex of "-1".
-          The algorithm for the roving tabindex strategy is as follows.
+          복합 UI 컴포넌트에서 초점을 관리하기 위해 이동 tabindex를 사용하는 경우, 탭 시퀀스에 포함 되어야 할 요소(element)는 0 값의 tabindex를 가지고 복합 컴포넌트의에 포함 된 다른 모든 초점을 얻을 수 있는 요소(element)는 -1 값의 tabindex를 가집니다.
+          이동 tabindex 전략에 대한 알고리즘은 다음과 같습니다.
         </p>
 
         <ul>
-          <li>When the component container is loaded or created, set <code>tabindex="0"</code> on the element that will initially be included in the tab sequence and set <code>tabindex="-1"</code> on all other focusable elements it contains.</li>
+          <li>컴포넌트 컨테이너가 로드되거나 생성될 때, 초기에 탭 시퀀스에 포함되는 요소(element)에 <code>tabindex="0"</code>를 설정하고 포함 된 다른 모든 초점을 얻을 수 있는 요소(element)에 <code>tabindex="-1"</code>을 설정하세요.</li>
           <li>
-            When the component contains focus and the user presses a navigation key that moves focus within the component, such as an arrow key:
+            컴포넌트가 초점을 포함하고 사용자가 컴포넌트 내에서 방향키와 같이 초점을 이동시키는 탐색 키를 누를 때:
 
             <ul>
-              <li>set <code>tabindex="-1"</code> on the element that has <code>tabindex="0"</code>.</li>
-              <li>Set <code>tabindex="0"</code> on the element that will become focused as a result of the key event.</li>
-              <li>Set focus, <code>element.focus()</code>, on the element that has <code>tabindex="0"</code>.</li>
+              <li><code>tabindex="0"</code>를 가진 요소(element)에 <code>tabindex="-1"</code>를 설정하세요.</li>
+              <li>키 이벤트의 결과로 초점을 얻게 될 요소(element)에 <code>tabindex="0"</code>를 설정하세요.</li>
+              <li><code>tabindex="0"</code>를 가진 요소(element)에 <code>element.focus()</code>로 초점을 설정하세요.</li>
             </ul>
           </li>
 
           <li>
-            If the design calls for a specific element to be focused the next time the user moves focus into the composite with <kbd>Tab</kbd> or <kbd>Shift+Tab</kbd>, check if that target element has <code>tabindex="0"</code> when the composite loses focus.
-            If it does not, set <code>tabindex="0"</code> on the target element and set <code>tabindex="-1"</code> on the element that previously had <code>tabindex="0"</code>.
+            설계가 다음에 사용자가 <kbd>Tab</kbd>이나 <kbd>Shift+Tab</kbd>으로 복합 컴포넌트 내로 초점을 이동시킬 때 특정 요소가 초점을 얻도록 요구하는 경우, 복합 컴포넌트가 초점을 잃을 때 그 대상 요소(element)가 <code>tabindex="0"</code>를 가지고 있는지 확인하세요.
+            그렇지 않으면, 대상 요소(element)에 <code>tabindex="0"</code>를 설정하고 이전에 <code>tabindex="0"</code>를 가졌던 요소(element)에 <code>tabindex="-1"</code>을 설정하세요.
           </li>
         </ul>
 
         <p>
-          One benefit of using roving tabindex rather than aria-activedescendant to manage focus is that the user agent will scroll the newly focused element into view.
+          초점을 관리하기 위해 aria-activedescendant 보다 이동 tabindex 사용의 한 가지 이점은 유저 에이전트가 새롭게 초점을 얻은 요소를 뷰(view)로 스크롤 한다는 것입니다.
         </p>
       </section>
 
       <section id="kbd_focus_activedescendant">
-        <h4 id="x6-6-2-managing-focus-in-composites-using-aria-activedescendant"><bdi class="secno">6.6.2 </bdi>Managing Focus in Composites Using aria-activedescendant<a class="self-link" aria-label="§" href="#kbd_focus_activedescendant"></a></h4>
+        <h4 id="x6-6-2-aria-activedescendant"><bdi class="secno">6.6.2 </bdi>aria-activedescendant를 사용하여 복합 컴포넌트에서 초점 관리<a class="self-link" aria-label="§" href="#kbd_focus_activedescendant"></a></h4>
 
         <p>
-          If a component container has an ARIA role that supports the <a class="property-reference" href="https://w3c.github.io/aria/#aria-activedescendant">aria-activedescendant</a> property, it is not necessary to manipulate the tabindex attribute and move DOM focus among focusable elements within the container.
-          Instead, only the container element needs to be included in the tab sequence. When the container has DOM focus, the value of aria-activedescendant on the container tells assistive technologies which element is active within the widget.
-          Assistive technologies will consider the element referred to as active to be the focused element even though DOM focus is on the element that has the aria-activedescendant property.
-          And, when the value of aria-activedescendant is changed, assistive technologies will receive focus change events equivalent to those received when DOM focus actually moves.
+          컴포넌트 컨테이너가 <a class="property-reference" href="https://w3c.github.io/aria/#aria-activedescendant">aria-activedescendant</a> 속성을 지원하는 ARIA 역할(role)을 가지는 경우, tabindex 속성(attribute)을 관리하고 컨테이너 내에 초점을 얻을 수 있는 요소(element) 간에 DOM 초점을 이동시킬 필요가 없습니다.
+          대신, 컨테이너 요소(element)만 탭 시퀀스에 포함되면 됩니다. 컨테이너가 DOM 초점을 가지는 경우, 컨테이너의 aria-activedescendant 값은 위젯에서 활성화 되는 요소(element)를 보조 기술에 알려줍니다.
+          보조 기술은 DOM 초점이 aria-activedescendant 속성(property)를 가진 요소(element)에 있다 하더라도 활성화 된 것으로 참조되는 요소(element)를 초점을 얻은 요소(element)라고 간주할 것입니다.
+          그리고, aria-activedescendant 값이 변경될 때, 보조 기술은 DOM 초점이 실제로 이동될 때 받는 것과 동일한 초점 변경 이벤트를 받을 것입니다.
         </p>
 
-        <p>The steps for using the aria-activedescendant method of managing focus are as follows.</p>
+        <p>초점 관리의 aria-activedescendant 사용 방법 단계는 다음과 같습니다.</p>
 
         <ul>
-          <li>When the container element that has a role that supports aria-activedescendant is loaded or created, ensure that:
+          <li>aria-activedescendant를 지원하는 역할(role)을 가진 컨테이터 요소(element)가 로드되거나 생성될 때, 다음을 보장하세요:
             <ul>
-              <li>The container element is included in the tab sequence as described in <a href="#kbd_general_between" class="sec-ref">§&nbsp;<bdi class="secno">6.5 </bdi>Keyboard Navigation Between Components (The Tab Sequence)</a> or is a focusable element of a composite that implements <a href="#kbd_roving_tabindex">a roving tabindex</a>.</li>
+              <li>컨테이너 요소(element)가 <a href="#kbd_general_between" class="sec-ref">§&nbsp;<bdi class="secno">6.5 </bdi>컴포넌트 간 키보드 탐색 (탭 시퀀스)</a>에 기술된 대로 탭 시퀀스에 포함되거나, <a href="#kbd_roving_tabindex">이동 tabindex</a>를 구현하는 복합 컴포넌트의 초점을 얻을 수 있는 요소(element)입니다.</li>
               <li>
-                It has <code>aria-activedescendant="IDREF"</code> where IDREF is the ID of the element within the container that should be identified as active when the widget receives focus.
-                The referenced element needs to meet the DOM relationship requirements described below.
+                IDREF가 위젯이 초점을 받을 때 컨테이너 내의 활성으로 식별되어야 하는 요소(element)의 ID인 <code>aria-activedescendant="IDREF"</code>가집니다.
+                참조 된 요소(element)는 아래 설명된 DOM 관계 요구 사항을 충족해야 합니다.
               </li>
             </ul>
           </li>
-          <li>When the container element receives DOM focus, draw a visual focus indicator on the active element and ensure the active element is scrolled into view.</li>
-          <li>When the composite widget contains focus and the user presses a navigation key that moves focus within the widget, such as an arrow key:
+          <li>컨테이너 요소(element)가 DOM 초점을 얻을 때, 활성 요소(element)에 시각적 초점 표시기를 그리고 활성 요소가 뷰(view) 안으로 스크롤 되도록 보장하세요.</li>
+          <li>복합 위젯이 초점을 포함하고 사용자가 위젯 내에서 방향키와 같은 초점을 이동하는 탐색 키를 누를 때:
             <ul>
-              <li>Change the value of aria-activedescendant on the container to refer to the element that should be reported to assistive technologies as active.</li>
-              <li>Move the visual focus indicator and, if necessary,  scrolled the active element into view.</li>
+              <li>보조 기술에 활성으로 보고되어야 하는 요소(element)를 가리키도록 </li>
+              <li>필요하다면, 시각적 초점 표시기를 이동시키고 뷰(view) 안으로 활성 요소(element)를 스크롤 되게 하세요.</li>
             </ul>
           </li>
           <li>
-            If the design calls for a specific element to be focused the next time a user moves focus into the composite with <kbd>Tab</kbd> or <kbd>Shift+Tab</kbd>, check if aria-activedescendant is referring to that target element when the container loses focus.
-            If it is not, set aria-activedescendant to refer to the target element.
+            설계가 다음에 사용자가 <kbd>Tab</kbd>이나 <kbd>Shift+Tab</kbd>으로 복합 컴포넌트 내로 초점을 이동시킬 때 특정 요소(element)가 초점을 얻도록 요구하는 경우, 컨테이너가 초점을 잃을 때 aria-activedescendant가 그 대상 요소(element)를 가리키고 있는지 확인하세요.
+            그렇지 않으면, aria-activedescendant를 대상 요소(element)를 가리키도록 설정하세요.
           </li>
         </ul>
 
         <p>
-          The <a href="https://w3c.github.io/aria/#aria-activedescendant" class="property-reference">specification for aria-activedescendant</a> places important restrictions on the DOM relationship between the focused element that has the aria-activedescendant attribute and the element referenced as active by the value of the attribute.
-          One of the following three conditions must be met.
+          <a href="https://w3c.github.io/aria/#aria-activedescendant" class="property-reference">aria-activedescendant에 대한 명세</a>는 aria-activedescendant 속성(attribute)을 가진 초점을 얻은 요소(element)와 속성(attribute) 값에 의해 활성으로 참조되는 요소(element) 간의 DOM 관계에 중요한 제한 사항을 둡니다.
+          다음 세 가지 조건 중 하나가 충족되어야 합니다.
         </p>
         <ol>
-          <li>The element referenced as active is a DOM descendant of the focused referencing element.</li>
-          <li>The focused referencing element has a value specified for the <a href="https://w3c.github.io/aria/#aria-owns" class="property-reference">aria-owns</a> property that includes the ID of the element referenced as active.</li>
-          <li>The focused referencing element has role of <a href="https://w3c.github.io/aria/#textbox" class="role-reference">textbox</a> and has <a href="https://w3c.github.io/aria/#aria-controls" class="property-reference">aria-controls</a> property referring to an element with a role that supports aria-activedescendant and either:
+          <li>활성으로 참조 된 요소(element)는 초점을 얻은 참조하는 요소(element)의 DOM 후손입니다.</li>
+          <li>초점을 얻은 참조하는 요소(element)는 활성으로 참조되는 요소(element)의 ID를 포함하는 <a href="https://w3c.github.io/aria/#aria-owns" class="property-reference">aria-owns</a> 속성(property)에 지정된 값을 가집니다.</li>
+          <li>초점을 얻은 요소(element)는 <a href="https://w3c.github.io/aria/#textbox" class="role-reference">textbox</a> 역할(role)을 가지고 aria-activedescendant를 지원하는 역할(role)을 가지면서 다음 중 하나인 요소(element)를 참조하는 <a href="https://w3c.github.io/aria/#aria-controls" class="property-reference">aria-controls</a> 속성(property)를 가집니다:
             <ol>
-              <li>The element referenced as active is a descendant of the controlled element.</li>
-              <li>The controlled element has a value specified for the <a href="https://w3c.github.io/aria/#aria-owns" class="property-reference">aria-owns</a> property that includes the ID of the element referenced as active.</li>
+              <li>활성으로 참조 된 요소(element)가 제어 요소(element)의 후손입니다.</li>
+              <li>제어 요소(element)는 활성으로 참조되는 요소(element)의 ID를 포함하는 <a href="https://w3c.github.io/aria/#aria-owns" class="property-reference">aria-owns</a> 속성(property)에 지정된 값을 가집니다.</li>
             </ol>
           </li>
         </ol>
@@ -6007,8 +6012,8 @@
           </p>
 
           <ul>
-            <li><a href="#kbd_general_between" class="sec-ref">§&nbsp;<bdi class="secno">6.5 </bdi>Keyboard Navigation Between Components (The Tab Sequence)</a> </li>
-            <li><a href="#kbd_general_within" class="sec-ref">§&nbsp;<bdi class="secno">6.6 </bdi> Keyboard Navigation Inside Components</a> </li>
+            <li><a href="#kbd_general_between" class="sec-ref">§&nbsp;<bdi class="secno">6.5 </bdi>컴포넌트 간 키보드 탐색 (탭 시퀀스)</a> </li>
+            <li><a href="#kbd_general_within" class="sec-ref">§&nbsp;<bdi class="secno">6.6 </bdi> 컴포넌트 내부 키보드 탐색</a> </li>
           </ul>
 
           <p>
@@ -7235,7 +7240,7 @@
         Informative references
       <a class="self-link" aria-label="§" href="#informative-references"></a></h3>
     <dl class="bibliography">
-      <dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-html-aam">[HTML-AAM]</dt><dd><a href="https://www.w3.org/TR/html-aam-1.0/"><cite>HTML Accessibility API Mappings 1.0</cite></a>. Steve Faulkner; Alexander Surkov; Scott O'Hara; Bogdan Brinza; Jason Kiss; Cynthia Shelly.  W3C. 17 August 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/html-aam-1.0/">https://www.w3.org/TR/html-aam-1.0/</a></dd><dt id="bib-html-aria">[HTML-ARIA]</dt><dd><a href="https://www.w3.org/TR/html-aria/"><cite>ARIA in HTML</cite></a>. Steve Faulkner; Scott O'Hara; Patrick Lauke.  W3C. 14 August 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/html-aria/">https://www.w3.org/TR/html-aria/</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd>
+      <dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-html-aam">[HTML-AAM]</dt><dd><a href="https://www.w3.org/TR/html-aam-1.0/"><cite>HTML Accessibility API Mappings 1.0</cite></a>. Steve Faulkner; Alexander Surkov; Scott O'Hara; Bogdan Brinza; Jason Kiss; Cynthia Shelly.  W3C. 17 August 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/html-aam-1.0/">https://www.w3.org/TR/html-aam-1.0/</a></dd><dt id="bib-html-aria">[HTML-ARIA]</dt><dd><a href="https://www.w3.org/TR/html-aria/"><cite>ARIA in HTML</cite></a>. Steve Faulkner; Scott O'Hara; Patrick Lauke.  W3C. 7 October 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/html-aria/">https://www.w3.org/TR/html-aria/</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd>
     </dl></section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
