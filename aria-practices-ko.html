@@ -5468,44 +5468,46 @@
     </section>
 
     <section id="kbd_general_between">
-      <h3>Keyboard Navigation Between Components (The Tab Sequence)</h3>
-
-      <p> As explained in section <a href="#kbd_generalnav"></a>, all interactive UI components need to be reachable via the keyboard. This is best achieved by either including them in the tab sequence or by making them accessible from a component that is in the tab sequence, e.g., as part of a composite component. This section addresses building and managing the tab sequence, and subsequent sections cover making focusable elements that are contained within components keyboard accessible. </p>
+      <h3>구성 요소 간 키보드 탐색 (탭 시퀀스)</h3>
 
       <p>
-        The [[HTML]] <a href="https://html.spec.whatwg.org/multipage/interaction.html#the-tabindex-attribute">tabindex</a> and [[SVG2]] <a href="https://www.w3.org/TR/SVG2/struct.html#tabindexattribute">tabindex</a> attributes can be used to add and remove elements from the tab sequence.
-        The value of tabindex can also influence the order of the tab sequence, although authors are strongly advised not to use tabindex for that purpose.
+         <a href="#kbd_generalnav"></a> 섹션에 설명된 대로, 모든 대화형 UI 구성 요소는 키보드를 통해 접근 할 수 있어야 합니다. 이것은 탭 시퀀스에 그것들을 포함시키거나 탭 시퀀스에 있는 구성 요소에 (예를 들어, 복합 구성 요소의 일부) 접근 할 수 있도록 함으로써 가장 잘 달성됩니다. 이 섹션에서는 탭 시퀀스를 만들고 관리하는 방법을 다루고, 이후 섹션에서는 구성 요소 내에 포함된 초점을 얻을 수 있는 요소(element)가 키보드 접근 가능하도록 하는 내용을 다룹니다. </p>
+
+      <p>
+
+        [[HTML]] <a href="https://html.spec.whatwg.org/multipage/interaction.html#the-tabindex-attribute">tabindex</a>와 [[SVG2]] <a href="https://www.w3.org/TR/SVG2/struct.html#tabindexattribute">tabindex</a> 속성(attribute)은 탭 시퀀스에 요소(element)를 추가하거나 제거하는데 사용될 수 있습니다.
+        tabindex 값은 탭 시퀀스 순서에도 영향을 미칠 수도 있지만, 그 목적으로 tabindex를 사용하지 않는 것을 강력히 권합니다.
       </p>
 
       <p>
-        In HTML, the default tab sequence of a web page includes only links and HTML form elements, except In macOS, where it includes only form elements.
-        macOS system preferences include a keyboard setting that enables the tab key to move focus to all focusable elements.
+        HTML 에서, 웹 페이지의 기본 탭 시퀀스는 maxOS에서는 form 요소(element)만 포함하는 것을 제외하고, 링크와 form 요소(element)만 포함합니다.
+        macOS 시스템 환경 설정에는 탭 키가 모든 초점을 얻을 수 있는 요소(element)로 초점을 이동할 수 있는 키보드 설정이 포함되어 있습니다.
       </p>
 
       <p>
-        The default order of elements in the tab sequence is the order of elements in the DOM.
-        The DOM order also determines screen reader reading order.
-        It is important to keep the keyboard tab sequence and the screen reader reading order aligned, logical, and predictable as described in <a href="#kbd_focus_discernable_predictable"></a>.
-        The most robust method of manipulating the order of the tab sequence while also maintaining alignment with the reading order that is currently available in all browsers is rearranging elements in the DOM.
+        탭 시퀀스의 기본 요소(element) 순서는 DOM의 요소(element) 순서입니다.
+        DOM 순서는 또한 스크린리더 낭독 순서를 결정합니다.
+        이는 <a href="#kbd_focus_discernable_predictable"></a>에 기술된 대로 키보드 탭 시퀀스와 스크린리더 낭독 순서를 정렬되고, 논리적이고, 예측 가능하게 유지하는데 중요합니다.
+        읽기 순서와 함께 정렬을 유지하면서 탭 시퀀스 순서를 조작하는 모든 브라우저에서 현재 사용 가능한 가장 강력한 방법은 DOM에서 요소(element)를 재정렬 하는 것입니다.
       </p>
 
-      <p>The values of the tabindex attribute have the following effects.</p>
+      <p>tabindex 속성(attribute) 값은 다음 효과를 가집니다.</p>
 
       <dl>
-        <dt>tabindex is not present or does not have a valid value</dt>
+        <dt>tabindex 가 없거나 유효한 값을 가지지 않는 경우</dt>
         <dd>
-          The element has its default focus behavior.
-          In HTML, only form controls and anchors with an HREF attribute are included in the tab sequence.
+          요소(element)는 기본 초점 동작을 가집니다.
+          HTML에서, form 컨트롤과 HREF 속성(attribute)을 가진 앵커만 탭 시퀀스에 포함됩니다.
         </dd>
         <dt>tabindex="0"</dt>
-        <dd>The element is included in the tab sequence based on its position in the DOM.</dd>
+        <dd>요소(element) DOM에서의 위치에 따라 탭 시퀀스에 포함됩니다.</dd>
         <dt>tabindex="-1"</dt>
-        <dd>The element is not included in the tab sequence but is focusable with element.focus().</dd>
-        <dt>tabindex="X" where X is an integer in the range 1 &lt;= X &lt;= 32767</dt>
+        <dd>요소(element)는 탭 시퀀스에 포함되지 않지만 element.focus()로 초점을 얻을 수 있습니다.</dd>
+        <dt>tabindex="X", X는 1 &lt;= X &lt;= 32767 범위의 정수</dt>
         <dd>
-          Authors are strongly advised NOT to use these values.
-          The element is placed in the tab sequence based on the value of tabindex.
-          Elements with a tabindex value of 0 and elements that are focusable by default will be in the sequence after elements with a tabindex value of 1 or greater.
+          이 값을 사용하지 않는 것을 강력히 권합니다.
+          요소(element)는 tabindex의 값에 따라 탭 시퀀스에 배치됩니다.
+          tabindex 값이 0인 요소(element)와 기본적으로 초점을 얻을 수 있는 요소(element)들은 tabindex 값이 1 이상인 요소(element) 이후 시퀀스에 있게 됩니다.
         </dd>
       </dl>
     </section>
