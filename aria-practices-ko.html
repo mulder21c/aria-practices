@@ -5328,7 +5328,7 @@
       </p>
 
       <p>
-        보통 모든 플랫폼에서 주요 키보드 탐색 규칙은 다른 키들, 주로 화살표 키가 여러 초점 가능한 요소들을 포함하는 컴포넌트의 내부로 초점을 이동시키는 반면 <kbd>tab</kbd>과 <kbd>shift+tab</kbd> 키는 한 UI 컴포넌트에서 다른 컴포넌트로 초점을 이동시킨다는 것입니다.
+        보통 모든 플랫폼에서 주요 키보드 탐색 규칙은 다른 키들, 주로 방향키가 여러 초점 가능한 요소들을 포함하는 컴포넌트의 내부로 초점을 이동시키는 반면 <kbd>tab</kbd>과 <kbd>shift+tab</kbd> 키는 한 UI 컴포넌트에서 다른 컴포넌트로 초점을 이동시킨다는 것입니다.
         <kbd>tab</kbd> 키를 누를 때 초점이 따르는 경로를 탭 시퀀스 혹은 탭 링이라고 부릅니다.
       </p>
 
@@ -5336,7 +5336,7 @@
         초점을 얻을 수 있는 여러 요소들을 포함하는 UI 컴포넌트의 일반적이 예는 라디오 그룹, 탭 목록, 메뉴, 그리드입니다.
         예를 들어, 라디오 그룹은 각각이 초점을 얻을 수 있는 여러 라디오 버튼을 포함합니다.
         하지만 오직 한 개 라디오 버튼만이 탭 시퀀스에 포함됩니다.
-        <kbd>Tab</kbd> 키를 누른 후 초점은 그룹 내의 라디오 버튼으로 이동하고, 화살표 키를 누르면 그룹 내의 라디오 버튼 간에 초점이 이동하며, 다시 <kbd>Tab</kbd> 키를 누르면 라디오 그룹을 벗어나 탭 시퀀스 내의 다음 요소로 초점이 이동됩니다.
+        <kbd>Tab</kbd> 키를 누른 후 초점은 그룹 내의 라디오 버튼으로 이동하고, 방향키를 누르면 그룹 내의 라디오 버튼 간에 초점이 이동하며, 다시 <kbd>Tab</kbd> 키를 누르면 라디오 그룹을 벗어나 탭 시퀀스 내의 다음 요소로 초점이 이동됩니다.
       </p>
 
       <p>
@@ -5468,10 +5468,13 @@
     </section>
 
     <section id="kbd_general_between">
-      <h3>구성 요소 간 키보드 탐색 (탭 시퀀스)</h3>
+      <h3>컴포넌트 간 키보드 탐색 (탭 시퀀스)</h3>
+      <div class="translator-comment">
+        여기서 컴포넌트(component)는 구성 요소로의 의미입니다. Front-End 개발에서 이야기하는 컴포넌트 단위와는 차이가 있습니다.
+      </div>
 
       <p>
-         <a href="#kbd_generalnav"></a> 섹션에 설명된 대로, 모든 대화형 UI 구성 요소는 키보드를 통해 접근 할 수 있어야 합니다. 이것은 탭 시퀀스에 그것들을 포함시키거나 탭 시퀀스에 있는 구성 요소에 (예를 들어, 복합 구성 요소의 일부) 접근 할 수 있도록 함으로써 가장 잘 달성됩니다. 이 섹션에서는 탭 시퀀스를 만들고 관리하는 방법을 다루고, 이후 섹션에서는 구성 요소 내에 포함된 초점을 얻을 수 있는 요소(element)가 키보드 접근 가능하도록 하는 내용을 다룹니다. </p>
+         <a href="#kbd_generalnav"></a> 섹션에 설명된 대로, 모든 대화형 UI 컴포넌트는 키보드를 통해 접근 할 수 있어야 합니다. 이것은 탭 시퀀스에 그것들을 포함시키거나 탭 시퀀스에 있는 컴포넌트에 (예를 들어, 복합 컴포넌트의 일부) 접근 할 수 있도록 함으로써 가장 잘 달성됩니다. 이 섹션에서는 탭 시퀀스를 만들고 관리하는 방법을 다루고, 이후 섹션에서는 컴포넌트 내에 포함된 초점을 얻을 수 있는 요소(element)가 키보드 접근 가능하도록 하는 내용을 다룹니다. </p>
 
       <p>
 
@@ -5513,116 +5516,116 @@
     </section>
 
     <section id="kbd_general_within">
-      <h3> Keyboard Navigation Inside Components</h3>
+      <h3> 컴포넌트 내부 키보드 탐색</h3>
 
       <p>
-        As described in section <a href="#kbd_generalnav"></a>, the tab sequence should include only one focusable element of a composite UI component.
-        Once a composite contains focus, keys other than <kbd>Tab</kbd> and <kbd>Shift + Tab</kbd> enable the user to move focus among its focusable elements.
-        Authors are free to choose which keys move focus inside of a composite, but they are strongly advised to use the same key bindings as similar components in common GUI operating systems as demonstrated in <a href="#aria_ex"></a>.
+        <a href="#kbd_generalnav"></a> 섹션에 기술된 대로, 탭 시퀀스는 단 하나의 복합 UI 컴포넌트의 초점을 얻을 수 있는 요소(element)만 포함해야 합니다.
+        일단 복합 컴포넌트가 초점을 포함하면, <kbd>Tab</kbd>과 <kbd>Shift + Tab</kbd> 이외의 키들로 사용자가 복합 컴포넌트의 초점 가능한 요소(element) 간에 초점 이동을 할 수 있게 합니다.
+        작성자는 복합 컴포넌트 내부에서 초점을 이동시키는 키를 자유롭게 선택할 수 있지만, <a href="#aria_ex"></a>에 설명 된 대로 공통 GUI 운영 체제의 유사한 컴포넌트와 동일한 키 바인딩을 사용하는 것을 강력히 권합니다.
       </p>
 
-      <p> The convention for where focus lands in a composite when it receives focus as a result of a <kbd>Tab</kbd> key event depends on the type of composite. It is typically one of the following. </p>
+      <p> <kbd>Tab</kbd> 키 이벤트의 결과로 초점을 얻을 때 복합 컴포넌트 내 초점을 얻을 위치에 대한 규칙은 복합 컴포넌트의 유형에 따라 다릅니다. 일반적으로 다음 중 하나입니다.</p>
 
       <ul>
         <li>
-          The element that had focus the last time the composite contained focus.
-          Or, if the composite has not yet contained the focus, the first element.
-          Widgets that usually employ this pattern include grid and tree grid.
+          마지막으로 복합 컴포넌트가 초점을 포함했을 때 초점을 가진 요소(element).
+          또는, 복합 컴포넌트가 초점을 아직 포함하지 않았다면, 첫 번째 요소(element).
+          일반적으로 이 패턴을 사용하는 위젯은 grid 및 tree grid를 포함합니다.
         </li>
 
         <li>
-          The selected element. Or, if there is no selected element, the first element.
-          Widgets where this pattern is commonly implemented include radio groups, tabs, list boxes, and trees.
-          Note: For radio groups, this pattern is referring to the checked radio button; the selected state is not supported for radio buttons.
+          선택 된 요소(element). 또는 선택 된 요소가 없을 경우, 첫 번째 요소(element).
+          일반적으로 이 패턴이 구현되는 위젯은 라디오 그룹, 탭, 목록 상자, 트리를 포함합니다.
+          참고: 라디오 그룹의 경우, 이 패턴은 체크 된 (checked) 라디오 버튼을 가리킵니다; 선택 된 (selected) 상태는 라디오 버튼에 대해 지원되지 않습니다.
         </li>
 
         <li>
-          The first element.
-          Components that typically follow this pattern include menubars and toolbars.
+          첫 번째 요소(element).
+          일반적으로 이 패턴을 따르는 컴포넌트는 메뉴바와 툴바를 포함합니다.
         </li>
       </ul>
 
       <p>
-        The following sections explain two strategies for managing focus inside composite elements: creating a roving tabindex and using the aria-activedescendant property.
+        다음 섹션에서는 복합 요소(element)에서 초점을 관리하기 위한 두가지 전략: 이동(roving) tabindex 생성과 aria-activedescendant 속성(property) 사용에 대해 설명합니다.
       </p>
 
       <section id="kbd_roving_tabindex">
-        <h4>Managing Focus Within Components Using a Roving tabindex</h4>
+        <h4>이동(roving) tabindex를 사용하여 컴포넌트에서 초점 관리</h4>
 
         <p>
-          When using roving tabindex to manage focus in a composite UI component, the element that is to be included in the tab sequence has tabindex of "0" and all other focusable elements contained in the composite have tabindex of "-1".
-          The algorithm for the roving tabindex strategy is as follows.
+          복합 UI 컴포넌트에서 초점을 관리하기 위해 이동 tabindex를 사용하는 경우, 탭 시퀀스에 포함 되어야 할 요소(element)는 0 값의 tabindex를 가지고 복합 컴포넌트의에 포함 된 다른 모든 초점을 얻을 수 있는 요소(element)는 -1 값의 tabindex를 가집니다.
+          이동 tabindex 전략에 대한 알고리즘은 다음과 같습니다.
         </p>
 
         <ul>
-          <li>When the component container is loaded or created, set <code>tabindex="0"</code> on the element that will initially be included in the tab sequence and set <code>tabindex="-1"</code> on all other focusable elements it contains.</li>
+          <li>컴포넌트 컨테이너가 로드되거나 생성될 때, 초기에 탭 시퀀스에 포함되는 요소(element)에 <code>tabindex="0"</code>를 설정하고 포함 된 다른 모든 초점을 얻을 수 있는 요소(element)에 <code>tabindex="-1"</code>을 설정하세요.</li>
           <li>
-            When the component contains focus and the user presses a navigation key that moves focus within the component, such as an arrow key:
+            컴포넌트가 초점을 포함하고 사용자가 컴포넌트 내에서 방향키와 같이 초점을 이동시키는 탐색 키를 누를 때:
 
             <ul>
-              <li>set <code>tabindex="-1"</code> on the element that has <code>tabindex="0"</code>.</li>
-              <li>Set <code>tabindex="0"</code> on the element that will become focused as a result of the key event.</li>
-              <li>Set focus, <code>element.focus()</code>, on the element that has <code>tabindex="0"</code>.</li>
+              <li><code>tabindex="0"</code>를 가진 요소(element)에 <code>tabindex="-1"</code>를 설정하세요.</li>
+              <li>키 이벤트의 결과로 초점을 얻게 될 요소(element)에 <code>tabindex="0"</code>를 설정하세요.</li>
+              <li><code>tabindex="0"</code>를 가진 요소(element)에 <code>element.focus()</code>로 초점을 설정하세요.</li>
             </ul>
           </li>
 
           <li>
-            If the design calls for a specific element to be focused the next time the user moves focus into the composite with <kbd>Tab</kbd> or <kbd>Shift+Tab</kbd>, check if that target element has <code>tabindex="0"</code> when the composite loses focus.
-            If it does not, set <code>tabindex="0"</code> on the target element and set <code>tabindex="-1"</code> on the element that previously had <code>tabindex="0"</code>.
+            설계가 다음에 사용자가 <kbd>Tab</kbd>이나 <kbd>Shift+Tab</kbd>으로 복합 컴포넌트 내로 초점을 이동시킬 때 특정 요소가 초점을 얻도록 요구하는 경우, 복합 컴포넌트가 초점을 잃을 때 그 대상 요소(element)가 <code>tabindex="0"</code>를 가지고 있는지 확인하세요.
+            그렇지 않으면, 대상 요소(element)에 <code>tabindex="0"</code>를 설정하고 이전에 <code>tabindex="0"</code>를 가졌던 요소(element)에 <code>tabindex="-1"</code>을 설정하세요.
           </li>
         </ul>
 
         <p>
-          One benefit of using roving tabindex rather than aria-activedescendant to manage focus is that the user agent will scroll the newly focused element into view.
+          초점을 관리하기 위해 aria-activedescendant 보다 이동 tabindex 사용의 한 가지 이점은 유저 에이전트가 새롭게 초점을 얻은 요소를 뷰(view)로 스크롤 한다는 것입니다.
         </p>
       </section>
 
       <section id="kbd_focus_activedescendant">
-        <h4>Managing Focus in Composites Using aria-activedescendant</h4>
+        <h4>aria-activedescendant를 사용하여 복합 컴포넌트에서 초점 관리</h4>
 
         <p>
-          If a component container has an ARIA role that supports the <a class="property-reference" href="#aria-activedescendant">aria-activedescendant</a> property, it is not necessary to manipulate the tabindex attribute and move DOM focus among focusable elements within the container.
-          Instead, only the container element needs to be included in the tab sequence. When the container has DOM focus, the value of aria-activedescendant on the container tells assistive technologies which element is active within the widget.
-          Assistive technologies will consider the element referred to as active to be the focused element even though DOM focus is on the element that has the aria-activedescendant property.
-          And, when the value of aria-activedescendant is changed, assistive technologies will receive focus change events equivalent to those received when DOM focus actually moves.
+          컴포넌트 컨테이너가 <a class="property-reference" href="#aria-activedescendant">aria-activedescendant</a> 속성을 지원하는 ARIA 역할(role)을 가지는 경우, tabindex 속성(attribute)을 관리하고 컨테이너 내에 초점을 얻을 수 있는 요소(element) 간에 DOM 초점을 이동시킬 필요가 없습니다.
+          대신, 컨테이너 요소(element)만 탭 시퀀스에 포함되면 됩니다. 컨테이너가 DOM 초점을 가지는 경우, 컨테이너의 aria-activedescendant 값은 위젯에서 활성화 되는 요소(element)를 보조 기술에 알려줍니다.
+          보조 기술은 DOM 초점이 aria-activedescendant 속성(property)를 가진 요소(element)에 있다 하더라도 활성화 된 것으로 참조되는 요소(element)를 초점을 얻은 요소(element)라고 간주할 것입니다.
+          그리고, aria-activedescendant 값이 변경될 때, 보조 기술은 DOM 초점이 실제로 이동될 때 받는 것과 동일한 초점 변경 이벤트를 받을 것입니다.
         </p>
 
-        <p>The steps for using the aria-activedescendant method of managing focus are as follows.</p>
+        <p>초점 관리의 aria-activedescendant 사용 방법 단계는 다음과 같습니다.</p>
 
         <ul>
-          <li>When the container element that has a role that supports aria-activedescendant is loaded or created, ensure that:
+          <li>aria-activedescendant를 지원하는 역할(role)을 가진 컨테이터 요소(element)가 로드되거나 생성될 때, 다음을 보장하세요:
             <ul>
-              <li>The container element is included in the tab sequence as described in <a href="#kbd_general_between"></a> or is a focusable element of a composite that implements <a href="#kbd_roving_tabindex">a roving tabindex</a>.</li>
+              <li>컨테이너 요소(element)가 <a href="#kbd_general_between"></a>에 기술된 대로 탭 시퀀스에 포함되거나, <a href="#kbd_roving_tabindex">이동 tabindex</a>를 구현하는 복합 컴포넌트의 초점을 얻을 수 있는 요소(element)입니다.</li>
               <li>
-                It has <code>aria-activedescendant="IDREF"</code> where IDREF is the ID of the element within the container that should be identified as active when the widget receives focus.
-                The referenced element needs to meet the DOM relationship requirements described below.
+                IDREF가 위젯이 초점을 받을 때 컨테이너 내의 활성으로 식별되어야 하는 요소(element)의 ID인 <code>aria-activedescendant="IDREF"</code>가집니다.
+                참조 된 요소(element)는 아래 설명된 DOM 관계 요구 사항을 충족해야 합니다.
               </li>
             </ul>
           </li>
-          <li>When the container element receives DOM focus, draw a visual focus indicator on the active element and ensure the active element is scrolled into view.</li>
-          <li>When the composite widget contains focus and the user presses a navigation key that moves focus within the widget, such as an arrow key:
+          <li>컨테이너 요소(element)가 DOM 초점을 얻을 때, 활성 요소(element)에 시각적 초점 표시기를 그리고 활성 요소가 뷰(view) 안으로 스크롤 되도록 보장하세요.</li>
+          <li>복합 위젯이 초점을 포함하고 사용자가 위젯 내에서 방향키와 같은 초점을 이동하는 탐색 키를 누를 때:
             <ul>
-              <li>Change the value of aria-activedescendant on the container to refer to the element that should be reported to assistive technologies as active.</li>
-              <li>Move the visual focus indicator and, if necessary,  scrolled the active element into view.</li>
+              <li>보조 기술에 활성으로 보고되어야 하는 요소(element)를 가리키도록 </li>
+              <li>필요하다면, 시각적 초점 표시기를 이동시키고 뷰(view) 안으로 활성 요소(element)를 스크롤 되게 하세요.</li>
             </ul>
           </li>
           <li>
-            If the design calls for a specific element to be focused the next time a user moves focus into the composite with <kbd>Tab</kbd> or <kbd>Shift+Tab</kbd>, check if aria-activedescendant is referring to that target element when the container loses focus.
-            If it is not, set aria-activedescendant to refer to the target element.
+            설계가 다음에 사용자가 <kbd>Tab</kbd>이나 <kbd>Shift+Tab</kbd>으로 복합 컴포넌트 내로 초점을 이동시킬 때 특정 요소(element)가 초점을 얻도록 요구하는 경우, 컨테이너가 초점을 잃을 때 aria-activedescendant가 그 대상 요소(element)를 가리키고 있는지 확인하세요.
+            그렇지 않으면, aria-activedescendant를 대상 요소(element)를 가리키도록 설정하세요.
           </li>
         </ul>
 
         <p>
-          The <a href="#aria-activedescendant" class="property-reference">specification for aria-activedescendant</a> places important restrictions on the DOM relationship between the focused element that has the aria-activedescendant attribute and the element referenced as active by the value of the attribute.
-          One of the following three conditions must be met.
+          <a href="#aria-activedescendant" class="property-reference">aria-activedescendant에 대한 명세</a>는 aria-activedescendant 속성(attribute)을 가진 초점을 얻은 요소(element)와 속성(attribute) 값에 의해 활성으로 참조되는 요소(element) 간의 DOM 관계에 중요한 제한 사항을 둡니다.
+          다음 세 가지 조건 중 하나가 충족되어야 합니다.
         </p>
         <ol>
-          <li>The element referenced as active is a DOM descendant of the focused referencing element.</li>
-          <li>The focused referencing element has a value specified for the <a href="#aria-owns" class="property-reference">aria-owns</a> property that includes the ID of the element referenced as active.</li>
-          <li>The focused referencing element has role of <a href="#textbox" class="role-reference">textbox</a> and has <a href="#aria-controls" class="property-reference">aria-controls</a> property referring to an element with a role that supports aria-activedescendant and either:
+          <li>활성으로 참조 된 요소(element)는 초점을 얻은 참조하는 요소(element)의 DOM 후손입니다.</li>
+          <li>초점을 얻은 참조하는 요소(element)는 활성으로 참조되는 요소(element)의 ID를 포함하는 <a href="#aria-owns" class="property-reference">aria-owns</a> 속성(property)에 지정된 값을 가집니다.</li>
+          <li>초점을 얻은 요소(element)는 <a href="#textbox" class="role-reference">textbox</a> 역할(role)을 가지고 aria-activedescendant를 지원하는 역할(role)을 가지면서 다음 중 하나인 요소(element)를 참조하는 <a href="#aria-controls" class="property-reference">aria-controls</a> 속성(property)를 가집니다:
             <ol>
-              <li>The element referenced as active is a descendant of the controlled element.</li>
-              <li>The controlled element has a value specified for the <a href="#aria-owns" class="property-reference">aria-owns</a> property that includes the ID of the element referenced as active.</li>
+              <li>활성으로 참조 된 요소(element)가 제어 요소(element)의 후손입니다.</li>
+              <li>제어 요소(element)는 활성으로 참조되는 요소(element)의 ID를 포함하는 <a href="#aria-owns" class="property-reference">aria-owns</a> 속성(property)에 지정된 값을 가집니다.</li>
             </ol>
           </li>
         </ol>
