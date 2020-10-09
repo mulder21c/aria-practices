@@ -5452,18 +5452,18 @@
     </section>
 
     <section id="kbd_selection_follows_focus">
-      <h3>Deciding When to Make Selection Automatically Follow Focus</h3>
-      <p> in composite widgets where only one element may be selected, such as a tablist or single-select listbox, moving the focus may also cause the focused element to become the selected element. This is called having selection follow focus. Having selection follow focus is often beneficial to users, but in some circumstances, it is extremely detrimental to accessibility. </p>
+      <h3>초점을 따라 자동으로 선택되게 하는 시기 결정</h3>
+      <p>탭 목록이나 단일 선택 목록 상자와 같이 단 하나의 요소(element)만 선택 될 수 있는 복합 위젯에서, 초점 이동은 초점을 얻은 요소(element)가 선택 된 요소(element)가 되게 할 수 있습니다. 이를 초점을 따라 선택 되도록 하는 것이라고 합니다. 초점을 따라 선택 되도록 하는 것은 종종 사용자에게 유익하지만, 일부 상황에서는 접근성에 매우 해롭습니다. </p>
       <p>
-        For example, in a tablist, the selected state is used to indicate which panel is displayed.
-        So, when selection follows focus in a tablist, moving focus from one tab to another automatically changes  which panel is displayed.
-        If the content of panels is present in the DOM, then displaying a new panel is nearly instantaneous.
-        A keyboard user who wishes to display the fourth of six tabs can do so with 3 quick presses of the right arrow.
-        And, a screen reader user who perceives the labels on tabs by navigating through them may efficiently read through the complete list without any latency.
+        예를 들어, 탭 목록에서, 선택 상태는 패널이 노출되어 있음을 나타내는데 사용 됩니다.
+        따라서, 탭 목록에서 선택이 초점을 따르는 경우, 한 탭에서 다른 탭으로 초점 이동은 자동으로 노출되는 패널을 변경시킵니다.
+        DOM에 패널의 콘텐츠가 존재한다면, 새로운 패널의 노출은 거의 즉시 이루어집니다.
+        6개 탭 중 4번째 탭을 노출시키기 원하는 키보드 사용자는 오른쪽 키를 3번 빠르게 눌러 그렇게 할 수 있습니다.
+        그리고 탭의 레이블을 탐색하여 인식하는 스크린리더 사용자는 대기 시간 없이 전체 탭 목록을 효율적을 읽을 수 있습니다.
       </p>
-      <p> However, if displaying a new panel causes a network request and possibly a page refresh, the effect of having selection automatically focus can be devastating to the experience for keyboard and screen reader users. In this case, displaying the fourth tab or reading through the list becomes a tedious and time-consuming task as the user experiences significant latency with each movement of focus. Further, if displaying a new tab refreshes the page, then the user not only has to wait for the new page to load but also return focus to the tab list. </p>
+      <p> 반면에, 새로운 패널을 노출시키는 것이 네트워크 요청을 발생시키고 페이지가 갱신(refresh) 될 수 있는 경우, 초점을 따라 자동으로 선택되게 하는 것은 키보드와 스크린리더 사용자의 경험을 파괴할 수 있습니다. 이 경우, 네 번째 탭을 표시하거나 탭 목록을 읽는 것은 사용자가 각 초점의 이동과 함께 상당한 지연 시간을 경험하기 때문에 지루하고 시간을 낭비하는 작업이 됩니다. 게다가, 새 탭이 페이지를 갱신하면 사용자는 새 페이지가 로드 될 때까지 기다려야 할 뿐만 아니라 탭 목록으로 초점을 다시 보내야 합니다. </p>
       <p>
-        When selection does not follow focus, the user changes which element is selected by pressing the <kbd>Enter</kbd> or <kbd>Space</kbd> key.
+        선택이 초점을 따르지 않는 경우, 사용자는  <kbd>Enter</kbd>나 <kbd>Space</kbd> 키를 눌러 선택 된 요소(element)를 변경합니다.
       </p>
     </section>
 
