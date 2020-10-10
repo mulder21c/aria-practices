@@ -5632,58 +5632,58 @@
       </section>
     </section>
     <section id="kbd_disabled_controls">
-      <h3>Focusability of disabled controls</h3>
+      <h3>비활성화 된 컨트롤의 초점 가능성(focusability)</h3>
       <p>
-        By default, disabled HTML input elements are removed from the tab sequence.
-        In most contexts, the normal expectation is that disabled interactive elements are not focusable.
-        However, there are some contexts where it is common for disabled elements to be focusable, especially inside of composite widgets.
-        For example, as demonstrated in the <a href="#menu"></a> pattern, disabled items are focusable when navigating through a menu with the arrow keys.
+        기본적으로 비활성화 된 HTML input 요소(element)는 탭 시퀀스에서 제거됩니다.
+        대부분의 상황에서, 일반적인 예상은 비활성화 된 인터랙티브 요소(element)는 초점을 얻을 수 없다는 것입니다.
+        하지만, 비활성화 된 요소(element)가 초점을 얻을 수 있는 것이 일반적인 상황이 있습니다, 특히 복합 위젯 내부에서.
+        예를 들어, <a href="#menu"></a> 패턴에서 보여지는 것처럼, 비활성화 된 항목이 방향키로 메뉴를 탐색할 때 초점을 얻을 수 있습니다.
       </p>
 
       <p>
-        Removing focusability from disabled elements can offer users both advantages and disadvantages.
-        Allowing keyboard users to skip disabled elements usually reduces the number of key presses required to complete a task.
-        However, preventing focus from moving to disabled elements can hide their presence from screen reader users who "see" by moving the focus.
+        비활성화 된 요소(element)에서 초점 가능성을 제거하는 것은 사용자에게 장점과 단점을 모두 제공할 수 있습니다.
+        키보드 사용자가 비활성화 된 요소(element)를 건너 뛰는 것을 허용하는 것은 일반적으로 작업을 완료하는데 필요한 키 누름 회수를 줄입니다.
+        하지만, 비활성화 된 요소(element)로의 이동으로부터 초점을 차단하는 것은 초점 이동을 통해 "보는" 스크린리더 사용자에게 해당 요소(element)의 존재를 숨기게 될 수 있습니다.
       </p>
 
       <p>
-        Authors are encouraged to adopt a consistent set of conventions for the focusability of disabled elements.
-        The examples in this guide adopt the following conventions, which both reflect common practice and attempt to balance competing concerns.
+        작성자는 비활성화 된 요소(element)의 초점 가능성에 대해 일관된 규칙을 채택하도록 권장됩니다.
+        이 지침의 예는 일반적인 사례를 반영하고 우선순위를 조정하려고 시도하는 다음 규칙을 채택합니다.
       </p>
 
       <ol>
-        <li>For elements that are in the tab sequence when enabled, remove them from the tab sequence when disabled.</li>
+        <li>활성화 된 경우 탭 시퀀스에 있는 요소(element)의 경우, 비활성화 될 때 탭 시퀀스에서 제거합니다.</li>
 
         <li>
-          For the following composite widget elements, keep them focusable when disabled:
+          다음 복합 위젯 요소(element)의 경우, 비활성화 될 때 초점을 얻을 수 있도록 유지합니다:
 
           <ul>
-            <li>Options in a <a href="#Listbox">Listbox</a></li>
-            <li>Menu items in a <a href="#menu">Menu or menu bar</a></li>
-            <li>Tab elements in a set of <a href="#tabpanel">Tabs</a></li>
-            <li>Tree items in a <a href="#TreeView">Tree View</a></li>
+            <li><a href="#Listbox">Listbox</a>의 옵션</li>
+            <li><a href="#menu">메뉴나 메뉴바</a>의 메뉴 항목</li>
+            <li><a href="#tabpanel">Tabs</a> 집합의 탭 요소(element)</li>
+            <li><a href="#TreeView">Tree View</a>의 트리 항목</li>
           </ul>
         </li>
 
         <li>
-          For elements contained in a toolbar, make them focusable if discoverability is a concern. Here are two examples to aid with this judgment.
+          툴바에 포함 된 요소(element)의 경우, 발견 가능성(discoverability)이 중요하다면 초점을 얻을 수 있도록 유지합니다. 이 판단에 도움이 되는 두 가지 예가 있습니다.
 
           <ol>
             <li>
-              A toolbar with buttons for moving, removing, and adding items in a list includes buttons for &quot;Up&quot;, &quot;Down&quot;, &quot;Add&quot;, and &quot;Remove&quot;.
-              The &quot;Up&quot; button is disabled and its focusability is removed when the first item in the list is selected.
-              Given the  presence of the &quot;Down&quot; button, discoverability of the &quot;Up&quot; button is not a concern.
+              목록의 항목을 이동시키거나, 제거하거나, 추가하기 위한 버튼을 가지는 툴바가 &quot;위&quot;, &quot;아래&quot;, &quot;추가&quot;, &quot;제거&quot; 버튼을 포함합니다.
+              목록의 첫 번째 항목이 선택 된 경우 &quot;위&quot; 버튼이 비활성화 되고 초점 가능성이 제거됩니다.
+              &quot;아래&quot; 버튼의 존재가 주어졌다면, &quot;위&quot; 버튼의 발견 가능성(discoverability)은 문제 되지 않습니다.
             </li>
 
             <li>
-              A toolbar in an editor contains a set of special smart paste functions that are disabled when the clipboard is empty or when the function is not applicable to the current content of the clipboard.
-              It could be helpful to keep the disabled buttons focusable if the ability to discover their functionality is primarily via their presence on the toolbar.
+              편집기의 툴바는 클립보드가 비어있거나 기능이 클립보드의 현재 콘텐츠에 적합하지 않다면 비활성화 되어있는 특별한 스마트 기능 세트를 포함합니다.
+              기능을 발견할 수 있는 것이 주로 그것들이 툴바에 존재하는 가를 통해 이루어지는 경우 비활성화 된 버튼이 초점을 얻을 수 있도록 유지하는 것이 도움이 될 수 있습니다.
             </li>
           </ol>
         </li>
       </ol>
 
-      <p>One design technique for mitigating the impact of including disabled elements in the path of keyboard focus is employing appropriate keyboard shortcuts as described in <a href="#kbd_shortcuts"></a>.</p>
+      <p>비활성화 된 요소(element)를 키보드 초점 경루에 포함시키는 것의 영향을 완하시키는 한 가지 설계 기법은 <a href="#kbd_shortcuts"></a>에 기술 된 대로 적절한 단축키를 사용하는 것입니다.</p>
     </section>
     <section id="kbd_common_conventions">
       <h3>Key Assignment Conventions for Common Functions</h3>
