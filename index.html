@@ -148,16 +148,16 @@
   "preProcess": [
     null
   ],
-  "publishDate": "2020-12-10",
-  "publishISODate": "2020-12-10T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 10 December 2020"
+  "publishDate": "2020-12-20",
+  "publishISODate": "2020-12-20T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 20 December 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 <body class="h-entry informative"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">WAI-ARIA 작성 방법 1.2</h1>
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2020-12-10">10 December 2020</time>
+      <time class="dt-published" datetime="2020-12-20">20 December 2020</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -283,7 +283,7 @@
   </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>소개</a></li><li class="tocline"><a class="tocxref" href="#read_me_first"><bdi class="secno">2. </bdi>먼저 읽어주세요</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#no_aria_better_bad_aria"><bdi class="secno">2.1 </bdi>잘못된 ARIA보다 ARIA를 안쓰는게 낫다</a></li><li class="tocline"><a class="tocxref" href="#browser_and_AT_support"><bdi class="secno">2.2 </bdi>브라우저와 보조 기술 지원</a></li><li class="tocline"><a class="tocxref" href="#mobile_and_touch_support"><bdi class="secno">2.3 </bdi>모바일과 터치 지원</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_ex"><bdi class="secno">3. </bdi>설계 패턴과 위젯</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accordion"><bdi class="secno">3.1 </bdi>아코디언 (Show/Hide 기능이 있는 섹션)</a></li><li class="tocline"><a class="tocxref" href="#alert"><bdi class="secno">3.2 </bdi>경고</a></li><li class="tocline"><a class="tocxref" href="#alertdialog"><bdi class="secno">3.3 </bdi>Alert and Message Dialogs</a></li><li class="tocline"><a class="tocxref" href="#breadcrumb"><bdi class="secno">3.4 </bdi>Breadcrumb</a></li><li class="tocline"><a class="tocxref" href="#button"><bdi class="secno">3.5 </bdi>Button</a></li><li class="tocline"><a class="tocxref" href="#carousel"><bdi class="secno">3.6 </bdi>Carousel (Slide Show or Image Rotator)</a></li><li class="tocline"><a class="tocxref" href="#checkbox"><bdi class="secno">3.7 </bdi>Checkbox</a></li><li class="tocline"><a class="tocxref" href="#combobox"><bdi class="secno">3.8 </bdi>Combobox</a></li><li class="tocline"><a class="tocxref" href="#dialog_modal"><bdi class="secno">3.9 </bdi>Dialog (Modal)</a></li><li class="tocline"><a class="tocxref" href="#disclosure"><bdi class="secno">3.10 </bdi>Disclosure (Show/Hide)</a></li><li class="tocline"><a class="tocxref" href="#feed"><bdi class="secno">3.11 </bdi>Feed</a></li><li class="tocline"><a class="tocxref" href="#grid"><bdi class="secno">3.12 </bdi>Grids : Interactive Tabular Data and Layout Containers</a></li><li class="tocline"><a class="tocxref" href="#link"><bdi class="secno">3.13 </bdi>Link</a></li><li class="tocline"><a class="tocxref" href="#Listbox"><bdi class="secno">3.14 </bdi>Listbox</a></li><li class="tocline"><a class="tocxref" href="#menu"><bdi class="secno">3.15 </bdi>Menu or Menu bar</a></li><li class="tocline"><a class="tocxref" href="#menubutton"><bdi class="secno">3.16 </bdi>Menu Button</a></li><li class="tocline"><a class="tocxref" href="#meter"><bdi class="secno">3.17 </bdi>Meter</a></li><li class="tocline"><a class="tocxref" href="#radiobutton"><bdi class="secno">3.18 </bdi>Radio Group</a></li><li class="tocline"><a class="tocxref" href="#slider"><bdi class="secno">3.19 </bdi>Slider</a></li><li class="tocline"><a class="tocxref" href="#slidertwothumb"><bdi class="secno">3.20 </bdi>Slider (Multi-Thumb)</a></li><li class="tocline"><a class="tocxref" href="#spinbutton"><bdi class="secno">3.21 </bdi>Spinbutton</a></li><li class="tocline"><a class="tocxref" href="#table"><bdi class="secno">3.22 </bdi>Table</a></li><li class="tocline"><a class="tocxref" href="#tabpanel"><bdi class="secno">3.23 </bdi>Tabs</a></li><li class="tocline"><a class="tocxref" href="#toolbar"><bdi class="secno">3.24 </bdi>Toolbar</a></li><li class="tocline"><a class="tocxref" href="#tooltip"><bdi class="secno">3.25 </bdi>Tooltip Widget</a></li><li class="tocline"><a class="tocxref" href="#TreeView"><bdi class="secno">3.26 </bdi>Tree View</a></li><li class="tocline"><a class="tocxref" href="#treegrid"><bdi class="secno">3.27 </bdi>Treegrid</a></li><li class="tocline"><a class="tocxref" href="#windowsplitter"><bdi class="secno">3.28 </bdi>Window Splitter</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_landmark"><bdi class="secno">4. </bdi>랜드마크 영역</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#html-element"><bdi class="secno">4.1 </bdi>HTML 섹션화 요소(element)</a></li><li class="tocline"><a class="tocxref" href="#generatedID"><bdi class="secno">4.2 </bdi>랜드마크 설계 일반 원칙</a></li><li class="tocline"><a class="tocxref" href="#generatedID-0"><bdi class="secno">4.3 </bdi>랜드마크 영역</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aria_lh_banner"><bdi class="secno">4.3.1 </bdi>Banner</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_complementary"><bdi class="secno">4.3.2 </bdi>Complementary</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_contentinfo"><bdi class="secno">4.3.3 </bdi>Contentinfo</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_form"><bdi class="secno">4.3.4 </bdi>Form</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_main"><bdi class="secno">4.3.5 </bdi>Main</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_navigation"><bdi class="secno">4.3.6 </bdi>Navigation</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_region"><bdi class="secno">4.3.7 </bdi>Region</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_search"><bdi class="secno">4.3.8 </bdi>Search</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions"><bdi class="secno">5. </bdi>접근 가능한 이름과 설명 제공</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#names_and_descriptions_definition"><bdi class="secno">5.1 </bdi>접근 가능한 이름과 설명이란?</a></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions_derivation"><bdi class="secno">5.2 </bdi>이름과 설명 문자열은 어떻게 파생되나요?</a></li><li class="tocline"><a class="tocxref" href="#accessible_names"><bdi class="secno">5.3 </bdi>접근 가능한 이름</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_cardinal_rules"><bdi class="secno">5.3.1 </bdi>이름 지정의 기본 규칙</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_rule_heed_warnings"><bdi class="secno">5.3.1.1 </bdi>규칙 1: 경고에 주의하고 철처하게 테스트</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_visible_text"><bdi class="secno">5.3.1.2 </bdi>규칙 2: 보이는 텍스트 선택</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_native_techniques"><bdi class="secno">5.3.1.3 </bdi>규칙 3: 기본 기술 선택</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_avoid_fallback"><bdi class="secno">5.3.1.4 </bdi>규칙 4: 브라우저 폴백 방지</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_brief_names"><bdi class="secno">5.3.1.5 </bdi>규칙 5: 간단하고 유용한 이름 작성</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_techniques"><bdi class="secno">5.3.2 </bdi>이름 지정 기법</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_with_child_content"><bdi class="secno">5.3.2.1 </bdi>자식 콘텐츠로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-label"><bdi class="secno">5.3.2.2 </bdi><code>aria-label</code>을 통해 문자열 속성으로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-labelledby"><bdi class="secno">5.3.2.3 </bdi><code>aria-labelledby</code>를 통해 참조된 콘텐트로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_labels"><bdi class="secno">5.3.2.4 </bdi>Label 요소로 폼 컨트롤 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_legends"><bdi class="secno">5.3.2.5 </bdi>legend 요소로 필드셋 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_captions"><bdi class="secno">5.3.2.6 </bdi>캡션으로 표와 삽화 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_fallback"><bdi class="secno">5.3.2.7 </bdi>title 및 placeholder로부터 파생 된 대체 이름</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_effectively"><bdi class="secno">5.3.3 </bdi>효과적이고 사용자 친화적인 접근 가능한 이름 구성</a></li><li class="tocline"><a class="tocxref" href="#naming_role_guidance"><bdi class="secno">5.3.4 </bdi><span id="naming_role_guidance_heading">역할(role)별 접근 가능한 이름 지정 지침</span></a></li><li class="tocline"><a class="tocxref" href="#name_calculation"><bdi class="secno">5.3.5 </bdi>접근 가능한 이름 계산</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#name_calculation_non-recursive_ex"><bdi class="secno">5.3.5.1 </bdi>비 재귀적 접근 가능한 이름 계산의 예</a></li><li class="tocline"><a class="tocxref" href="#name_calculation_recursive_ex"><bdi class="secno">5.3.5.2 </bdi>재귀적 접근 가능한 이름 계산의 예</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessible_descriptions"><bdi class="secno">5.4 </bdi>접근 가능한 설명</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_techniques"><bdi class="secno">5.4.1 </bdi>설명 기법</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_with_aria-describedby"><bdi class="secno">5.4.1.1 </bdi><code>aria-describedby</code>로 내용을 참조하여 설명하기</a></li><li class="tocline"><a class="tocxref" href="#describing_with_captions"><bdi class="secno">5.4.1.2 </bdi>캡션으로 표 및 삽화에 설명 지정</a></li><li class="tocline"><a class="tocxref" href="#describing_with_title"><bdi class="secno">5.4.1.3 </bdi>title로부터 파생된 설명</a></li></ol></li><li class="tocline"><a class="tocxref" href="#description_calculation"><bdi class="secno">5.4.2 </bdi>접근 가능한 설명 계산</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#keyboard"><bdi class="secno">6. </bdi>키보드 인터페이스 개발</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_generalnav"><bdi class="secno">6.1 </bdi>기본 키보드 탐색 규칙</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_discernable_predictable"><bdi class="secno">6.2 </bdi>식별 가능하고 예측 가능한 키보드 초점</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_vs_selection"><bdi class="secno">6.3 </bdi>초점 vs 선택, 이중 초점 인식</a></li><li class="tocline"><a class="tocxref" href="#kbd_selection_follows_focus"><bdi class="secno">6.4 </bdi>초점을 따라 자동으로 선택되게 하는 시기 결정</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_between"><bdi class="secno">6.5 </bdi>컴포넌트 간 키보드 탐색 (탭 시퀀스)</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_within"><bdi class="secno">6.6 </bdi> 컴포넌트 내부 키보드 탐색</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_roving_tabindex"><bdi class="secno">6.6.1 </bdi>이동(roving) tabindex를 사용하여 컴포넌트에서 초점 관리</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_activedescendant"><bdi class="secno">6.6.2 </bdi>aria-activedescendant를 사용하여 복합 컴포넌트에서 초점 관리</a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_disabled_controls"><bdi class="secno">6.7 </bdi>비활성화 된 컨트롤의 초점 가능성(focusability)</a></li><li class="tocline"><a class="tocxref" href="#kbd_common_conventions"><bdi class="secno">6.8 </bdi>공통 기능에 대한 키 할당 규칙</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts"><bdi class="secno">6.9 </bdi>Keyboard Shortcuts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_behavior_design"><bdi class="secno">6.9.1 </bdi>Designing the Scope and Behavior of Keyboard Shortcuts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_basic"><bdi class="secno">6.9.1.1 </bdi>Ensure Basic Access Via Navigation </a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_choose_behavior"><bdi class="secno">6.9.1.2 </bdi>Choose Appropriate Shortcut Behavior</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_where"><bdi class="secno">6.9.1.3 </bdi>Choose Where to Add Shortcuts </a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assigning"><bdi class="secno">6.9.2 </bdi>Assigning Keyboard Shortcuts</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_opsys_conflicts"><bdi class="secno">6.9.2.1 </bdi>Operating System Key Conflicts</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_assistivetech_conflicts"><bdi class="secno">6.9.2.2 </bdi>Assistive Technology Key Conflicts</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_browser_conflicts"><bdi class="secno">6.9.2.3 </bdi>Browser Key Conflicts</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_intentional_conflicts"><bdi class="secno">6.9.2.4 </bdi>Intentional Key Conflicts</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties"><bdi class="secno">7. </bdi>Grid and Table Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_rows"><bdi class="secno">7.1 </bdi>Using <code>aria-rowcount</code> and <code>aria-rowindex</code></a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols"><bdi class="secno">7.2 </bdi>Using <code>aria-colcount</code> and <code>aria-colindex</code></a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_contiguous"><bdi class="secno">7.2.1 </bdi>Using <code>aria-colindex</code> When Column Indices Are Contiguous</a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_noncontiguous"><bdi class="secno">7.2.2 </bdi>Using <code>aria-colindex</code> When Column Indices Are Not Contiguous</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_spans"><bdi class="secno">7.3 </bdi>Defining cell spans using <code>aria-colspan</code> and <code>aria-rowspan</code></a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_sort"><bdi class="secno">7.4 </bdi>Indicating sort order with <code>aria-sort</code></a></li></ol></li><li class="tocline"><a class="tocxref" href="#presentation_role"><bdi class="secno">8. </bdi>Intentionally Hiding Semantics with the <code>presentation</code> Role</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#presentation_role_effects"><bdi class="secno">8.1 </bdi>
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>소개</a></li><li class="tocline"><a class="tocxref" href="#read_me_first"><bdi class="secno">2. </bdi>먼저 읽어주세요</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#no_aria_better_bad_aria"><bdi class="secno">2.1 </bdi>잘못된 ARIA보다 ARIA를 안쓰는게 낫다</a></li><li class="tocline"><a class="tocxref" href="#browser_and_AT_support"><bdi class="secno">2.2 </bdi>브라우저와 보조 기술 지원</a></li><li class="tocline"><a class="tocxref" href="#mobile_and_touch_support"><bdi class="secno">2.3 </bdi>모바일과 터치 지원</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_ex"><bdi class="secno">3. </bdi>설계 패턴과 위젯</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accordion"><bdi class="secno">3.1 </bdi>아코디언 (Show/Hide 기능이 있는 섹션)</a></li><li class="tocline"><a class="tocxref" href="#alert"><bdi class="secno">3.2 </bdi>경고</a></li><li class="tocline"><a class="tocxref" href="#alertdialog"><bdi class="secno">3.3 </bdi>Alert and Message Dialogs</a></li><li class="tocline"><a class="tocxref" href="#breadcrumb"><bdi class="secno">3.4 </bdi>Breadcrumb</a></li><li class="tocline"><a class="tocxref" href="#button"><bdi class="secno">3.5 </bdi>Button</a></li><li class="tocline"><a class="tocxref" href="#carousel"><bdi class="secno">3.6 </bdi>Carousel (Slide Show or Image Rotator)</a></li><li class="tocline"><a class="tocxref" href="#checkbox"><bdi class="secno">3.7 </bdi>Checkbox</a></li><li class="tocline"><a class="tocxref" href="#combobox"><bdi class="secno">3.8 </bdi>Combobox</a></li><li class="tocline"><a class="tocxref" href="#dialog_modal"><bdi class="secno">3.9 </bdi>Dialog (Modal)</a></li><li class="tocline"><a class="tocxref" href="#disclosure"><bdi class="secno">3.10 </bdi>Disclosure (Show/Hide)</a></li><li class="tocline"><a class="tocxref" href="#feed"><bdi class="secno">3.11 </bdi>Feed</a></li><li class="tocline"><a class="tocxref" href="#grid"><bdi class="secno">3.12 </bdi>Grids : Interactive Tabular Data and Layout Containers</a></li><li class="tocline"><a class="tocxref" href="#link"><bdi class="secno">3.13 </bdi>Link</a></li><li class="tocline"><a class="tocxref" href="#Listbox"><bdi class="secno">3.14 </bdi>Listbox</a></li><li class="tocline"><a class="tocxref" href="#menu"><bdi class="secno">3.15 </bdi>Menu or Menu bar</a></li><li class="tocline"><a class="tocxref" href="#menubutton"><bdi class="secno">3.16 </bdi>Menu Button</a></li><li class="tocline"><a class="tocxref" href="#meter"><bdi class="secno">3.17 </bdi>Meter</a></li><li class="tocline"><a class="tocxref" href="#radiobutton"><bdi class="secno">3.18 </bdi>Radio Group</a></li><li class="tocline"><a class="tocxref" href="#slider"><bdi class="secno">3.19 </bdi>Slider</a></li><li class="tocline"><a class="tocxref" href="#slidertwothumb"><bdi class="secno">3.20 </bdi>Slider (Multi-Thumb)</a></li><li class="tocline"><a class="tocxref" href="#spinbutton"><bdi class="secno">3.21 </bdi>Spinbutton</a></li><li class="tocline"><a class="tocxref" href="#table"><bdi class="secno">3.22 </bdi>Table</a></li><li class="tocline"><a class="tocxref" href="#tabpanel"><bdi class="secno">3.23 </bdi>Tabs</a></li><li class="tocline"><a class="tocxref" href="#toolbar"><bdi class="secno">3.24 </bdi>Toolbar</a></li><li class="tocline"><a class="tocxref" href="#tooltip"><bdi class="secno">3.25 </bdi>Tooltip Widget</a></li><li class="tocline"><a class="tocxref" href="#TreeView"><bdi class="secno">3.26 </bdi>Tree View</a></li><li class="tocline"><a class="tocxref" href="#treegrid"><bdi class="secno">3.27 </bdi>Treegrid</a></li><li class="tocline"><a class="tocxref" href="#windowsplitter"><bdi class="secno">3.28 </bdi>Window Splitter</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_landmark"><bdi class="secno">4. </bdi>랜드마크 영역</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#html-element"><bdi class="secno">4.1 </bdi>HTML 섹션화 요소(element)</a></li><li class="tocline"><a class="tocxref" href="#generatedID"><bdi class="secno">4.2 </bdi>랜드마크 설계 일반 원칙</a></li><li class="tocline"><a class="tocxref" href="#generatedID-0"><bdi class="secno">4.3 </bdi>랜드마크 영역</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aria_lh_banner"><bdi class="secno">4.3.1 </bdi>Banner</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_complementary"><bdi class="secno">4.3.2 </bdi>Complementary</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_contentinfo"><bdi class="secno">4.3.3 </bdi>Contentinfo</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_form"><bdi class="secno">4.3.4 </bdi>Form</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_main"><bdi class="secno">4.3.5 </bdi>Main</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_navigation"><bdi class="secno">4.3.6 </bdi>Navigation</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_region"><bdi class="secno">4.3.7 </bdi>Region</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_search"><bdi class="secno">4.3.8 </bdi>Search</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions"><bdi class="secno">5. </bdi>접근 가능한 이름과 설명 제공</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#names_and_descriptions_definition"><bdi class="secno">5.1 </bdi>접근 가능한 이름과 설명이란?</a></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions_derivation"><bdi class="secno">5.2 </bdi>이름과 설명 문자열은 어떻게 파생되나요?</a></li><li class="tocline"><a class="tocxref" href="#accessible_names"><bdi class="secno">5.3 </bdi>접근 가능한 이름</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_cardinal_rules"><bdi class="secno">5.3.1 </bdi>이름 지정의 기본 규칙</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_rule_heed_warnings"><bdi class="secno">5.3.1.1 </bdi>규칙 1: 경고에 주의하고 철처하게 테스트</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_visible_text"><bdi class="secno">5.3.1.2 </bdi>규칙 2: 보이는 텍스트 선택</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_native_techniques"><bdi class="secno">5.3.1.3 </bdi>규칙 3: 기본 기술 선택</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_avoid_fallback"><bdi class="secno">5.3.1.4 </bdi>규칙 4: 브라우저 폴백 방지</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_brief_names"><bdi class="secno">5.3.1.5 </bdi>규칙 5: 간단하고 유용한 이름 작성</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_techniques"><bdi class="secno">5.3.2 </bdi>이름 지정 기법</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_with_child_content"><bdi class="secno">5.3.2.1 </bdi>자식 콘텐츠로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-label"><bdi class="secno">5.3.2.2 </bdi><code>aria-label</code>을 통해 문자열 속성으로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-labelledby"><bdi class="secno">5.3.2.3 </bdi><code>aria-labelledby</code>를 통해 참조된 콘텐트로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_labels"><bdi class="secno">5.3.2.4 </bdi>Label 요소로 폼 컨트롤 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_legends"><bdi class="secno">5.3.2.5 </bdi>legend 요소로 필드셋 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_captions"><bdi class="secno">5.3.2.6 </bdi>캡션으로 표와 삽화 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_fallback"><bdi class="secno">5.3.2.7 </bdi>title 및 placeholder로부터 파생 된 대체 이름</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_effectively"><bdi class="secno">5.3.3 </bdi>효과적이고 사용자 친화적인 접근 가능한 이름 구성</a></li><li class="tocline"><a class="tocxref" href="#naming_role_guidance"><bdi class="secno">5.3.4 </bdi><span id="naming_role_guidance_heading">역할(role)별 접근 가능한 이름 지정 지침</span></a></li><li class="tocline"><a class="tocxref" href="#name_calculation"><bdi class="secno">5.3.5 </bdi>접근 가능한 이름 계산</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#name_calculation_non-recursive_ex"><bdi class="secno">5.3.5.1 </bdi>비 재귀적 접근 가능한 이름 계산의 예</a></li><li class="tocline"><a class="tocxref" href="#name_calculation_recursive_ex"><bdi class="secno">5.3.5.2 </bdi>재귀적 접근 가능한 이름 계산의 예</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessible_descriptions"><bdi class="secno">5.4 </bdi>접근 가능한 설명</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_techniques"><bdi class="secno">5.4.1 </bdi>설명 기법</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_with_aria-describedby"><bdi class="secno">5.4.1.1 </bdi><code>aria-describedby</code>로 내용을 참조하여 설명하기</a></li><li class="tocline"><a class="tocxref" href="#describing_with_captions"><bdi class="secno">5.4.1.2 </bdi>캡션으로 표 및 삽화에 설명 지정</a></li><li class="tocline"><a class="tocxref" href="#describing_with_title"><bdi class="secno">5.4.1.3 </bdi>title로부터 파생된 설명</a></li></ol></li><li class="tocline"><a class="tocxref" href="#description_calculation"><bdi class="secno">5.4.2 </bdi>접근 가능한 설명 계산</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#keyboard"><bdi class="secno">6. </bdi>키보드 인터페이스 개발</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_generalnav"><bdi class="secno">6.1 </bdi>기본 키보드 탐색 규칙</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_discernable_predictable"><bdi class="secno">6.2 </bdi>식별 가능하고 예측 가능한 키보드 초점</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_vs_selection"><bdi class="secno">6.3 </bdi>초점 vs 선택, 이중 초점 인식</a></li><li class="tocline"><a class="tocxref" href="#kbd_selection_follows_focus"><bdi class="secno">6.4 </bdi>초점을 따라 자동으로 선택되게 하는 시기 결정</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_between"><bdi class="secno">6.5 </bdi>컴포넌트 간 키보드 탐색 (탭 시퀀스)</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_within"><bdi class="secno">6.6 </bdi> 컴포넌트 내부 키보드 탐색</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_roving_tabindex"><bdi class="secno">6.6.1 </bdi>이동(roving) tabindex를 사용하여 컴포넌트에서 초점 관리</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_activedescendant"><bdi class="secno">6.6.2 </bdi>aria-activedescendant를 사용하여 복합 컴포넌트에서 초점 관리</a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_disabled_controls"><bdi class="secno">6.7 </bdi>비활성화 된 컨트롤의 초점 가능성(focusability)</a></li><li class="tocline"><a class="tocxref" href="#kbd_common_conventions"><bdi class="secno">6.8 </bdi>공통 기능에 대한 키 할당 규칙</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts"><bdi class="secno">6.9 </bdi>키보드 단축키</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_behavior_design"><bdi class="secno">6.9.1 </bdi>키보드 단축키의 범위와 동작 설계</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_basic"><bdi class="secno">6.9.1.1 </bdi>탐색을 통한 기본 접근 보장</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_choose_behavior"><bdi class="secno">6.9.1.2 </bdi>적절한 단축키 동작 선택</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_where"><bdi class="secno">6.9.1.3 </bdi>단축키를 추가할 위치 선택 </a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assigning"><bdi class="secno">6.9.2 </bdi>키보드 단축키 할당</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_opsys_conflicts"><bdi class="secno">6.9.2.1 </bdi>운영 체제 키 충돌</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_assistivetech_conflicts"><bdi class="secno">6.9.2.2 </bdi>보조 기술 키 충돌</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_browser_conflicts"><bdi class="secno">6.9.2.3 </bdi>브라우저 키 충돌</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_intentional_conflicts"><bdi class="secno">6.9.2.4 </bdi>의도적인 키 충돌</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties"><bdi class="secno">7. </bdi>Grid and Table Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_rows"><bdi class="secno">7.1 </bdi>Using <code>aria-rowcount</code> and <code>aria-rowindex</code></a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols"><bdi class="secno">7.2 </bdi>Using <code>aria-colcount</code> and <code>aria-colindex</code></a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_contiguous"><bdi class="secno">7.2.1 </bdi>Using <code>aria-colindex</code> When Column Indices Are Contiguous</a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_noncontiguous"><bdi class="secno">7.2.2 </bdi>Using <code>aria-colindex</code> When Column Indices Are Not Contiguous</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_spans"><bdi class="secno">7.3 </bdi>Defining cell spans using <code>aria-colspan</code> and <code>aria-rowspan</code></a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_sort"><bdi class="secno">7.4 </bdi>Indicating sort order with <code>aria-sort</code></a></li></ol></li><li class="tocline"><a class="tocxref" href="#presentation_role"><bdi class="secno">8. </bdi>Intentionally Hiding Semantics with the <code>presentation</code> Role</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#presentation_role_effects"><bdi class="secno">8.1 </bdi>
         Effects of Role <code>presentation</code>
       </a></li><li class="tocline"><a class="tocxref" href="#presentation_role_ignored"><bdi class="secno">8.2 </bdi>
         Conditions That Cause Role <code>presentation</code> to be Ignored
@@ -376,7 +376,7 @@
       </p>
       <p>
         비슷하게, 이 지침의 JavaScript와 CSS는 작성 시점에서의 가장 최신 버전의 크롬, 파이어폭스, 인터넷 익스플로러, 사파리와 호환되도록 작성되었습니다.
-        특히, 인터넷 익스플로러 10 이하 버전에서는 일부 JavaScript와 CSS가 제대로 동작하지 않을 수 있습니다.
+        인터넷 익스플로러에서는 일부 JavaScript와 CSS가 제대로 동작하지 않을 수 있습니다.
       </p>
       <p>
         ARIA 워킹 그룹과 다른 컨트리뷰터들이 오류를 못 보고 지나친 경우를 제외하고, 이 지침의 특정 브라우저나 특정 보조 기술에서 제대로 동작하지 않는 예제는 브라우저나 보조 기술 버그를 시연하는 것입니다.
@@ -4200,8 +4200,8 @@
             이 상황에서 <code>aria-labelledby</code>를 사용하는 것이 <code>for</code> 속성(attribute)을 가진 HTML <code>label</code>을 사용하는 것과 유사한 반면, 한 가지 중요한 차이점은 브라우저가 레이블을 지정하는 요소를 클릭하는 것이 레이블이 지정된 요소를 자동으로 활성화 하지 않는 다는 것에 주목하세요. 그것은 작성자의 책임입니다.
             하지만, HTML <code>label</code>은 <code>span</code> 요소에 레이블을 지정하는데 사용될 수 없습니다. 다행히 HTML <code>type="checkbox"</code>을 가진 <code>input</code>은 ARIA <code>switch</code> 역할(role)을 허용하므로 가능한 경우 다음 접근법을 사용하는 것이 더 견고한 해결책을 만듭니다.
           </p>
-          <pre><code aria-busy="false" class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"night-mode"</span>&gt;</span>야간 모드<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"switch"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"night-mode"</span>&gt;</span></code></pre>
+          <pre><code aria-busy="false" class="hljs abnf">&lt;label for=<span class="hljs-string">"night-mode"</span>&lt;야간 모드&lt;/label&gt;
+&lt;input type=<span class="hljs-string">"checkbox"</span> role=<span class="hljs-string">"switch"</span> id=<span class="hljs-string">"night-mode"</span>&lt;</code></pre>
           <div class="translator-comment">
             텍스트가 복잡하여 부연 설명을 덧붙이면, HTML의 기본 기능으로 <code>label</code>을 클릭하면 이 <code>label</code>의 <code>for</code> 속성(attribute)으로 연결된 요소를 활성화 하도록 동작하는데, 위 예제에서와 같이 ARIA의 작성하는 것은 label의 동작과 같은 HTML 네이티브 동작을 제공하지 않음을 의미합니다. 따라서, HTML 네이티브와 동등하게 동작하게 하는 것은 작성자의 몫으로 남겨집니다.
           </div>
@@ -4215,8 +4215,8 @@
     <li><p>input 요소의 값을 통합합니다. 즉, 텍스트 상자를 참조하는 경우, 텍스트 상자의 값이 계산 된 이름 문자열에 포함됩니다.</p></li>
   </ul>
   <p><code>aria-labelledby</code>를 가진 숨겨진 요소를 참조하는 예는 야간 스위치 제어에 대한 레이블 일 수 있습니다:</p>
-      <pre><code aria-busy="false" class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"night-mode-label"</span> <span class="hljs-attr">hidden</span>&gt;</span>야간 모드<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"switch"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"night-mode-label"</span>&gt;</span></code></pre>
+      <pre><code aria-busy="false" class="hljs abnf">&lt;span id=<span class="hljs-string">"night-mode-label"</span> hidden&lt;야간 모드&lt;/span&gt;
+&lt;input type=<span class="hljs-string">"checkbox"</span> role=<span class="hljs-string">"switch"</span> aria-labelledby=<span class="hljs-string">"night-mode-label"</span>&lt;</code></pre>
 
           <p>
             경우에 따라, 요소에 대한 가장 효과적인 이름은 다른 요소의 콘텐트와 자체 콘텐츠가 결합된 것입니다.
@@ -4802,7 +4802,7 @@
             </tr>
             <tr>
               <td><a href="https://w3c.github.io/aria/#marquee" class="role-reference"><code>marquee</code></a></td>
-              <td>필수</td>
+              <td>재량</td>
               <td>
                 시각적으로 보이는 레이블이 존재하는 경우 <code>aria-labelledby</code>를, 그렇지 않으면 <code>aria-label</code>을 사용하세요.</td>
             </tr>
@@ -5024,7 +5024,7 @@
                 <ul>
                   <li>스크린리더 사용자가 컨텍스트와 search 랜드마크의 목적을 이해하도록 도와주세요.</li>
                   <li>가시적으로 보이는 레이블이 존재한다면, <code>aria-labelledby</code>를, 그렇지 않으면 <code>aria-label</code>을 사용하여 이름이 지정됩니다.</li>
-                  <li><a href="aria_lh_search">Search 랜드마크</a> 섹션을 참고하세요.</li>
+                  <li><a href="#aria_lh_search">Search 랜드마크</a> 섹션을 참고하세요.</li>
                 </ul>
               </td>
             </tr>
@@ -5919,7 +5919,7 @@
         </li>
       </ol>
 
-      <p>비활성화 된 요소(element)를 키보드 초점 경루에 포함시키는 것의 영향을 완하시키는 한 가지 설계 기법은 <a href="#kbd_shortcuts" class="sec-ref">§&nbsp;<bdi class="secno">6.9 </bdi>Keyboard Shortcuts</a>에 기술 된 대로 적절한 단축키를 사용하는 것입니다.</p>
+      <p>비활성화 된 요소(element)를 키보드 초점 경루에 포함시키는 것의 영향을 완하시키는 한 가지 설계 기법은 <a href="#kbd_shortcuts" class="sec-ref">§&nbsp;<bdi class="secno">6.9 </bdi>키보드 단축키</a>에 기술 된 대로 적절한 단축키를 사용하는 것입니다.</p>
     </section>
     <section id="kbd_common_conventions">
       <h3 id="x6-8"><bdi class="secno">6.8 </bdi>공통 기능에 대한 키 할당 규칙<a class="self-link" aria-label="§" href="#kbd_common_conventions"></a></h3>
@@ -5971,43 +5971,43 @@
       </table>
     </section>
     <section id="kbd_shortcuts">
-      <h3 id="x6-9-keyboard-shortcuts"><bdi class="secno">6.9 </bdi>Keyboard Shortcuts<a class="self-link" aria-label="§" href="#kbd_shortcuts"></a></h3>
+      <h3 id="x6-9"><bdi class="secno">6.9 </bdi>키보드 단축키<a class="self-link" aria-label="§" href="#kbd_shortcuts"></a></h3>
       <p>
-        When effectively designed, keyboard shortcuts that focus an element, activate a widget, or both can dramatically enhance usability of frequently used features of a page or site.
-        This section addresses some of the keyboard shortcut design and implementation factors that most impact their effectiveness, including:
+        효과적으로 설계 된 경우, 요소에 초점을 주거나, 위젯을 활성화 시키는 키보드 단축키는 페이지나 사이트의 자주 사용되는 기능의 사용성을 극적으로 향상시킬 수 있습니다.
+        이 섹션은 다음을 포함하여 효율성에 가장 큰 영향을 미치는 키보드 단축키 설계와 구현 요소에 대해 설명합니다:
       </p>
       <ol>
-        <li>Understanding how keyboard shortcuts augment a keyboard interface and whether to make a particular shortcut move focus, perform a function, or both. </li>
-        <li>Making key assignments and avoiding assignment conflicts with assistive technologies, browsers, and operating systems. </li>
-        <li>Exposing and documenting key assignments. </li>
+        <li>키보드 단축키가 키보드 인터페이스를 확장시키는 방법과 특정 단축키가 초점을 이동시키는지, 기능을 수행하는지, 혹은 둘 모두인지 여부에 대한 이해.</li>
+        <li>키 할당과 보조 기술, 브라우저, 운영 체제와의 할당 충돌 방지.</li>
+        <li>키 할당 노출과 문서화.</li>
       </ol>
       <section id="kbd_shortcuts_behavior_design">
-        <h4 id="x6-9-1-designing-the-scope-and-behavior-of-keyboard-shortcuts"><bdi class="secno">6.9.1 </bdi>Designing the Scope and Behavior of Keyboard Shortcuts<a class="self-link" aria-label="§" href="#kbd_shortcuts_behavior_design"></a></h4>
+        <h4 id="x6-9-1"><bdi class="secno">6.9.1 </bdi>키보드 단축키의 범위와 동작 설계<a class="self-link" aria-label="§" href="#kbd_shortcuts_behavior_design"></a></h4>
 
-        <p>This section explains the following factors when determining which elements and features to assign keyboard shortcuts and what behavior to give each shortcut:</p>
+        <p>이 섹션은 키보드 단축키를 할당할 요소(element) 및 기능과 각 단축키에 제공할 동작을 결정할 때 다음 요소에 대해 설명합니다:</p>
 
         <ol>
-          <li>Ensuring discovery through navigation; keyboard shortcuts enhance, not replace, standard keyboard access.</li>
+          <li>탐색을 통한 발견 보장; 키보드 단축키는 표준 키보드 접근을 대체하는 것이 아니라 향상시키는 것입니다.</li>
 
           <li>
-            Effectively choosing from among the following behaviors:
+            다음 동작 중 효과적인 것을 선택:
 
             <ol>
-              <li>Navigation: Moving focus to an element. </li>
-              <li>Activation: Performing an operation associated with an element that does not have focus and might not be visible.</li>
-              <li>Navigation and activation: Both moving focus to an element and activating it.</li>
+              <li>탐색: 요소(element)로 초점 이동. </li>
+              <li>활성화: 초점을 가지지 않고 보이지 않을 수도 있는 요소(element)와 연관된 작업 수행.</li>
+              <li>탐색 및 활성화: 요소(element)로 초점을 이동하고 그것을 활성화.</li>
             </ol>
           </li>
 
-          <li>Balancing efficiency and cognitive load: lack of a shortcut can reduce efficiency while too many shortcuts can increase cognitive load and clutter the experience.</li>
+          <li>효율성(efficiency)과 인지 부하(cognitive load)의 균형: 단축키가 없으면 효율성이 저하될 수 있는 반면 너무 많은 단축키는 인지 부하를 증가시키고 경험을 혼잡하게 만들 수 있습니다.</li>
         </ol>
 
         <section id="kbd_shortcuts_design_basic">
-          <h5 id="x6-9-1-1-ensure-basic-access-via-navigation"><bdi class="secno">6.9.1.1 </bdi>Ensure Basic Access Via Navigation <a class="self-link" aria-label="§" href="#kbd_shortcuts_design_basic"></a></h5>
+          <h5 id="x6-9-1-1"><bdi class="secno">6.9.1.1 </bdi>탐색을 통한 기본 접근 보장<a class="self-link" aria-label="§" href="#kbd_shortcuts_design_basic"></a></h5>
 
           <p>
-            Before assigning keyboard shortcuts, it is essential to ensure the features and functions to which shortcuts may be assigned are keyboard accessible without a keyboard shortcut.
-            In other words, all elements that could be targets for keyboard shortcuts need to be focusable via the keyboard using the methods described in:
+            단축키를 할당하기 전에, 기능(feature)과 단축키가 할당되는 기능(function)이 키보드 단축키 없이도 접근 가능함을 보장하는 것이 중요합니다.
+            다시 말해, 키보드 단축키에 대한 대상이 될 수 있는 모든 요소(element)는 다음에 설명된 방법을 사용하여 키보드를 통해 초점을 얻을 수 있어야 합니다:
           </p>
 
           <ul>
@@ -6016,148 +6016,151 @@
           </ul>
 
           <p>
-            Do not use keyboard shortcuts as a substitute for access via navigation.
-            This is essential to full keyboard access because:
+            키보드 단축키를 탐색을 통한 접근의 대체로 사용하지 마세요.
+            이것은 다음의 이유로 전체 키보드 접근에 필수적입니다:
           </p>
 
           <ol>
-            <li>The primary means of making functions and their shortcuts discoverable is by making the target elements focusable and revealing key assignments on the element itself.</li>
-            <li>If people who rely on the keyboard have to read documentation to learn which keys are required to use an interface, the interface may technically meet some accessibility standards but in practice is only accessible to the small subset of them who have the knowledge that such documentation exists, have the extra time available, and the ability to retain the necessary information.</li>
-            <li>Not all devices that depend on keyboard interfaces can support keyboard shortcuts.</li>
+            <li>기능과 그의 단축키를 만드는 것의 주요 방법은  대상 요소(element)를 초점을 얻을 수 있게 하고 요소(element) 자체에 키 할당을 표시하는 것입니다.</li>
+            <li>키보드를 사용하는 사람들이 인터페이스를 사용하는 데 필요한 키를 학습하기 위해 문서를 읽어야 하는 경우, 인터페이스는 기술적으로는 일부 접근성 표준을 충족할 수 있지만 실제로는 그러한 문서가 존재한다는 사실을 알고 있고 가용한 추가 시간이 있으며, 필요한 정보를 기억할 수 있는 능력을 가진 비교적 적은 수의 사람만이 접근할 수 있습니다.</li>
+            <li>키보드 인터페이스에 의존하는 모든 장치가 키보드 단축키를 지원할 수 있는 것은 아닙니다. </li>
           </ol>
         </section>
 
         <section id="kbd_shortcuts_design_choose_behavior">
-          <h5 id="x6-9-1-2-choose-appropriate-shortcut-behavior"><bdi class="secno">6.9.1.2 </bdi>Choose Appropriate Shortcut Behavior<a class="self-link" aria-label="§" href="#kbd_shortcuts_design_choose_behavior"></a></h5>
+          <h5 id="x6-9-1-2"><bdi class="secno">6.9.1.2 </bdi>적절한 단축키 동작 선택<a class="self-link" aria-label="§" href="#kbd_shortcuts_design_choose_behavior"></a></h5>
 
-          <p>The following conventions may help identify the most advantageous behavior for a keyboard shortcut.</p>
+          <p>다음 규칙은 키보드 단축키에 대한 가장 유리한 동작을 식별하는데 도움이 될 수 있습니다.</p>
 
           <ul>
             <li>
-              Move focus when the primary objective is to make navigation more efficient, e.g., reduce the number of times the user must press <kbd>Tab</kbd> or the arrow keys.
-              This behavior is commonly expected when assigning a shortcut to a text box, toolbar, or composite, such as a listbox, tree, grid, or menubar.
-              This behavior is also useful for moving focus to a section of a page, such as the main content or a complementary landmark section.
+              기본 목표가 탐색을 보다 효과적으로 만드는 것인 경우, 예를 들어 사용자가 <kbd>Tab</kbd>이나 방향키를 눌려야 하는 횟수를 줄이는 것인 경우 초점을 이동시키세요.
+              이 동작은 일반적으로 텍스트 상자, 툴바 또는 목록 상자, 트리, 그리드, 메뉴바와 같은 복합 컴포넌트에 단축키를 할당 할 경우 예상됩니다.
+              이 동작은 또한 메인 콘텐츠나 complementary 랜드마크 섹션과 같은 페이지의 섹션으로 초점을 이동하는데에도 유용합니다.
             </li>
 
-            <li> Activate an element without moving focus when the target context of the function is the context that contains the focus. This behavior is most common for command buttons and for functions associated with elements that are not visible, such as a "Save" option that is accessible via a menu. For example, if the focus is on an option in a listbox and a toolbar contains buttons for moving and removing options, it is most beneficial to keep focus in the listbox when the user presses a key shortcut for one of the buttons in the toolbar. This behavior can be particularly important for screen reader users because it provides confirmation of the action performed and makes performing multiple commands more efficient. For instance, when a screen reader user presses the shortcut for the "Up" button, the user will be able to hear the new position of the option in the list since it still has the focus. Similarly, when the user presses the shortcut for deleting an option, the user can
-								hear the next option in the list and immediately decide whether to press the delete shortcut again. </li>
+            <li> 기능의 대상 콘텍스트가 초점을 포함하는 콘텍스트 인 경우 초점 이동 없이 요소를 작동 시키세요. 이 동작은 명령 버튼 및 메뉴를 통해서 접근 가능한 "저장" 옵션과 같이 보이지 않는 요소(element)에 연관 된 기능에 가장 일반적입니다. 예를 들어, 초점이 목록상자의 옵션에 있고 툴바가 옵션을 이동시키고 제거하는 버튼을 포함하는 경우, 사용자가 툴바 내 버튼 중 하나에 대한 단축 키를 누를 때 목록 상자에 초점을 유지하는 것이 가장 좋습니다. 이 동작은 수행 된 작업의 확인을 제공하고 여러 명령을 수행하는 것을 더 효율적으로 만들 수 있기 때문에 스크린리더 사용자에게 특히 중요할 수 있습니다. 예를 들어 스크린리더 사용자가 "위" 버튼에 대한 단축키를 누를 때, 사용자는 여전히 초점을 가지고 있기 때문에 목록의 옵션의 새로운 위치를 들을 수 있습니다. 마찬가지로, 사용자가 옵션을 삭제하는 단축키를 누를 때, 사용자는 목록의 다음 옵션을 들을 수 있고 즉시 다시 삭제 단축키를 누를지를 결정할 수 있습니다. </li>
 
             <li>
-              Move focus and activate when the target of the shortcut has a single function and the context of that function is the same as the target.
-              This behavior is typical when a shortcut is assigned to a button that opens a menu or dialog, to a checkbox, or to a navigation link or button.
+              단축키 대상이 단일 기능을 가지고 그 기능의 컨텍스트가 대상과 동일할 경우 초점을 이동하고 활성화 시키세요.
+              이 동작은 단축키가 메뉴나 대화상자를 여는 버튼이나, 체크박스, 내비게이션 링크나 버튼에 할당 될 경우 일반적입니다.
             </li>
           </ul>
         </section>
 
         <section id="kbd_shortcuts_design_where">
-          <h5 id="x6-9-1-3-choose-where-to-add-shortcuts"><bdi class="secno">6.9.1.3 </bdi>Choose Where to Add Shortcuts <a class="self-link" aria-label="§" href="#kbd_shortcuts_design_where"></a></h5>
-          <p>Work to draft content for this section is tracked in <a href="https://github.com/w3c/aria-practices/issues/219">issue 219.</a></p>
-          <p>The first goal when designing a keyboard interface is simple, efficient, and intuitive operation with only basic keyboard navigation support. If basic operation of a keyboard interface is inefficient, attempting to compensate for fundamental design issues, such as suboptimal layout or command structure, by implementing keyboard shortcuts will not likely reduce user frustration. The practical implication of this is that, in most well-designed user interfaces, the percentage of functionality that needs to be accessible via a keyboard shortcut in order to create optimal usability is not very high. In many simple user interfaces, keyboard shortcuts can be entirely superfluous. And, in user interfaces with too many keyboard shortcuts, the excess shortcuts create cognitive load that make the most useful ones more difficult to remember. </p>
-          <p>Consider the following when deciding where to assign keyboard shortcuts: </p>
+          <h5 id="x6-9-1-3"><bdi class="secno">6.9.1.3 </bdi>단축키를 추가할 위치 선택 <a class="self-link" aria-label="§" href="#kbd_shortcuts_design_where"></a></h5>
+          <p>이 섹션에 대한 초안 콘텐트 작업은 <a href="https://github.com/w3c/aria-practices/issues/219">issue 219</a>에서 추적됩니다.</p>
+          <p>키보드 인터페이스를 설계할 때 첫 번째 목표는 기본 키보드 내비게이션 지원만으로 간단하고, 효율적이며, 직관적인 조작입니다. 키보드 인터페이스의 기본 조작이 비효율적인 경우, 키보드 단축키를 구현하여 최적화 되지 않은 레이아웃이나 명령 구조와 같은 근본적인 설계 이슈에 대한 보완을 위한 시도하는 것은 사용자 불만을 줄일 수 없을 것입니다. 이것의 실질적인 의미는, 대부분의 잘 설계된 유저 인터페이스에서는 최적화 된 사용성을 만들기 위해 키보드 단축키를 통해 접근 할 수 있어야 하는 기능의 비율이 높지 않다는 것입니다. 많은 단순한 유저 인터페이스에서, 키보드 단축키는 완전히 불필요할 수 있습니다. 그리고, 키보드 단축키가 너무 많은 유저 인터페이스에서는, 가장 유용한 단축키를 기억하기 어렵게 만드는 인지 부하를 발생시킵니다.
+          </p><p>키보드 단축키를 할당을 결정할 때 다음 사항을 고려하세요: </p>
 
           <ol>
-            <li>To be written.</li>
+            <li>작성 예정...</li>
           </ol>
         </section>
       </section>
       <section id="kbd_shortcuts_assigning">
-        <h4 id="x6-9-2-assigning-keyboard-shortcuts"><bdi class="secno">6.9.2 </bdi>Assigning Keyboard Shortcuts<a class="self-link" aria-label="§" href="#kbd_shortcuts_assigning"></a></h4>
-        <p>When choosing the keys to assign to a shortcut, there are many factors to consider.</p>
+        <h4 id="x6-9-2"><bdi class="secno">6.9.2 </bdi>키보드 단축키 할당<a class="self-link" aria-label="§" href="#kbd_shortcuts_assigning"></a></h4>
+        <p>할당할 단축키를 선택할 때 고려해야 할 많은 요소들이 있습니다.</p>
         <ul>
-          <li>Making the shortcut easy to learn and remember by using a mnemonic (e.g., <kbd>Control + S</kbd> for "Save") or following a logical or spacial pattern.</li>
-          <li> Localizing the interface, including for differences in which keys are available and how they behave and for language considerations that could impact mnemonics. </li>
-          <li>Avoiding and managing conflicts with key assignments used by an assistive technology, the browser, or the operating system.</li>
+          <li>니모닉(예를 들어, "저장"을 위해 <kbd>Control + S</kbd>)을 사용하거나 논리적 혹은 공간적 패턴을 따라 학습하고 기억하기 쉽게 만듦</li>
+          <li> 사용 가능한 키와 동작 방식의 차이, 그리고 니모닉에 영향을 줄 수 있는 언어 고려하상을 포함하여 인터페이스를 지역화</li>
+          <li>보조 기술, 브라우저, 운영 체제에서 사용되는 키 할당과의 충돌 방지 및 관리</li>
         </ul>
         <p>
-          Methods for designing a key shortcut scheme that supports learning and memory is beyond the scope of this guide.
-          Unless the key shortcut scheme is extensive, it is likely sufficient to mimic concepts that are familiar from common desktop software, such as browsers.
-          Similarly, while localization is important, describing how to address it is left to other resources that specialize in that topic.
+          학습과 기억을 지원하는 단축키 체계를 설계하는 방법은 이 지침의 범위를 벗어납니다.
+          단축키 체계가 광범위 하지 않은 이상, 브라우저와 같은 일반적인 데스크탑 소프트웨어에서 익숙한 개념을 모방하는 것으로 충분합니다.
+          마찬가지로 지역화가 중요하지만, 이를 해결하는 방법을 설명하는 것은 그 토픽을 전문으로 하는 다른 리소스에 맡깁니다.
         </p>
         <p>
-          The remainder of this section provides guidance balancing requirements and concerns related to key assignment conflicts.
-          It is typically ideal if key assignments do not conflict with keys that are assigned to functions in the user's operating system, browser, or assistive technology.
-          Conflicts can block efficient access to functions that are essential to the user, and a perfect storm of conflicts can trap a user.
-          At the same time, there are some circumstances where intentional conflicts are useful.
-          And, given the vast array of operating system, browser, and assistive technology keys, it is almost impossible to be certain conflicts do not exist.
-          So it is also important to employ strategies that mitigate the impact of conflicts whether they are intentional or unknown.
+          이 섹션의 나머지 부분에서는 키 할당 충돌과 관련된 요구 사항과 우려 사항을 조정하는 지침을 제공합니다.
+          일반적으로 키 할당은 사용자의 운영 체제, 브라우저, 보조 기술의 기능에 할당 된 키와 충돌하지 않는 경우가 이상적입니다.
+          충돌은 사용자에게 필수적인 기능에 대한 유효한 접근을 차단할 수 있고, 충돌의 더할 수 없이 나쁜 상황은 사용자를 가두어 버릴 수 있습니다.
+          동시에, 의도적인 충돌이 유용한 상황도 있습니다.
+          그리고 방대한 운영 체제, 브라우저, 보조 기술 키를 감안할 때, 일부 충돌이 존재하지 않는 다는 것은 거의 불가능합니다.
+          따라서 의도적이든 알려지지 않았든, 충돌의 영향을 완화하는 전략을 채택하는 것도 중요합니다.
         </p>
         <div class="note" role="note" id="issue-container-generatedID-37"><div role="heading" class="note-title marker" id="h-note-34" aria-level="5"><span>Note</span></div><p class="">
-          In the following sections, <kbd>meta</kbd> key refers to the <kbd>Windows</kbd> key on Windows-compatible keyboards and the <kbd>Command</kbd> key on MacOS-compatible keyboards.
+          다음 섹션에서, <kbd>meta</kbd>키는 Windows 호환 키보드의 <kbd>Windows</kbd>와 MacOS 호환 키보드의 <kbd>Command</kbd>키를 가리킵니다.
         </p></div>
         <section id="kbd_shortcuts_assignments_opsys_conflicts">
-          <h5 id="x6-9-2-1-operating-system-key-conflicts"><bdi class="secno">6.9.2.1 </bdi>Operating System Key Conflicts<a class="self-link" aria-label="§" href="#kbd_shortcuts_assignments_opsys_conflicts"></a></h5>
+          <h5 id="x6-9-2-1"><bdi class="secno">6.9.2.1 </bdi>운영 체제 키 충돌<a class="self-link" aria-label="§" href="#kbd_shortcuts_assignments_opsys_conflicts"></a></h5>
 
-          <p> It is essential to avoid conflicts with keys that perform system level functions, such as application and window management and display and sound control. In general, this can be achieved by refraining from the following types of assignments. </p>
+          <p> 어플리케이션 및 창 관리, 디스플레이 및 사운드 제어와 같은 시스템 수준 기능을 수행하는 키와의 충돌을 방지하는 것이 중요합니다. 일반적으로, 다음과 같은 유형의 할당을 자제함으로써 이를 달성 할 수 있습니다. </p>
 
           <ol>
-            <li>Any modifier keys + any of <kbd>Tab</kbd>, <kbd>Enter</kbd>, <kbd>Space</kbd>, or <kbd>Escape</kbd>.</li>
+            <li>임의의 보조 키(modifire key) + <kbd>Tab</kbd>, <kbd>Enter</kbd>, <kbd>Space</kbd>, <kbd>Escape</kbd> 중 하나.</li>
 
-            <li><kbd>Meta</kbd> key + any other single key (there are exceptions, but they can be risky as these keys can change across versions of operating systems). </li>
+            <li><kbd>Meta</kbd> 키 + 다른 단일 키(single key) (예외가 있지만, 이 키들은 운영체제 버전에 따라 변경될 수 있으므로 위험할 수 있습니다.). </li>
 
-            <li><kbd>Alt</kbd> + a function key.</li>
+            <li><kbd>Alt</kbd> + 기능 키.</li>
           </ol>
 
+          <p class="translator-comment">
+            "보조 키(modifire key)"는 <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, <kbd>Alt</kbd> 키를 의미합니다.
+          </p>
+
           <p>
-            In addition, there are some important application level features that most applications, including browsers, generally support.
-            These include:
+            또한, 브라우저를 포함하여 대부분의 어플리케이션이 일반적으로 지원하는 몇 가지 중요한 어플리케이션 수준 기능이 있습니다.
+            다음이 포함됩니다:
           </p>
 
           <ol>
-            <li>Zoom</li>
-            <li>Copy/Paste</li>
+            <li>확대</li>
+            <li>복사/붙여넣기</li>
             <li> ... to be continued ... </li>
           </ol>
         </section>
 
         <section id="kbd_shortcuts_assignments_assistivetech_conflicts">
-          <h5 id="x6-9-2-2-assistive-technology-key-conflicts"><bdi class="secno">6.9.2.2 </bdi>Assistive Technology Key Conflicts<a class="self-link" aria-label="§" href="#kbd_shortcuts_assignments_assistivetech_conflicts"></a></h5>
+          <h5 id="x6-9-2-2"><bdi class="secno">6.9.2.2 </bdi>보조 기술 키 충돌<a class="self-link" aria-label="§" href="#kbd_shortcuts_assignments_assistivetech_conflicts"></a></h5>
 
           <p>
-            Even though assistive technologies have collectively taken thousands of key assignments, avoiding conflicts is relatively easy.
-            This is because assistive technologies have had to develop key assignment schemes that avoid conflicts with both operating systems and applications.
-            They do this by hijacking specific keys as modifiers that uniquely define their key commands.
-            For example, many assistive technologies use the <kbd>Caps Lock</kbd> key as a modifier.
+            보조 기술은 통틀어 수천 개의 키 할당을 취했지만 충돌을 피하는 것은 비교적 쉽습니다.
+            이는 보조 기술이 운영 체제 및 어플리케이션과의 충돌을 피하는 키 할당 체계를 개발해야 했기 때문입니다.
+            특정 키를 키 명령을 고유하게 정의하는 보조 키로 가로채는 방식으로 이를 수행합니다.
+            예를 들어, 많은 보조 기술들이 보조 키로 <kbd>Caps Lock</kbd>를 사용합니다.
           </p>
 
-          <p>Deflect assistive technology key conflicts by steering clear of the following types of assignments. </p>
+          <p>다음 유형의 할당을 피하여 보조 기술 키 충돌을 피하세요.
 
-          <ol>
-            <li><kbd>Caps Lock</kbd> + any other combination of keys.</li>
-            <li><kbd>Insert</kbd> + any combination of other keys.</li>
-            <li><kbd>Scroll Lock</kbd> + any combination of other keys.</li>
-            <li>macOS only: <kbd>Control+Option</kbd> + any combination of other keys.</li>
+          </p><ol>
+            <li><kbd>Caps Lock</kbd> + 다른 키 조합.</li>
+            <li><kbd>Insert</kbd> + 다른 키 조합.</li>
+            <li><kbd>Scroll Lock</kbd> + 다른 키 조합.</li>
+            <li>macOS only: <kbd>Control+Option</kbd> + 다른 키 조합.</li>
           </ol>
         </section>
 
         <section id="kbd_shortcuts_assignments_browser_conflicts">
-          <h5 id="x6-9-2-3-browser-key-conflicts"><bdi class="secno">6.9.2.3 </bdi>Browser Key Conflicts<a class="self-link" aria-label="§" href="#kbd_shortcuts_assignments_browser_conflicts"></a></h5>
+          <h5 id="x6-9-2-3"><bdi class="secno">6.9.2.3 </bdi>브라우저 키 충돌<a class="self-link" aria-label="§" href="#kbd_shortcuts_assignments_browser_conflicts"></a></h5>
 
-          <p> While there is considerable similarity among browser keyboard schemes, the patterns within the schemes are less homogenous. Consequently, it is more difficult to avoid conflicts with browser key assignments. While the impact of conflicts is sometimes mitigated by the availability of two paths to nearly every function -- keyboard accessible menus and keyboard shortcuts, avoiding conflicts with shortcuts to heavily used functions is nonetheless important. Pay special attention to avoiding conflicts with shortcuts to: </p>
+          <p> 브라우저 키보드 체계에는 상당한 유사성이 있지만 체계 내의 패턴은 동질적이지 않습니다. 따라서 브라우저 키 할당과의 충돌을 피하는 것이 더 어렵습니다. 충돌의 영향은 거의 모든 기능 -- 키보드 접근 가능한 메뉴와 키보드 단축키에 대한 두 가지 경로를 사용할 수 있기 때문에 다소 완화되지만, 많이 사용되는 기능에 대한 단축키와의 충돌을 피하는 것이 중요합니다. 다음 단축키와의 충돌을 방지하기 위해 각벽히 주의하세요: </p>
 
           <ol>
-            <li>Address or location bar</li>
-            <li>Notification bar</li>
-            <li>Page refresh</li>
-            <li>Bookmark and history functions</li>
-            <li>Find functions</li>
+            <li>주소 또는 위치바</li>
+            <li>알림 바</li>
+            <li>페이지 새로 고침</li>
+            <li>북마크와 히스토리 기능</li>
+            <li>기능 찾기</li>
           </ol>
         </section>
         <section id="kbd_shortcuts_assignments_intentional_conflicts">
-          <h5 id="x6-9-2-4-intentional-key-conflicts"><bdi class="secno">6.9.2.4 </bdi>Intentional Key Conflicts<a class="self-link" aria-label="§" href="#kbd_shortcuts_assignments_intentional_conflicts"></a></h5>
+          <h5 id="x6-9-2-4"><bdi class="secno">6.9.2.4 </bdi>의도적인 키 충돌<a class="self-link" aria-label="§" href="#kbd_shortcuts_assignments_intentional_conflicts"></a></h5>
 
           <p>
-            While avoiding key conflicts is usually desirable, there are circumstances where intentionally conflicting with a browser function is acceptable or even desirable.
-            This can occur when the following combination of conditions arises:
+            키 충돌을 피하는 것이 일반적으로 바람직하지만, 브라우저 기능과 의도적으로 충돌하는 것이 적절하거나 심지어 바람직한 상황이 있습니다.
+            다음 조건의 조합이 유발하는 경우 발생할 수 있습니다:
           </p>
 
           <ul>
-            <li>A web application has a frequently used function that is similar to a browser function.</li>
-            <li>Users will often want to execute the web application function.</li>
-            <li>Users will rarely execute the browser function.</li>
-            <li>There is an efficient, alternative path to the browser function.</li>
+            <li>웹 어플리케이션에는 브라우저 기능과 유사한 자주 사용되는 기능이 있습니다.</li>
+            <li>사용자가 종종 웹 어플리케이션 기능을 실행하려고 합니다.</li>
+            <li>사용자가 브라우저 기능을 거의 실행하지 않습니다.</li>
+            <li>브라우저 기능에 대한 효율적인 대체 경로가 있습니다.</li>
           </ul>
 
-          <p>For example, consider a save function that is available when the focus is in an editor. Most browsers use ... to be continued ...</p>
+          <p>예를 들어, 초점이 편집기에 있을 경우 사용 가능한 저장 키를 생각해보세요.  Most browsers use ... to be continued ...</p>
         </section>
       </section>
     </section>
@@ -7239,7 +7242,7 @@
         Informative references
       <a class="self-link" aria-label="§" href="#informative-references"></a></h3>
     <dl class="bibliography">
-      <dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-html-aam">[HTML-AAM]</dt><dd><a href="https://www.w3.org/TR/html-aam-1.0/"><cite>HTML Accessibility API Mappings 1.0</cite></a>. Steve Faulkner; Alexander Surkov; Scott O'Hara; Bogdan Brinza; Jason Kiss; Cynthia Shelly.  W3C. 17 August 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/html-aam-1.0/">https://www.w3.org/TR/html-aam-1.0/</a></dd><dt id="bib-html-aria">[HTML-ARIA]</dt><dd><a href="https://www.w3.org/TR/html-aria/"><cite>ARIA in HTML</cite></a>. Steve Faulkner; Scott O'Hara; Patrick Lauke.  W3C. 20 October 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/html-aria/">https://www.w3.org/TR/html-aria/</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd>
+      <dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-html-aam">[HTML-AAM]</dt><dd><a href="https://www.w3.org/TR/html-aam-1.0/"><cite>HTML Accessibility API Mappings 1.0</cite></a>. Steve Faulkner; Alexander Surkov; Scott O'Hara; Bogdan Brinza; Jason Kiss; Cynthia Shelly.  W3C. 17 August 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/html-aam-1.0/">https://www.w3.org/TR/html-aam-1.0/</a></dd><dt id="bib-html-aria">[HTML-ARIA]</dt><dd><a href="https://www.w3.org/TR/html-aria/"><cite>ARIA in HTML</cite></a>. Steve Faulkner; Scott O'Hara; Patrick Lauke.  W3C. 14 December 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/html-aria/">https://www.w3.org/TR/html-aria/</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd>
     </dl></section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
