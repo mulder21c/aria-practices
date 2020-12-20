@@ -5931,47 +5931,45 @@
   </section>
 
   <section id="gridAndTableProperties">
-    <h2>Grid and Table Properties</h2>
+    <h2>Grid와 Table 속성(property)</h2>
     <p>
-      To fully present and describe a grid or table, in addition to parsing the headers, rows, and cells using the roles described in the
-      <a href="#grid">grid pattern</a> or <a href="#table">table pattern</a>,
-      assistive technologies need to be able to determine:
+      그리드 또는 테이블을 완전히 나타내고 설명하려면, <a href="#grid">그리드 패턴</a>이나 <a href="#table">테이블 패털</a>에 기술 된 역할(role)을 사용하여 헤더, 행(row), 셀(cell)을 해석하는 것 외에도 보조 기술이 다음을 결정할 수 있어야 합니다:
     </p>
     <ul>
-      <li>The number of rows and columns.</li>
-      <li>Whether any columns or rows are hidden, e.g., columns 1 through 3 and  5 through 8 are visible but column 4 is hidden.</li>
-      <li>Whether a cell spans multiple rows or columns.</li>
-      <li>Whether and how data is sorted.</li>
+      <li>행과 열의 개수</li>
+      <li>열 또는 행의 숨김 여부, 예를 들어, 1 ~ 3열과 5 ~ 8열은 보여지지만 4열은 숨김.</li>
+      <li>셀이 여러 행 또는 열로 합쳐져 있는지 여부.</li>
+      <li>데이터 정렬 여부 및 방법.</li>
     </ul>
     <p>
-      Browsers automatically populate their accessibility tree with the number of rows and columns in a grid or table based on the rendered DOM.
-      However, there are many situations where the DOM does not contain the whole grid or table, such as when the data set is too large to fully render.
-      Additionally, some of this information, like skipped columns or rows and how data is sorted, cannot be derived from the DOM structure.
+      브라우저는 자동으로 렌더링 된 DOM을 기준으로 그리드나 테이블의 행과 열 개수로 접근 가능한 트리를 채웁니다.
+      하지만, 데이터가 너무 커서 완전히 렌더링 할 수 없는 경우와 같이 DOM이 전체 그리드나 테이블이 포함하지 않는 많은 상황이 있습니다.
+      게다가, 건너 뛴 열이나 행 및 데이터 정렬 방법과 같은 일부 정보는 DOM 구조에서 파생될 수 없습니다.
     </p>
-    <p>The below sections explain how to use the following properties that ARIA provides for grid and table accessibility.</p>
+    <p>아래 섹션에서는 ARIA가 그리드와 테이블에 접근성을 제공하는 속성(property)들을 사용하는 방법을 설명합니다.</p>
     <table class="widget-features">
-      <caption>Grid and Table Property Definitions</caption>
+      <caption>그리드와 테이블 속성(property) 정의</caption>
       <thead>
         <tr>
-          <th>Property</th>
-          <th>Definition</th>
+          <th>속성(property)</th>
+          <th>정의</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th><code>aria-colcount</code></th>
-          <td>Defines the total number of columns in a <code>table</code>, <code>grid</code>, or <code>treegrid</code>.</td>
+          <td><code>table</code>, <code>grid</code>, <code>treegrid</code>의 총 열 개수를 정의.</td>
         </tr>
         <tr>
           <th><code>aria-rowcount</code></th>
-          <td>Defines the total number of rows in a <code>table</code>, <code>grid</code>, or <code>treegrid</code>.</td>
+          <td><code>table</code>, <code>grid</code>, <code>treegrid</code>의 총 행 개수를 정의.</td>
         </tr>
         <tr>
           <th><code>aria-colindex</code></th>
           <td>
             <ul>
-              <li>Defines a cell's position with respect to the total number of columns within a <code>table</code>, <code>grid</code>, or <code>treegrid</code>.</li>
-              <li><strong>Note:</strong> Numbering starts with 1, not 0.</li>
+              <li><code>table</code>, <code>grid</code>, <code>treegrid</code> 내의 총 열 개수에 대한 셀 위치를 정의.</li>
+              <li><strong>참고:</strong> 번호 매김은 0이 아닌 1로 시작.</li>
             </ul>
           </td>
         </tr>
@@ -5979,110 +5977,110 @@
           <th><code>aria-rowindex</code></th>
           <td>
             <ul>
-              <li>Defines a cell's position with respect to the total number of rows within a <code>table</code>, <code>grid</code>, or <code>treegrid</code>.</li>
-              <li><strong>Note:</strong> Numbering starts with 1, not 0.</li>
+              <li><code>table</code>, <code>grid</code>, <code>treegrid</code> 내의 행 총 개수에 대한 셀 위치를 정의.</li>
+              <li><strong>참고:</strong> 번호 매김은 0이 아닌 1로 시작.</li>
             </ul>
           </td>
         </tr>
         <tr>
           <th><code>aria-colspan</code></th>
-          <td>Defines the number of columns spanned by a cell or gridcell within a <code>table</code>, <code>grid</code>, or <code>treegrid</code>.</td>
+          <td><code>table</code>, <code>grid</code>, <code>treegrid</code> 내의 셀 또는 그리드셀에 합쳐진 열의 수 정의 .</td>
         </tr>
         <tr>
           <th><code>aria-rowspan</code></th>
-          <td>Defines the number of rows spanned by a cell or gridcell within a <code>table</code>, <code>grid</code>, or <code>treegrid</code>.</td>
+          <td><code>table</code>, <code>grid</code>, <code>treegrid</code> 내의 셀 또는 그리드셀에 합쳐진 행의 수 정의.</td>
         </tr>
         <tr>
           <th><code>aria-sort</code></th>
-          <td>Indicates if items in a row or column are sorted in ascending or descending order.</td>
+          <td>행 또는 열이 오름차순 혹은 내림차순으로 정렬 되는지 여부를 나타냅니다.</td>
         </tr>
       </tbody>
     </table>
     <section id="gridAndTableProperties_rows">
-      <h3>Using <code>aria-rowcount</code> and <code>aria-rowindex</code></h3>
+      <h3><code>aria-rowcount</code>와 <code>aria-rowindex</code> 사용</h3>
       <p>
-        When the number of rows represented by the DOM structure is not the total number of rows available for a table, grid, or treegrid,
-        the  <code>aria-rowcount</code>  property is used to communicate the total number of rows available,
-        and it is accompanied by the <code>aria-rowindex</code> property to identify the row indices of the rows that are present in the DOM.
+        DOM 구조가 나타낸 행의 개수가 table, grid, treegrid에 사용 가능한 총 행 개수가 아닌 경우,
+        <code>aria-rowcount</code> 속성(property)이 사용 가능한 총 행 개수를 전달하는데 사용되고,
+        DOM에 있는 행의 행 인덱스를 식별하기 위해 <code>aria-rowindex</code> 속성(property)이 수반됩니다.
       </p>
       <p>
-        The <code>aria-rowcount</code> is specified on the element with the <code>table</code>, <code>grid</code>, or <code>treegrid</code> role.
-        Its value is an integer equal to the total number of rows available, including header rows.
-        If the total number of rows is unknown, a value of <code>-1</code> may be specified.
-        Using a value of <code>-1</code> indicates that more rows are available to include in the DOM without specifying the size of the available supply.
+        <code>aria-rowcount</code>는 <code>table</code>, <code>grid</code>, <code>treegrid</code> 역할(role)이 있는 요소(element)에 지정됩니다.
+        값은 헤더 행을 포함하여 사용 가능한 행의 총 개수와 동일한 정수입니다.
+        행의 총 개수를 알 수 없는 경우, <code>-1</code> 값이 지정 될 수 있습니다.
+        <code>-1</code> 값을 사용하는 것은 사용 가능한 공급의 크기를 지정하지 않고 사용 가능한 더 많은 행을 DOM에 포함 시킬 수 있음을 나타냅니다
       </p>
       <p>
-        When <code>aria-rowcount</code> is used on a <code>table</code>, <code>grid</code>, or <code>treegrid</code>,
-        a value for <code>aria-rowindex</code> property is specified on each of its descendant rows, including any header rows.
-        The value of <code>aria-rowindex</code> is an integer that is:
+        <code>table</code>, <code>grid</code>, <code>treegrid</code>에 <code>aria-rowcount</code>가 사용 되는 경우,
+        <code>aria-rowindex</code> 속성(property) 값이 헤더 행을 포함하여 각 하위 행에 지정됩니다.
+        <code>aria-rowindex</code> 값은 다음과 같은 정수입니다:
       </p>
       <ol>
-        <li>Greater than or equal to 1.</li>
-        <li>Greater than the value of <code>aria-rowindex</code> on any previous rows.</li>
-        <li>Set to the index of the first row in the span if cells span multiple rows.</li>
-        <li>Less than or equal to the total number of rows.</li>
+        <li>1 이상.</li>
+        <li>이전 행의 <code>aria-rowindex</code> 값보다 큰 값.</li>
+        <li>셀이 여러 행에 합쳐진 경우 합쳐진 첫 번째 행의 인덱스로 설정.</li>
+        <li>전체 행 수 이하.</li>
       </ol>
       <p>
-        <strong>WARNING!</strong> Missing or inconsistent values of <code>aria-rowindex</code> could have devastating effects on assistive technology behavior.
-        For example, specifying an invalid value for <code>aria-rowindex</code> or setting it on some but not all rows in a table, could cause screen reader table reading functions to skip rows or simply stop functioning.
+        <strong>주의!</strong> <code>aria-rowindex</code> 누락 또는 부적합한 값은 보조 기술 동작에 치명적인 영향을 미칠 수 있습니다.
+        예를 들어, <code>aria-rowindex</code>에 유효하지 않은 값을 지정하거나 테이블에 모든 행이 아니라 일부에만 설정하는 것은 스크린리더 테이블 낭독 기능이 행을 건너 뛰거나 단순히 기능을 중지 시킬 수 있습니다.
       </p>
       <p>
-        The following code demonstrates the use of <code>aria-rowcount</code> and <code>aria-rowindex</code> properties on a table containing a hypothetical class list.
+        다음 코드는 가상의 수업 목록을 포함하는 표에 <code>aria-rowcount</code>와 <code>aria-rowindex</code> 속성(property)의 사용을 보여줍니다.
       </p>
       <pre>
         <code>
           &lt;!--
-            aria-rowcount tells assistive technologies the actual size of the grid
-            is 463 rows even though only 4 rows are present in the markup.
+            aria-rowcount는 마크업에 4개의 행만 존재함에도 불구하고 그리드의 실제 크기가
+            463개 행이라고 보조 기술에 알려줍니다.
           --&gt;
-          &lt;table role=&quot;grid&quot; aria-rowcount=&quot;463&quot;&gt;
-            aria-label=&quot;Student roster for history 101&quot;
+          &lt;table role=&quot;grid&quot; aria-rowcount=&quot;463&quot;
+            aria-label=&quot;역사 101 학생 명부&quot;&gt;
             &lt;thead&gt;
               &lt;tr aria-rowindex=&quot;1&quot;&gt;
-                &lt;th&gt;Last Name&lt;/th&gt;
-                &lt;th&gt;First Name&lt;/th&gt;
+                &lt;th&gt;성&lt;/th&gt;
+                &lt;th&gt;이름&lt;/th&gt;
                 &lt;th&gt;E-mail&lt;/th&gt;
-                &lt;th&gt;Major&lt;/th&gt;
-                &lt;th&gt;Minor&lt;/th&gt;
-                &lt;th&gt;Standing&lt;/th&gt;
+                &lt;th&gt;전공&lt;/th&gt;
+                &lt;th&gt;부전공&lt;/th&gt;
+                &lt;th&gt;학년&lt;/th&gt;
               &lt;/tr&gt;
             &lt;/thead&gt;
             &lt;tbody&gt;
                 &lt;!--
-                  aria-rowindex tells assistive technologies that this
-                  row is row 51 in the grid of 463 rows.
+                  aria-rowindex는 이 행이 463 행 중
+                  51번째 행이라고 보조 기술에 알려줍니다
                 --&gt;
               &lt;tr aria-rowindex=&quot;51&quot;&gt;
                 &lt;td&gt;Henderson&lt;/td&gt;
                 &lt;td&gt;Alan&lt;/td&gt;
                 &lt;td&gt;ahederson56@myuniveristy.edu&lt;/td&gt;
-                &lt;td&gt;Business&lt;/td&gt;
-                &lt;td&gt;Spanish&lt;/td&gt;
-                &lt;td&gt;Junior&lt;/td&gt;
+                &lt;td&gt;경영&lt;/td&gt;
+                &lt;td&gt;스페인어&lt;/td&gt;
+                &lt;td&gt;3학년&lt;/td&gt;
               &lt;/tr&gt;
                 &lt;!--
-                  aria-rowindex tells assistive technologies that this
-                  row is row 52 in the grid of 463 rows.
+                  aria-rowindex는 이 행이 463 행 중
+                  52번째 행이라고 보조 기술에 알려줍니다.
                 --&gt;
               &lt;tr aria-rowindex=&quot;52&quot;&gt;
                 &lt;td&gt;Henderson&lt;/td&gt;
                 &lt;td&gt;Alice&lt;/td&gt;
                 &lt;td&gt;ahederson345@myuniveristy.edu&lt;/td&gt;
-                &lt;td&gt;Engineering&lt;/td&gt;
-                &lt;td&gt;none&lt;/td&gt;
-                &lt;td&gt;Sophomore&lt;/td&gt;
+                &lt;td&gt;공학&lt;/td&gt;
+                &lt;td&gt;없음&lt;/td&gt;
+                &lt;td&gt;2학년&lt;/td&gt;
               &lt;/tr&gt;
                 &lt;!--
-                  aria-rowindex tells assistive technologies that this
-                  row is row 53 in the grid of 463 rows.
+                  aria-rowindex는 이 행이 463 행 중
+                  53번째 행이라고 보조 기술에 알려줍니다.
                 --&gt;
               &lt;tr aria-rowindex=&quot;53&quot;&gt;
                 &lt;td&gt;Henderson&lt;/td&gt;
                 &lt;td&gt;Andrew&lt;/td&gt;
                 &lt;td&gt;ahederson75@myuniveristy.edu&lt;/td&gt;
                 &lt;td&gt;General Studies&lt;/td&gt;
-                &lt;td&gt;none&lt;/td&gt;
-                &lt;td&gt;Freshman&lt;/td&gt;
+                &lt;td&gt;없음&lt;/td&gt;
+                &lt;td&gt;1학년&lt;/td&gt;
               &lt;/tr&gt;
             &lt;/tbody&gt;
           &lt;/table&gt;
