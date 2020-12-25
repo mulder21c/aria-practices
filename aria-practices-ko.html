@@ -6010,7 +6010,7 @@
         <code>-1</code> 값을 사용하는 것은 사용 가능한 공급의 크기를 지정하지 않고 사용 가능한 더 많은 행을 DOM에 포함 시킬 수 있음을 나타냅니다
       </p>
       <p>
-        <code>table</code>, <code>grid</code>, <code>treegrid</code>에 <code>aria-rowcount</code>가 사용 되는 경우,
+        <code>table</code>, <code>grid</code>, <code>treegrid</code>에 <code>aria-rowcount</code>가 사용되는 경우,
         <code>aria-rowindex</code> 속성(property) 값이 헤더 행을 포함하여 각 하위 행에 지정됩니다.
         <code>aria-rowindex</code> 값은 다음과 같은 정수입니다:
       </p>
@@ -6021,8 +6021,8 @@
         <li>전체 행 수 이하.</li>
       </ol>
       <p>
-        <strong>주의!</strong> <code>aria-rowindex</code> 누락 또는 부적합한 값은 보조 기술 동작에 치명적인 영향을 미칠 수 있습니다.
-        예를 들어, <code>aria-rowindex</code>에 유효하지 않은 값을 지정하거나 테이블에 모든 행이 아니라 일부에만 설정하는 것은 스크린리더 테이블 낭독 기능이 행을 건너 뛰거나 단순히 기능을 중지 시킬 수 있습니다.
+        <strong>주의!</strong> <code>aria-rowindex</code>의 누락 또는 부적합한 값은 보조 기술 동작에 치명적인 영향을 미칠 수 있습니다.
+        예를 들어, <code>aria-rowindex</code>에 유효하지 않은 값을 지정하거나 테이블에 모든 행이 아니라 일부에만 설정하는 것은 스크린리더 테이블 낭독 기능이 행을 건너 뛰거나 단순히 기능을 중지 시키게 할 수 있습니다.
       </p>
       <p>
         다음 코드는 가상의 수업 목록을 포함하는 표에 <code>aria-rowcount</code>와 <code>aria-rowindex</code> 속성(property)의 사용을 보여줍니다.
@@ -6088,53 +6088,53 @@
       </pre>
     </section>
     <section id="gridAndTableProperties_cols">
-      <h3>Using <code>aria-colcount</code> and <code>aria-colindex</code></h3>
+      <h3><code>aria-colcount</code>과 <code>aria-colindex</code>사용</h3>
       <p>
-        When the number of columns represented by the DOM structure is not the total number of columns available for a table, grid, or treegrid,
-        the  <code>aria-colcount</code>  property is used to communicate the total number of columns available,
-        and it is accompanied by the <code>aria-colindex</code> property to identify the column indices of the columns that are present in the DOM.
+        DOM 구조에 나타난 열 개수가 table, grid, treegrid에 사용 가능한 열의 총 개수가 아닐 경우,
+        <code>aria-colcount</code> 속성(property)이 사용 가능한 열의 총 개수를 전달하는데 사용되고,
+        DOM에 있는 열의 열 인덱스를 식별하기 위해 <code>aria-colindex</code> 속성(property)이 수반됩니다.
       </p>
       <p>
-        The <code>aria-colcount</code> is specified on the element with the <code>table</code>, <code>grid</code>, or <code>treegrid</code> role.
-        Its value is an integer equal to the total number of columns available.
-        If the total number of columns is unknown, a value of <code>-1</code> may be specified.
-        Using a value of <code>-1</code> indicates that more columns are available to include in the DOM without specifying the size of the available supply.
+        <code>aria-colcount</code>는 <code>table</code>, <code>grid</code>, or <code>treegrid</code> 역할(role)이 있는 요소(element)에 지정됩니다.
+        값은 사용 가능한 열의 총 개수와 동일한 정수입니다.
+        열의 총 개수를 알 수 없는 경우, <code>-1</code> 값이 지정될 수 있습니다.
+        <code>-1</code> 값을 사용하는 것은 사용 가능한 공급의 크기를 지정하지 않고 사용 가능한 더 많은 열을 DOM에 포함 시킬 수 있음을 나타냅니다.
       </p>
       <p>
-        When <code>aria-colcount</code> is used on a <code>table</code>, <code>grid</code>, or <code>treegrid</code>,
-        a value for <code>aria-colindex</code> property is either specified on each of its descendant rows or on every cell in each descendant row, depending on whether the columns are contiguous as described below.
-        The value of <code>aria-colindex</code> is an integer that is:
+        <code>table</code>, <code>grid</code>, <code>treegrid</code>에 <code>aria-colcount</code>가 사용되는 경우,
+        <code>aria-colindex</code> 속성(property) 값은 아래 기술된 대로 열이 연속되어 있는지에 따라 각 후손 행이나 후손 행의 모든 셀에 지정됩니다.
+        <code>aria-colindex</code>의 값은 다음과 같은 정수입니다:
       </p>
       <ol>
-        <li>Greater than or equal to 1.</li>
-        <li>When set on a cell, greater than the value set on any previous cell within the same row.</li>
-        <li>Set to the index of the first column in the span if a cell spans multiple columns.</li>
-        <li>Less than or equal to the total number of columns.</li>
+        <li>1 이상.</li>
+        <li>셀에 설정할 경우, 동일한 행 내의 이전 셀에 설정 된 모든 값보다 큰 값.</li>
+        <li>셀이 여러 열에 합쳐져 있을 경우, 합쳐진 첫 번째 열의 인덱스 값으로 설정.</li>
+        <li>전체 열 개수 이하.</li>
       </ol>
       <p>
-        <strong>WARNING!</strong> Missing or inconsistent values of <code>aria-colindex</code> could have devastating effects on assistive technology behavior.
-        For example, specifying an invalid value for <code>aria-colindex</code> or setting it on some but not all cells in a row, could cause screen reader table reading functions to skip cells or simply stop functioning.
+        <strong>주의!</strong> <code>aria-colindex</code>의 누락 또는 부적합한 값은 보조 기술 동작에 치명적인 영향을 미칠 수 있습니다.
+        예를 들어, <code>aria-colindex</code>에 유효하지 않은 값을 지정하거나 행의 모든 셀이 아니라 일부에만 설정하는 것은 스크린리더 테이블 낭독 기능이 셀을 건너 뛰거나 단순히 기능을 중지 시키게 할 수 있습니다.
       </p>
       <section id="gridAndTableProperties_cols_contiguous">
-        <h4>Using <code>aria-colindex</code> When Column Indices Are Contiguous</h4>
+        <h4>열 인덱스가 연속적일 때 <code>aria-colindex</code> 사용</h4>
         <p>
-          When all the cells in a row have column index numbers that are consecutive integers,
-          <code>aria-colindex</code> can be set on the row element with a value equal to the index number of the first column in the set.
-          Browsers will then compute a column number for each cell in the row.
+          행의 모든 셀이 연속적인 정수인 열 인덱스 번호를 가지는 경우,
+          <code>aria-colindex</code>가 세트의 첫 번째 열의 인덱스 번호와 동일한 값이 행 요소(element)에 설정될 수 있습니다.
+          브라우저는 행의 각 셀의 열 번호를 계산합니다.
         </p>
         <p>
-          The following code shows a grid with 16 columns, of which columns 2 through 5 are displayed to the user.
-          Because the set of columns is contiguous, <code>aria-colindex</code> can be placed on each row.
+          다음의 코드는 사용자에게 2 ~ 5까지의 열이 표시 된 16개 열을 가진 그리드를 보여줍니다.
+          열 세트가 연속적이기 때문에, <code>aria-colindex</code>가 각 행에 배치될 수 있습니다.
         </p>
         <pre>
         <code>
 &lt;div role="grid" aria-colcount="16"&gt;
   &lt;div role="rowgroup"&gt;
     &lt;div role="row" <strong>aria-colindex="2"</strong>&gt;
-      &lt;span role="columnheader"&gt;First Name&lt;/span&gt;
-      &lt;span role="columnheader"&gt;Last Name&lt;/span&gt;
-      &lt;span role="columnheader"&gt;Company&lt;/span&gt;
-      &lt;span role="columnheader"&gt;Address&lt;/span&gt;
+      &lt;span role="columnheader"&gt;이름&lt;/span&gt;
+      &lt;span role="columnheader"&gt;성&lt;/span&gt;
+      &lt;span role="columnheader"&gt;회사&lt;/span&gt;
+      &lt;span role="columnheader"&gt;주소&lt;/span&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div role="rowgroup"&gt;
@@ -6157,45 +6157,45 @@
 </pre>
       </section>
       <section id="gridAndTableProperties_cols_noncontiguous">
-        <h4>Using <code>aria-colindex</code> When Column Indices Are Not Contiguous</h4>
+        <h4>열 인덱스가 비연속적일 때 <code>aria-colindex</code> 사용</h4>
         <p>
-          When the cells in a row have column index numbers that are not consecutive integers, <code>aria-colindex</code> needs to be set on each cell in the row.
-          The following example shows a grid for an online grade book where the first two columns contain a student name and subsequent columns contain scores.
-          In this example, the first two columns with the student name are shown, but the score columns have been scrolled to show columns 10 through 13.
-          Columns 3 through 9 are not visible so are not in the DOM.
+          행의 셀이 비연속적인 정수인 열 인덱스 번호를 가지는 경우, <code>aria-colindex</code>는 행의 각 셀에 설정 되어야 합니다.
+          다음 예제는 처음 두 열이 학생 이름을 포함하고 이후 열들이 점수를 포함하는 온라인 성적표에 대한 그리드를 보여줍니다.
+          이 예에서, 학생 이름이 있는 첫 두 열은 표시되고, 점수 열은 10 ~ 13 열을 표시하도록 스크롤 되었습니다.
+          열 3 ~ 9는 표시되지 않으므로 DOM에 없습니다.
         </p>
         <pre>
           <code>
             &lt;table role=&quot;grid&quot; aria-rowcount=&quot;463&quot; aria-colcount=&quot;13&quot;&gt;
-              aria-label=&quot;Student grades for history 101&quot;
+              aria-label=&quot;역사 101에 대한 학생 성적&quot;
               &lt;!--
-                aria-rowcount and aria-colcount tell assistive technologies
-                the actual size of the grid is 463 rows by 13 columns,
-                which is not the number rows and columns found in the markup.
+                aria-rowcount와 aria-colcount는 보조 기술에
+                그리드의 실제 크기가 463개 행 x 13개 열 임을 알려주며,
+                이는 마크업에서 발견되는 행과 열의 수가 아닙니다.
               --&gt;
               &lt;thead&gt;
                 &lt;tr aria-rowindex=&quot;1&quot;&gt;
                   &lt;!--
-                    aria-colindex tells assistive technologies that the
-                    following columns represent columns 1 and 2 of the total data set.
+                    aria-colindex는 보조기술에
+                    다음 열이 전체 데이터 세트의 1, 2열을 나타냄을 전달합니다.
                   --&gt;
-                  &lt;th aria-colindex=&quot;1&quot;&gt;Last Name&lt;/th&gt;
-                  &lt;th aria-colindex=&quot;2&quot;&gt;First Name&lt;/th&gt;
+                  &lt;th aria-colindex=&quot;1&quot;&gt;성&lt;/th&gt;
+                  &lt;th aria-colindex=&quot;2&quot;&gt;이름&lt;/th&gt;
                   &lt;!--
-                    aria-colindex tells users of assistive technologies that the
-                    following columns represent columns 10, 11, 12, and 13 of
-                    the overall data set of grades.
+                    aria-colindex는 보조기술 사용자에게
+                    다음 열이 전체 성적 데이터 세트의 10, 11, 12, 13열을 나타냄을
+                    전달합니다.
                   --&gt;
-                  &lt;th aria-colindex=&quot;10&quot;&gt;Homework 4&lt;/th&gt;
-                  &lt;th aria-colindex=&quot;11&quot;&gt;Quiz 2&lt;/th&gt;
-                  &lt;th aria-colindex=&quot;12&quot;&gt;Homework 5&lt;/th&gt;
-                  &lt;th aria-colindex=&quot;13&quot;&gt;Homework 6&lt;/th&gt;
+                  &lt;th aria-colindex=&quot;10&quot;&gt;숙제 4&lt;/th&gt;
+                  &lt;th aria-colindex=&quot;11&quot;&gt;시험 2&lt;/th&gt;
+                  &lt;th aria-colindex=&quot;12&quot;&gt;숙제 5&lt;/th&gt;
+                  &lt;th aria-colindex=&quot;13&quot;&gt;숙제 6&lt;/th&gt;
                 &lt;/tr&gt;
               &lt;/thead&gt;
               &lt;tbody&gt;
                 &lt;tr aria-rowindex=&quot;50&quot;&gt;
                   &lt;!--
-                    every cell needs to define the aria-colindex attribute
+                    모든 셀은 aria-colindex 속성(attribute)을 정의해야 합니다
                   --&gt;
                   &lt;td aria-colindex=&quot;1&quot;&gt;Henderson&lt;/td&gt;
                   &lt;td aria-colindex=&quot;2&quot;&gt;Alan&lt;/td&gt;
@@ -6227,51 +6227,51 @@
       </section>
     </section>
     <section id="gridAndTableProperties_spans">
-      <h3>Defining cell spans using <code>aria-colspan</code> and <code>aria-rowspan</code></h3>
+      <h3><code>aria-colspan</code>과 <code>aria-rowspan</code>를 사용하여 셀 합치기 정의</h3>
       <p>
-        For tables, grids, and treegrids  created using elements other than HTML <code>table</code> elements,
-        row and column spans are defined with the <code>aria-rowspan</code> and <code>aria-colspan</code> properties.
+        HTML <code>table</code> 요소(elmeent)가 아닌 요소(element)를 사용하여 tables, grids, treegrids이 생성된 경우,
+        행과 열 합침은 <code>aria-rowspan</code>과 <code>aria-colspan</code> 속성(property)으로 정의됩니다.
       </p>
-      <p>The value of <code>aria-colspan</code> is an integer that is:</p>
+      <p><code>aria-colspan</code>의 값은 다음과 같은 정수입니다:</p>
       <ol>
-        <li>Greater than or equal to 1.</li>
-        <li>less than the value that would cause the cell to overlap the next cell in the same row.</li>
+        <li>1 이상.</li>
+        <li>동일 행의 다음 셀과 겹쳐지게 되는 값보다 작은 값</li>
       </ol>
-      <p>The value of <code>aria-rowspan</code> is an integer that is:</p>
+      <p><code>aria-rowspan</code>의 값은 다음과 같은 정수입니다:</p>
       <ol>
-        <li>Greater than or equal to 0.</li>
-        <li>0 means the cell spans all the remaining rows in its row group.</li>
-        <li>less than the value that would cause the cell to overlap the next cell in the same column.</li>
+        <li>0 이상.</li>
+        <li>0은 행 그룹의 나머지 모든 행 합침을 의미합니다.</li>
+        <li>동일 열의 다음 셀과 겹쳐지게 되는 값보다 작은 값.</li>
       </ol>
       <p>
-        The following example grid has a two row header.
-        The first two columns have headers that span both rows of the header.
-        The subsequent 6 columns are grouped into 3 pairs with headers in the first row that each span two columns.
+        다음 예제 그리드는 두 개의 행 헤더를 가집니다.
+        첫 두 열은 헤더의 모든 행에 걸쳐진 헤더를 가집니다.
+        이후 6개 열은 첫번째 행의 헤더로 각 2개 열이 합쳐진 3쌍으로 그룹핑 됩니다.
       </p>
       <pre>
         <code>
           &lt;div role=&quot;grid&quot; aria-rowcount=&quot;463&quot;&gt;
-            aria-label=&quot;Student grades for history 101&quot;
+            aria-label=&quot;역사 101에 대한 학생 성적&quot;
             &lt;div role=&quot;rowgroup&quot;&gt;
               &lt;div role=&quot;row&quot; aria-rowindex=&quot;1&quot;&gt;
                   &lt;!--
-                    aria-rowspan and aria-colspan provide
-                    assistive technologies with the correct data cell header information
-                    when header cells span more than one row or column.
+                    aria-rowspan와 aria-colspan는
+                    헤더 셀이 하나 이상의 행 또는 열로 합쳐질 경우
+                    올바른 데이터 셀 헤더 정보를 보조기술에 제공합니다.
                   --&gt;
-                  &lt;span role="columnheader" aria-rowspan=&quot;2&quot;&gt;Last Name&lt;/span&gt;
-                  &lt;span role="columnheader" aria-rowspan=&quot;2&quot;&gt;First Name&lt;/span&gt;
-                  &lt;span role="columnheader" aria-colspan=&quot;2&quot;&gt;Test 1&lt;/span&gt;
-                  &lt;span role="columnheader" aria-colspan=&quot;2&quot;&gt;Test 2&lt;/span&gt;
-                  &lt;span role="columnheader" aria-colspan=&quot;2&quot;&gt;Final&lt;/span&gt;
+                  &lt;span role="columnheader" aria-rowspan=&quot;2&quot;&gt;성&lt;/span&gt;
+                  &lt;span role="columnheader" aria-rowspan=&quot;2&quot;&gt;이름&lt;/span&gt;
+                  &lt;span role="columnheader" aria-colspan=&quot;2&quot;&gt;시험 1&lt;/span&gt;
+                  &lt;span role="columnheader" aria-colspan=&quot;2&quot;&gt;시험 2&lt;/span&gt;
+                  &lt;span role="columnheader" aria-colspan=&quot;2&quot;&gt;최종&lt;/span&gt;
               &lt;/div&gt;
               &lt;div role=&quot;row&quot; aria-rowindex=&quot;2&quot;&gt;
-                  &lt;span role="columnheader"&gt;Score&lt;/span&gt;
-                  &lt;span role="columnheader"&gt;Grade&lt;/span&gt;
-                  &lt;span role="columnheader"&gt;Score&lt;/span&gt;
-                  &lt;span role="columnheader"&gt;Grade&lt;/span&gt;
-                  &lt;span role="columnheader"&gt;Total&lt;/span&gt;
-                  &lt;span role="columnheader"&gt;Grade&lt;/span&gt;
+                  &lt;span role="columnheader"&gt;점수&lt;/span&gt;
+                  &lt;span role="columnheader"&gt;등급&lt;/span&gt;
+                  &lt;span role="columnheader"&gt;점수&lt;/span&gt;
+                  &lt;span role="columnheader"&gt;등급&lt;/span&gt;
+                  &lt;span role="columnheader"&gt;점수&lt;/span&gt;
+                  &lt;span role="columnheader"&gt;등급&lt;/span&gt;
               &lt;/div&gt;
             &lt;/div&gt;
             &lt;div role=&quot;rowgroup&quot;&gt;
@@ -6310,61 +6310,60 @@
         </code>
       </pre>
       <p>
-        <strong>Note:</strong> When using HTML <code>table</code> elements,
-        use the native semantics of the <code>th</code> and <code>td</code> elements to define row and column spans
-        by using the <code>rowspan</code> and <code>colspan</code> attributes.
+        <strong>참고:</strong> <code>table</code> 요소(element)를 사용하는 경우, 열과 행 합침을 정의하도록
+        <code>rowspan</code>과 <code>colspan</code> 속성(attribute)을 사용하여 <code>th</code>와 <code>td</code>의 기본 의미론을 사용하세요.
       </p>
     </section>
     <section id="gridAndTableProperties_sort">
-      <h3>Indicating sort order with <code>aria-sort</code></h3>
+      <h3><code>aria-sort</code>로 정렬 순서 나타내기</h3>
       <p>
-        When rows or columns are sorted, the <code>aria-sort</code> property can be applied to a column or row header to indicate the sorting method.
-        The following table describes allowed values for <code>aria-sort</code>.
+        행 또는 열이 정렬되는 경우, <code>aria-sort</code> 속성(property)이 정렬 방법을 나타내기 위해 열이나 행 헤더에 적용될 수 있습니다.
+        다음 표는 <code>aria-sort</code>에 허용된 값을 설명합니다.
       </p>
       <table class="widget-features">
         <caption>
-          Description of values for <code>aria-sort</code>
+          <code>aria-sort</code>에 대한 값 설명
         </caption>
         <thead>
           <tr>
-            <th>Value</th>
-            <th>Description</th>
+            <th>값</th>
+            <th>설명</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th><code>ascending</code></th>
-            <td>Data are sorted in ascending order.</td>
+            <td>데이터가 오름차순으로 정렬됩니다.</td>
           </tr>
           <tr>
             <th><code>descending</code></th>
-            <td>Data are sorted in descending order.</td>
+            <td>데이터가 내림차순으로 정렬됩니다.</td>
           </tr>
           <tr>
             <th><code>other</code></th>
-            <td>Data are sorted by an algorithm other than ascending or descending.</td>
+            <td>데이터가 오름차순 또는 내림차순 이외의 알고리즘으로 정렬됩니다.</td>
           </tr>
           <tr>
             <th><code>none</code></th>
-            <td>Default (no sort applied).</td>
+            <td>기본 (정렬이 적용되지 않음).</td>
           </tr>
         </tbody>
       </table>
       <p>
-        It is important to note that ARIA does not provide a way to indicate levels of sort for data sets that have multiple sort keys.
-        Thus, there is limited value to applying <code>aria-sort</code> with a value other than <code>none</code> to more than one column or row.
+        ARIA가 여러 정렬 키를 가진 데이터 세트에 대한 정렬의 수준을 나타내는 방법을 제공하지 않는다는 점에 유의해야 합니다.
+        따라서, 둘 이상의 열이나 행에 <code>none</code> 이외의 값을 가진 <code>aria-sort</code>를 적용하는데 제한적인 값이 있습니다.
       </p>
-      <p>The following example grid uses <code>aria-sort</code> to indicate the rows are sorted from the highest "Quiz 2" score to the lowest "Quiz 2" score.</p>
+      <p>다음 예제 그리드는 행이 최고 "Quiz 2" 점수부터 최저 "Quiz 2" 점수로 정렬되었음을 나타내는데 <code>aria-sort</code>를 사용합니다.</p>
       <pre>
         <code>
           &lt;table role=&quot;grid&quot; aria-rowcount=&quot;463&quot; aria-colcount=&quot;13&quot;
-            aria-label=&quot;Student grades for history 101&quot;&gt;
+            aria-label=&quot;역사 101에 대한 학생 성적&quot;&gt;
             &lt;thead&gt;
               &lt;tr aria-colindex=&quot;10&quot; aria-rowindex=&quot;1&quot;&gt;
                 &lt;th&gt;Homework 4&lt;/th&gt;
                 &lt;!--
-                  aria-sort indicates the column with the heading
-                  "Quiz 2" has been used to sort the rows of the grid.
+                  aria-sort가 헤딩 "Quiz 2"를 가진 열이 그리드의 행을
+                  정렬하는데 사용되었음을 나타냅니다.
                 --&gt;
                 &lt;th aria-sort=&quot;descending&quot;&gt;Quiz 2&lt;/th&gt;
                 &lt;th&gt;Homework 5&lt;/th&gt;
