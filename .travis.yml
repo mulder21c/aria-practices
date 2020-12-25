@@ -37,7 +37,7 @@ jobs:
       script: node test/util/report.js
       env: ALLOW_FAILURE=true
     - stage: Deploy
-      if: branch = master
+      if: branch = master AND type != pull_request
       script: skip
       before_deploy: scripts/travis-before_deploy.sh
       deploy:
