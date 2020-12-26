@@ -15,8 +15,6 @@
  * limitations under the License.
  */
 
-'use strict';
-
 // Removes the "tablist" role from bootstrap.js "nav" class objects
 $(document).ready(function (e) {
   $('ul.nav-stacked').removeAttr('role');

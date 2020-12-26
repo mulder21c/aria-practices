@@ -15,8 +15,6 @@
  * limitations under the License.
  */
 
-'use strict';
-
 $('#myTabs a').click(function (e) {
   e.preventDefault();
   $(this).tab('show');
