@@ -6428,9 +6428,9 @@
   </section>
 
   <section id="range_related_properties">
-    <h2>Communicating Value and Limits for Range Widgets</h2>
+    <h2>범위 위젯에 대한 값과 제한 전달</h2>
     <p>
-      ARIA defines the following roles as range widgets, which means they communicate a value that is typically numeric and constrained to defined limits.
+      ARIA는 다음 역할(role)을 범위 위젯으로 정의하고, 이는 일반적으로 숫자이고 한도를 정의하기 위해 강제 된 값을 전달한다는 것을 의미합니다.
     </p>
     <ul>
       <li><code>meter</code></li>
@@ -6441,67 +6441,67 @@
       <li><code>spinbutton</code></li>
     </ul>
     <p>
-      For example, a spin button for choosing a day within the month of January would allow integer values that range from 1 to 31.
-      In some cases, the value is represented numerically, but is not presented as a number to users.
-      For instance, a spin button for choosing a day of the week could support values from 1 to 7 but they could be presented to the user as day names, e.g., "Monday", "Tuesday", etc.
+      예를 들어, 1월의 날짜를 선택하는 스핀 버튼은 1 ~ 31까지 범위의 정수 값을 허용합니다.
+      경우에 따라, 값은 숫자로 나타나지만, 사용자에게 숫자로 표시되지 않습니다.
+      일례로, 요일을 선택하는 스핀 버튼은 1 ~ 7까지의 값을 지원할 수 있지만, 사용자에게는 요일 이름 예를 들어, "월요일", "화요일" 등으로 표시될 수 있습니다.
     </p>
     <p>
-      This section describes considerations for using the following four properties that communicate characteristics of a range widget:
+      이 섹션은 범위 위젯의 특성을 전달하는 다음의 4가지 속성(property)에 대한 고려사항을 설명합니다:
     </p>
     <table>
       <thead>
         <tr>
-          <th>Property</th>
-          <th>Definition</th>
+          <th>속성(property)</th>
+          <th>정의</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th><code>aria-valuemin</code></th>
-          <td>Defines the minimum value allowed by a range widget.</td>
+          <td>범위 위젯에 허용된 최소 값을 정의.</td>
         </tr>
         <tr>
           <th><code>aria-valuemax</code></th>
-          <td>Defines the maximum value allowed by a range widget.</td>
+          <td>범위 위젯에 허용된 최대 값을 정의.</td>
         </tr>
         <tr>
           <th><code>aria-valuenow</code></th>
-          <td>Defines the current value of a range widget. This value is a number greater than or equal to <code>aria-valuemin</code> and less than or equal to <code>aria-valuemax</code> (if they are specified).</td>
+          <td>범위 위젯의 현재 값을 정의. 이 값은 (지정되었다면) <code>aria-valuemin</code> 이상의 숫자이고 <code>aria-valuemax</code> 이하의 값입니다.</td>
         </tr>
         <tr>
           <th><code>aria-valuetext</code></th>
-          <td>If a numeric value is not sufficiently descriptive, this property can define a text description of the current value of a range widget.</td>
+          <td>숫자 값이 충분히 설명적이지 않은 경우, 이 속성이 범위 위젯의 현재 값의 텍스트 설명을 정의할 수 있습니다.</td>
         </tr>
       </tbody>
     </table>
 
     <section id="range_related_properties_using_aria-valuemin_aria-valuemax_and_aria-valuenow">
-      <h3>Using <code>aria-valuemin</code>, <code>aria-valuemax</code> and <code>aria-valuenow</code></h3>
+      <h3><code>aria-valuemin</code>, <code>aria-valuemax</code>, <code>aria-valuenow</code> 사용하기</h3>
       <p>
-        When the value of a range widget is constrained to known limits, the <code>aria-valuemin</code> and <code>aria-valuemax</code> properties are used to inform assistive technologies of the minimum and maximum values of the range.
-        For some widgets, assistive technologies use this information to present the current value as a percentage.
-        When using these properties, set <code>aria-valuemin</code> to the lowest value allowed for the widget and <code>aria-valuemax</code> to the highest allowed value.
-        If values for <code>aria-valuemin</code> and <code>aria-valuemax</code> are not set, default values are exposed to assistive technologies unless the widget is a <code>spinbutton</code>, which is the only range widget that does not have default limits.
+        범위 위젯의 값이 알려진 한도로 제한되는 경우, <code>aria-valuemin</code>과 <code>aria-valuemax</code> 속성(property)이 보조 기술에 범위의 최소와 최대값을 알리는데 사용됩니다.
+        일부 위젯의 경우, 보조 기술은 현재 값을 백분율로 표시하는데 이 정보를 사용합니다.
+        이 속성(property)을 사용하는 경우, <code>aria-valuemin</code>를 위젯에 허용된 가장 낮은 값으로, <code>aria-valuemax</code>를 허용된 가장 높은 값으로 설정하세요.
+        <code>aria-valuemin</code>과 <code>aria-valuemax</code>에 대한 값이 설정되지 않았다면, 위젯이 기본 한도를 가지지 않는 유일한 범위 위젯인 <code>spinbutton</code>이 아닌 한 보조 기술에 기본 값이 노출됩니다.
       </p>
       <p>
-        The <code>aria-valuenow</code> property is used to inform assistive technologies of the current value of a range widget.
-        Set <code>aria-valuenow</code> to the current value of the widget, ensuring the value of <code>aria-valuenow</code> falls within the range defined by <code>aria-valuemin</code> and <code>aria-valuemax</code>.
-        If the current value of a <code>progressbar</code> or <code>spinbutton</code> is indeterminate or unknown, omit the <code>aria-valuenow</code> property.
-        The <code>aria-valuenow</code> property is required for the <code>meter</code>, <code>scrollbar</code>, <code>separator</code> (if the element is focusable), and <code>slider</code> roles.
+        <code>aria-valuenow</code> 속성(property)은 보조 기술에 범위 위젯의 현재 값을 알리는데 사용됩니다.
+        <code>aria-valuenow</code>의 값이 <code>aria-valuemin</code>과 <code>aria-valuemax</code>에 정의된 범위에 들어가게 하여,  <code>aria-valuenow</code>를 위젯의 현재 값으로 설정하세요.
+        <code>progressbar</code>나 <code>spinbutton</code>의 현재 값을 가늠할 수 없거나 알 수 없는 경우, <code>aria-valuenow</code> 속성(property)을 생략하세요.
+        <code>aria-valuenow</code> 속성(property)은 <code>meter</code>, <code>scrollbar</code>, <code>separator</code> (요소가 초점을 얻을 수 있는 경우), <code>slider</code> 역할(role)에 필요합니다.
       </p>
       <p>
-        The range widget roles have the following default values and requirements for <code>aria-valuemin</code>, <code>aria-valuemax</code> and <code>aria-valuenow</code>.
+        범위 위젯 역할(role)은 다음의 기본 값과 <code>aria-valuemin</code>, <code>aria-valuemax</code>, <code>aria-valuenow</code>에 대한 요구사항을 가집니다.
       </p>
       <table>
         <thead>
 
           <tr>
-            <th scope="col">Role</th>
-            <th scope="col"><code>aria-valuemin</code><br>(default)</th>
-            <th scope="col"><code>aria-valuemax</code><br>(default)</th>
-            <th scope="col"><code>aria-valuemin</code><br>(required)</th>
-            <th scope="col"><code>aria-valuemax</code><br>(required)</th>
-            <th scope="col"><code>aria-valuenow</code><br>(required)</th>
+            <th scope="col">역할(role)</th>
+            <th scope="col"><code>aria-valuemin</code><br>(기본 값)</th>
+            <th scope="col"><code>aria-valuemax</code><br>(기본 값)</th>
+            <th scope="col"><code>aria-valuemin</code><br>(필수)</th>
+            <th scope="col"><code>aria-valuemax</code><br>(필수)</th>
+            <th scope="col"><code>aria-valuenow</code><br>(필수)</th>
           </tr>
         </thead>
         <tbody>
@@ -6530,7 +6530,7 @@
             <td>Yes</td>
           </tr>
           <tr>
-            <th scope="row"><code>separator</code> <small>(if focusable)</small></th>
+            <th scope="row"><code>separator</code> <small>(초점을 얻을 수 있는 경우)</small></th>
             <td>0</td>
             <td>100</td>
             <td>No</td>
@@ -6558,52 +6558,52 @@
     </section>
 
     <section id="range_related_properties_using_aria-valuetext">
-      <h3>Using <code>aria-valuetext</code></h3>
+      <h3><code>aria-valuetext</code>사용하기</h3>
 
       <p>
-        When the element's values are contained within a range but those values are not numeric (such as "small", "medium" and "large"),
-        or they are numeric but there is value in communicating more information than just a number,
-        <code>aria-valuetext</code> is used to surface the text value to assistive technologies.
-        Only use <code>aria-valuetext</code> when <code>aria-valuenow</code> is not sufficiently meaningful for users because using <code>aria-valuetext</code> will prevent assistive technologies from communicating <code>aria-valuenow</code>.
+        요소(element)의 값이 범위 내에 포함되어 있지만 그 값이 ("작음", "중간", "큼"과 같이) 숫자가 아닌 경우,
+        또는 숫자이지만 숫자만으로보다는 더 많은 정보를 전달하는 것에 가치가 있는 경우,
+        <code>aria-valuetext</code>가 보조 기술에 텍스트 값을 드러내는데 사용됩니다.
+        <code>aria-valuetext</code>를 사용하는 것은 보조 기술이 <code>aria-valuenow</code>과 통신하는 것을 방해하므로 <code>aria-valuenow</code>이 사용자에게 충분히 유의미하지 않은 경우 <code>aria-valuetext</code>만 사용하세요.
       </p>
 
       <div class="example">
         <p>
-          For example, for a battery indicator, it would be useful to know how many minutes are remaining, in addition to the percentage of charge remaining.
+          예를 들어, 배터리 표시기의 경우, 남은 충전 비율과 함께, 남은 시간(분)을 아는 것이 유용할 것입니다.
         </p>
 
         <pre><code>
-  &lt;span id="battery-label"&gt;Battery&lt;/span&gt;
+  &lt;span id="battery-label"&gt;배터리&lt;/span&gt;
   &lt;span role="meter" aria-labelledby="battery-label"
     aria-valuenow="5"
-    aria-valuetext="5%, 18 minutes remaining."&gt;
+    aria-valuetext="5%, 18 분 남음."&gt;
   &lt;/span&gt;
         </code></pre>
       </div>
     </section>
 
     <section id="range_related_properties_meter_role">
-      <h3>Range properties with meter</h3>
+      <h3>meter 범위 속성(property)</h3>
       <p>
-        The <code>aria-valuemin</code> and <code>aria-valuemax</code> properties only need to be set for elements with role <code>meter</code> if the meter's minimum value is not 0 or its maximum value is not 100.
-        It is necessary, however, to always specify a value for <code>aria-valuenow</code> and to ensure the value is greater than or equal to the minimum allowed value and less than or equal to the maximum allowed value.
-        A detailed description of the <code>meter</code> role is in the <a href="#meter">meter design pattern</a>.</p>
+        <code>aria-valuemin</code>과 <code>aria-valuemax</code> 속성(property)은 meter의 최소 값이 0이 아니거나 최대 값이 100이 아닌 경우 <code>meter</code> 역할(role)을 가진 요소(element)에 설정하는데에만 필요합니다.
+        하지만, <code>aria-valuenow</code>에 대한 값을 항상 지정하고 값이 허용 된 최소 값 이상이고 허용 된 최대 값 이상임을 보장해야 할 필요가 있습니다.
+        <code>meter</code> 역할(role)의 자세한 설명은 <a href="#meter">meter 설계 패턴</a>에 있습니다.</p>
 
-      <p>This example of a meter shows the current Central Processing Unit (CPU) usage. </p>
+      <p>이 meter의 예는 현재 중앙 처리 장치(CPU) 사용량을 보여줍니다. </p>
 
-      <pre><code>&lt;span id="cpu_usage_label"&gt;CPU usage&lt;/span&gt;
-&lt;!-- The CPU usage uses the default values of 0 and 100 for aria-valuemin and aria-valuemax --&gt;
+      <pre><code>&lt;span id="cpu_usage_label"&gt;CPU 사용량&lt;/span&gt;
+&lt;!-- CPU 사용량은 aria-valuemin과 aria-valuemax에 대해 0과 100의 기본 값을 사용합니다 --&gt;
 &lt;div role="meter"
       aria-valuenow="90"
       aria-labelledby="cpu_usage_label"&gt;
 &lt;/div&gt;</code></pre>
 
       <p>
-        The <code>aria-valuetext</code> property can be set to a string that makes the meter value understandable. For example, a CPU usage meter value might be conveyed as <code>aria-valuetext="90% of CPU is being used"</code>.
+        <code>aria-valuetext</code> 속성(property)은 meter 값을 이해할 수 있게 하는 문자열로 설정 될 수 있습니다. 예를 들어, CPU 사용량 meter 값은 <code>aria-valuetext="CPU의 90% 사용 중"</code>으로 전달 될 수 있습니다.
       </p>
-      <p>Here is another example of a meter that has a range different from the default of 0 for <code>aria-valuemin</code> and 100 for <code>aria-valuemax</code>.</p>
+      <p><code>aria-valuemin</code> 기본 값 0과 <code>aria-valuemax</code> 기본 값 100과는 다른 범위를 가지는 meter의 다른 예가 있습니다.</p>
 
-      <pre><code>&lt;span id="ph_alkaline_meter_label"&gt;Alkaline pH(Power of Hydrogen) Level&lt;/span&gt;
+      <pre><code>&lt;span id="ph_alkaline_meter_label"&gt;알카라인 pH(산성도) 수준&lt;/span&gt;
 &lt;div role="meter"
         aria-valuenow="9"
         aria-valuemin="7"
@@ -6612,17 +6612,17 @@
 &lt;/div&gt;</code></pre>
     </section>
     <section id="range_related_properties_progressbar_role">
-      <h3>Range properties with progress bars</h3>
+      <h3>progress bars 범위 속성(property)</h3>
 
       <p>
-        The <code>aria-valuemin</code> and <code>aria-valuemax</code> properties only need to be set for the <code>progressbar</code> role when the progress bar's minimum is not 0 or the maximum value is not 100.
-        The aria-valuenow property needs to be set for a <code>progressbar</code> if its value is known (e.g. not indeterminate).
-        If the <code>aria-valuenow</code> property is set, the author needs to make sure it is within the minimum and maximum values.
+        <code>aria-valuemin</code>과 <code>aria-valuemax</code> 속성(property)은 진행 바의 최소 값이 0이 아니거나 최대 값이 100이 아닌 경우 <code>progressbar</code> 역할(role)에 설정하는데에만 필요합니다.
+        <code>aria-valuenow</code> 속성(property)은 값이 알려진 경우 (예를 들어 불명확하지 않은) <code>progressbar</code>에 설정하는데 필요합니다.
+        <code>aria-valuenow</code> 속성(property)가 설정되는 경우, 작성자는 최소 그리고 최대 값 내로 만들 필요가 있습니다.
       </p>
-      <p>Following is an example of a progress bar represented by an SVG.</p>
+      <p>다음은 SVG로 표시되는 진행 바의 예입니다.</p>
 
-      <pre><code>&lt;div&gt;&lt;span id="loadlabel"&gt;Loading:&lt;/span&gt;
-  &lt;!-- The progress bar uses the default values of 0 and 100 for aria-valuemin and aria-valuemax --&gt;
+      <pre><code>&lt;div&gt;&lt;span id="loadlabel"&gt;로딩:&lt;/span&gt;
+  &lt;!-- 진행 바는 aria-valuemin과 aria-valuemax에 0과 100의 기본 값을 사용합니다 --&gt;
   &lt;span role="progressbar"
         aria-labelledby="loadlabel"
         aria-valuenow="33" &gt;
@@ -6632,25 +6632,25 @@
     &lt;/svg&gt;
   &lt;/span&gt;
 &lt;/div&gt;</code></pre>
-      <p>This progress bar can also be made using the native HTML <code>progress</code> element.</p>
+      <p>이 진행 바는 네이티브 HTML <code>progress</code> 요소(element)를 사용하여 만들 수 있습니다.</p>
 
-      <pre><code>&lt;label for="loadstatus"&gt;Loading:&lt;/label&gt;
+      <pre><code>&lt;label for="loadstatus"&gt;로딩:&lt;/label&gt;
 &lt;progress id="loadstatus" max="100" value="33"&gt;&lt;/progress&gt;
       </code></pre>
 
-      <p>To represent an indeterminate progress bar where the value range is unknown, omit the <code>aria-valuenow</code> attribute.</p>
+      <p>값 범위가 알 수 없는 경우 불명확한 진행 바를 나타내기 위해, <code>aria-valuenow</code> 속성(attribute)을 생략하세요.</p>
 
-      <pre><code>&lt;img role="progressbar" src="spinner.gif" alt="Loading..."&gt;</code></pre>
+      <pre><code>&lt;img role="progressbar" src="spinner.gif" alt="로딩..."&gt;</code></pre>
     </section>
 
     <section id="range_related_properties_scrollbar_role">
-      <h3>Range properties with scrollbars</h3>
+      <h3>scrollbars 범위 속성(property)</h3>
 
       <p>
-        The <code>aria-valuemin</code> and <code>aria-valuemax</code> properties only need to be set for the <code>scrollbar</code> role when it's minimum value is not 0 or the maximum value is not 100.   The <code>aria-valuenow</code> property is required for <code>scrollbar</code> and the author needs to make sure it is within the minimum and maximum values.
+        <code>aria-valuemin</code>과 <code>aria-valuemax</code> 속성(property)은 최소 값이 0이 아니거나 최대 값이 100이 아닌 경우 <code>scrollbar</code> 역할(role)에 설정하는데에만 필요합니다. <code>aria-valuenow</code> 속성(property)은 <code>scrollbar</code>에 필수이고 작성자는 최소 그리고 최대 값 내로 만들 필요가 있습니다.
       </p>
       <p>
-        <code>aria-valuenow</code> will generally be exposed as a percentage between <code>aria-valuemin</code> and <code>aria-valuemax</code> calculated by assistive technologies.
+        <code>aria-valuenow</code>은 일반적으로 보조 기술에 의해 계산되어 <code>aria-valuemin</code>과 <code>aria-valuemax</code> 사이의 백분율로 노출될 것입니다.
       </p>
 
       <pre><code>&lt;span id="pi-label"&gt;Pi&lt;/div&gt;
@@ -6658,7 +6658,7 @@
 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
 &lt;/div&gt;
 &lt;div class="rail"&gt;
-&lt;!-- The scrollbar uses the default values of 0 and 100 for aria-valuemin and aria-valuemax --&gt;
+&lt;!-- scrollbar는 aria-valuemin과 aria-valuemax에 0과 100의 기본값을 사용합니다 --&gt;
   &lt;div
     class="thumb"
     role="scrollbar"
@@ -6673,67 +6673,68 @@
     </section>
 
     <section id="range_related_properties_slider_role">
-      <h3>Range properties with sliders</h3>
+      <h3>sliders 범위 속성(property)</h3>
       <p>
-        The <code>aria-valuemin</code> and <code>aria-valuemax</code> properties only need to be set for the <code>slider</code> role when the slider's minimum is not 0 or the maximum value is not 100.
-        The <code>aria-valuenow</code> property is required for <code>slider</code> role and the author needs to make sure it is within the minimum and maximum values.
-        A detailed description of the <code>slider</code> role can be found in the <a href="#slider">slider design pattern</a> and <a href="#slidertwothumb">slider (multi-thumb) design pattern</a>.
+        <code>aria-valuemin</code>과 <code>aria-valuemax</code> 속성(property)은 슬라이더의 최소 값이 0이 아니거나 최대 값이 100이 아닌 경우 <code>slider</code> 역할(role)에 설정하는데에만 필요합니다.
+        <code>aria-valuenow</code> 속성(property)은 <code>slider</code> 역할(role)에 필수이고 작성자는 최소 그리고 최대 값 내로 만들 필요가 있습니다.
+        <code>slider</code> 역할(role)의 자세한 설명은 <a href="#slider">slider 설계 패턴</a>과 <a href="#slidertwothumb">slider (multi-thumb) 설계 패턴</a>에서 확인 할 수 있습니다.
       </p>
       <p>
-        The following example shows a temperature controller.
-        In this example, <code>aria-valuenow</code> is meaningful to the user, and so <code>aria-valuetext</code> is not used.
+        다음 예는 온도 조절기를 보여줍니다.
+        이 예에서, <code>aria-valuenow</code>는 사용자에게 유의미하므로 <code>aria-valuetext</code>가 사용되지 않습니다.
       </p>
       <pre><code>&lt;div class="rail"&gt;
   &lt;div id="thumb" role="slider" aria-valuemin="50" aria-valuenow="68" aria-valuemax="100"
-       aria-label="Temperature (F)" tabindex="0"&gt;
+       aria-label="온도 (F)" tabindex="0"&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-      <p>The slider example above can be made using the HTML <code>&lt;input type="range"&gt;</code> element.</p>
-      <pre><code>&lt;input type="range" min="50" value="68" max="100" aria-label="Temperature (F)"&gt;
-      </code></pre><p>The following example is a fan control. The <code>aria-valuenow</code> value is "1", which is not meaningful to the user. The <code>aria-valuetext</code> property is used so that assistive technology will surface its value ("low") instead.</p>
+      <p>위 슬라이더 예제는 네이티브 HTML <code>&lt;input type="range"&gt;</code> 요소(element)를 사용하여 만들 수 있습니다.</p>
+      <pre><code>&lt;input type="range" min="50" value="68" max="100" aria-label="온도 (F)"&gt;
+      </code></pre>
+      <p>다음 예는 선풍기 조절기입니다. <code>aria-valuenow</code> 값은 사용자에게 유의미하지 않은 "1" 입니다. 보조 기술이 대신 그 값("저")을 나타내도록 <code>aria-valuetext</code> 속성(property)이 사용됩니다.</p>
       <pre><code>&lt;div class="rail"&gt;
   &lt;div id="thumb" role="slider" aria-valuemin="0" aria-valuenow="1" aria-valuemax="3"
        aria-valuetext="low" aria-label="Fan speed" tabindex="0" &gt;
   &lt;/div&gt;
-  &lt;div class="value"&gt; Off &lt;/div&gt;
-  &lt;div class="value"&gt; Low &lt;/div&gt;
-  &lt;div class="value"&gt; Medium &lt;/div&gt;
-  &lt;div class="value"&gt; High &lt;/div&gt;
+  &lt;div class="value"&gt; 끔 &lt;/div&gt;
+  &lt;div class="value"&gt; 저 &lt;/div&gt;
+  &lt;div class="value"&gt; 중 &lt;/div&gt;
+  &lt;div class="value"&gt; 고 &lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </section>
 
     <section id="range_related_properties_spinbutton_role">
-      <h3>Range properties with spin buttons</h3>
+      <h3>spin buttons 범위 속성(property)</h3>
 
       <p>
-        The <code>aria-valuemin</code> and <code>aria-valuemax</code> properties are used only when a <code>spinbutton</code> has a defined range.
-        They do not have default values, so if they are not specified, range limits will not be exposed to assistive technologies.
-        Similarly, the <code>aria-valuenow</code> property is set only when a <code>spinbutton</code> has a value.
-        If it is not set, a value is not exposed to assistive technologies for the <code>spinbutton</code>.
-        <code>aria-valuetext</code> can be used when appropriate.
-        A detailed description of the <code>spinbutton</code> role can be found in the <a href="#spinbutton">spinbutton design pattern</a>.
+        <code>aria-valuemin</code>과 <code>aria-valuemax</code> 속성(property)은 <code>spinbutton</code>이 정의된 범위를 가지는 경우에만 사용됩니다.
+        기본 값이 없으므로, 정의되지 않은 경우, 범위 제한은 보조 기술에 노출되지 않습니다.
+        마찬가지로, <code>aria-valuenow</code> 속성(property)은 <code>spinbutton</code>이 값을 가지는 경우에만 설정됩니다.
+        설정되지 않은 경우, 값은 <code>spinbutton</code>에 대해 보조 기술에 노출되지 않습니다.
+        <code>aria-valuetext</code>는 적절한 경우 사용될 수 있습니다.
+        <code>spinbutton</code> 역할(role)의 자세한 설명은 <a href="#spinbutton">spinbutton 설계 패턴</a>에서 확인 할 수 있습니다.
       </p>
 
-      <p>The following example sets the price of paperclips in cents.</p>
+      <p>다음 예는 클립 가격을 센트로 설정합니다.</p>
 
       <pre><code>&lt;div role="spinbutton" aria-labelledby="price-label" aria-valuenow="50" tabindex="0"&gt;
-  &lt;button id="lower-price"&gt;Lower&lt;/button&gt;
-  &lt;button id="raise-price"&gt;Raise&lt;/button&gt;
-  &lt;span id="price-label"&gt;Price per paperclip: $&lt;/span&gt;&lt;span id="price"&gt;0.50&lt;/span&gt;
+  &lt;button id="lower-price"&gt;감소&lt;/button&gt;
+  &lt;button id="raise-price"&gt;증가&lt;/button&gt;
+  &lt;span id="price-label"&gt;클립 당 가격: $&lt;/span&gt;&lt;span id="price"&gt;0.50&lt;/span&gt;
 &lt;/div&gt;</code></pre>
 
-      <p>If there are minimum and maximum allowed values, set the <code>aria-valuemin</code> and <code>aria-valuemax</code> properties.</p>
+      <p>허용 된 최소와 최대 값이 있다면, <code>aria-valuemin</code>과 <code>aria-valuemax</code> 속성(property)을 설정하세요.</p>
 
       <pre><code>&lt;div role="spinbutton" aria-labelledby="price-label"
       aria-valuemin="1" aria-valuenow="50" aria-valuemax="200" tabindex="0"&gt;
-  &lt;button id="lower-price"&gt;Lower&lt;/button&gt;
-  &lt;button id="raise-price"&gt;Raise&lt;/button&gt;
-  &lt;span id="price-label"&gt;Price per paperclip: $&lt;/span&gt;&lt;span id="price"&gt;0.50&lt;/span&gt;
+  &lt;button id="lower-price"&gt;감소&lt;/button&gt;
+  &lt;button id="raise-price"&gt;증가&lt;/button&gt;
+  &lt;span id="price-label"&gt;클립 당 가격: $&lt;/span&gt;&lt;span id="price"&gt;0.50&lt;/span&gt;
 &lt;/div&gt;</code></pre>
 
-      <p>The spin button example above can be made using the native HTML <code>&lt;input type="number"&gt;</code> element.</p>
+      <p>위 스핀 버튼 예제는 네이티브 HTML <code>&lt;input type="number"&gt;</code> 요소(element)를 사용하여 만들 수 있습니다.</p>
 
-      <pre><code>&lt;label&gt;Price per paperclip: $&lt;input type="number" min="0.01" value="0.5" max="2" step="0.01"&gt;&lt;/label&gt;</code></pre>
+      <pre><code>&lt;label&gt;클립 당 가격: $&lt;input type="number" min="0.01" value="0.5" max="2" step="0.01"&gt;&lt;/label&gt;</code></pre>
     </section>
   </section>
 
