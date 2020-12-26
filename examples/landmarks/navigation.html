@@ -53,67 +53,11 @@
             </ul>
             <section aria-label="Coding Techniques">
               <ul id="myTabs" class="nav nav-tabs" role="tablist">
-                <li class="active"><a id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab" data-toggle="tab">ARIA 기법</a></li>
-                <li><a id="tab2" href="#tabpanel2" aria-controls="tabpanel2" role="tab" data-toggle="tab">HTML 기법</a></li>
+                <li class="active"><a id="tab2" href="#tabpanel2" aria-controls="tabpanel2" role="tab" data-toggle="tab">HTML 기법</a></li>
+                <li><a id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab" data-toggle="tab">ARIA 기법</a></li>
               </ul>
               <div class="tab-content">
-                <div  id="tabpanel1" aria-labelledby="tab1" role="tabpanel" class="tab-pane active">
-                  <p><code>navigation</code> 랜드마크를 정의하도록 <code>role="navigation"</code> 속성(attribute)이 사용됩니다.</p>
-
-                  <h2>ARIA 예: 한 개 Navigation 랜드마크</h2>
-                  <p>페이지에 하나의 navigation 랜드마크만 있다면, 레이블은 선택적입니다.</p>
-                  <div class="code">
-                    &lt;div <strong>role="navigation"</strong>&gt;<br>
-                    <br>
-                    &nbsp;&nbsp;&lt;h2&gt;<em>navigation 영역에 대한 제목</em>&lt;h2&gt;<br>
-                    <br>
-                    &nbsp;&nbsp;&lt;ul&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page1.html"&gt;Link 1&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page2.html"&gt;Link 2&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page3.html"&gt;Link 3&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page4.html"&gt;Link 4&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;.....<br>
-                    &nbsp;&nbsp;&lt;/ul&gt;<br>
-                    &lt;/div&gt;
-                  </div>
-
-                  <h3>ARIA 예: 둘 이상의 Navigation 랜드마크</h3>
-                  <p>페이지에 둘 이상의 navigation 랜드마크가 있다면, 각각은 고유한 레이블을 가져야 합니다.</p>
-                  <div class="code">
-                    &lt;div <strong>role="navigation" aria-labelledby="<em>nav1</em>"</strong>&gt;
-                    <br>
-                    <br>
-                    &nbsp;&nbsp;&lt;h2 <strong>id="<em>nav1</em>"</strong>&gt;<em>navigation 영역 1에 대한 제목</em>&lt;h2&gt;<br>
-                    <br>
-                    &nbsp;&nbsp;&lt;ul&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page11.html"&gt;Link 1&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page12.html"&gt;Link 2&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page13.html"&gt;Link 3&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page14.html"&gt;Link 4&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;.....<br>
-                    &nbsp;&nbsp;&lt;/ul&gt;<br>
-                    &lt;/div&gt;
-                    <br>
-                    <br>
-                    ....<br>
-                    <br>
-                    &lt;div <strong>role="navigation"  aria-labelledby="<em>nav2</em>"</strong>&gt;
-                    <br>
-                    <br>
-                    &nbsp;&nbsp;&lt;h2 <strong>id="<em>nav2</em>"</strong>&gt;<em>navigation 영역 2에 대한 제목</em>&lt;h2&gt;<br>
-                    <br>
-                    &nbsp;&nbsp;&lt;ul&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page21.html"&gt;Link 5&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page22.html"&gt;Link 6&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page23.html"&gt;Link 7&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page24.html"&gt;Link 8&lt;/a&gt;&lt;/li&gt;<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;.....<br>
-                    &nbsp;&nbsp;&lt;/ul&gt;<br>
-                    &lt;/div&gt;
-                  </div>
-                </div>
-
-                <div id="tabpanel2" aria-labelledby="tab2" role="tabpanel" class="tab-pane">
+                <div id="tabpanel2" aria-labelledby="tab2" role="tabpanel" class="tab-pane active">
                   <p><code>navigation</code> 랜드마크를 정의하도록 HTML <code>nav</code> 요소(element)를 사용하세요.</p>
 
                   <h3>HTML 예: 한 개 Navigation 랜드마크</h3>
@@ -170,6 +114,62 @@
                     <strong>&lt;/nav&gt;</strong>
                   </div>
                 </div>
+
+                <div  id="tabpanel1" aria-labelledby="tab1" role="tabpanel" class="tab-pane">
+                  <p><code>navigation</code> 랜드마크를 정의하도록 <code>role="navigation"</code> 속성(attribute)이 사용됩니다.</p>
+
+                  <h2>ARIA 예: 한 개 Navigation 랜드마크</h2>
+                  <p>페이지에 하나의 navigation 랜드마크만 있다면, 레이블은 선택적입니다.</p>
+                  <div class="code">
+                    &lt;div <strong>role="navigation"</strong>&gt;<br>
+                    <br>
+                    &nbsp;&nbsp;&lt;h2&gt;<em>navigation 영역에 대한 제목</em>&lt;h2&gt;<br>
+                    <br>
+                    &nbsp;&nbsp;&lt;ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page1.html"&gt;Link 1&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page2.html"&gt;Link 2&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page3.html"&gt;Link 3&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page4.html"&gt;Link 4&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;.....<br>
+                    &nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/div&gt;
+                  </div>
+
+                  <h3>ARIA 예: 둘 이상의 Navigation 랜드마크</h3>
+                  <p>페이지에 둘 이상의 navigation 랜드마크가 있다면, 각각은 고유한 레이블을 가져야 합니다.</p>
+                  <div class="code">
+                    &lt;div <strong>role="navigation" aria-labelledby="<em>nav1</em>"</strong>&gt;
+                    <br>
+                    <br>
+                    &nbsp;&nbsp;&lt;h2 <strong>id="<em>nav1</em>"</strong>&gt;<em>navigation 영역 1에 대한 제목</em>&lt;h2&gt;<br>
+                    <br>
+                    &nbsp;&nbsp;&lt;ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page11.html"&gt;Link 1&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page12.html"&gt;Link 2&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page13.html"&gt;Link 3&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page14.html"&gt;Link 4&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;.....<br>
+                    &nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/div&gt;
+                    <br>
+                    <br>
+                    ....<br>
+                    <br>
+                    &lt;div <strong>role="navigation"  aria-labelledby="<em>nav2</em>"</strong>&gt;
+                    <br>
+                    <br>
+                    &nbsp;&nbsp;&lt;h2 <strong>id="<em>nav2</em>"</strong>&gt;<em>navigation 영역 2에 대한 제목</em>&lt;h2&gt;<br>
+                    <br>
+                    &nbsp;&nbsp;&lt;ul&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page21.html"&gt;Link 5&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page22.html"&gt;Link 6&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page23.html"&gt;Link 7&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="page24.html"&gt;Link 8&lt;/a&gt;&lt;/li&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;.....<br>
+                    &nbsp;&nbsp;&lt;/ul&gt;<br>
+                    &lt;/div&gt;
+                  </div>
+                </div>
               </div>
             </section>
           </main>
@@ -196,7 +196,7 @@
               <li><a href="http://www.w3.org/TR/core-aam-1.1/">Core Accessibility API Mappings 1.1</a></li>
               <li><a href="https://www.w3.org/TR/html-aam-1.0/">HTML Accessibility API Mappings 1.0</a></li>
               <li><a href="https://html.spec.whatwg.org/">HTML Specification</a></li>
-              <li><a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a>
+              <li><a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a></li>
               <li><a href="https://www.w3.org/TR/using-aria/">Using ARIA in HTML</a></li>
               <li><a href="http://www.w3.org/TR/WCAG/">WCAG Specification</a></li>
             </ul>
@@ -209,7 +209,7 @@
             W3C ARIA Authoring Practices Task Force
           </div>
           <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-            Copyright 2016
+            Copyright 2020
           </div>
         </footer>
       </div>

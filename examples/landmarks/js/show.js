@@ -15,28 +15,28 @@
  * limitations under the License.
  */
 
-function showLandmarks (event) {
+'use strict';
+
+function showLandmarks(event) {
   if (typeof window[initLandmarks] !== 'function') {
     window[initLandmarks] = initLandmarks();
   }
 
   if (window[initLandmarks].run()) {
     event.target.innerHTML = '랜드마크 감추기';
-  }
-  else {
+  } else {
     event.target.innerHTML = '랜드마크 보기';
   }
 }
 
-function showHeadings (event) {
+function showHeadings(event) {
   if (typeof window[initHeadings] !== 'function') {
     window[initHeadings] = initHeadings();
   }
 
   if (window[initHeadings].run()) {
     event.target.innerHTML = '헤딩 감추기';
-  }
-  else {
+  } else {
     event.target.innerHTML = '헤딩 보기';
   }
 }

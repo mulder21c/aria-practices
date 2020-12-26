@@ -20,7 +20,7 @@ ol ol ol ol{ list-style:lower-alpha; }
 }
 
 /* not clear where/why the following two blocks are used; spacing on .role causes problem in html-aam; commenting out for now
- *
+ * 
 .role, .state, .property, .widget {
 	margin-left: 2em;
 	margin-bottom: 4ex;
@@ -241,25 +241,14 @@ abbr.symbol {
 	border-bottom:none;
 }
 
-.aref {
-	font-family: monospace;
-	font-weight: bold;
+.aref { 
+	font-family: monospace; 
+	font-weight: bold; 
 	color: #ff4500 !important;
 }
 
 /* prevent <dt> from butting up against previous <dd> in .termlist (terms.html) */
 .termlist dt {margin-top: 1em;}
-span.translator-comment {
-	color: #df03a8;
-}
-div.translator-comment, p.translator-comment {
-	padding: 0.5em;
-	background-color: #f0f0f0;
-}
-div.translator-comment:not(.intro)::before, p.translator-comment:not(.intro)::before {
-	content: "역자 주 : ";
-	float: left;
-	margin-right: 1em;
-	padding: 0 0.25em;
-	color: #df03a8;
-}
+
+
+
