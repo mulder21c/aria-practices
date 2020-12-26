@@ -1,0 +1,4 @@
+# Ignore external copied w3c files
+common
+bootstrap.css
+bootstrap-theme.css

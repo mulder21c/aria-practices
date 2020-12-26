@@ -56,50 +56,12 @@
 
             <section aria-label="Coding Techniques">
               <ul id="myTabs" class="nav nav-tabs" role="tablist">
-                <li class="active"><a id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab" data-toggle="tab">ARIA 기법</a></li>
-                <li><a id="tab2" href="#tabpanel2" aria-controls="tabpanel2"  role="tab" data-toggle="tab">HTML 기법</a></li>
+                <li class="active"><a id="tab2" href="#tabpanel2" aria-controls="tabpanel2"  role="tab" data-toggle="tab">HTML 기법</a></li>
+                <li><a id="tab1" href="#tabpanel1" aria-controls="tabpanel1" role="tab" data-toggle="tab">ARIA 기법</a></li>
               </ul>
 
               <div class="tab-content">
-                <div id="tabpanel1" aria-labelledby="tab1" role="tabpanel" class="tab-pane active">
-                  <p><code>role="region"</code> 속성(attribute)이 <code>region</code> 랜드마크를 정의하는데 사용됩니다.</p>
-
-                  <h3>ARIA 예: <code>div[role="region"][aria-labelledby]</code> 속성(attribute) 사용</h3>
-                  <div class="code">
-                    &lt;div role="main"&gt;
-                    <br>
-                    <br>
-                    &nbsp;&nbsp;&lt;h1&gt;<em>주요 콘텐트 영역에 대한 제목</em>&lt;h1&gt;<br>
-                    <br>
-                    &nbsp;&nbsp;&lt;div <strong>role="region" aria-labelledby="region1"</strong>&gt;
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 <strong>id="region1"</strong>&gt;영역 1에 대한 제목&lt;/h2&gt;
-                    <br>
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>영역 1에 대한 콘텐트</em> ...
-                    <br>
-                    <br>
-                    &nbsp;&nbsp;&lt;/div&gt;
-                    <br>
-                    <br>
-                    &nbsp;&nbsp;&lt;div <strong>role="region" aria-labelledby="region2"</strong>&gt;
-                    <br>
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 <strong>id="region2"</strong>&gt;영역 2에 대한 제목&lt;/h2&gt;
-                    <br>
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>영역 2에 대한 콘텐트</em> ...
-                    <br>
-                    <br>
-                    &nbsp;&nbsp;&lt;/div&gt;
-                    <br>
-                    <br>
-                    &lt;/main&gt;
-                  </div>
-
-                </div>
-
-                <div  id="tabpanel2" aria-labelledby="tab2" role="tabpanel" class="tab-pane">
+                <div  id="tabpanel2" aria-labelledby="tab2" role="tabpanel" class="tab-pane active">
                   <p><code>region</code> 랜드마크를 정의하도록 HTML <code>section</code> 요소(element)를 사용하세요.</p>
 
                   <h3>HTML 예: <code>section[aria-labelledby]</code> 속성(attribute) 사용</h3>
@@ -193,7 +155,7 @@
                     &nbsp;&nbsp;<strong>&lt;/section&gt;</strong>
                     <br>
                     <br>
-                    &nbsp;&nbsp;<strong>&lt;section title="영역 2에 대한 제목">&gt;</strong>
+                    &nbsp;&nbsp;<strong>&lt;section title="영역 2에 대한 제목"&gt;</strong>
                     <br>
                     <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;영역 2에 대한 제목&lt;/h2&gt;
@@ -207,6 +169,44 @@
                     <br>
                     &lt;/main&gt;
                   </div>
+                </div>
+
+                <div id="tabpanel1" aria-labelledby="tab1" role="tabpanel" class="tab-pane">
+                  <p><code>role="region"</code> 속성(attribute)이 <code>region</code> 랜드마크를 정의하는데 사용됩니다.</p>
+
+                  <h3>ARIA 예: <code>role="region"</code> 속성(attribute) 사용</h3>
+                  <div class="code">
+                    &lt;div role="main"&gt;
+                    <br>
+                    <br>
+                    &nbsp;&nbsp;&lt;h1&gt;<em>주요 콘텐트 영역에 대한 제목</em>&lt;h1&gt;<br>
+                    <br>
+                    &nbsp;&nbsp;&lt;div <strong>role="region" aria-labelledby="region1"</strong>&gt;
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 <strong>id="region1"</strong>&gt;영역 1에 대한 제목&lt;/h2&gt;
+                    <br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>영역 1에 대한 콘텐트</em> ...
+                    <br>
+                    <br>
+                    &nbsp;&nbsp;&lt;/div&gt;
+                    <br>
+                    <br>
+                    &nbsp;&nbsp;&lt;div <strong>role="region" aria-labelledby="region2"</strong>&gt;
+                    <br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 <strong>id="region2"</strong>&gt;영역 2에 대한 제목&lt;/h2&gt;
+                    <br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;... <em>영역 2에 대한 콘텐트</em> ...
+                    <br>
+                    <br>
+                    &nbsp;&nbsp;&lt;/div&gt;
+                    <br>
+                    <br>
+                    &lt;/div&gt;
+                  </div>
+
                 </div>
               </div>
             </section>
@@ -235,7 +235,7 @@
               <li><a href="http://www.w3.org/TR/core-aam-1.1/">Core Accessibility API Mappings 1.1</a></li>
               <li><a href="https://www.w3.org/TR/html-aam-1.0/">HTML Accessibility API Mappings 1.0</a></li>
               <li><a href="https://html.spec.whatwg.org/">HTML Specification</a></li>
-              <li><a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a>
+              <li><a href="https://www.w3.org/TR/html-aria/">ARIA in HTML</a></li>
               <li><a href="https://www.w3.org/TR/using-aria/">Using ARIA in HTML</a></li>
               <li><a href="http://www.w3.org/TR/WCAG/">WCAG Specification</a></li>
             </ul>
@@ -248,7 +248,7 @@
             W3C ARIA Authoring Practices Task Force
           </div>
           <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-            Copyright 2016
+            Copyright 2020
           </div>
         </footer>
       </div>

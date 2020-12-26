@@ -16,16 +16,15 @@ jobs:
     - env: ALLOW_FAILURE=true
 
   include:
-    - stage: Test
-      name: CSS Linting
-      script: npm run lint:css
-    - stage: Test
-      name: JS Linting
-      script: npm run lint:es
-    - stage: Test
-      name: HTML Linting
-      script: npm run vnu-jar
-
+    # - stage: Test
+    #   name: CSS Linting
+    #   script: npm run lint:css
+    # - stage: Test
+    #   name: JS Linting
+    #   script: npm run lint:es
+    # - stage: Test
+    #   name: HTML Linting
+    #   script: npm run vnu-jar
     - stage: Test
       name: AVA Regression Tests
       addons:

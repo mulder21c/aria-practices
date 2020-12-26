@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <title>WAI-ARIA Authoring Practices 1.2</title>
-  <script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
   <script src="common/script/resolveReferences.js" class="remove"></script>
-  <script src="common/biblio.js" class="remove"></script>
   <script src="respec-config.js" class="remove"></script>
+  <script src="common/biblio.js" class="remove"></script>
+  <script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
   <link href="common/css/common.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,7 +26,7 @@
       of the
       <a href="https://www.w3.org/WAI/">Web Accessibility Initiative</a>.
       It supports the
-      <a href="" class="specref">WAI-ARIA 1.2</a> [<cite><a href="#bib-WAI-ARIA" class="bibref">WAI-ARIA</a></cite>]
+      [[[wai-aria-1.2]]] [[WAI-ARIA-1.2]]
       specification, providing detailed advice and examples beyond what would be appropriate to a technical specification but which are important to understand the specification.
     </p>
     <p> This draft includes only a portion of content planned for WAI-ARIA Authoring Practices 1.2. To see plans for the complete guide, review the <a href="https://github.com/w3c/aria-practices/milestones?direction=asc&amp;sort=due_date&amp;state=open">Authoring Practices Milestone Plan</a>. </p>
@@ -140,8 +140,8 @@
         It is thus advisable to test implementations thoroughly with each browser and assistive technology combination that is relevant within a target audience.
       </p>
       <p>
-        Similarly, JavaScript and CSS in this guide is written to be compatible with the most recent version of Chrome, Firefox, Internet Explorer, and Safari at the time of writing.
-        In particular, some JavaScript and CSS may not function correctly in Internet Explorer version 10 or earlier.
+        Similarly, JavaScript and CSS in this guide is written to be compatible with the most recent version of Chrome, Firefox, and Safari at the time of writing.
+Some JavaScript and CSS may not function correctly in Internet Explorer.
       </p>
       <p>
         Except in cases where the ARIA Working Group and other contributors have overlooked an error,
@@ -508,10 +508,11 @@
       </ul>
 
       <section class="notoc">
-        <h4>Example</h4>
-        <p>
-          <a href="examples/carousel/carousel-1.html">Auto-Rotating Image Carousel Example:</a> A basic image carousel that demonstrates the accessibility features necessary for carousels that rotate automatically on page load.
-        </p>
+        <h4>Examples</h4>
+        <ul>
+          <li><a href="examples/carousel/carousel-1-prev-next.html">Auto-Rotating Image Carousel with Buttons for Slide Control:</a> A basic image carousel that demonstrates the accessibility features necessary for carousels that rotate automatically on page load and also enables users to choose which slide is displayed with buttons for previous and next slide.</li>
+          <li><a href="examples/carousel/carousel-2-tablist.html">Auto-Rotating Image Carousel with Tabs for Slide Control:</a> An image carousel that demonstrates accessibility features necessary for carousels that rotate automatically on page load and also enables users to choose which slide is displayed with a set of tabs.</li>
+        </ul>
       </section>
 
       <section class="notoc">
@@ -605,8 +606,8 @@
             Optionally, an element wrapping the set of slide elements has <a href="#aria-atomic" class="property-reference">aria-atomic</a> set to <code>false</code>
             and <a href="#aria-live" class="property-reference">aria-live</a> set to:
             <ul>
-              <li><code>off</code>: if the carousel is automatically rotating.
-              <li><code>polite</code>: if the carousel is <strong>NOT</strong> automatically rotating.
+              <li><code>off</code>: if the carousel is automatically rotating.</li>
+              <li><code>polite</code>: if the carousel is <strong>NOT</strong> automatically rotating.</li>
             </ul>
           </li>
         </ul>
@@ -790,10 +791,12 @@
       <section class="notoc">
         <h4>Examples</h4>
         <ul>
+          <li><a href="examples/combobox/combobox-select-only.html">Select-Only Combobox</a>: A single-select combobox with no text input that is functionally similar to an HTML <code>select</code> element.</li>
           <li><a href="examples/combobox/combobox-autocomplete-both.html">Editable Combobox with Both List and Inline Autocomplete</a>: An editable combobox that demonstrates the autocomplete behavior known as <q>list with inline autocomplete</q>.</li>
           <li><a href="examples/combobox/combobox-autocomplete-list.html">Editable Combobox with List Autocomplete</a>: An editable combobox that demonstrates the autocomplete behavior known as <q>list with manual selection</q>.</li>
           <li><a href="examples/combobox/combobox-autocomplete-none.html">Editable Combobox Without Autocomplete</a>: An editable combobox that demonstrates the behavior associated with <code>aria-autocomplete=none</code>.</li>
           <li><a href="examples/combobox/grid-combo.html">Editable Combobox with Grid Popup</a>: An editable combobox that presents suggestions in a grid, enabling users to navigate descriptive information about each suggestion.</li>
+          <li><a href="examples/combobox/combobox-datepicker.html">Date Picker Combobox</a>: An editable date input combobox that opens a dialog containing a calendar grid and buttons for navigating by month and year.</li>
         </ul>
       </section>
 
@@ -992,7 +995,7 @@
               <li>In either case, focus is visually distinct from selection so users can readily see if a value is selected or not.</li>
             </ul>
         </li>
-          <li>If nodes in the tree are arranged horizontally (<a href="aria-orientation" class="property-reference">aria-orientation</a> is set to <code>horizontal</code>):
+          <li>If nodes in the tree are arranged horizontally (<a href="#aria-orientation" class="property-reference">aria-orientation</a> is set to <code>horizontal</code>):
             <ol>
               <li><kbd>Down Arrow</kbd> performs as <kbd>Right Arrow</kbd> is described above, and vice versa.</li>
               <li><kbd>Up Arrow</kbd> performs as <kbd>Left Arrow</kbd> is described above, and vice versa.</li>
@@ -1024,7 +1027,7 @@
           <li>The element that serves as an input and displays the combobox value has role <a href="#combobox" class="role-reference">combobox</a>.</li>
           <li>
             The combobox element has <a href="#aria-controls" class="property-reference">aria-controls</a> set to a value that refers to the element that serves as the popup.
-            Note that <code>aria-controls</code> only needs to be set when the popup is visible. However, it is valid to reference an element that is not visible. 
+            Note that <code>aria-controls</code> only needs to be set when the popup is visible. However, it is valid to reference an element that is not visible.
           </li>
           <li>The popup is an element that has role <a href="#listbox" class="role-reference">listbox</a>, <a href="#tree" class="role-reference">tree</a>, <a href="#grid" class="role-reference">grid</a>, or <a href="#dialog" class="role-reference">dialog</a>.</li>
           <li>
@@ -1805,6 +1808,7 @@
           <li><a href="examples/listbox/listbox-scrollable.html">Scrollable Listbox Example</a>: Single-select listbox that scrolls to reveal more options, similar to HTML <code>select</code> with <code>size</code> attribute greater than one.</li>
           <li><a href="examples/listbox/listbox-collapsible.html">Collapsible Dropdown Listbox Example</a>: Single-select collapsible listbox that expands when activated, similar to HTML <code>select</code> with the attribute <code>size=&quot;1&quot;</code>.</li>
           <li><a href="examples/listbox/listbox-rearrangeable.html">Example Listboxes with Rearrangeable Options</a>: Examples of both single-select and multi-select listboxes with accompanying toolbars where options can be added, moved, and removed.</li>
+          <li><a href="examples/listbox/listbox-grouped.html">Listbox Example with Grouped Options</a>: Single-select listbox with grouped options, similar to an HTML <code>select</code> with <code>optgroup</code> children.</li>
         </ul>
       </section>
 
@@ -1932,8 +1936,8 @@
       <section class="notoc">
         <h4>Examples</h4>
         <ul>
-          <li><a href="examples/menubar/menubar-1/menubar-1.html">Navigation Menubar Example</a>: Demonstrates a menubar that provides site navigation.</li>
-          <li><a href="examples/menubar/menubar-2/menubar-2.html">Editor Menubar Example</a>: Demonstrates menu radios and menu checkboxes in submenus of a menubar that provides text formatting commands for a text field.</li>
+          <li><a href="examples/menubar/menubar-navigation.html">Navigation Menubar Example</a>: Demonstrates a menubar that provides site navigation.</li>
+          <li><a href="examples/menubar/menubar-editor.html">Editor Menubar Example</a>: Demonstrates menu radios and menu checkboxes in submenus of a menubar that provides text formatting commands for a text field.</li>
         </ul>
       </section>
 
@@ -1942,8 +1946,8 @@
         <p>
           The following description of keyboard behaviors assumes:</p>
           <ol>
-            <li>A horizontal <code>menubar</code> containing several <code>menuitem</code> elements.</li>
-            <li>All items in the <code>menubar</code> have child submenus that contain multiple vertically arranged items.</li>
+            <li>A horizontal <code>menubar</code> containing several <code>menuitem</code>, <code>menuitemradio</code>, or <code>menuitemcheckbox</code> elements.</li>
+            <li>Some <code>menuitem</code> elements in the <code>menubar</code> have child submenus that contain vertically arranged items.</li>
             <li>Some of the <code>menuitem</code> elements in the submenus have child submenus with items that are also vertically arranged.</li>
           </ol>
           <p>When reading the following descriptions, also keep in mind that:</p>
@@ -1975,14 +1979,14 @@
           </li>
           <li><kbd>Down Arrow</kbd>:
             <ul>
-              <li>When focus is on a <code>menuitem</code> in a <code>menubar</code>, opens its submenu and places focus on the first item in the submenu.</li>
+              <li>When focus is on a <code>menuitem</code> in a <code>menubar</code>, and that <code>menuitem</code> has a submenu, opens the submenu and places focus on the first item in the submenu.</li>
             <li>When focus is in a <code>menu</code>, moves focus to the next item, optionally wrapping from the last to the first.</li>
             </ul>
           </li>
           <li><kbd>Up Arrow</kbd>:
             <ul>
             <li>When focus is in a <code>menu</code>, moves focus to the previous item, optionally wrapping from the first to the last.</li>
-            <li>(Optional): When focus is on a <code>menuitem</code> in a <code>menubar</code>, opens its submenu and places focus on the last item in the submenu.</li>
+            <li>(Optional): When focus is on a <code>menuitem</code> in a <code>menubar</code>, and that <code>menuitem</code> has a submenu, opens the submenu and places focus on the last item in the submenu.</li>
             </ul>
           </li>
           <li><kbd>Right Arrow</kbd>:
@@ -1992,9 +1996,9 @@
               <li>When focus is in a <code>menu</code> and on an item that does not have a submenu, performs the following 3 actions:
               <ol>
                   <li>Closes the submenu and any parent menus.</li>
-                  <li>Moves focus to the next <code>menuitem</code> in the <code>menubar</code>.</li>
+                  <li>Moves focus to the next item in the <code>menubar</code>.</li>
                   <li>
-                    Either: (Recommended) opens the submenu of that <code>menuitem</code> without moving focus into the submenu,
+                    If focus is now on a <code>menuitem</code> with a submenu, either: (Recommended) opens the submenu of that <code>menuitem</code> without moving focus into the submenu,
                     or opens the submenu of that <code>menuitem</code> and places focus on the first item in the submenu.
                   </li>
                 </ol>
@@ -2009,9 +2013,9 @@
               <li>When focus is in a submenu of an item in a <code>menubar</code>, performs the following 3 actions:
                 <ol>
                   <li>Closes the submenu.</li>
-                  <li>Moves focus to the previous <code>menuitem</code> in the <code>menubar</code>.</li>
+                  <li>Moves focus to the previous item in the <code>menubar</code>.</li>
                   <li>
-                    Either: (Recommended) opens the submenu of that <code>menuitem</code> without moving focus into the submenu,
+                    If focus is now on a <code>menuitem</code> with a submenu, either: (Recommended) opens the submenu of that <code>menuitem</code> without moving focus into the submenu,
                     or opens the submenu of that <code>menuitem</code> and places focus on the first item in the submenu.
                   </li>
                 </ol>
@@ -2020,8 +2024,8 @@
           </li>
           <li><kbd>Home</kbd>: If arrow key wrapping is not supported, moves focus to the first item in the current <code>menu</code> or <code>menubar</code>.</li>
           <li><kbd>End</kbd>: If arrow key wrapping is not supported, moves focus to the last item in the current <code>menu</code> or <code>menubar</code>.</li>
-          <li>Any key that corresponds to a printable character (Optional): Move focus to   the next menu item in the current menu whose label begins with that printable character.</li>
-          <li><kbd>Escape</kbd>: Close the menu that contains focus and return focus to   the element or context, e.g., menu button or parent <code>menuitem</code>, from which the menu was opened. </li>
+          <li>Any key that corresponds to a printable character (Optional): Move focus to the next item in the current menu whose label begins with that printable character.</li>
+          <li><kbd>Escape</kbd>: Close the menu that contains focus and return focus to the element or context, e.g., menu button or parent <code>menuitem</code>, from which the menu was opened.</li>
           <li><kbd>Tab</kbd>: Moves focus to the next element in the tab sequence, and if the item that had focus is not in a <code>menubar</code>, closes its <code>menu</code> and all open parent <code>menu</code> containers.</li>
           <li><kbd>Shift + Tab</kbd>: Moves focus to the previous element in the tab sequence, and if the item that had focus is not in a <code>menubar</code>, closes its <code>menu</code> and all open parent <code>menu</code> containers.</li>
         </ul>
@@ -2029,13 +2033,13 @@
           <li>Disabled menu items are focusable but cannot be activated. </li>
           <li>A <a href="#separator" class="role-reference">separator</a> in a menu is not focusable or interactive.</li>
           <li>
-            If a menu is opened or a menubar receives focus as a result of a context action, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to   the invoking context.
+            If a menu is opened or a menubar receives focus as a result of a context action, <kbd>Escape</kbd> or <kbd>Enter</kbd> may return focus to the invoking context.
             For example, a rich text editor may have a menubar that receives focus when a shortcut key, e.g., <kbd>alt + F10</kbd>, is pressed while editing.
             In this case, pressing <kbd>Escape</kbd> or activating a command from the menu may return focus to the editor.
           </li>
           <li>
             Although it is recommended that authors avoid doing so, some implementations of navigation menubars may have <code>menuitem</code> elements that both perform a function and open a submenu.
-            In such implementations, <kbd>enter</kbd> and <kbd>Space</kbd> perform a navigation function, e.g., load new content,
+            In such implementations, <kbd>Enter</kbd> and <kbd>Space</kbd> perform a navigation function, e.g., load new content,
             while <kbd>Down Arrow</kbd>, in a horizontal menubar, opens the submenu associated with that same <code>menuitem</code>.
           </li>
           <li>
@@ -2212,8 +2216,8 @@
       <section class="notoc">
         <h4>Examples</h4>
         <ul>
-          <li><a href="examples/radio/radio-1/radio-1.html">Radio Group Example Using Roving tabindex</a></li>
-          <li><a href="examples/radio/radio-2/radio-2.html">Radio Group Example Using aria-activedescendant</a></li>
+          <li><a href="examples/radio/radio.html">Radio Group Example Using Roving tabindex</a></li>
+          <li><a href="examples/radio/radio-activedescendant.html">Radio Group Example Using aria-activedescendant</a></li>
         </ul>
       </section>
 
@@ -2344,7 +2348,10 @@
         A slider is an input where the user selects a value from within a given range.
         Sliders typically have a slider thumb that can be moved along a bar or track to change the value of the slider.
       </p>
-
+      <p class="warning">
+        Users of touch-based assistive technologies may not be able to fully operate widgets that implement this pattern because APIs for capturing the necessary gestures and commands from assistive technologies are not yet available.
+        Authors should fully test widgets using this pattern with assistive technologies before considering incorporation into production systems.
+      </p>
       <section class="notoc">
         <h4>Examples</h4>
         <ul>
@@ -2406,6 +2413,10 @@
         For example, in a price range selector, the maximum value of the thumb that sets the lower end of the range is limited by the current value of the thumb that sets the upper end of the range.
         Conversely, the minimum value of the upper end thumb is limited by the current value of the lower end thumb.
         However, in some multi-thumb sliders, each thumb sets a value that does not depend on the other thumb values.
+      </p>
+      <p class="warning">
+        Users of touch-based assistive technologies may not be able to fully operate widgets that implement this pattern because APIs for capturing the necessary gestures and commands from assistive technologies are not yet available.
+        Authors should fully test widgets using this pattern with assistive technologies before considering incorporation into production systems.
       </p>
 
       <section class="notoc">
@@ -2632,8 +2643,11 @@
         <p>For the tab list:</p>
         <ul>
           <li>
-            <kbd>Tab</kbd>: When focus moves into the tab list, places focus on the active <code>tab</code> element.
-            When the tab list contains the focus, moves focus to the next element in the page tab sequence outside the tablist, which is typically either the first focusable element inside the tab panel or the tab panel itself.
+            <kbd>Tab</kbd>:
+            <ul>
+              <li>When focus moves into the tab list, places focus on the active <code>tab</code> element.</li>
+              <li>When the tab list contains the focus, moves focus to the next element in the page tab sequence outside the tablist, which is the tabpanel unless the first element containing meaningful content inside the tabpanel is focusable.</li>
+            </ul>
           </li>
           <li>When focus is on a tab element in a horizontal tab list:
             <ul>
@@ -3083,12 +3097,14 @@
               <li>If focus is on a row, moves focus one row down.  If focus is on the last row, focus does not move.</li>
               <li>If focus is on a cell, moves focus one cell down.  If focus is on the bottom cell in the column, focus does not move.</li>
             </ul>
+          </li>
           <li>
             <kbd>Up Arrow</kbd>:
             <ul>
               <li>If focus is on a row, moves focus one row up.  If focus is on the first row, focus does not move.</li>
               <li>If focus is on a cell, moves focus one cell up.  If focus is on the top cell in the column, focus does not move.</li>
             </ul>
+          </li>
           <li>
             <kbd>Page Down</kbd>:
             <ul>
@@ -3786,7 +3802,7 @@
         Authors supply a description when there is a need to associate additional information with an element, such as instructions or format requirements for an input field.
       </p>
       <p>
-        assistive technologies present names differently from descriptions.
+        Assistive technologies present names differently from descriptions.
         For instance, screen readers typically announce the name and role of an element first, e.g., a button named <q>Mute Conversation</q>could be spoken as <q>Mute Conversation button</q>.
         If an element has a state, it could be announced either before or after the name and role; after name and role is the typical default.
          For example, a switch button named <q>Mute Conversation</q> in the <q>off</q> state could be announced as <q>Mute Conversation switch button off</q>.
@@ -3873,7 +3889,7 @@ However, most authors do not need such detailed understanding of the algorithms 
             For example, the following link is named &quot;Home&quot;.
           </p>
 
-          <pre><code>&lt;a href="/">Home&lt;/a></code></pre>
+          <pre><code>&lt;a href="/"&gt;Home&lt;/a&gt;</code></pre>
 
           <p>
             When assistive technologies render an element that gets its accessible name from its content, such as a link or button, the accessible name is the only content the user can perceive for that element.
@@ -3906,15 +3922,15 @@ However, most authors do not need such detailed understanding of the algorithms 
             In two special cases, certain descendants are ignored: <code>group</code> descendants of <code>treeitem</code> elements and <code>menu</code> descendants of <code>menuitem</code> elements are omitted from the calculation.
             For example, in the following <code>tree</code>, the name of the first tree item is <q>Fruits</q>; <q>Apples</q>, <q>Bananas</q>, and <q>Oranges</q> are omitted.
           </p>
-        <pre><code>&lt;ul role="tree">
-  &lt;li role="treeitem">Fruits
-    &lt;ul role="group">
-      &lt;li role="treeitem">Apples&lt;/li>
-      &lt;li role="treeitem">Bananas&lt;/li>
-      &lt;li role="treeitem">Oranges&lt;/li>
-    &lt;/ul>
-  &lt;/li>
-&lt;/ul></code></pre>
+        <pre><code>&lt;ul role="tree"&gt;
+  &lt;li role="treeitem"&gt;Fruits
+    &lt;ul role="group"&gt;
+      &lt;li role="treeitem"&gt;Apples&lt;/li&gt;
+      &lt;li role="treeitem"&gt;Bananas&lt;/li&gt;
+      &lt;li role="treeitem"&gt;Oranges&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
           <p class="warning">
             If an element with one of the above roles that supports naming from child content is named by using <code>aria-label</code> or <code>aria-labelledby</code>, content contained in the element and its descendants is hidden from assistive technology users unless the descendant content is referenced by <code>aria-labelledby</code>.
             It is strongly recommended to avoid using either of these attributes to override content of one of the above elements except in rare circumstances where hiding content from assistive technology users is beneficial.
@@ -3928,7 +3944,7 @@ However, most authors do not need such detailed understanding of the algorithms 
             The <a href="#aria-label" class="property-reference">aria-label</a> property enables authors to name an element with a string that is not visually rendered.
             For example, the name of the following button is &quot;Close&quot;.
           </p>
-          <pre><code>&lt;button type="button" aria-label="Close">X&lt;/button></code></pre>
+          <pre><code>&lt;button type="button" aria-label="Close"&gt;X&lt;/button&gt;</code></pre>
           <p>
             The <code>aria-label</code> property is useful when there is no visible text content that will serve as an appropriate accessible name.
           </p>
@@ -3961,15 +3977,15 @@ However, most authors do not need such detailed understanding of the algorithms 
             The <a href="#aria-labelledby" class="property-reference">aria-labelledby property</a> enables authors to reference other elements on the page to define an accessible name.
             For example, the following switch is named by the text content of a previous sibling element.
           </p>
-          <pre><code>&lt;span id="night-mode-label">Night mode&lt;/span&gt;
-&lt;span role="switch" aria-checked="false" tabindex="0" aria-labelledby="night-mode-label">&lt;/span&gt;</code></pre>
+          <pre><code>&lt;span id="night-mode-label"&gt;Night mode&lt;/span&gt;
+&lt;span role="switch" aria-checked="false" tabindex="0" aria-labelledby="night-mode-label"&gt;&lt;/span&gt;</code></pre>
           <p>
             Note that while using <code>aria-labelledby</code> is similar in this situation to using an HTML <code>label</code> element with the <code>for</code> attribute, one significant difference is that browsers do not automatically make clicking on the labeling element activate the labeled element; that is an author responsibility.
             However, HTML <code>label</code> cannot be used to label a <code>span</code> element.
             Fortunately, an HTML <code>input</code> with <code>type="checkbox"</code> allows the ARIA <code>switch</code> role, so when feasible, using the following approach creates a more robust solution.
           </p>
-          <pre><code>&lt;label for="night-mode">Night mode&lt;/label>
-&lt;input type="checkbox" role="switch" id="night-mode"></code></pre>
+          <pre><code>&lt;label for="night-mode"&gt;Night mode&lt;/label&gt;
+&lt;input type="checkbox" role="switch" id="night-mode"&gt;</code></pre>
   <p>The <code>aria-labelledby</code> property is useful in a wide variety of situations because:</p>
   <ul>
     <li><p>It has the highest precedence when browsers calculate accessible names, i.e., it overrides names from child content and all other naming attributes, including <code>aria-label</code>.</p></li>
@@ -3980,8 +3996,8 @@ However, most authors do not need such detailed understanding of the algorithms 
     <li><p>It incorporates the value of input elements, i.e., if it references a textbox, the value of the textbox is included in the calculated name string.</p></li>
   </ul>
   <p>An example of referencing a hidden element with <code>aria-labelledby</code> could be a label for a night switch control:</p>
-      <pre><code>&lt;span id="night-mode-label" hidden>Night mode&lt;/span>
-&lt;input type="checkbox" role="switch" aria-labelledby="night-mode-label"></code></pre>
+      <pre><code>&lt;span id="night-mode-label" hidden&gt;Night mode&lt;/span&gt;
+&lt;input type="checkbox" role="switch" aria-labelledby="night-mode-label"&gt;</code></pre>
 
           <p>
             In some cases, the most effective name for an element is its own content combined with the content of another element.
@@ -3996,8 +4012,8 @@ However, most authors do not need such detailed understanding of the algorithms 
             If an element is referenced more than one time, only the first reference is processed.
             When concatenating content from multiple elements, browsers trim leading and trailing white space and separate content from each element with a single space.
           </p>
-          <pre><code>&lt;button id="download-button" aria-labelledby="download-button download-details">Download&lt;/button>
-&lt;span id="download-details">PDF, 2.4 MB&lt;/span></code></pre>
+          <pre><code>&lt;button id="download-button" aria-labelledby="download-button download-details"&gt;Download&lt;/button&gt;
+&lt;span id="download-details"&gt;PDF, 2.4 MB&lt;/span&gt;</code></pre>
           <p>In the above example, the accessible name of the button will be "Download PDF, 2.4 MB", with a space between "Download" and "PDF", and not "DownloadPDF, 2.4 MB".</p>
           <ol class="warning">
             <li>The <code>aria-labelledby</code> property cannot be chained, i.e., if an element with <code>aria-labelledby</code> references another element that also has <code>aria-labelledby</code>, the <code>aria-labelledby</code> attribute on the referenced element will be ignored.</li>
@@ -4022,17 +4038,17 @@ However, most authors do not need such detailed understanding of the algorithms 
             However, unless the text is programmatically associated with the checkbox, assistive technology users will experience a checkbox without a label.
             Wrapping the checkbox and the labeling text in a <code>label</code> element as follows gives the checkbox an accessible name.
           </p>
-          <pre><code>&lt;label>
-  &lt;input type="checkbox" name="subscribe">
+          <pre><code>&lt;label&gt;
+  &lt;input type="checkbox" name="subscribe"&gt;
   subscribe to our newsletter
-&lt;/label></code></pre>
+&lt;/label&gt;</code></pre>
           <p>
             A form control can also be associated with a label by using the <code>for</code> attribute on the <code>label</code> element.
             This allows the label and the form control to be siblings or have different parents in the DOM, but requires adding an <code>id</code> attribute to the form control, which can be error-prone.
             When possible, use the above encapsulation technique for association instead of the following <code>for</code> attribute technique.
           </p>
-          <pre><code>&lt;input type="checkbox" name="subscribe" id="subscribe_checkbox">
-&lt;label for="subscribe_checkbox">subscribe to our newsletter&lt;/label></code></pre>
+          <pre><code>&lt;input type="checkbox" name="subscribe" id="subscribe_checkbox"&gt;
+&lt;label for="subscribe_checkbox"&gt;subscribe to our newsletter&lt;/label&gt;</code></pre>
           <p>
             Using the <code>label</code> element is an effective technique for satisfying <a href="#naming_rule_visible_text">Rule 2: Prefer Visible Text</a>.
             It also satisfies <a href="#naming_rule_native_techniques">Rule 3: Prefer Native Techniques</a>.
@@ -4047,12 +4063,12 @@ However, most authors do not need such detailed understanding of the algorithms 
             The HTML <code>fieldset</code> element can be used to group form controls, and the <code>legend</code> element can be used to give the group a name.
             For example, a group of radio buttons can be grouped together in a <code>fieldset</code>, where the <code>legend</code> element labels the group for the radio buttons.
           </p>
-          <pre><code>&lt;fieldset>
-  &lt;legend>Select your starter class&lt;/legend>
-  &lt;label>&lt;input type="radio" name="starter-class" value="green"> Green&lt;/label>
-  &lt;label>&lt;input type="radio" name="starter-class" value="red"> Red&lt;/label>
-  &lt;label>&lt;input type="radio" name="starter-class" value="blue"> Blue&lt;/label>
-&lt;/fieldset></code></pre>
+          <pre><code>&lt;fieldset&gt;
+  &lt;legend&gt;Select your starter class&lt;/legend&gt;
+  &lt;label&gt;&lt;input type="radio" name="starter-class" value="green"&gt;Green&lt;/label&gt;
+  &lt;label&gt;&lt;input type="radio" name="starter-class" value="red"&gt;Red&lt;/label&gt;
+  &lt;label&gt;&lt;input type="radio" name="starter-class" value="blue"&gt;Blue&lt;/label&gt;
+&lt;/fieldset&gt;</code></pre>
           <p>
             This grouping technique is particularly useful for presenting multiple choice questions.
             It enables authors to associate a question with a group of answers.
@@ -4061,17 +4077,17 @@ However, most authors do not need such detailed understanding of the algorithms 
           <p>
             Similar benefits can be gained from grouping and naming other types of related form fields using <code>fieldset</code> and <code>legend</code>.
           </p>
-          <pre><code>&lt;fieldset>
-  &lt;legend>Shipping address&lt;/legend>
-  &lt;p>&lt;label>Full name &lt;input name="name" required>&lt;/label>&lt;/p>
-  &lt;p>&lt;label>Address line 1 &lt;input name="address-1" required>&lt;/label>&lt;/p>
-  &lt;p>&lt;label>Address line 2 &lt;input name="address-2">&lt;/label>&lt;/p>
+          <pre><code>&lt;fieldset&gt;
+  &lt;legend&gt;Shipping address&lt;/legend&gt;
+  &lt;p&gt;&lt;label&gt;Full name &lt;input name="name" required&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;Address line 1 &lt;input name="address-1" required&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;Address line 2 &lt;input name="address-2"&gt;&lt;/label&gt;&lt;/p&gt;
   ...
-&lt;/fieldset>
-&lt;fieldset>
-  &lt;legend>Billing address&lt;/legend>
+&lt;/fieldset&gt;
+&lt;fieldset&gt;
+  &lt;legend&gt;Billing address&lt;/legend&gt;
   ...
-&lt;/fieldset></code></pre>
+&lt;/fieldset&gt;</code></pre>
           <p>Using the <code>legend</code> element to name a <code>fieldset</code> element satisfies <a href="#naming_rule_visible_text">Rule 2: Prefer Visible Text</a> and <a href="#naming_rule_native_techniques">Rule 3: Prefer Native Techniques</a>.</p>
         </section>
 
@@ -4087,28 +4103,29 @@ However, most authors do not need such detailed understanding of the algorithms 
             If the <code>table</code> element does not have <code>aria-label</code> or <code>aria-labelledby</code>, then the <code>caption</code> will be used as the accessible name.
             For example, the accessible name of the following table is <q>Special opening hours</q>.
           </p>
-          <pre><code>&lt;table>
- &lt;caption>Special opening hours&lt;/caption>
- &lt;tr>&lt;td>30 May &lt;td>Closed
- &lt;tr>&lt;td>6 June &lt;td>11:00-16:00
-&lt;/table></code></pre>
+          <pre><code>&lt;table&gt;
+ &lt;caption&gt;Special opening hours&lt;/caption&gt;
+ &lt;tr&gt;&lt;td&gt;30 May&lt;/td&gt;&lt;td&gt;Closed&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;6 June&lt;/td&gt;&lt;td&gt;11:00-16:00&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
           <p>The following example gives the table a number (<q>Table 1</q>) so it can be referenced. </p>
-          <pre><code>&lt;table>
- &lt;caption>Table 1. Traditional dietary intake of Okinawans and other Japanese circa 1950&lt;/caption>
- &lt;thead>
-  &lt;tr>
-   &lt;th>
-   &lt;th>Okinawa, 1949
-   &lt;th>Japan, 1950
- &lt;tbody>
-  &lt;tr>
-   &lt;th>Total calories
-   &lt;td>1785
-   &lt;td>2068
+          <pre><code>&lt;table&gt;
+ &lt;caption&gt;Table 1. Traditional dietary intake of Okinawans and other Japanese circa 1950&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th&gt;&lt;/th&gt;
+   &lt;th&gt;Okinawa, 1949&lt;/th&gt;
+   &lt;th&gt;Japan, 1950&lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;th&gt;Total calories&lt;/th&gt;
+   &lt;td&gt;1785&lt;/td&gt;
+   &lt;td&gt;2068&lt;/td&gt;
 
   [...]
 
-&lt;/table></code></pre>
+&lt;/table&gt;</code></pre>
           <p>Note: Above table content is from <a href="https://www.ncbi.nlm.nih.gov/pubmed/17986602">Caloric restriction, the traditional Okinawan diet, and healthy aging: the diet of the world's longest-lived people and its potential impact on morbidity and life span</a>.</p>
           <p>
             If a <code>table</code> is named using <code>aria-label</code> or <code>aria-labelledby</code>, then a <code>caption</code> element, if present, will become an accessible description.
@@ -4118,10 +4135,10 @@ However, most authors do not need such detailed understanding of the algorithms 
             Similarly, an HTML <code>figure</code> element can be given a caption using the <code>figcaption</code> element.
             The caption can appear before or after the figure, but it is more common for figures to have the caption after.
           </p>
-          <pre><code>&lt;figure>
- &lt;img alt="Painting of a person walking in a desert." src="Hole_JesusalDesierto.jpg">
- &lt;figcaption>Jesus entering the desert as imagined by William Hole, 1908&lt;/figcaption>
-&lt;/figure></code></pre>
+          <pre><code>&lt;figure&gt;
+ &lt;img alt="Painting of a person walking in a desert." src="Hole_JesusalDesierto.jpg"&gt;
+ &lt;figcaption&gt;Jesus entering the desert as imagined by William Hole, 1908&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
           <p>
             Like with <code>table</code> elements, if a <code>figure</code> is not named using <code>aria-label</code> or <code>aria-labelledby</code>, the content of the <code>figcaption</code> element will be used as the accessible name.
             However unlike <code>table</code> elements, if the <code>figcaption</code> element is not used for the name, it does not become an accessible description unless it is referenced by <code>aria-describedby</code>.
@@ -4146,22 +4163,22 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
 
           <p>For example, a <code>fieldset</code> element without a <code>legend</code> element child, but with a <code>title</code> attribute, gets its accessible name from the <code>title</code> attribute.</p>
 
-          <pre><code>&lt;fieldset title="Select your starter class">
-  &lt;label>&lt;input type="radio" name="starter-class" value="green"> Green&lt;/label>
-  &lt;label>&lt;input type="radio" name="starter-class" value="red"> Red&lt;/label>
-  &lt;label>&lt;input type="radio" name="starter-class" value="blue"> Blue&lt;/label>
-&lt;/fieldset></code></pre>
+          <pre><code>&lt;fieldset title="Select your starter class"&gt;
+  &lt;label&gt;&lt;input type="radio" name="starter-class" value="green"&gt;Green&lt;/label&gt;
+  &lt;label&gt;&lt;input type="radio" name="starter-class" value="red"&gt;Red&lt;/label&gt;
+  &lt;label&gt;&lt;input type="radio" name="starter-class" value="blue"&gt;Blue&lt;/label&gt;
+&lt;/fieldset&gt;</code></pre>
 
           <p>
             For the HTML <code>input</code> and <code>textarea</code> elements, the <code>placeholder</code> attribute is used as a fallback labeling mechanism if nothing else (including the <code>title</code> attribute) results in a label.
             It is better to use a <code>label</code> element, since it does not disappear visually when the user focuses the form control.
           </p>
 
-          <pre><code>&lt;!-- Using a &lt;label> is recommended -->
-&lt;label>Search &lt;input type=search name=q>&lt;/label>
+          <pre><code>&lt;!-- Using a &lt;label&gt; is recommended --&gt;
+&lt;label&gt;Search &lt;input type=search name=q&gt;&lt;/label&gt;
 
-&lt;!-- A placeholder is used as fallback -->
-&lt;input type=search name=q placeholder="Search"></code></pre>
+&lt;!-- A placeholder is used as fallback --&gt;
+&lt;input type=search name=q placeholder="Search"&gt;</code></pre>
         </section>
       </section>
 
@@ -4570,7 +4587,7 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
             </tr>
             <tr>
               <td><a href="#marquee" class="role-reference"><code>marquee</code></a></td>
-              <td>Required</td>
+              <td>Discretionary</td>
               <td>Use <code>aria-labelledby</code> if a visible label is present, otherwise use <code>aria-label</code>.</td>
             </tr>
             <tr>
@@ -4793,7 +4810,7 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
                 <ul>
                   <li>Helps screen reader users understand the context and purpose of the search landmark.</li>
                   <li>Named using <code>aria-labelledby</code> if a visible label is present, otherwise with <code>aria-label</code>.</li>
-                  <li>See the <a href="aria_lh_search">Search Landmark</a> section.</li>
+                  <li>See the <a href="#aria_lh_search">Search Landmark</a> section.</li>
                 </ul>
               </td>
             </tr>
@@ -5082,73 +5099,73 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
           When calculating a name from content for the <code>treeitem</code> role, descendant content of child <code>group</code> elements are not included.
           For example, in the following <code>tree</code>, the name of the first tree item is <q>Fruits</q>; <q>Apples</q>, <q>Bananas</q>, and <q>Oranges</q> are automatically omitted.
         </p>
-        <pre><code>&lt;ul role="tree">
-  &lt;li role="treeitem">Fruits
-    &lt;ul role="group">
-      &lt;li role="treeitem">Apples&lt;/li>
-      &lt;li role="treeitem">Bananas&lt;/li>
-      &lt;li role="treeitem">Oranges&lt;/li>
-    &lt;/ul>
-  &lt;/li>
-&lt;/ul></code></pre>
+        <pre><code>&lt;ul role="tree"&gt;
+  &lt;li role="treeitem"&gt;Fruits
+    &lt;ul role="group"&gt;
+      &lt;li role="treeitem"&gt;Apples&lt;/li&gt;
+      &lt;li role="treeitem"&gt;Bananas&lt;/li&gt;
+      &lt;li role="treeitem"&gt;Oranges&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
         <p>
           Similarly, when calculating a name from content for the <code>menuitem</code> role, descendant content of child <code>menu</code> elements are not included.
           So, the name of the first parent <code>menuitem</code> in the following <code>menu</code> is <q>Fruits</q>.
         </p>
-        <pre><code>&lt;ul role="menu">
-  &lt;li role="menuitem">Fruits
-    &lt;ul role="menu">
-      &lt;li role="menuitem">Apples&lt;/li>
-      &lt;li role="menuitem">Bananas&lt;/li>
-      &lt;li role="menuitem">Oranges&lt;/li>
-    &lt;/ul>
-  &lt;/li>
-&lt;/ul></code></pre>
+        <pre><code>&lt;ul role="menu"&gt;
+  &lt;li role="menuitem"&gt;Fruits
+    &lt;ul role="menu"&gt;
+      &lt;li role="menuitem"&gt;Apples&lt;/li&gt;
+      &lt;li role="menuitem"&gt;Bananas&lt;/li&gt;
+      &lt;li role="menuitem"&gt;Oranges&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 
         <section id="name_calculation_non-recursive_ex">
           <h5>Examples of non-recursive accessible name calculation</h5>
           <p>Consider an <code>input</code> element that has no associated <code>label</code> element and only a <code>name</code> attribute and so does not have an accessible name (do not do this):</p>
-          <pre><code>&lt;input name="code"></code></pre>
+          <pre><code>&lt;input name="code"&gt;</code></pre>
           <p>If there is a <code>placeholder</code> attribute, then it serves as a naming fallback mechanism (avoid doing this):</p>
 
           <pre><code>&lt;input name="code"
-       placeholder="One-time code"></code></pre>
+       placeholder="One-time code"&gt;</code></pre>
 
           <p>If there is also a <code>title</code> attribute, then it is used as the accessible name instead of <code>placeholder</code>, but it is still a fallback (avoid doing this):</p>
 
           <pre><code>&lt;input name="code"
        placeholder="123456"
-       title="One-time code"></code></pre>
+       title="One-time code"&gt;</code></pre>
 
           <p>If there is also a <code>label</code> element (recommended), then that is used as the accessible name, and the <code>title</code> attribute is instead used as the accessible description:</p>
 
-          <pre><code>&lt;label>One-time code
+          <pre><code>&lt;label&gt;One-time code
  &lt;input name="code"
         placeholder="123456"
-        title="Get your code from the app.">
-&lt;/label></code></pre>
+        title="Get your code from the app."&gt;
+&lt;/label&gt;</code></pre>
 
           <p>If there is also an <code>aria-label</code> attribute (not recommended unless it adds clarity for assistive technology users), then that becomes the accessible name, overriding the <code>label</code> element:</p>
 
-          <pre><code>&lt;label>Code
+          <pre><code>&lt;label&gt;Code
  &lt;input name="code"
         aria-label="One-time code"
         placeholder="123456"
-        title="Get your code from the app.">
-&lt;/label></code></pre>
+        title="Get your code from the app."&gt;
+&lt;/label&gt;</code></pre>
 
           <p>If there is also an <code>aria-labelledby</code> attribute, that wins over the other elements and attributes (the <code>aria-label</code> attribute ought to be removed if it is not used):</p>
 
-          <pre><code>&lt;p>Please fill in your &lt;span id="code-label">one-time code&lt;/span> to log in.&lt;/p>
-&lt;p>
- &lt;label>Code
+          <pre><code>&lt;p&gt;Please fill in your &lt;span id="code-label"&gt;one-time code&lt;/span&gt; to log in.&lt;/p&gt;
+&lt;p&gt;
+ &lt;label&gt;Code
   &lt;input name="code"
          aria-labelledby="code-label"
          aria-label="This is ignored"
          placeholder="123456"
-         title="Get your code from the app.">
- &lt;/label>
-&lt;/p></code></pre>
+         title="Get your code from the app."&gt;
+ &lt;/label&gt;
+&lt;/p&gt;</code></pre>
           </section>
 
           <section id="name_calculation_recursive_ex">
@@ -5157,16 +5174,16 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
 
             <p>In this example, the label for the button is computed by recursing into each child node, resulting in <q>Move to trash</q>.</p>
 
-            <pre><code>&lt;button>Move to &lt;img src="bin.svg" alt="trash">&lt;/button></code></pre>
+            <pre><code>&lt;button&gt;Move to &lt;img src="bin.svg" alt="trash"&gt;&lt;/button&gt;</code></pre>
 
             <p>When following an <code>aria-labelledby</code> reference, the algorithm avoids following the same reference twice to avoid infinite loops.</p>
 
             <p>In this example, the label for the button is computed by first following the <code>aria-labelledby</code> reference to the parent element, and then computing the label for that element from the child nodes, first visiting the <code>button</code> element again but ignoring the <code>aria-labelledby</code> reference and instead using the <code>aria-label</code>, and then visiting the next child (the text node). The resulting label is <q>Remove meeting: Daily status report</q>.</p>
 
-            <pre><code>&lt;div id="meeting-1">
-  &lt;button aria-labelledby="meeting-1" aria-label="Remove meeting:">X&lt;/button>
+            <pre><code>&lt;div id="meeting-1"&gt;
+  &lt;button aria-labelledby="meeting-1" aria-label="Remove meeting:"&gt;X&lt;/button&gt;
   Daily status report
-&lt;/div></code></pre>
+&lt;/div&gt;</code></pre>
         </section>
       </section>
     </section>
@@ -5182,15 +5199,15 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
             For example, a button could be described by a sibling paragraph.
           </p>
 
-          <pre><code>&lt;button aria-describedby="trash-desc">Move to trash&lt;/button>
+          <pre><code>&lt;button aria-describedby="trash-desc"&gt;Move to trash&lt;/button&gt;
 ...
-&lt;p id="trash-desc">Items in the trash will be permanently removed after 30 days.&lt;/p></code></pre>
+&lt;p id="trash-desc"&gt;Items in the trash will be permanently removed after 30 days.&lt;/p&gt;</code></pre>
 
           <p>Descriptions are reduced to text strings. For example, if the description contains an HTML <code>img</code> element, a text equivalent of the image is computed.</p>
 
-          <pre><code>&lt;button aria-describedby="trash-desc"> Move to &lt;img src="bin.svg" alt="trash">&lt;/button>
+          <pre><code>&lt;button aria-describedby="trash-desc"&gt;Move to &lt;img src="bin.svg" alt="trash"&gt;&lt;/button&gt;
 ...
-&lt;p id="trash-desc">Items in &lt;img src="bin.svg" alt="the trash"> will be permanently removed after 30 days.&lt;/p></code></pre>
+&lt;p id="trash-desc"&gt;Items in &lt;img src="bin.svg" alt="the trash"&gt; will be permanently removed after 30 days.&lt;/p&gt;</code></pre>
 
           <p>
             As with <code>aria-labelledby</code>, it is possible to reference an element using <code>aria-describedby</code> even if that element is hidden.
@@ -5199,12 +5216,12 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
             In the following example, the accessible description for the <code>input</code> element is <q>Your username is the name that you use to log in to this service.</q>
           </p>
 
-          <pre><code>&lt;label for="username">Username&lt;/label>
-&lt;input id="username" name="username" aria-describedby="username-desc">
-&lt;button aria-expanded="false" aria-controls="username-desc" aria-label="Help about username">?&lt;/button>
-&lt;p id="username-desc" hidden>
+          <pre><code>&lt;label for="username"&gt;Username&lt;/label&gt;
+&lt;input id="username" name="username" aria-describedby="username-desc"&gt;
+&lt;button aria-expanded="false" aria-controls="username-desc" aria-label="Help about username"&gt;?&lt;/button&gt;
+&lt;p id="username-desc" hidden&gt;
   Your username is the name that you use to log in to this service.
-&lt;/p></code></pre>
+&lt;/p&gt;</code></pre>
         </section>
 
         <section id="describing_with_captions">
@@ -5214,30 +5231,30 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
             For example, a preceding heading might serve as an appropriate accessible name, and the <code>caption</code> element might contain a longer description.
             In such a situation, <code>aria-labelledby</code> could be used on the <code>table</code> to set the accessible name to the heading content and the <code>caption</code> would become the accessible description.
           </p>
-          <pre><code>&lt;h2 id="events-heading">Upcoming events&lt;/h2>
-&lt;table aria-labelledby="events-heading">
- &lt;caption>
+          <pre><code>&lt;h2 id="events-heading"&gt;Upcoming events&lt;/h2&gt;
+&lt;table aria-labelledby="events-heading"&gt;
+ &lt;caption&gt;
   Calendar of upcoming events, weeks 27 through 31, with each week starting with
   Monday. The first column is the week number.
- &lt;/caption>
- &lt;tr>&lt;th>Week&lt;th>Monday&lt;th>Tuesday&lt;th>Wednesday&lt;th>Thursday&lt;th>Friday&lt;th>Saturday&lt;th>Sunday
- &lt;tr>&lt;td>27&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>
- &lt;tr>&lt;td>28&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;a href="/events/9856">Crown Princess's birthday&lt;/a>
- &lt;tr>&lt;td>29&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>
- &lt;tr>&lt;td>30&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>
- &lt;tr>&lt;td>31&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>&lt;td>
-&lt;/table></code></pre>
+ &lt;/caption&gt;
+ &lt;tr&gt;&lt;th&gt;Week&lt;/th&gt;&lt;th&gt;Monday&lt;/th&gt;&lt;th&gt;Tuesday&lt;/th&gt;&lt;th&gt;Wednesday&lt;/th&gt;&lt;th&gt;Thursday&lt;/th&gt;&lt;th&gt;Friday&lt;/th&gt;&lt;th&gt;Saturday&lt;/th&gt;&lt;th&gt;Sunday&lt;/th&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;27&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;28&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;a href="/events/9856"&gt;Crown Princess's birthday&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;29&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;30&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td&gt;31&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
           <p>The HTML <code>figure</code> element can get its accessible <em>name</em> from its <code>figcaption</code> element, but it will not be used as the accessible <em>description</em>, even if it was not used as the accessible name. If the <code>figcaption</code> element is appropriate as an accessible description, and the accessible name is set using <code>aria-labelledby</code> or <code>aria-label</code>, then the <code>figcaption</code> can be explicitly set as the accessible description using the <code>aria-describedby</code> attribute.</p>
-          <pre><code>&lt;h2 id="neutron">Neutron&lt;/h2>
-&lt;figure aria-labelledby="neutron" aria-describedby="neutron-caption">
+          <pre><code>&lt;h2 id="neutron"&gt;Neutron&lt;/h2&gt;
+&lt;figure aria-labelledby="neutron" aria-describedby="neutron-caption"&gt;
  &lt;img src="neutron.svg" alt="Within the neutron are three quarks (blue 'u',
- red 'd', green 'd') that are interconnected.">
- &lt;figcaption id="neutron-caption">
+ red 'd', green 'd') that are interconnected."&gt;
+ &lt;figcaption id="neutron-caption"&gt;
   The quark content of the neutron. The color assignment of individual quarks is
   arbitrary, but all three colors must be present. Forces between quarks are
   mediated by gluons.
- &lt;/figcaption>
-&lt;/figure></code></pre>
+ &lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
          </section>
 
         <section id="describing_with_title">
@@ -5246,17 +5263,17 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
           <p>A visible description together with <code>aria-describedby</code> is generally recommended. If a description that is not visible is desired, then the <code>title</code> attribute can be used, for any HTML element that can have an accessible description.</p>
           <p>Note that the <code>title</code> attribute might not be accessible to some users, in particular sighted users not using a screen reader and not using a pointing device that supports hover (e.g., a mouse).</p>
           <p>For example, an <code>input</code> element with input constrained using the <code>pattern</code> attribute can use the <code>title</code> attribute to describe what the expected input is.</p>
-          <pre><code>&lt;label> Part number:
+          <pre><code>&lt;label&gt; Part number:
  &lt;input pattern="[0-9][A-Z]{3}" name="part"
-        title="A part number is a digit followed by three uppercase letters."/>
-&lt;/label></code></pre>
+        title="A part number is a digit followed by three uppercase letters."/&gt;
+&lt;/label&gt;</code></pre>
           <p>The <code>title</code> attribute in this case can be shown to the user as a tooltip when the user hovers or focuses the control, but also as part of the error message when the user agent validates the form, if the <code>input</code> element's value doesn't match the <code>pattern</code>.</p>
           <p>As another example, a link can use the <code>title</code> attribute to describe the link in more detail.</p>
           <pre><code>&lt;a href="http://twitter.com/W3C"
-   title="Follow W3C on Twitter">
+   title="Follow W3C on Twitter"&gt;
    &lt;img src="/2008/site/images/Twitter_bird_logo_2012.svg"
-        alt="Twitter" class="social-icon" height="40" />
-&lt;/a></code></pre>
+        alt="Twitter" class="social-icon" height="40" /&gt;
+&lt;/a&gt;</code></pre>
         </section>
       </section>
 
@@ -6284,7 +6301,7 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
                 &lt;span role=&quot;cell&quot;&gt;161&lt;/span&gt;
                 &lt;span role=&quot;cell&quot;&gt;B-&lt;/span&gt;
               &lt;/div&gt;
-              &lt;div role=&quot;row&quot;  aria-rowindex=&quot;51&quot;&gt;
+              &lt;div role=&quot;row&quot; aria-rowindex=&quot;51&quot;&gt;
                 &lt;span role=&quot;cell&quot;&gt;Henderson&lt;/span&gt;
                 &lt;span role=&quot;cell&quot;&gt;Alice&lt;/span&gt;
                 &lt;span role=&quot;cell&quot;&gt;94&lt;/span&gt;
@@ -6294,7 +6311,7 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
                 &lt;span role=&quot;cell&quot;&gt;180&lt;/span&gt;
                 &lt;span role=&quot;cell&quot;&gt;A-&lt;/span&gt;
               &lt;/div&gt;
-              &lt;div role=&quot;row&quot;  aria-rowindex=&quot;52&quot;&gt;
+              &lt;div role=&quot;row&quot; aria-rowindex=&quot;52&quot;&gt;
                 &lt;span role=&quot;cell&quot;&gt;Henderson&lt;/span&gt;
                 &lt;span role=&quot;cell&quot;&gt;Andrew&lt;/span&gt;
                 &lt;span role=&quot;cell&quot;&gt;82&lt;/span&gt;
@@ -6409,6 +6426,316 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
 
     </section>
 
+  </section>
+
+  <section id="range_related_properties">
+    <h2>Communicating Value and Limits for Range Widgets</h2>
+    <p>
+      ARIA defines the following roles as range widgets, which means they communicate a value that is typically numeric and constrained to defined limits.
+    </p>
+    <ul>
+      <li><code>meter</code></li>
+      <li><code>progressbar</code></li>
+      <li><code>scrollbar</code></li>
+      <li><code>separator</code> (if focusable)</li>
+      <li><code>slider</code></li>
+      <li><code>spinbutton</code></li>
+    </ul>
+    <p>
+      For example, a spin button for choosing a day within the month of January would allow integer values that range from 1 to 31.
+      In some cases, the value is represented numerically, but is not presented as a number to users.
+      For instance, a spin button for choosing a day of the week could support values from 1 to 7 but they could be presented to the user as day names, e.g., "Monday", "Tuesday", etc.
+    </p>
+    <p>
+      This section describes considerations for using the following four properties that communicate characteristics of a range widget:
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Definition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><code>aria-valuemin</code></th>
+          <td>Defines the minimum value allowed by a range widget.</td>
+        </tr>
+        <tr>
+          <th><code>aria-valuemax</code></th>
+          <td>Defines the maximum value allowed by a range widget.</td>
+        </tr>
+        <tr>
+          <th><code>aria-valuenow</code></th>
+          <td>Defines the current value of a range widget. This value is a number greater than or equal to <code>aria-valuemin</code> and less than or equal to <code>aria-valuemax</code> (if they are specified).</td>
+        </tr>
+        <tr>
+          <th><code>aria-valuetext</code></th>
+          <td>If a numeric value is not sufficiently descriptive, this property can define a text description of the current value of a range widget.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <section id="range_related_properties_using_aria-valuemin_aria-valuemax_and_aria-valuenow">
+      <h3>Using <code>aria-valuemin</code>, <code>aria-valuemax</code> and <code>aria-valuenow</code></h3>
+      <p>
+        When the value of a range widget is constrained to known limits, the <code>aria-valuemin</code> and <code>aria-valuemax</code> properties are used to inform assistive technologies of the minimum and maximum values of the range.
+        For some widgets, assistive technologies use this information to present the current value as a percentage.
+        When using these properties, set <code>aria-valuemin</code> to the lowest value allowed for the widget and <code>aria-valuemax</code> to the highest allowed value.
+        If values for <code>aria-valuemin</code> and <code>aria-valuemax</code> are not set, default values are exposed to assistive technologies unless the widget is a <code>spinbutton</code>, which is the only range widget that does not have default limits.
+      </p>
+      <p>
+        The <code>aria-valuenow</code> property is used to inform assistive technologies of the current value of a range widget.
+        Set <code>aria-valuenow</code> to the current value of the widget, ensuring the value of <code>aria-valuenow</code> falls within the range defined by <code>aria-valuemin</code> and <code>aria-valuemax</code>.
+        If the current value of a <code>progressbar</code> or <code>spinbutton</code> is indeterminate or unknown, omit the <code>aria-valuenow</code> property.
+        The <code>aria-valuenow</code> property is required for the <code>meter</code>, <code>scrollbar</code>, <code>separator</code> (if the element is focusable), and <code>slider</code> roles.
+      </p>
+      <p>
+        The range widget roles have the following default values and requirements for <code>aria-valuemin</code>, <code>aria-valuemax</code> and <code>aria-valuenow</code>.
+      </p>
+      <table>
+        <thead>
+
+          <tr>
+            <th scope="col">Role</th>
+            <th scope="col"><code>aria-valuemin</code><br>(default)</th>
+            <th scope="col"><code>aria-valuemax</code><br>(default)</th>
+            <th scope="col"><code>aria-valuemin</code><br>(required)</th>
+            <th scope="col"><code>aria-valuemax</code><br>(required)</th>
+            <th scope="col"><code>aria-valuenow</code><br>(required)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><code>meter</code></th>
+            <td>0</td>
+            <td>100</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>progressbar</code></th>
+            <td>0</td>
+            <td>100</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>scrollbar</code></th>
+            <td>0</td>
+            <td>100</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>separator</code> <small>(if focusable)</small></th>
+            <td>0</td>
+            <td>100</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>slider</code></th>
+            <td>0</td>
+            <td>100</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>spinbutton</code></th>
+            <td>None</td>
+            <td>None</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="range_related_properties_using_aria-valuetext">
+      <h3>Using <code>aria-valuetext</code></h3>
+
+      <p>
+        When the element's values are contained within a range but those values are not numeric (such as "small", "medium" and "large"),
+        or they are numeric but there is value in communicating more information than just a number,
+        <code>aria-valuetext</code> is used to surface the text value to assistive technologies.
+        Only use <code>aria-valuetext</code> when <code>aria-valuenow</code> is not sufficiently meaningful for users because using <code>aria-valuetext</code> will prevent assistive technologies from communicating <code>aria-valuenow</code>.
+      </p>
+
+      <div class="example">
+        <p>
+          For example, for a battery indicator, it would be useful to know how many minutes are remaining, in addition to the percentage of charge remaining.
+        </p>
+
+        <pre><code>
+  &lt;span id="battery-label"&gt;Battery&lt;/span&gt;
+  &lt;span role="meter" aria-labelledby="battery-label"
+    aria-valuenow="5"
+    aria-valuetext="5%, 18 minutes remaining."&gt;
+  &lt;/span&gt;
+        </code></pre>
+      </div>
+    </section>
+
+    <section id="range_related_properties_meter_role">
+      <h3>Range properties with meter</h3>
+      <p>
+        The <code>aria-valuemin</code> and <code>aria-valuemax</code> properties only need to be set for elements with role <code>meter</code> if the meter's minimum value is not 0 or its maximum value is not 100.
+        It is necessary, however, to always specify a value for <code>aria-valuenow</code> and to ensure the value is greater than or equal to the minimum allowed value and less than or equal to the maximum allowed value.
+        A detailed description of the <code>meter</code> role is in the <a href="#meter">meter design pattern</a>.</p>
+
+      <p>This example of a meter shows the current Central Processing Unit (CPU) usage. </p>
+
+      <pre><code>&lt;span id="cpu_usage_label"&gt;CPU usage&lt;/span&gt;
+&lt;!-- The CPU usage uses the default values of 0 and 100 for aria-valuemin and aria-valuemax --&gt;
+&lt;div role="meter"
+      aria-valuenow="90"
+      aria-labelledby="cpu_usage_label"&gt;
+&lt;/div&gt;</code></pre>
+
+      <p>
+        The <code>aria-valuetext</code> property can be set to a string that makes the meter value understandable. For example, a CPU usage meter value might be conveyed as <code>aria-valuetext="90% of CPU is being used"</code>.
+      </p>
+      <p>Here is another example of a meter that has a range different from the default of 0 for <code>aria-valuemin</code> and 100 for <code>aria-valuemax</code>.</p>
+
+      <pre><code>&lt;span id="ph_alkaline_meter_label"&gt;Alkaline pH(Power of Hydrogen) Level&lt;/span&gt;
+&lt;div role="meter"
+        aria-valuenow="9"
+        aria-valuemin="7"
+        aria-valuemax="14"
+        aria-labelledby="ph_alkaline_meter_label"&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+    <section id="range_related_properties_progressbar_role">
+      <h3>Range properties with progress bars</h3>
+
+      <p>
+        The <code>aria-valuemin</code> and <code>aria-valuemax</code> properties only need to be set for the <code>progressbar</code> role when the progress bar's minimum is not 0 or the maximum value is not 100.
+        The aria-valuenow property needs to be set for a <code>progressbar</code> if its value is known (e.g. not indeterminate).
+        If the <code>aria-valuenow</code> property is set, the author needs to make sure it is within the minimum and maximum values.
+      </p>
+      <p>Following is an example of a progress bar represented by an SVG.</p>
+
+      <pre><code>&lt;div&gt;&lt;span id="loadlabel"&gt;Loading:&lt;/span&gt;
+  &lt;!-- The progress bar uses the default values of 0 and 100 for aria-valuemin and aria-valuemax --&gt;
+  &lt;span role="progressbar"
+        aria-labelledby="loadlabel"
+        aria-valuenow="33" &gt;
+    &lt;svg width="100" height="10"&gt;
+      &lt;rect x="0" y="0" height="10" width="100" stroke="black" fill="none"/&gt;
+      &lt;rect x="0" y="0" height="10" width="33" fill="green" /&gt;
+    &lt;/svg&gt;
+  &lt;/span&gt;
+&lt;/div&gt;</code></pre>
+      <p>This progress bar can also be made using the native HTML <code>progress</code> element.</p>
+
+      <pre><code>&lt;label for="loadstatus"&gt;Loading:&lt;/label&gt;
+&lt;progress id="loadstatus" max="100" value="33"&gt;&lt;/progress&gt;
+      </code></pre>
+
+      <p>To represent an indeterminate progress bar where the value range is unknown, omit the <code>aria-valuenow</code> attribute.</p>
+
+      <pre><code>&lt;img role="progressbar" src="spinner.gif" alt="Loading..."&gt;</code></pre>
+    </section>
+
+    <section id="range_related_properties_scrollbar_role">
+      <h3>Range properties with scrollbars</h3>
+
+      <p>
+        The <code>aria-valuemin</code> and <code>aria-valuemax</code> properties only need to be set for the <code>scrollbar</code> role when it's minimum value is not 0 or the maximum value is not 100.   The <code>aria-valuenow</code> property is required for <code>scrollbar</code> and the author needs to make sure it is within the minimum and maximum values.
+      </p>
+      <p>
+        <code>aria-valuenow</code> will generally be exposed as a percentage between <code>aria-valuemin</code> and <code>aria-valuemax</code> calculated by assistive technologies.
+      </p>
+
+      <pre><code>&lt;span id="pi-label"&gt;Pi&lt;/div&gt;
+&lt;div id="pi"&gt;
+3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
+&lt;/div&gt;
+&lt;div class="rail"&gt;
+&lt;!-- The scrollbar uses the default values of 0 and 100 for aria-valuemin and aria-valuemax --&gt;
+  &lt;div
+    class="thumb"
+    role="scrollbar"
+    aria-labelledby="pi-label"
+    aria-controls="pi"
+    aria-orientation="horizontal"
+    aria-valuenow="25"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+    </section>
+
+    <section id="range_related_properties_slider_role">
+      <h3>Range properties with sliders</h3>
+      <p>
+        The <code>aria-valuemin</code> and <code>aria-valuemax</code> properties only need to be set for the <code>slider</code> role when the slider's minimum is not 0 or the maximum value is not 100.
+        The <code>aria-valuenow</code> property is required for <code>slider</code> role and the author needs to make sure it is within the minimum and maximum values.
+        A detailed description of the <code>slider</code> role can be found in the <a href="#slider">slider design pattern</a> and <a href="#slidertwothumb">slider (multi-thumb) design pattern</a>.
+      </p>
+      <p>
+        The following example shows a temperature controller.
+        In this example, <code>aria-valuenow</code> is meaningful to the user, and so <code>aria-valuetext</code> is not used.
+      </p>
+      <pre><code>&lt;div class="rail"&gt;
+  &lt;div id="thumb" role="slider" aria-valuemin="50" aria-valuenow="68" aria-valuemax="100"
+       aria-label="Temperature (F)" tabindex="0"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <p>The slider example above can be made using the HTML <code>&lt;input type="range"&gt;</code> element.</p>
+      <pre><code>&lt;input type="range" min="50" value="68" max="100" aria-label="Temperature (F)"&gt;
+      </code></pre><p>The following example is a fan control. The <code>aria-valuenow</code> value is "1", which is not meaningful to the user. The <code>aria-valuetext</code> property is used so that assistive technology will surface its value ("low") instead.</p>
+      <pre><code>&lt;div class="rail"&gt;
+  &lt;div id="thumb" role="slider" aria-valuemin="0" aria-valuenow="1" aria-valuemax="3"
+       aria-valuetext="low" aria-label="Fan speed" tabindex="0" &gt;
+  &lt;/div&gt;
+  &lt;div class="value"&gt; Off &lt;/div&gt;
+  &lt;div class="value"&gt; Low &lt;/div&gt;
+  &lt;div class="value"&gt; Medium &lt;/div&gt;
+  &lt;div class="value"&gt; High &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+
+    <section id="range_related_properties_spinbutton_role">
+      <h3>Range properties with spin buttons</h3>
+
+      <p>
+        The <code>aria-valuemin</code> and <code>aria-valuemax</code> properties are used only when a <code>spinbutton</code> has a defined range.
+        They do not have default values, so if they are not specified, range limits will not be exposed to assistive technologies.
+        Similarly, the <code>aria-valuenow</code> property is set only when a <code>spinbutton</code> has a value.
+        If it is not set, a value is not exposed to assistive technologies for the <code>spinbutton</code>.
+        <code>aria-valuetext</code> can be used when appropriate.
+        A detailed description of the <code>spinbutton</code> role can be found in the <a href="#spinbutton">spinbutton design pattern</a>.
+      </p>
+
+      <p>The following example sets the price of paperclips in cents.</p>
+
+      <pre><code>&lt;div role="spinbutton" aria-labelledby="price-label" aria-valuenow="50" tabindex="0"&gt;
+  &lt;button id="lower-price"&gt;Lower&lt;/button&gt;
+  &lt;button id="raise-price"&gt;Raise&lt;/button&gt;
+  &lt;span id="price-label"&gt;Price per paperclip: $&lt;/span&gt;&lt;span id="price"&gt;0.50&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+      <p>If there are minimum and maximum allowed values, set the <code>aria-valuemin</code> and <code>aria-valuemax</code> properties.</p>
+
+      <pre><code>&lt;div role="spinbutton" aria-labelledby="price-label"
+      aria-valuemin="1" aria-valuenow="50" aria-valuemax="200" tabindex="0"&gt;
+  &lt;button id="lower-price"&gt;Lower&lt;/button&gt;
+  &lt;button id="raise-price"&gt;Raise&lt;/button&gt;
+  &lt;span id="price-label"&gt;Price per paperclip: $&lt;/span&gt;&lt;span id="price"&gt;0.50&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+      <p>The spin button example above can be made using the native HTML <code>&lt;input type="number"&gt;</code> element.</p>
+
+      <pre><code>&lt;label&gt;Price per paperclip: $&lt;input type="number" min="0.01" value="0.5" max="2" step="0.01"&gt;&lt;/label&gt;</code></pre>
+    </section>
   </section>
 
   <section id="presentation_role">
@@ -6660,282 +6987,7 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
 
   <section id="change_log" class="appendix">
     <h2>Change History</h2>
-    
-    <section id="change_log_2019_november" class="appendix">
-      <h3>Changes in November 2019 publication of the 3rd working draft of version 1.2</h3>
-      <p>
-        APG 1.1 supported ARIA 1.1, and this version, APG 1.2, supports ARIA 1.2.
-        The following changes have been made to APG 1.1 in order to make this draft of APG 1.2.
-      </p>
-      <ul>
-        <li>Added section to provide guidance related to 38 document structure roles, 18 of which are new in ARIA 1.2.</li>
-        <li>Revised guidance for roles where naming requirements changed in ARIA 1.2. ARIA 1.2 prohibits names on some roles. ARIA 1.2 removed naming requirements from some other roles.</li>
-        <li>Added naming guidance for 18 roles that are new in ARIA 1.2.</li>
-        <li>Revised the combobox pattern and 4 combobox examples to reflect changes made in ARIA 1.2.</li>
-        <li>Added a design pattern and example implementation of the new meter role.</li>
-        <li>Added a new listbox example that illustrates new ARIA 1.2 support for named groups of options in a listbox.</li>
-        <li>Revised the editor menubar example to illustrate new ARIA 1.2 support for named groups of items in a menu.</li>
-        <li>Added a button example that illustrates use of the new ARIA 1.2 IDL interface.</li>
-        <li>Due to change in ARIA 1.2, removed Math role from list of roles that have presentational children.</li>
-        <li>In response to feedback, revise description of Escape behavior in the combobox Pattern.</li>
-        <li>Corrected color contrast in accordion and date picker examples.</li>
-        <li>Fixed 4 bugs in the date picker dialog example.</li>
-        <li>Fixed 2 bugs in the spin button date picker example related to incrementing past limits.</li>
-        <li>Changed all Examples with buttons to add button type to non-submit buttons.</li>
-        <li>Changed tabs examples to hide panels with display: none instead of the hidden attribute.</li>
-      </ul>
-      <p>For more detail, see:</p>
-      <ul>
-        <li>
-          <a href="https://github.com/w3c/aria-practices/milestone/10">APG 1.2 Working Draft 3 Milestone</a>:
-          Github issues closed in the third working draft of APG 1.2 published in November 2019.
-        </li>
-        <li>
-          <a href="https://github.com/w3c/aria-practices/milestone/7">APG 1.2 Working Draft 1 milestone</a>:
-          GitHub issues closed in the first working draft of APG 1.2 published on July 17, 2018.
-        </li>
-        <li><a href="https://github.com/w3c/aria-practices/wiki/Change-Log-for-November-2019-APG-1.2-Working-Draft-3">Detailed change log with links to all commits in the November 2019 publication  of APG 1.2 that are not in the August 14, 2019 publication of APG 1.1 release 4.</a></li>
-      </ul>
-    </section>
-    
-    <section id="change_log_2019_july" class="appendix">
-      <h3>Changes in July 2019 Publication of APG 1.1 Release 4</h3>
-      <ul>
-        <li>Major additions and revisions:
-          <ul>
-            <li>
-              Added section providing guidance on coding and composing accessible names and descriptions.
-              This section comprehensively covers ARIA and HTML naming and describing techniques as well as specific guidance for every ARIA role.
-            </li>
-            <li>Added example of a site navigation bar (<q>menu system</q>) with dropdown lists of links coded using the disclosure pattern.</li>
-            <li>
-              Added an example of a date picker based on the dialog and grid patterns.
-              A modal dialog contains a calendar grid that presents buttons for each day of a month.
-            </li>
-            <li> Added an example of a date picker that uses three spin buttons for day, month, and year.</li>
-            <li>
-              Image Carousel Example: Updated the example so that the rotation control is always visible instead of only being visible for keyboard users who move focus into the carousel region.
-              Also changed the controls so they are implemented with HTML button elements instead of links with the <code>button</code> role.
-            </li>
-            <li>Toolbar Example: Added popup text labels for icons that are displayed on both hover and focus.</li>
-          </ul>
-        </li>
-        <li>Minor revisions of guidance or implementation were made to the following design patterns and examples:
-          <ul>
-            <li>Editor Menubar Example: Updated example so that meta data used by the scripts is specified using <code>data-</code> attributes instead of with <code>rel</code> attributes.</li>
-            <li>Radio Group with Active Descendant Example: Removed unused keycodes and fixed linting issues.</li>
-          </ul>
-        </li>
-      </ul>
-      <p>Also see:</p>
-      <ul>
-        <li>
-          <a href="https://github.com/w3c/aria-practices/milestone/8">The APG 1.1 Release 4 Milestone</a>:
-          which lists the GitHub issues that document discussions and reviews of changes included in the July 2019 publication.
-        </li>
-        <li>
-          <a href="https://github.com/w3c/aria-practices/wiki/Change-Log-for-July-2019-APG-1.1-Note-Release-4">Detailed change log with links to all commits that are new in the July 2019 publication  since the January 2019 publication.</a>
-        </li>
-      </ul>
-    </section>
-    
-    <section id="change_log_2019_january" class="appendix">
-      <h3>Changes in January 2019 Publication of APG 1.1 Release 3</h3>
-      <ul>
-        <li>Major additions and revisions:
-          <ul>
-            <li>Added indexes that allow lookup of examples by role, state, or property.</li>
-            <li>Added a carousel design pattern and example implementation.</li>
-            <li>Revised radio group pattern to accommodate radio groups nested in toolbars: left and right arrow keys do not change the checked state and can move focus outside the group.</li>
-            <li>Redesigned toolbar example to demonstrate an editor toolbar that includes a nested radio group, toggle buttons, menu button, spin button, checkbox, and link. Also fixed several bugs.</li>
-            <li>Restructured the accordion example to use HTML heading elements containing HTML button elements.</li>
-            <li>Added a regression test framework and suite of regression tests that test all documented keyboard behaviors, roles, states, and properties for each example implementation of a pattern.</li>
-          </ul>
-        </li>
-        <li>Minor revisions of guidance or implementation were made to the following design patterns and examples:
-          <ul>
-            <li>Alert dialog example: Replaced lorem ipsum placeholder with text that describes actions that trigger the alert dialog and alert message.</li>
-            <li>Button Example: Button activation now happens on keyup for space key and aria-hidden was removed from child svg.</li>
-            <li>Legacy Combobox examples: Fixed enter key documentation, made Up Arrow set activedescendant to last match in list, corrected up arrow documentation for the textbox.</li>
-            <li>Dialog Examples: Fixed IE11 incompatibility in role validity check.</li>
-            <li>Single-select listbox example: Fix a bug with aria-selected.</li>
-            <li>Grid Examples: Fixed how event listeners were cleaned up.</li>
-            <li>Menubar Examples: Applied role="none" where missing from elements in menubar and changed visual design to better distinguish between menuitemradio and meuitemcheckbox elements.</li>
-            <li>Radio Group Example: Fixed documentation of elements used in attributes table.</li>
-            <li>Spin Button Pattern: Added aria-invalid guidance for values outside allowed range.</li>
-            <li>Toolbar Pattern: Clarified keyboard guidance for Tab and Shift+Tab and revised description to remove guidance that conflicted with updated radio group pattern.</li>
-          </ul>
-        </li>
-      </ul>
-      <p>Also see:</p>
-      <ul>
-        <li>
-          <a href="https://github.com/w3c/aria-practices/milestone/3?closed=1">The APG 1.1 Release 3 Milestone</a>:
-          which lists the GitHub issues that document discussions and reviews of changes included in the January 2019 publication.
-        </li>
-        <li>
-          <a href="https://github.com/w3c/aria-practices/wiki/Change-Log-for-January-2019-APG-1.1-Note-Release-3">Detailed change log with links to all commits that are new in the January 2019 publication  since the July 2018 publication.</a>
-        </li>
-      </ul>
-    </section>
-    
-    <section id="change_log_2018_july" class="appendix">
-      <h3>Changes in July 2018 Publication of APG 1.1 Release 2</h3>
-      <ul>
-        <li>
-          Added the following:
-          <ul>
-            <li>Treegrid design pattern and example</li>
-            <li>Alert dialog example</li>
-          </ul>
-        </li>
-        <li>Significant revisions of guidance or implementation were made to the following design patterns and examples:
-          <ul>
-            <li>Accordion pattern and example, including removing two optional key commands from the pattern.</li>
-            <li>Checkbox example bug fixes</li>
-            <li>ARIA 1.0 Combobox example, including escape key behavior</li>
-            <li>ARIA 1.1 Combobox example labeling</li>
-            <li>Modal dialog example, primarily code refactoring when adding alert dialog</li>
-            <li>Grid pattern, including guidance on column selection</li>
-            <li>Listbox examples</li>
-            <li>Menu pattern, including guidance on menu/submenu structure</li>
-            <li>editor menubar example, including significant improvement to mouse behaviors.</li>
-            <li>Menu button example bug fixes</li>
-            <li>Navigation menubar example bug fixes</li>
-            <li>Radio group example styling</li>
-            <li>Tabs pattern, including labeling guidance</li>
-            <li>Tree view pattern, including multi-select guidance</li>
-            <li>Tree view example bug fixes</li>
-          </ul>
-        </li>
-      </ul>
-      <p>Also see:</p>
-      <ul>
-        <li>
-          <a href="https://github.com/w3c/aria-practices/milestone/1?closed=1">The APG 1.1 Release 2 Milestone</a>:
-          which lists the GitHub issues that document discussions and reviews of changes included in the July 2018 publication.
-        </li>
-        <li>
-          <a href="https://github.com/w3c/aria-practices/wiki/Change-Log-for-July-2018-APG-1.1-Note-Release-2">Detailed change log with links to all commits that are new in the July 2018 publication  since the December 2017 publication of the Note.</a>
-        </li>
-      </ul>
-    </section>
-    <section id="change_log_2017_december" class="appendix">
-      <h3>Changes in December 2017 Publication of APG 1.1 Release 1</h3>
-      <ul>
-        <li>
-          Added the following:
-          <ul>
-            <li>Read Me First section</li>
-            <li>Combobox pattern</li>
-            <li>Combobox examples: 3 ARIA 1.0 style and 4 ARIA 1.1 style</li>
-            <li>Disclosure pattern</li>
-            <li>Feed example display page</li>
-            <li>Grid and table properties guidance section</li>
-            <li>Collapsible dropdown listbox example</li>
-            <li>Multi-thumb slider examples</li>
-            <li>Table pattern and example</li>
-          </ul>
-        </li>
-        <li>The top of each example page now includes a set of four related links to:
-          <ul>
-            <li><Q>Browser and Assistive Technology Support</Q> section of <q>Read Me First</q></li>
-            <li><q>Report Issue</q> page in the Github repository</li>
-            <li><q>Related Issues</q> listed in the Github project for the example</li>
-            <li><q>Design Pattern</q> section that applies to the example</li>
-          </ul>
-        </li>
-        <li>All Javascript and CSS files used by the examples include the correct license and copyright statements.</li>
-        <li>Significant revisions of guidance and implementation were made to the following sections, design patterns, and examples:
-          <ul>
-            <li>Introduction</li>
-            <li>Keyboard guidance for Mac OS</li>
-            <li>Accordion example</li>
-            <li>Mixed checkbox examples</li>
-            <li>Scrollable layout grid example</li>
-            <li>Listbox examples</li>
-            <li>Modal dialog example</li>
-            <li>editor menubar example</li>
-            <li>Navigation menubar example</li>
-            <li>Menu button examples</li>
-            <li>Spinbutton pattern</li>
-            <li>Toolbar example</li>
-            <li>Tree view examples</li>
-          </ul>
-        </li>
-      </ul>
-      <p>Also see:</p>
-      <ul>
-        <li>
-          <a href="https://github.com/w3c/aria-practices/milestone/6">1.1 APG Release 1 milestone,</a>
-          which lists the GitHub issues that document discussions and reviews of changes included in the December 2017 publication.
-        </li>
-        <li>
-          <a href="https://github.com/w3c/aria-practices/wiki/Change-Log-for-December-2017-Note-Release-1">Detailed change log with links to all commits that are new in the December 2017 publication as a Note since the June 2017 working draft.</a>
-        </li>
-      </ul>
-    </section>
-    <section id="change_log_2017_june" class="appendix">
-      <h3>Changes in June 2017 APG 1.1 Working Draft</h3>
-      <ul>
-        <li>
-          Added the following:
-          <ul>
-            <li>Modal dialog example</li>
-            <li>Disclosure design pattern</li>
-            <li>Example disclosure for FAQ</li>
-            <li>Example disclosure for image description</li>
-            <li>Draft of feed pattern</li>
-            <li>Example feed implementation</li>
-            <li>Example of menu button using aria-activedescendant</li>
-            <li>Example of tabs with manual activation</li>
-          </ul>
-        </li>
-        <li>Design pattern section: moved examples subsection of each design pattern to be
-          the first subsection.</li>
-        <li>
-          Across all example pages:
-          <ul>
-            <li>Improved visual design of tables that document keyboard implementation,
-              roles, states, and properties.</li>
-            <li>Improved consistency of editorial style.</li>
-          </ul>
-        </li>
-        <li>
-          Significant revisions of guidance and implementation were made to the following design
-          patterns and example pages:
-          <ul>
-            <li>Accordion example</li>
-            <li>Alert example</li>
-            <li>Breadcrumb example</li>
-            <li>Button example</li>
-            <li>Checkbox examples</li>
-            <li>Dialog (modal) design pattern</li>
-            <li>Grid examples</li>
-            <li>Landmark examples</li>
-            <li>Link example</li>
-            <li>Listbox example</li>
-            <li>Menubar examples</li>
-            <li>Menu button examples</li>
-            <li>Radio group example</li>
-            <li>Slider design pattern</li>
-            <li>Slider example</li>
-            <li>Example of tabs with automatic activation</li>
-            <li>Tree view examples</li>
-          </ul>
-        </li>
-      </ul>
-      <p>Also see:</p>
-      <ul>
-        <li>
-          <a href="https://github.com/w3c/aria-practices/issues?q=is%3Aclosed+is%3Aissue+milestone%3A%22Jan+2017+Clean+Up%22+sort%3Aupdated-asc">January 2017 Clean Up Milestone</a>,
-          which lists the GitHub issues that document discussions and reviews of changes included in the June 2017 working draft.
-        </li>
-        <li>
-          <a href="https://github.com/w3c/aria-practices/wiki/Change-Log-for-June-2017-Working-Draft">Detailed change log with links to all commits that are new in the June 2017 working draft.</a>
-        </li>
-      </ul>
-    </section>
+    <p>Change history is maintained in a separate version-specific branch.</p>
   </section>
 
   <section id="acknowledgements" class="appendix">
@@ -7011,7 +7063,7 @@ So, As advised by <a href="#naming_rule_avoid_fallback">Rule 4: Avoid Browser Fa
   		</ul>
   	</section>
 
-  	<div data-include='common/acknowledgements/funders.html' data-include-replace='true'></div>
+  	<div data-include="common/acknowledgements/funders.html" data-include-replace="true"></div>
 
   </section>
 </body>
