@@ -6772,33 +6772,26 @@
     </ol>
     <section id="presentation_role_effects">
       <h3>
-        Effects of Role <code>presentation</code>
+        <code>presentation</code> 역할(role)의 효과
       </h3>
       <p>
-        When <code>role=&quot;presentation&quot;</code> is specified on an element, if a
-        <a href="#presentation_role_ignored">condition that requires a browser to ignore the <code>presentation</code> role</a>
-        does not exist, it has the following three effects.
+        요소(element)에 <code>role=&quot;presentation&quot;</code>이 지정 된 경우,
+        <a href="#presentation_role_ignored">브라우저가 <code>presentation</code> 역할(role)을 무시하는데 필요한 조건</a>이 없는 경우, 다음과 같은 세 가지 효과를 가집니다.
       </p>
       <ol>
-        <li>The element’s implied ARIA role and any ARIA states and properties associated with
-          that role are hidden from assistive technologies.</li>
+        <li>요소(element)의 암묵적 ARIA 역할(role)과 그 역할(role)과 관련 된 ARIA 상태(state) 및 속성(property)가 보조 기술에 숨겨집니다.</li>
         <li>
-          Text contained by the element, i.e., inner text, as well as inner text of all its
-          descendant elements remains visible to assistive technologies except, of course, when the
-          text is explicitly hidden, e.g., styled with <code>display: none</code> or has <code>aria-hidden=&quot;true&quot;</code>.
+          요소(element)에 포함된 텍스트, 즉, 내부 텍스트 뿐아니라 모든 후손 요소(element)의 내부 텍스트가 텍스트가 명시적으로 숨겨진 경우 예를 들어 <code>display: none</code>으로 스타일링 되었거나 <code>aria-hidden=&quot;true&quot;</code>를 가지는 경우를 제외하고, 보조 기술에 계속 노출됩니다.
         </li>
         <li>
-          The roles, states, and properties of each descendant element remain visible to assistive
-          technologies unless the descendant requires the context of the presentational
-          element. For example:
+          각 후손 요소(element)의 역할(role), 상태(state), 속성(property)가 표현 요소(presentational
+          element)의 컨텍스트를 요구하지 않는 한 보조기술에 계속 노출됩니다. 예를 들어:
           <ul>
-            <li> If <code>presentation</code> is applied to a <code>ul</code> or <code>ol</code> element, each child <code>li</code> element inherits the <code>presentation</code> role because ARIA requires the <code>listitem</code> elements to have the parent <code>list</code> element. So, the <code>li</code> elements are not exposed to assistive technologies, but elements contained inside of those <code>li</code> elements, including nested lists, are visible to assistive technologies. </li>
+            <li><code>presentation</code>이 <code>ul</code>이나 <code>ol</code> 요소(elmeent)에 적용 된 경우, 각 자식 <code>li</code> 요소(element)는 ARAI가 부모 <code>list</code> 요소(element)를 가지도록 <code>listitem</code> 요소(element)를 요구하므로, <code>presentation</code> 역할(role)을 상속받습니다. 따라서, <code>li</code> 요소(element)는 보조 기술에 노출되지 않지만, 중첩된 목록을 포함하여 그 <code>li</code> 요소(element) 내부에 포함된 요소(element)는 보조 기술에 노출 됩니다.</li>
             <li>
-              Similarly, if <code>presentation</code> is applied to a <code>table</code> element,
-              the descendant <code>caption</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>,
-              <code>tr</code>, <code>th</code>, and <code>td</code>
-              elements inherit role <code>presentation</code> and are thus not exposed to assistive technologies.
-              But, elements inside of the <code>th</code> and <code>td</code> elements, including nested tables,  are exposed to assistive technologies.
+              마찬가지로, <code>presentation</code>이 <code>table</code> 요소(element)에 적용 된 경우, 후손 <code>caption</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>,
+              <code>tr</code>, <code>th</code>, <code>td</code> 요소(element)는 <code>presentation</code> 역할(role)을 상속하고 따라서 보조 기술에 노출되지 않습니다.
+              하지만, 중첩 된 테이블을 포함하여 <code>th</code>와 <code>td</code> 요소(element) 내부의 요소는 보조 기술에 노출 됩니다.
             </li>
           </ul>
         </li>
