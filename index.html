@@ -150,16 +150,16 @@
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishDate": "2020-12-26",
-  "publishISODate": "2020-12-26T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 26 December 2020"
+  "publishDate": "2021-01-02",
+  "publishISODate": "2021-01-02T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 02 January 2021"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 <body class="h-entry informative"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">WAI-ARIA 작성 방법 1.2</h1>
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2020-12-26">26 December 2020</time>
+      <time class="dt-published" datetime="2021-01-02">02 January 2021</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -195,7 +195,7 @@
     <p class="copyright">
     <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
     ©
-    2018-2020
+    2018-2021
     
     <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
     <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
@@ -296,7 +296,7 @@
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>소개</a></li><li class="tocline"><a class="tocxref" href="#read_me_first"><bdi class="secno">2. </bdi>먼저 읽어주세요</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#no_aria_better_bad_aria"><bdi class="secno">2.1 </bdi>잘못된 ARIA보다 ARIA를 안쓰는게 낫다</a></li><li class="tocline"><a class="tocxref" href="#browser_and_AT_support"><bdi class="secno">2.2 </bdi>브라우저와 보조 기술 지원</a></li><li class="tocline"><a class="tocxref" href="#mobile_and_touch_support"><bdi class="secno">2.3 </bdi>모바일과 터치 지원</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_ex"><bdi class="secno">3. </bdi>설계 패턴과 위젯</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accordion"><bdi class="secno">3.1 </bdi>아코디언 (Show/Hide 기능이 있는 섹션)</a></li><li class="tocline"><a class="tocxref" href="#alert"><bdi class="secno">3.2 </bdi>경고</a></li><li class="tocline"><a class="tocxref" href="#alertdialog"><bdi class="secno">3.3 </bdi>Alert and Message Dialogs</a></li><li class="tocline"><a class="tocxref" href="#breadcrumb"><bdi class="secno">3.4 </bdi>Breadcrumb</a></li><li class="tocline"><a class="tocxref" href="#button"><bdi class="secno">3.5 </bdi>Button</a></li><li class="tocline"><a class="tocxref" href="#carousel"><bdi class="secno">3.6 </bdi>Carousel (Slide Show or Image Rotator)</a></li><li class="tocline"><a class="tocxref" href="#checkbox"><bdi class="secno">3.7 </bdi>Checkbox</a></li><li class="tocline"><a class="tocxref" href="#combobox"><bdi class="secno">3.8 </bdi>Combobox</a></li><li class="tocline"><a class="tocxref" href="#dialog_modal"><bdi class="secno">3.9 </bdi>Dialog (Modal)</a></li><li class="tocline"><a class="tocxref" href="#disclosure"><bdi class="secno">3.10 </bdi>Disclosure (Show/Hide)</a></li><li class="tocline"><a class="tocxref" href="#feed"><bdi class="secno">3.11 </bdi>Feed</a></li><li class="tocline"><a class="tocxref" href="#grid"><bdi class="secno">3.12 </bdi>Grids : Interactive Tabular Data and Layout Containers</a></li><li class="tocline"><a class="tocxref" href="#link"><bdi class="secno">3.13 </bdi>Link</a></li><li class="tocline"><a class="tocxref" href="#Listbox"><bdi class="secno">3.14 </bdi>Listbox</a></li><li class="tocline"><a class="tocxref" href="#menu"><bdi class="secno">3.15 </bdi>Menu or Menu bar</a></li><li class="tocline"><a class="tocxref" href="#menubutton"><bdi class="secno">3.16 </bdi>Menu Button</a></li><li class="tocline"><a class="tocxref" href="#meter"><bdi class="secno">3.17 </bdi>Meter</a></li><li class="tocline"><a class="tocxref" href="#radiobutton"><bdi class="secno">3.18 </bdi>Radio Group</a></li><li class="tocline"><a class="tocxref" href="#slider"><bdi class="secno">3.19 </bdi>Slider</a></li><li class="tocline"><a class="tocxref" href="#slidertwothumb"><bdi class="secno">3.20 </bdi>Slider (Multi-Thumb)</a></li><li class="tocline"><a class="tocxref" href="#spinbutton"><bdi class="secno">3.21 </bdi>Spinbutton</a></li><li class="tocline"><a class="tocxref" href="#table"><bdi class="secno">3.22 </bdi>Table</a></li><li class="tocline"><a class="tocxref" href="#tabpanel"><bdi class="secno">3.23 </bdi>Tabs</a></li><li class="tocline"><a class="tocxref" href="#toolbar"><bdi class="secno">3.24 </bdi>Toolbar</a></li><li class="tocline"><a class="tocxref" href="#tooltip"><bdi class="secno">3.25 </bdi>Tooltip Widget</a></li><li class="tocline"><a class="tocxref" href="#TreeView"><bdi class="secno">3.26 </bdi>Tree View</a></li><li class="tocline"><a class="tocxref" href="#treegrid"><bdi class="secno">3.27 </bdi>Treegrid</a></li><li class="tocline"><a class="tocxref" href="#windowsplitter"><bdi class="secno">3.28 </bdi>Window Splitter</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_landmark"><bdi class="secno">4. </bdi>랜드마크 영역</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#html-element"><bdi class="secno">4.1 </bdi>HTML 섹션화 요소(element)</a></li><li class="tocline"><a class="tocxref" href="#generatedID"><bdi class="secno">4.2 </bdi>랜드마크 설계 일반 원칙</a></li><li class="tocline"><a class="tocxref" href="#generatedID-0"><bdi class="secno">4.3 </bdi>랜드마크 영역</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aria_lh_banner"><bdi class="secno">4.3.1 </bdi>Banner</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_complementary"><bdi class="secno">4.3.2 </bdi>Complementary</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_contentinfo"><bdi class="secno">4.3.3 </bdi>Contentinfo</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_form"><bdi class="secno">4.3.4 </bdi>Form</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_main"><bdi class="secno">4.3.5 </bdi>Main</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_navigation"><bdi class="secno">4.3.6 </bdi>Navigation</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_region"><bdi class="secno">4.3.7 </bdi>Region</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_search"><bdi class="secno">4.3.8 </bdi>Search</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions"><bdi class="secno">5. </bdi>접근 가능한 이름과 설명 제공</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#names_and_descriptions_definition"><bdi class="secno">5.1 </bdi>접근 가능한 이름과 설명이란?</a></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions_derivation"><bdi class="secno">5.2 </bdi>이름과 설명 문자열은 어떻게 파생되나요?</a></li><li class="tocline"><a class="tocxref" href="#accessible_names"><bdi class="secno">5.3 </bdi>접근 가능한 이름</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_cardinal_rules"><bdi class="secno">5.3.1 </bdi>이름 지정의 기본 규칙</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_rule_heed_warnings"><bdi class="secno">5.3.1.1 </bdi>규칙 1: 경고에 주의하고 철처하게 테스트</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_visible_text"><bdi class="secno">5.3.1.2 </bdi>규칙 2: 보이는 텍스트 선택</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_native_techniques"><bdi class="secno">5.3.1.3 </bdi>규칙 3: 기본 기술 선택</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_avoid_fallback"><bdi class="secno">5.3.1.4 </bdi>규칙 4: 브라우저 폴백 방지</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_brief_names"><bdi class="secno">5.3.1.5 </bdi>규칙 5: 간단하고 유용한 이름 작성</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_techniques"><bdi class="secno">5.3.2 </bdi>이름 지정 기법</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_with_child_content"><bdi class="secno">5.3.2.1 </bdi>자식 콘텐츠로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-label"><bdi class="secno">5.3.2.2 </bdi><code>aria-label</code>을 통해 문자열 속성으로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-labelledby"><bdi class="secno">5.3.2.3 </bdi><code>aria-labelledby</code>를 통해 참조된 콘텐트로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_labels"><bdi class="secno">5.3.2.4 </bdi>Label 요소로 폼 컨트롤 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_legends"><bdi class="secno">5.3.2.5 </bdi>legend 요소로 필드셋 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_captions"><bdi class="secno">5.3.2.6 </bdi>캡션으로 표와 삽화 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_fallback"><bdi class="secno">5.3.2.7 </bdi>title 및 placeholder로부터 파생 된 대체 이름</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_effectively"><bdi class="secno">5.3.3 </bdi>효과적이고 사용자 친화적인 접근 가능한 이름 구성</a></li><li class="tocline"><a class="tocxref" href="#naming_role_guidance"><bdi class="secno">5.3.4 </bdi><span id="naming_role_guidance_heading">역할(role)별 접근 가능한 이름 지정 지침</span></a></li><li class="tocline"><a class="tocxref" href="#name_calculation"><bdi class="secno">5.3.5 </bdi>접근 가능한 이름 계산</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#name_calculation_non-recursive_ex"><bdi class="secno">5.3.5.1 </bdi>비 재귀적 접근 가능한 이름 계산의 예</a></li><li class="tocline"><a class="tocxref" href="#name_calculation_recursive_ex"><bdi class="secno">5.3.5.2 </bdi>재귀적 접근 가능한 이름 계산의 예</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessible_descriptions"><bdi class="secno">5.4 </bdi>접근 가능한 설명</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_techniques"><bdi class="secno">5.4.1 </bdi>설명 기법</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_with_aria-describedby"><bdi class="secno">5.4.1.1 </bdi><code>aria-describedby</code>로 내용을 참조하여 설명하기</a></li><li class="tocline"><a class="tocxref" href="#describing_with_captions"><bdi class="secno">5.4.1.2 </bdi>캡션으로 표 및 삽화에 설명 지정</a></li><li class="tocline"><a class="tocxref" href="#describing_with_title"><bdi class="secno">5.4.1.3 </bdi>title로부터 파생된 설명</a></li></ol></li><li class="tocline"><a class="tocxref" href="#description_calculation"><bdi class="secno">5.4.2 </bdi>접근 가능한 설명 계산</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#keyboard"><bdi class="secno">6. </bdi>키보드 인터페이스 개발</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_generalnav"><bdi class="secno">6.1 </bdi>기본 키보드 탐색 규칙</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_discernable_predictable"><bdi class="secno">6.2 </bdi>식별 가능하고 예측 가능한 키보드 초점</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_vs_selection"><bdi class="secno">6.3 </bdi>초점 vs 선택, 이중 초점 인식</a></li><li class="tocline"><a class="tocxref" href="#kbd_selection_follows_focus"><bdi class="secno">6.4 </bdi>초점을 따라 자동으로 선택되게 하는 시기 결정</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_between"><bdi class="secno">6.5 </bdi>컴포넌트 간 키보드 탐색 (탭 시퀀스)</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_within"><bdi class="secno">6.6 </bdi> 컴포넌트 내부 키보드 탐색</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_roving_tabindex"><bdi class="secno">6.6.1 </bdi>이동(roving) tabindex를 사용하여 컴포넌트에서 초점 관리</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_activedescendant"><bdi class="secno">6.6.2 </bdi>aria-activedescendant를 사용하여 복합 컴포넌트에서 초점 관리</a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_disabled_controls"><bdi class="secno">6.7 </bdi>비활성화 된 컨트롤의 초점 가능성(focusability)</a></li><li class="tocline"><a class="tocxref" href="#kbd_common_conventions"><bdi class="secno">6.8 </bdi>공통 기능에 대한 키 할당 규칙</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts"><bdi class="secno">6.9 </bdi>키보드 단축키</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_behavior_design"><bdi class="secno">6.9.1 </bdi>키보드 단축키의 범위와 동작 설계</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_basic"><bdi class="secno">6.9.1.1 </bdi>탐색을 통한 기본 접근 보장</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_choose_behavior"><bdi class="secno">6.9.1.2 </bdi>적절한 단축키 동작 선택</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_where"><bdi class="secno">6.9.1.3 </bdi>단축키를 추가할 위치 선택 </a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assigning"><bdi class="secno">6.9.2 </bdi>키보드 단축키 할당</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_opsys_conflicts"><bdi class="secno">6.9.2.1 </bdi>운영 체제 키 충돌</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_assistivetech_conflicts"><bdi class="secno">6.9.2.2 </bdi>보조 기술 키 충돌</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_browser_conflicts"><bdi class="secno">6.9.2.3 </bdi>브라우저 키 충돌</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_intentional_conflicts"><bdi class="secno">6.9.2.4 </bdi>의도적인 키 충돌</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties"><bdi class="secno">7. </bdi>Grid와 Table 속성(property)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_rows"><bdi class="secno">7.1 </bdi><code>aria-rowcount</code>와 <code>aria-rowindex</code> 사용</a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols"><bdi class="secno">7.2 </bdi><code>aria-colcount</code>과 <code>aria-colindex</code>사용</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_contiguous"><bdi class="secno">7.2.1 </bdi>열 인덱스가 연속적일 때 <code>aria-colindex</code> 사용</a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_noncontiguous"><bdi class="secno">7.2.2 </bdi>열 인덱스가 비연속적일 때 <code>aria-colindex</code> 사용</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_spans"><bdi class="secno">7.3 </bdi><code>aria-colspan</code>과 <code>aria-rowspan</code>를 사용하여 셀 합치기 정의</a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_sort"><bdi class="secno">7.4 </bdi><code>aria-sort</code>로 정렬 순서 나타내기</a></li></ol></li><li class="tocline"><a class="tocxref" href="#range_related_properties"><bdi class="secno">8. </bdi>범위 위젯에 대한 값과 제한 전달</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#range_related_properties_using_aria-valuemin_aria-valuemax_and_aria-valuenow"><bdi class="secno">8.1 </bdi><code>aria-valuemin</code>, <code>aria-valuemax</code>, <code>aria-valuenow</code> 사용하기</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_using_aria-valuetext"><bdi class="secno">8.2 </bdi><code>aria-valuetext</code>사용하기</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_meter_role"><bdi class="secno">8.3 </bdi>meter 범위 속성(property)</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_progressbar_role"><bdi class="secno">8.4 </bdi>progress bars 범위 속성(property)</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_scrollbar_role"><bdi class="secno">8.5 </bdi>scrollbars 범위 속성(property)</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_slider_role"><bdi class="secno">8.6 </bdi>sliders 범위 속성(property)</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_spinbutton_role"><bdi class="secno">8.7 </bdi>spin buttons 범위 속성(property)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#presentation_role"><bdi class="secno">9. </bdi><code>presentation</code> 역할(role)로 의도적으로 의미론 숨기기</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#presentation_role_effects"><bdi class="secno">9.1 </bdi>
-        Effects of Role <code>presentation</code>
+        <code>presentation</code> 역할(role)의 효과
       </a></li><li class="tocline"><a class="tocxref" href="#presentation_role_ignored"><bdi class="secno">9.2 </bdi>
         Conditions That Cause Role <code>presentation</code> to be Ignored
       </a></li><li class="tocline"><a class="tocxref" href="#presentation_role_examples"><bdi class="secno">9.3 </bdi>
@@ -6979,16 +6979,10 @@
   <section id="presentation_role">
     <h2 id="x9-presentation-role"><bdi class="secno">9. </bdi><code>presentation</code> 역할(role)로 의도적으로 의미론 숨기기<a class="self-link" aria-label="§" href="#presentation_role"></a></h2>
     <p>
-      While ARIA is primarily used to express semantics, there are some situations where hiding an
-      element’s semantics from assistive technologies is helpful. This is done with the
-      <a href="https://w3c.github.io/aria/#presentation" class="role-reference">presentation</a>
-      role, which declares that an element is being used only for presentation and therefore does
-      not have any accessibility semantics. The ARIA 1.1 specification also includes role
-      <a href="https://w3c.github.io/aria/#none" class="role-reference">none</a>,
-      which serves as a synonym for <code>presentation</code>.
+      ARIA가 주로 의미론을 표현하는데 사용되지만, 보조 기술로부터 요소(element)의 의미론을 숨기는 것이 도움이 되는 상황이 있습니다. 이는 오직 표현(presentation)을 위해서만 사용되고 있고 따라서 어떤 접근 가능한 의미를 가지지 않음을 선언하는 <a href="https://w3c.github.io/aria/#presentation" class="role-reference">presentation</a> 역할(role)로 수행됩니다. ARIA 1.1 명세는 <code>presentation</code>의 동의어로서 제공되는 <a href="https://w3c.github.io/aria/#none" class="role-reference">none</a> 역할(role)도 포함합니다.
     </p>
     <p>
-      For example, consider a tabs widget built using an HTML <code>ul</code> element.
+      예를 들어, HTML <code>ul</code> 요소(element)를 사용하여 만들어진 탭 위젯을 고려해보세요.
     </p>
     <pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"tablist"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span>&gt;</span>
@@ -7002,50 +6996,38 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
     <p>
-      Because the list is declared to be a tablist, the list items are not in a list context. It
-      could confuse users if an assistive technology were to render those list items. Applying role
-      <code>presentation</code> to the <code>li</code> elements tells browsers to leave those
-      elements out of their accessibility tree. Assistive technologies will thus be unaware of the
-      list item elements and see the tab elements as immediate children of the tablist.
+      목록이 탭 목록으로 선언되었기 때문에, 목록 항목은 목록 컨텍스트에 있지 않습니다. 보조 기술이 그 목록 항목들을 렌더링 한다면 사용자에게 혼란을 줄 수 있습니다. <code>li</code> 요소(element)에 <code>presentation</code> 역할(role)을 적용하는 것은 접근성 트리에서 그 요소(element)를 빼도록 브라우저에게 전달합니다. 따라서 보조 기술은 목록 항목 요소(elmeent)를 알지도 못하고 탭 요소(element)를 탭 목록의 직속 자식으로 간주합니다.
     </p>
     <p>
-      Three common uses of role <code>presentation</code> are:
+      <code>presentation</code> 역할(role)의 일반적인 3가지 용도는 다음과 같습니다:
     </p>
     <ol>
-      <li>Hiding a decorative image; it is equivalent to giving the image null alt text. </li>
-      <li>Suppressing table semantics of tables used for layout in circumstances where the table semantics do not convey meaningful relationships.</li>
-      <li>Eliminating semantics of intervening orphan elements in the structure of a composite
-        widget, such as a tablist, menu, or tree as demonstrated in the example above.</li>
+      <li>장식용 이미지 숨김; 이미지에 null 대체 텍스트를 제공하는 것과 같습니다.</li>
+      <li>테이블이 유의미한 관계를 전달하지 않는 상황에서 레이아웃에 사용된 테이블의 의미를 숨김</li>
+      <li>위 예에서 보여진 것 처럼, 탭 목록, 메뉴, 트리와 같은 복합 위젯 구조에서 사이에 있는 고아 요소(orphan element)의 의미론을 제거.</li>
     </ol>
     <section id="presentation_role_effects">
-      <h3 id="x9-1-effects-of-role-presentation"><bdi class="secno">9.1 </bdi>
-        Effects of Role <code>presentation</code>
+      <h3 id="x9-1-presentation-role"><bdi class="secno">9.1 </bdi>
+        <code>presentation</code> 역할(role)의 효과
       <a class="self-link" aria-label="§" href="#presentation_role_effects"></a></h3>
       <p>
-        When <code>role="presentation"</code> is specified on an element, if a
-        <a href="#presentation_role_ignored">condition that requires a browser to ignore the <code>presentation</code> role</a>
-        does not exist, it has the following three effects.
+        요소(element)에 <code>role="presentation"</code>이 지정 된 경우,
+        <a href="#presentation_role_ignored">브라우저가 <code>presentation</code> 역할(role)을 무시하는데 필요한 조건</a>이 없는 경우, 다음과 같은 세 가지 효과를 가집니다.
       </p>
       <ol>
-        <li>The element’s implied ARIA role and any ARIA states and properties associated with
-          that role are hidden from assistive technologies.</li>
+        <li>요소(element)의 암묵적 ARIA 역할(role)과 그 역할(role)과 관련 된 ARIA 상태(state) 및 속성(property)가 보조 기술에 숨겨집니다.</li>
         <li>
-          Text contained by the element, i.e., inner text, as well as inner text of all its
-          descendant elements remains visible to assistive technologies except, of course, when the
-          text is explicitly hidden, e.g., styled with <code>display: none</code> or has <code>aria-hidden="true"</code>.
+          요소(element)에 포함된 텍스트, 즉, 내부 텍스트 뿐아니라 모든 후손 요소(element)의 내부 텍스트가 텍스트가 명시적으로 숨겨진 경우 예를 들어 <code>display: none</code>으로 스타일링 되었거나 <code>aria-hidden="true"</code>를 가지는 경우를 제외하고, 보조 기술에 계속 노출됩니다.
         </li>
         <li>
-          The roles, states, and properties of each descendant element remain visible to assistive
-          technologies unless the descendant requires the context of the presentational
-          element. For example:
+          각 후손 요소(element)의 역할(role), 상태(state), 속성(property)가 표현 요소(presentational
+          element)의 컨텍스트를 요구하지 않는 한 보조기술에 계속 노출됩니다. 예를 들어:
           <ul>
-            <li> If <code>presentation</code> is applied to a <code>ul</code> or <code>ol</code> element, each child <code>li</code> element inherits the <code>presentation</code> role because ARIA requires the <code>listitem</code> elements to have the parent <code>list</code> element. So, the <code>li</code> elements are not exposed to assistive technologies, but elements contained inside of those <code>li</code> elements, including nested lists, are visible to assistive technologies. </li>
+            <li><code>presentation</code>이 <code>ul</code>이나 <code>ol</code> 요소(elmeent)에 적용 된 경우, 각 자식 <code>li</code> 요소(element)는 ARAI가 부모 <code>list</code> 요소(element)를 가지도록 <code>listitem</code> 요소(element)를 요구하므로, <code>presentation</code> 역할(role)을 상속받습니다. 따라서, <code>li</code> 요소(element)는 보조 기술에 노출되지 않지만, 중첩된 목록을 포함하여 그 <code>li</code> 요소(element) 내부에 포함된 요소(element)는 보조 기술에 노출 됩니다.</li>
             <li>
-              Similarly, if <code>presentation</code> is applied to a <code>table</code> element,
-              the descendant <code>caption</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>,
-              <code>tr</code>, <code>th</code>, and <code>td</code>
-              elements inherit role <code>presentation</code> and are thus not exposed to assistive technologies.
-              But, elements inside of the <code>th</code> and <code>td</code> elements, including nested tables,  are exposed to assistive technologies.
+              마찬가지로, <code>presentation</code>이 <code>table</code> 요소(element)에 적용 된 경우, 후손 <code>caption</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>,
+              <code>tr</code>, <code>th</code>, <code>td</code> 요소(element)는 <code>presentation</code> 역할(role)을 상속하고 따라서 보조 기술에 노출되지 않습니다.
+              하지만, 중첩 된 테이블을 포함하여 <code>th</code>와 <code>td</code> 요소(element) 내부의 요소는 보조 기술에 노출 됩니다.
             </li>
           </ul>
         </li>
