@@ -6741,16 +6741,10 @@
   <section id="presentation_role">
     <h2><code>presentation</code> 역할(role)로 의도적으로 의미론 숨기기</h2>
     <p>
-      While ARIA is primarily used to express semantics, there are some situations where hiding an
-      element’s semantics from assistive technologies is helpful. This is done with the
-      <a href="#presentation" class="role-reference">presentation</a>
-      role, which declares that an element is being used only for presentation and therefore does
-      not have any accessibility semantics. The ARIA 1.1 specification also includes role
-      <a href="#none" class="role-reference">none</a>,
-      which serves as a synonym for <code>presentation</code>.
+      ARIA가 주로 의미론을 표현하는데 사용되지만, 보조 기술로부터 요소(element)의 의미론을 숨기는 것이 도움이 되는 상황이 있습니다. 이는 오직 표현(presentation)을 위해서만 사용되고 있고 따라서 어떤 접근 가능한 의미를 가지지 않음을 선언하는 <a href="#presentation" class="role-reference">presentation</a> 역할(role)로 수행됩니다. ARIA 1.1 명세는 <code>presentation</code>의 동의어로서 제공되는 <a href="#none" class="role-reference">none</a> 역할(role)도 포함합니다.
     </p>
     <p>
-      For example, consider a tabs widget built using an HTML <code>ul</code> element.
+      예를 들어, HTML <code>ul</code> 요소(element)를 사용하여 만들어진 탭 위젯을 고려해보세요.
     </p>
     <pre>
     &lt;ul role=&quot;tablist&quot;&gt;
@@ -6766,20 +6760,15 @@
     &lt;/ul&gt;
     </pre>
     <p>
-      Because the list is declared to be a tablist, the list items are not in a list context. It
-      could confuse users if an assistive technology were to render those list items. Applying role
-      <code>presentation</code> to the <code>li</code> elements tells browsers to leave those
-      elements out of their accessibility tree. Assistive technologies will thus be unaware of the
-      list item elements and see the tab elements as immediate children of the tablist.
+      목록이 탭 목록으로 선언되었기 때문에, 목록 항목은 목록 컨텍스트에 있지 않습니다. 보조 기술이 그 목록 항목들을 렌더링 한다면 사용자에게 혼란을 줄 수 있습니다. <code>li</code> 요소(element)에 <code>presentation</code> 역할(role)을 적용하는 것은 접근성 트리에서 그 요소(element)를 빼도록 브라우저에게 전달합니다. 따라서 보조 기술은 목록 항목 요소(elmeent)를 알지도 못하고 탭 요소(element)를 탭 목록의 직속 자식으로 간주합니다.
     </p>
     <p>
-      Three common uses of role <code>presentation</code> are:
+      <code>presentation</code> 역할(role)의 일반적인 3가지 용도는 다음과 같습니다:
     </p>
     <ol>
-      <li>Hiding a decorative image; it is equivalent to giving the image null alt text. </li>
-      <li>Suppressing table semantics of tables used for layout in circumstances where the table semantics do not convey meaningful relationships.</li>
-      <li>Eliminating semantics of intervening orphan elements in the structure of a composite
-        widget, such as a tablist, menu, or tree as demonstrated in the example above.</li>
+      <li>장식용 이미지 숨김; 이미지에 null 대체 텍스트를 제공하는 것과 같습니다.</li>
+      <li>테이블이 유의미한 관계를 전달하지 않는 상황에서 레이아웃에 사용된 테이블의 의미를 숨김</li>
+      <li>위 예에서 보여진 것 처럼, 탭 목록, 메뉴, 트리와 같은 복합 위젯 구조에서 사이에 있는 고아 요소(orphan element)의 의미론을 제거.</li>
     </ol>
     <section id="presentation_role_effects">
       <h3>
