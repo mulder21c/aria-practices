@@ -6832,15 +6832,11 @@
   </section>
 
   <section id="children_presentational">
-    <h2>Roles That Automatically Hide Semantics by Making Their Descendants Presentational</h2>
+    <h2>후손을 표현적(presentational)으로 만들어 자동으로 의미를 숨기는 역할(role)</h2>
     <p>
-      There are some types of user interface components that, when represented in a platform
-      accessibility API, can only contain text. For example, accessibility APIs do not have a way of
-      representing semantic elements contained in a button. To deal with this limitation, WAI-ARIA
-      requires browsers to automatically apply role <code>presentation</code> to all descendant
-      elements of any element with a role that cannot support semantic children.
+      플랫폼 접근성 API에 나타날 때, 텍스트를 포함할 수만 있는 몇 가지 유저 인터페이스 컴포넌트 유형이 있습니다. 예를 들어, 접근성 API는 버튼에 포함 된 의미 요소(element)를 나타내는 방법이 없습니다. 이 제한을 다루기 위해, WAI-ARIA는 브라우저에 자동으로 <code>presentation</code> 역할을(role) 의미 자식을 지원할 수 없는 역할(role)을 가진 모든 요소(element)의 모든 후손 요소(element)에 적용하도록 요구합니다.
     </p>
-    <p>The roles that require all children to be presentational are:</p>
+    <p>모든 자식이 표현적이 되도록 요구하는 역할(role)은 다음과 같습니다:</p>
     <ul>
       <li>button</li>
       <li>checkbox</li>
@@ -6857,30 +6853,29 @@
       <li>switch</li>
       <li>tab</li>
     </ul>
-    <p>For instance, consider the following tab element, which contains a heading.</p>
+    <p>예를 들어, 제목이 포함된 다음 탭 요소(element)를 고려해보세요.</p>
     <pre>
-      &lt;li role=&quot;tab&quot;&gt;&lt;h3&gt;Title of My Tab&lt;/h3&gt;&lt;/li&gt;
+      &lt;li role=&quot;tab&quot;&gt;&lt;h3&gt;탭 제목&lt;/h3&gt;&lt;/li&gt;
     </pre>
     <p>
-      Because WAI-ARIA requires descendants of tab to be presentational,
-      the following code is equivalent.
+      WAI-ARIA는 탭의 후손을 표현적이 되도록 요구하기 때문에,
+      다음 코드는 동일합니다.
     </p>
     <pre>
-      &lt;li role=&quot;tab&quot;&gt;&lt;h3 role=&quot;presentation&quot;&gt;Title of My Tab&lt;/h3&gt;&lt;/li&gt;
+      &lt;li role=&quot;tab&quot;&gt;&lt;h3 role=&quot;presentation&quot;&gt;탭 제목&lt;/h3&gt;&lt;/li&gt;
     </pre>
     <p>
-      And, from the perspective of anyone using a technology that relies on an accessibility API, such as a screen reader,
-      the heading does not exist since the previous code is equivalent to the following.
+      그리고, 스크린리더와 같은 접근성 API에 의존하는 기술을 사용하는 사람의 관점에서, 이전 코드가 다음과 동일하기 때문에 헤딩은 존재하지 않습니다.
     </p>
     <pre>
-      &lt;li role=&quot;tab&quot;&gt;Title of My Tab&lt;/li&gt;
+      &lt;li role=&quot;tab&quot;&gt;탭 제목&lt;/li&gt;
     </pre>
     <p>
-      See the
+      동작에 대한 자세한 설명은
       <a href="#presentation_role">
-        section about role <code>presentation</code>
+        <code>presentation</code> 역할(role)에 대한 섹션
       </a>
-      for a detailed explanation of what it does.
+      을 참고하세요.
     </p>
   </section>
 
