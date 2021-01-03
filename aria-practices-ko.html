@@ -6799,35 +6799,34 @@
     </section>
     <section id="presentation_role_ignored">
       <h3>
-        Conditions That Cause Role <code>presentation</code> to be Ignored
+        <code>presentation</code> 역할(role)이 무시되는 조건
       </h3>
       <p>
-         Browsers ignore <code>role=&quot;presentation&quot;</code>, and it therefore has no effect, if either of the following are true about the element to which it is applied:</p>
+        브라우저는 적용 된 요소(element)에 대해서 다음 중 하나가 참이면 <code>role=&quot;presentation&quot;</code>를 무시하므로 효과가 없습니다:</p>
           <ul>
-            <li>The element is focusable, e.g. it is natively focusable like an HTML link or input, or it has a <code>tabindex</code> attribute.</li>
+            <li>요소(element)가 초점을 얻을 수 있는, 예를 들어 HTML 링크나 입력 처럼 기본적으로 초점을 얻을 수 있거나, <code>tabindex</code> 속성(attribute)을 가진 경우.</li>
             <li>
-              The element has any of the
-              <a href="#global_states" class="specref">twenty-one global ARIA states and properties</a>,
-              e.g., <code>aria-label</code>.
+              요소(element)가 <a href="#global_states" class="specref">21개의 전역 ARIA 상태(state) 및 속성(property)</a>, 예를 들어 <code>aria-label</code>을 가지는 경우.
             </li>
           </ul>
     </section>
     <section id="presentation_role_examples">
       <h3>
-        Example Demonstrating Effects of the <code>presentation</code> Role
+        <code>presentation</code> 역할(role)의 효과를 보여주는 예
       </h3>
-      <p>This code:</p>
+      <p>이 코드는:</p>
       <pre>
         &lt;ul role=&quot;presentation&quot;&gt;
           &lt;li&gt;Date of birth:&lt;/li&gt;
           &lt;li&gt;January 1, 3456&lt;/li&gt;
         &lt;/ul&gt;
       </pre>
-      <p>when parsed by a browser, is equivalent to the following from the perspective of a screen reader or other assistive technology that relies on the browser's accessibility tree:
+      <p>
+        브라우저에 의해 해석 될 때, 스크린리더나 브라우저의 접근성 트리에 의존하는 다른 보조 기술의 관점에서 다음과 동일합니다:
       </p>
       <pre>
         &lt;div&gt;Date of birth:&lt;/div&gt;
-          &lt;div&gt;January 1, 3456&lt;/div&gt;
+        &lt;div&gt;January 1, 3456&lt;/div&gt;
       </pre>
     </section>
   </section>
