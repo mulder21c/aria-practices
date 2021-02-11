@@ -82,7 +82,7 @@
             <ul>
               <li>양식이 검색 기능으로 사용되는 경우 <code>form</code> 랜드마크 대신 <code>search</code> 랜드마크를 사용하세요.</li>
               <li><code>form</code> 랜드마크는 사용자들이 양식의 목적을 이해할 수 있도록 레이블을 가져야 합니다.</li>
-              <li><code>form</code> 랜드마크에 대한 레이블은 <code>aria-labelledby</code>를 사용하여 보이는 제목 요소(element)로 (예를 들어, <code>h1-h6</code> 요소) 식별되어야 합니다.</li>
+              <li><code>form</code> 랜드마크에 대한 레이블은 <code>aria-labelledby</code>를 사용하여 보이는 제목 엘리먼트로 (예를 들어, <code>h1-h6</code> 요소) 식별되어야 합니다.</li>
               <li>페이지가 둘 이상의 <code>form</code> 랜드마크를 포함하는 경우, 각각은 고유한 레이블을 가져야 합니다.</li>
               <li>
                 가능한 항상 HTML 문서의 <code>form</code> 랜드마크에 포함된 컨트롤들은 네이티브 호스트 의미론을 사용해야 합니다:
@@ -101,7 +101,7 @@
               </ul>
               <div class="tab-content">
                 <div id="tabpanel2" aria-labelledby="tab2" role="tabpanel" class="tab-pane active">
-                  <p><code>form</code> 요소(element) 접근 가능한 이름을 가진다면 <code>form</code> 랜드마크로 간주됩니다.</p>
+                  <p><code>form</code> 엘리먼트 접근 가능한 이름을 가진다면 <code>form</code> 랜드마크로 간주됩니다.</p>
 
                   <h3>HTML Form 랜드마크 예</h3>
 
@@ -177,7 +177,7 @@
                 </div>
                 <div id="tabpanel1" aria-labelledby="tab1" role="tabpanel" class="tab-pane">
                   <ul>
-                    <li><code>role="form"</code> 속성(attribute)은 form 랜드마크를 정의합니다.</li>
+                    <li><code>role="form"</code> 어트리뷰트는 form 랜드마크를 정의합니다.</li>
                     <li>페이지의 영역을 식별하도록 <code>role="form"</code> 을 사용하세요; 모든 양식 필드를 식별하는데 사용하지 마세요.</li>
                   </ul>
 
