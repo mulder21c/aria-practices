@@ -150,16 +150,16 @@
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishDate": "2021-02-12",
-  "publishISODate": "2021-02-12T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 12 February 2021"
+  "publishDate": "2021-02-13",
+  "publishISODate": "2021-02-13T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 13 February 2021"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 <body class="h-entry informative"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">WAI-ARIA 작성 방법 1.2</h1>
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2021-02-12">12 February 2021</time>
+      <time class="dt-published" datetime="2021-02-13">13 February 2021</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -5798,7 +5798,7 @@
         </li>
 
         <li>
-          선택 된 엘리먼트. 또는 선택 된 요소가 없을 경우, 첫 번째 엘리먼트.
+          선택 된 엘리먼트. 또는 선택 된 엘리먼트가 없을 경우, 첫 번째 엘리먼트.
           일반적으로 이 패턴이 구현되는 위젯은 라디오 그룹, 탭, 목록 상자, 트리를 포함합니다.
           참고: 라디오 그룹의 경우, 이 패턴은 체크 된 (checked) 라디오 버튼을 가리킵니다; 선택 된 (selected) 상태는 라디오 버튼에 대해 지원되지 않습니다.
         </li>
@@ -5869,7 +5869,7 @@
           <li>컨테이너 엘리먼트가 DOM 초점을 얻을 때, 활성 엘리먼트에 시각적 초점 표시기를 그리고 활성 요소가 뷰(view) 안으로 스크롤 되도록 보장하세요.</li>
           <li>복합 위젯이 초점을 포함하고 사용자가 위젯 내에서 방향키와 같은 초점을 이동하는 탐색 키를 누를 때:
             <ul>
-              <li>보조 기술에 활성으로 보고되어야 하는 엘리먼트를 가리키도록 </li>
+              <li>보조 기술에 활성으로 보고되어야 하는 엘리먼트를 가리키도록 컨테이너에 aria-activedescendant의 값을 변경시킵니다 </li>
               <li>필요하다면, 시각적 초점 표시기를 이동시키고 뷰(view) 안으로 활성 엘리먼트를 스크롤 되게 하세요.</li>
             </ul>
           </li>
