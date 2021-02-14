@@ -45,7 +45,9 @@ while in the second example, they may select multiple options before activating 
   <section>
     <h2>Examples</h2>
     <section>
-      <h3 id="ex1_label">Example 1: Single-Select Listbox</h3>
+      <div class="example-header">
+        <h3 id="ex1_label">Example 1: Single-Select Listbox</h3>
+      </div>
       <div role="separator" id="ex1_start_sep" aria-labelledby="ex1_start_sep ex1_label" aria-label="Start of"></div>
       <div id="ex1">
         <p>Rank features important to you when choosing where to live. If a feature is unimportant, move it to the unimportant features list.</p>
@@ -104,7 +106,9 @@ while in the second example, they may select multiple options before activating 
     </section>
 
     <section>
-      <h3 id="ex2_label">Example 2: Multi-Select Listbox</h3>
+      <div class="example-header">
+        <h3 id="ex2_label">Example 2: Multi-Select Listbox</h3>
+      </div>
       <div role="separator" id="ex2_start_sep" aria-labelledby="ex2_start_sep ex2_label" aria-label="Start of"></div>
       <div id="ex2">
         <p>Choose upgrades for your transport capsule.</p>
@@ -123,7 +127,7 @@ while in the second example, they may select multiple options before activating 
               <li id="ms_opt4" role="option" aria-selected="false">Rear seat warmers</li>
               <li id="ms_opt5" role="option" aria-selected="false">Front sun roof</li>
               <li id="ms_opt6" role="option" aria-selected="false">Rear sun roof</li>
-              <li id="ms_opt7" role="option" aria-selected="false">Privacy cloque</li>
+              <li id="ms_opt7" role="option" aria-selected="false">Cloaking capability</li>
               <li id="ms_opt8" role="option" aria-selected="false">Food synthesizer</li>
               <li id="ms_opt9" role="option" aria-selected="false">Advanced waste recycling system</li>
               <li id="ms_opt10" role="option" aria-selected="false">Turbo vertical take-off capability</li>
@@ -290,7 +294,10 @@ while in the second example, they may select multiple options before activating 
           <td>Selects from the focused option to the end of the list.</td>
         </tr>
         <tr data-test-id="key-control-a">
-          <th><kbd>Control + A</kbd></th>
+          <th>
+            <kbd>Control + A</kbd> (All Platforms)<br>
+            <kbd>Command-A</kbd> (macOS)
+          </th>
           <td>selects all options in the list. If all options are selected, unselects all options.</td>
         </tr>
       </tbody>
@@ -394,22 +401,14 @@ while in the second example, they may select multiple options before activating 
 
   <section>
     <h2>Javascript and CSS Source Code</h2>
-    <ul>
+    <ul id="css_js_files">
       <li>
         CSS:
         <a href="css/listbox.css" type="tex/css">listbox.css</a>
       </li>
       <li>
         Javascript:
-        <a href="js/listbox.js" type="text/javascript">listbox.js</a>
-      </li>
-      <li>
-        Javascript:
-        <a href="js/toolbar.js" type="text/javascript">toolbar.js</a>
-      </li>
-      <li>
-        Javascript:
-        <a href="js/listbox-rearrangeable.js" type="text/javascript">listbox-rearrangeable.js</a>
+        <a href="js/listbox.js" type="text/javascript">listbox.js</a>, <a href="js/toolbar.js" type="text/javascript">toolbar.js</a>, <a href="js/listbox-rearrangeable.js" type="text/javascript">listbox-rearrangeable.js</a>, <a href="../js/utils.js">utils.js</a>
       </li>
     </ul>
   </section>
@@ -420,12 +419,12 @@ while in the second example, they may select multiple options before activating 
     <div id="sc1_start_sep" role="separator" aria-labelledby="sc1_start_sep sc1_label" aria-label="Start of HTML for"></div>
     <pre><code id="sc1"></code></pre>
     <div id="sc1_end_sep" role="separator" aria-labelledby="sc1_end_sep sc1_label" aria-label="End of HTML for"></div>
-    <script>sourceCode.add('sc1', 'ex1')</script>
+    <script>sourceCode.add('sc1', 'ex1', 'ex1_label', 'css_js_files')</script>
     <h3 id="sc2_label">Example 2: Multi-Select Listbox</h3>
     <div id="sc2_start_sep" role="separator" aria-labelledby="sc2_start_sep sc2_label" aria-label="Start of HTML for"></div>
     <pre><code id="sc2"></code></pre>
     <div id="sc2_end_sep" role="separator" aria-labelledby="sc2_end_sep sc2_label" aria-label="End of HTML for"></div>
-    <script>sourceCode.add('sc2', 'ex2')</script>
+    <script>sourceCode.add('sc2', 'ex2', 'ex2_label', 'css_js_files')</script>
     <!--  After all source has been added, run make to do the insert.  -->
     <script> sourceCode.make() </script>
   </section>

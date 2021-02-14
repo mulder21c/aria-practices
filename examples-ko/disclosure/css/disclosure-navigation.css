@@ -68,22 +68,22 @@
 }
 
 .disclosure-nav button:hover,
-.disclosure-nav button[aria-expanded=true] {
+.disclosure-nav button[aria-expanded="true"] {
   background-color: #005a9c;
   color: #fff;
 }
 
 .disclosure-nav button:hover::after,
-.disclosure-nav button[aria-expanded=true]::after {
+.disclosure-nav button[aria-expanded="true"]::after {
   border-color: #fff;
 }
 
 /* Styles for example page content section */
-.disclosure-pagecontent {
+.disclosure-page-content {
   border: 1px solid #ccc;
   padding: 1em;
 }
 
-.disclosure-pagecontent h3 {
+.disclosure-page-content h3 {
   margin-top: 0.5em;
 }
