@@ -6880,38 +6880,37 @@
   </section>
 
   <section id="structural_roles">
-    <h2>Structural Roles</h2>
+    <h2>구조적 역할(role)</h2>
     <p>
-      ARIA provides a set of roles that convey the accessibility semantics of structures on a page.
-      These roles express the meaning that is conveyed by the layout and appearance of elements that organize and structure content, such as headings, lists, and tables.
+      ARIA는 페이지 구조의 접근성 의미를 전달하는 역할 집합을 제공합니다. 이 역할은 제목(heading), 목록, 표와 같은 콘텐츠를 구성하고 구조화하는 에리먼트의 레이아웃 및 모양을 전달하는 의미를 나타냅니다.
     </p>
     <p>
-      some host languages, such as HTML, include elements that express the same semantics as an ARIA role.
-      For instance, the HTML <code>&lt;p&gt;</code> element is mapped to accessibility APIs in exactly the same way as <code>&lt;div role="paragraph"&gt;</code>.
-      The ARIA and HTML specifications refer to this mapping of HTML elements to ARIA attributes as implied semantics, i.e., the implied ARIA role of the HTML <code>&lt;p&gt;</code> element is <code>paragraph</code>.
+      HTML 같은 일부 호스트 언어는 ARIA 역할(role)과 동일한 의미를 나타내는 엘리먼트를 포함합니다.
+      예를 들어, HTML <code>&lt;p&gt;</code> 엘리먼트는 <code>&lt;div role="paragraph"&gt;</code>와 정확히 동일한 방식으로 접근성 API에 매핑됩니다.
+      ARIA와 HTML 명세는 HTML 엘리먼트와 ARIA 어트리뷰트의 이 매핑을 암묵적 의미론이라고 칭합니다. 예를 들어 HTML <code>&lt;p&gt;</code> 엘리먼트의 암묵적 ARIA 역할(role)은 <code>paragraph</code> 입니다.
     </p>
     <p>
-      When developing HTML, it is important to use native HTML elements where ever possible.
-      Do not use an ARIA role or property if it is possible to use an HTML element that has equivalent semantics.
-      Circumstances where it is appropriate to use ARIA attributes instead of equivalent HTML are:
+      HTML을 개발할 때, 가능한 한 기본 HTML 엘리먼트를 사용하는 것이 중요합니다.
+      동등한 의미를 가진 HTML 엘리먼트를 사용하는 것이 가능하다면, ARIA 역할(role)이나 속성(property)를 사용하지 마세요.
+      동등한 HTML 대신 ARIA 어트리뷰트를 사용하는 것이 적절한 상황은 다음과 같습니다:
     </p>
     <ol>
-      <li>When the HTML element cannot be styled in a way that meets visual design requirements.</li>
-      <li>When testing reveals that browsers or assistive technologies provide better support for the ARIA equivalent.</li>
-      <li>When remediating or retrofitting legacy content and altering the underlying DOM to use the HTML would be cost prohibitive.</li>
-      <li>When building a web component to compose a <a href="https://html.spec.whatwg.org/multipage/#custom-elements">custom element</a> and the element being extended  does not convey the appropriate or sufficient accessibility semantics.</li>
+      <li>HTML 엘리먼트가 시각 디자인 요구사항을 충족하는 방식으로 스타일 될 수 없는 경우.</li>
+      <li>테스트 결과 브라우저나 보조 기술이 동등한 ARIA를 더 잘 지원하는 것으로 나타나는 경우.</li>
+      <li>레거시 콘텐트를 교정하거나(remediating) 개량(retrofitting)하고 HTML을 사용하도록 근본적으로 DOM을 바꾸는 것이 비용이 엄두도 못 낼 정도로 많이 드는 경우.</li>
+      <li><a href="https://html.spec.whatwg.org/multipage/#custom-elements">사용자 정의 엘리먼트</a>를 구성하기 위해  웹 컴포넌트를 빌드하고 있고 확장되는 요소가 적절하거나 충분한 접근성 의미를 전달하지 않는 경우.</li>
     </ol>
-    <p>The following table lists all structural roles defined in ARIA 1.2.</p>
+    <p>다음 표는 ARIA 1.2에 정의된 모든 구조적 역할(role)을 나열합니다.</p>
     <table class="widget-features">
-      <caption>ARIA structural roles</caption>
+      <caption>ARIA 구조적 역할(role)</caption>
       <thead>
         <tr>
-          <th>ARIA Role</th>
-          <th>HTML Equivalent</th>
+          <th>ARIA 역할(role)</th>
+          <th>동등한 HTML</th>
         </tr>
       </thead>
       <tbody>
-        <tr><th>application</th><td>No equivalent element</td></tr>
+        <tr><th>application</th><td>동등한 엘리먼트 없음</td></tr>
         <tr><th>article</th><td>article</td></tr>
         <tr><th>blockquote</th><td>blockquote</td></tr>
         <tr><th>caption</th><td>caption</td></tr>
@@ -6920,22 +6919,22 @@
         <tr><th>columnheader</th><td>th</td></tr>
         <tr><th>definition</th><td>dd</td></tr>
         <tr><th>deletion</th><td>del</td></tr>
-        <tr><th>directory</th><td>No equivalent element</td></tr>
-        <tr><th>document</th><td>No equivalent element</td></tr>
+        <tr><th>directory</th><td>동등한 엘리먼트 없음</td></tr>
+        <tr><th>document</th><td>동등한 엘리먼트 없음</td></tr>
         <tr><th>emphasis</th><td>em</td></tr>
-        <tr><th>feed</th><td>No equivalent element</td></tr>
+        <tr><th>feed</th><td>동등한 엘리먼트 없음</td></tr>
         <tr><th>figure</th><td>figure</td></tr>
         <tr><th>generic</th><td>div, span</td></tr>
-        <tr><th>group</th><td>No equivalent element</td></tr>
+        <tr><th>group</th><td>동등한 엘리먼트 없음</td></tr>
         <tr><th>heading with aria-level="N" where N is 1, 2, 3, 4, 5, or 6</th><td>h1, h2, h3, h4, h5, h6</td></tr>
         <tr><th>insertion</th><td>ins</td></tr>
         <tr><th>img</th><td>img</td></tr>
         <tr><th>list</th><td>ul, ol</td></tr>
         <tr><th>listitem</th><td>li</td></tr>
-        <tr><th>math</th><td>No equivalent element</td></tr>
-        <tr><th>none</th><td>No equivalent element</td></tr>
-        <tr><th>note</th><td>No equivalent element</td></tr>
-        <tr><th>presentation</th><td>No equivalent element</td></tr>
+        <tr><th>math</th><td>동등한 엘리먼트 없음</td></tr>
+        <tr><th>none</th><td>동등한 엘리먼트 없음</td></tr>
+        <tr><th>note</th><td>동등한 엘리먼트 없음</td></tr>
+        <tr><th>presentation</th><td>동등한 엘리먼트 없음</td></tr>
         <tr><th>paragraph</th><td>p</td></tr>
         <tr><th>row</th><td>tr</td></tr>
         <tr><th>rowgroup</th><td>tbody, thead, tfoot</td></tr>
@@ -6947,8 +6946,8 @@
         <tr><th>table</th><td>table</td></tr>
         <tr><th>term</th><td>dfn</td></tr>
         <tr><th>time</th><td>time</td></tr>
-        <tr><th>toolbar</th><td>No equivalent element</td></tr>
-        <tr><th>tooltip</th><td>No equivalent element</td></tr>
+        <tr><th>toolbar</th><td>동등한 엘리먼트 없음</td></tr>
+        <tr><th>tooltip</th><td>동등한 엘리먼트 없음</td></tr>
       </tbody>
     </table>
   </section>
