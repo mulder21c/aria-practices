@@ -301,52 +301,42 @@
     </section>
 
     <section class="widget" id="alertdialog">
-      <h3>Alert and Message Dialogs</h3>
+      <h3>경고 및 메세지 대화상자</h3>
       <p>
-        An alert dialog  is a <a href="#dialog_modal">modal dialog</a> that interrupts the user's workflow to communicate an important message and acquire a response.
-        Examples include action confirmation prompts and error message confirmations.
-        The <a href="#alertdialog" class="role-reference">alertdialog</a> role
-        enables assistive technologies and browsers to distinguish alert dialogs from other dialogs
-        so they have the option of giving alert dialogs special treatment, such as playing a system alert sound.
+        경고 대화상자는 중요한 메세지를 전달하고 응답을 얻기 위해 사용자의 작업 흐름을 잠시 중단시키는 <a href="#dialog_modal">모달 대화상자</a>입니다.
+        예제는 작업 확인 프롬프트와 경고 메세지 확인을 포함합니다.
+        <a href="#alertdialog" class="role-reference">alertdialog</a> 역할(role)은 보조 기술 및 브라우저가 다른 대화상자와 경고 대화상자를 구별할 수 있게 하기 때문에 시스템 경고음을 재생하는 것 같은 경고 대화 상자에 특수 처리를 제공하는 옵션이 있습니다.
       </p>
 
       <section class="notoc">
-        <h4>Example</h4>
-        <p><a href="examples/dialog-modal/alertdialog.html">Alert Dialog Example</a>: A confirmation prompt that demonstrates an alert dialog.</p>
+        <h4>예제</h4>
+        <p><a href="examples/dialog-modal/alertdialog.html">경고 대화상자 예제</a>: 경고 대화상자를 보여주는 확인 프롬프트.</p>
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
-        <p>See the keyboard interaction section for the <a href="#dialog_modal">modal dialog pattern</a>.</p>
+        <h4>키보드 인터랙션</h4>
+        <p><a href="#dialog_modal">모달 대화상자 패턴</a>에 대한 키보드 인터랙션 섹션 참고.</p>
       </section>
       <section class="notoc">
           <h4>WAI-ARIA 역할(role), 상태(state), 속성(property)</h4>
           <ul>
               <li>
-                  The element that contains all elements of the dialog, including the alert
-                  message and any dialog buttons, has role
-                  <a class="role-reference" href="#alertdialog">alertdialog</a>.
+                  경고 메세지와 대화상자 버튼을 포함하여, 대화상자의 모든 엘리먼트를 포함하는 엘리먼트는
+                  <a class="role-reference" href="#alertdialog">alertdialog</a> 역할(role)을 가집니다.
               </li>
               <li>
-                  The element with role <code>alertdialog</code> has either:
+                <code>alertdialog</code> 역할(role)을 가진 엘리먼트는:
                   <ul>
                       <li>
-                          A value for
-                          <a href="#aria-labelledby" class="property-reference">aria-labelledby</a>
-                          that refers to the element containing the title of the dialog if the
-                          dialog has a visible label.
+                          대화상자가 눈에 보이는 레이블을 가지는 경우 <a href="#aria-labelledby" class="property-reference">aria-labelledby</a>에 대화상자의 제목을 포함하는 엘리먼트를 가리키는 값을 가지거나
                       </li>
                       <li>
-                          A value for
-                          <a href="#aria-label" class="property-reference">aria-label</a>
-                          if the dialog does not have a visible label.
+                          대화상자가 눈에 보이는 레이블을 가지지 않는 경우 <a href="#aria-label" class="property-reference">aria-label</a>에 값을 가집니다.
                       </li>
                   </ul>
               </li>
               <li>
-                  The element with role <code>alertdialog</code> has a value set for
-                  <a href="#aria-describedby" class="property-reference">aria-describedby</a>
-                  that refers to the element containing the alert message.
+                <code>alertdialog</code> 역할(role)을 가진 엘리먼트는 <a href="#aria-describedby" class="property-reference">aria-describedby</a>에 경고 메세지를 포함하는 엘리먼트를 가리키는 값을 가집니다.
               </li>
           </ul>
       </section>
@@ -366,7 +356,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <p>해당되지 않음.</p>
       </section>
 
@@ -418,7 +408,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <p>When the button has focus:</p>
         <ul>
           <li>
@@ -530,7 +520,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <ul>
           <li>
             If the carousel has an auto-rotate feature, automatic slide rotation stops when any element in the carousel receives keyboard focus.
@@ -682,7 +672,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <p>When the checkbox has focus, pressing the <kbd>Space</kbd> key changes the state of the checkbox.</p>
       </section>
 
@@ -798,7 +788,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <ul>
           <li><kbd>Tab</kbd>: The combobox is in the page <kbd>Tab</kbd> sequence.</li>
           <li>Note: The popup indicator icon or button (if present), the popup, and the popup descendants are excluded from the page <kbd>Tab</kbd> sequence. </li>
@@ -1106,7 +1096,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <p>In the following description, the term <q>tabbable element</q> refers to any element with a <code>tabindex</code> value of zero or greater. Note that values greater than 0 are strongly discouraged.</p>
         <ul>
           <li>When a dialog opens, focus moves to an element inside the dialog. See notes below regarding initial focus placement.</li>
@@ -1230,7 +1220,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <p>When the disclosure control has focus:</p>
         <ul>
           <li><kbd>Enter</kbd>: activates the disclosure control and toggles the visibility of the disclosure content.</li>
@@ -1314,7 +1304,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <p>
           The feed pattern is not based on a desktop GUI widget so the <code>feed</code> role is not associated with any well-established keyboard conventions.
           Supporting the following, or a similar,  interface is recommended.
@@ -1758,7 +1748,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <ul>
           <li><kbd>Enter</kbd>: Executes the link and moves focus to the link target.</li>
           <li><kbd>Shift + F10</kbd> (Optional): Opens a context menu for the link.</li>
@@ -1813,7 +1803,7 @@
       </section>
 
       <section id="listbox_kbd_interaction" class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <p>For a vertically oriented listbox:</p>
         <ul>
           <li> When a single-select listbox receives focus:
@@ -1942,7 +1932,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <p>
           The following description of keyboard behaviors assumes:</p>
           <ol>
@@ -2123,7 +2113,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <ul>
           <li>With focus on the button:
             <ul>
@@ -2183,7 +2173,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <p>해당되지 않음.</p>
       </section>
 
@@ -2222,7 +2212,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <section class="notoc">
           <h5>For Radio Groups Not Contained in a Toolbar</h5>
           <p>
@@ -2361,7 +2351,7 @@
       </section>
 
       <section id="slider_kbd_interaction" class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <ul>
           <li><kbd>Right Arrow</kbd>: Increase the value of the slider by one step.</li>
           <li><kbd>Up Arrow</kbd>: Increase the value of the slider by one step.</li>
@@ -2425,7 +2415,7 @@
       </section>
 
       <section id="slidertwothumb_kbd_interaction" class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <ul>
           <li>Each thumb is in the page tab sequence and has the same keyboard interaction as a <a href="#slider_kbd_interaction">single-thumb slider</a>.</li>
           <li>
@@ -2484,7 +2474,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <ul>
           <li><kbd>Up Arrow</kbd>: Increases the value.</li>
           <li><kbd>Down Arrow</kbd>: Decreases the value.</li>
@@ -2570,7 +2560,7 @@
         <p><a href="examples/table/table.html">Table Example</a>: ARIA table made using HTML <code>div</code> and <code>span</code> elements.</p>
       </section>
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <p>해당되지 않음.</p>
       </section>
       <section id="table_roles_states_props" class="notoc">
@@ -2639,7 +2629,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <p>For the tab list:</p>
         <ul>
           <li>
@@ -2748,7 +2738,7 @@
         </p>
       </section>
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <ul>
           <li><kbd>Tab</kbd> and <kbd>Shift + Tab</kbd>: Move focus into and out of the toolbar. When focus moves into a toolbar:
             <ul>
@@ -2818,7 +2808,7 @@
         </p>
       </section>
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <p><kbd>Escape</kbd>: Dismisses the Tooltip.</p>
         <ol class="note">
           <li>Focus stays on the triggering element while the tooltip is displayed.</li>
@@ -2892,7 +2882,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <p>For a vertically oriented tree:</p>
         <ul>
           <li> When a single-select tree receives focus:
@@ -3059,7 +3049,7 @@
       </section>
 
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <p>
           The following keys provide <code>treegrid</code> navigation by moving focus among rows and cells of the grid.
           Implementations of <code>treegrid</code> make these key commands available when an element in the grid has received focus, e.g., after a user has moved focus to the grid with <kbd>Tab</kbd>.
@@ -3297,7 +3287,7 @@
         </p>
       </section>
       <section class="notoc">
-        <h4>Keyboard Interaction</h4>
+        <h4>키보드 인터랙션</h4>
         <ul>
           <li><kbd>Left Arrow</kbd>: Moves a vertical splitter to the left.</li>
           <li><kbd>Right Arrow</kbd>: Moves a vertical splitter to the right.</li>

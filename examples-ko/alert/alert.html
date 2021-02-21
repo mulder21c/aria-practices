@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Alert Example | WAI-ARIA Authoring Practices 1.2</title>
+    <title>경고 예제 | WAI-ARIA 작성 방법 1.2</title>
 
     <!--  Core js and css shared by all examples; do not modify when using this template. -->
     <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css">
@@ -18,29 +18,29 @@
   <body>
   <nav aria-label="Related Links" class="feedback">
     <ul>
-      <li><a href="../../#browser_and_AT_support">Browser and Assistive Technology Support</a></li>
+      <li><a href="../../#browser_and_AT_support">브라우저와 보조 기술 지원</a></li>
       <li><a href="https://github.com/w3c/aria-practices/issues/new">Report Issue</a></li>
       <li><a href="https://github.com/w3c/aria-practices/projects/20">Related Issues</a></li>
-      <li><a href="../../#alert">Design Pattern</a></li>
+      <li><a href="../../#alert">설계 패턴</a></li>
     </ul>
   </nav>
     <main>
-    <h1>Alert Example</h1>
+    <h1>경고 예제</h1>
     <p>
-      The below example demonstrates the <a href="../../#alert">design pattern for alert</a>.
-      Activating the <q>Trigger Alert</q> button causes a message to be inserted into the example alert element.
+      다음 예제는 <a href="../../#alert">경고에 대한 설계 패턴</a>을 보여줍니다.
+      <q>Trigger Alert</q> 버튼을 활성화하면 예제 경고 엘리먼트에 메세지가 삽입됩니다.
     </p>
-    <p>Similar examples include:</p>
+    <p>유사한 예는 다음과 같습니다:</p>
     <ul>
-      <li><a href="../dialog-modal/alertdialog.html">Alert Dialog Example</a>: A confirmation prompt that demonstrates an alert dialog.</li>
+      <li><a href="../dialog-modal/alertdialog.html">경고 대화상자 예제</a>: 경고 대화상자를 보여주는 확인 프롬프트.</li>
     </ul>
     <section>
       <div class="example-header">
-        <h2 id="ex_label">Example</h2>
+        <h2 id="ex_label">예제</h2>
       </div>
       <p>
-        This is just a test.
-        A typical alert is triggered by an event, such as an error, warning condition, or the arrival of information that is important in the context of the user's task.
+        이것은 단지 테스트일 뿐입니다.
+        일반적인 경고는 오류, 경고 조건, 사용자의 작업 컨텍스트에서 중요한 정보 도착과 같은 이벤트에 의해 작동 됩니다.
       </p>
       <div role="separator" id="ex_start_sep" aria-labelledby="ex_start_sep ex_label" aria-label="Start of"></div>
       <div id="ex1">
@@ -48,7 +48,7 @@
 
         <div id="example" role="alert"></div>
 
-        <!--  The following script element contains the content that will be inserted into the alert element. -->
+        <!--  다음 스크립트 엘리먼트는 경로 엘리먼트에 삽입 될 콘텐츠를 포함합니다. -->
         <script type="text/template" id="alert-template">
           <p><span lang="da">Hej</span>, hello, <span lang="it">ciao</span>, <span lang="ja">こんにちは</span>, <span lang="ko">안녕</span></p>
         </script>
@@ -57,27 +57,27 @@
     </section>
 
     <section>
-      <h2>Accessibility Features</h2>
+      <h2>접근성 특성</h2>
       <p>
-        Because an alert is for critical information, assistive technologies may provide special behaviors designed to help call attention to changes in the text of an alert.
-        For example, screen readers may interrupt all other speech and preface announcement of the new alert text with a special sound or phrase.
+        경고는 중요한(critical) 정보를 위한 것이기 때문에, 보조 기술은 경고 텍스트의 변경 사항에 주의를 끌도록 설계된 특수한 동작을 제공할 수 있습니다.
+        예를 들어, 스크린리더는 특별한 소리나 구문으로 모든 다른 낭독 및 새로운 경고 텍스트의 머리말을 잠깐 중단시킬 수 있습니다.
       </p>
     </section>
 
     <section>
-      <h2 id="kbd_label">Keyboard Support</h2>
-      <p>No keyboard interaction needed.</p>
+      <h2 id="kbd_label">키보드 지원</h2>
+      <p>키보드 인터랙션이 필요하지 않습니다.</p>
     </section>
 
     <section>
-      <h2 id="rps_label">Role, Property, State, and Tabindex  Attributes</h2>
+      <h2 id="rps_label">Role, Property, State, Tabindex 어트리뷰트</h2>
       <table aria-labelledby="rps_label" class="data attributes">
         <thead>
           <tr>
-            <th scope="col">Role</th>
-            <th scope="col">Attribute</th>
-            <th scope="col">Element</th>
-            <th scope="col">Usage</th>
+            <th scope="col">역할(role)</th>
+            <th scope="col">어트리뷰트</th>
+            <th scope="col">엘리먼트</th>
+            <th scope="col">사용법</th>
           </tr>
         </thead>
         <tbody>
@@ -85,27 +85,27 @@
             <th scope="row"><code>alert</code></th>
             <td></td>
             <td><code>div</code></td>
-            <td>Identifies the element as the container where alert content will be added or updated.</td>
+            <td>경고 콘텐츠가 추가되거나 업데이트 될 컨테이터로 엘리먼트를 식별 시킵니다.</td>
           </tr>
           <tr data-test-id="test-not-required">
             <td></td>
             <th scope="row"><code>aria-live=<q>assertive</q></code></th>
-            <td>Implicit on <code>div</code></td>
+            <td><code>div</code>에 암묵적</td>
             <td>
               <ul>
-                <li>This does not have to be declared in the code because it is implicit in the alert role.</li>
-                <li>Tells assistive technologies to interrupt other processes to provide users with immediate notification of relevant alert container changes.</li>
+                <li>alert 역할(role)에 암묵적이므로 코드에 선언할 필요는 없습니다.</li>
+                <li>다른 프로세스를 잠시 중단하고 관련 경고 컨텐이너 변경 사항의 즉시 알림을 사용자에게 제공하도록 보조 기술에 지시합니다.</li>
               </ul>
             </td>
           </tr>
           <tr data-test-id="test-not-required">
             <td></td>
             <th scope="row"><code>aria-atomic=<q>true</q></code></th>
-            <td>Implicit on <code>div</code></td>
+            <td><code>div</code>에 암묵적</td>
             <td>
               <ul>
-                <li>This does not have to be declared in the code because it is implicit in the alert role.</li>
-                <li>Tells assistive technologies to use the entire content of the alert element as the alert message even if only a portion of it has changed.</li>
+                <li>alert 역할(role)에 암묵적이므로 코드에 선언할 필요는 없습니다.</li>
+                <li>일부만 변경 된 경우에도 경고 메세지로 경고 엘리먼트의 전체 컨텐츠를 사용하도록 보조 기술에 지시합니다.</li>
               </ul>
             </td>
           </tr>
@@ -114,7 +114,7 @@
     </section>
 
     <section>
-      <h2>Javascript and CSS Source Code</h2>
+      <h2>Javascript와 CSS 소스 코드</h2>
       <ul id="css_js_files">
         <li>
           CSS:
@@ -128,7 +128,7 @@
     </section>
 
     <section>
-      <h2 id="sc1_label">HTML Source Code</h2>
+      <h2 id="sc1_label">HTML 소스 코드</h2>
       <div role="separator" id="sc1_start_sep" aria-labelledby="sc1_start_sep sc1_label" aria-label="Start of"></div>
       <pre><code id="sc1"></code></pre>
       <div role="separator" id="sc1_end_sep" aria-labelledby="sc1_end_sep sc1_label" aria-label="End of"></div>
@@ -139,7 +139,7 @@
     </section>
     </main>
     <nav>
-      <a href="../../#alert">Alert Design Pattern in WAI-ARIA Authoring Practices 1.2</a>
+      <a href="../../#alert">WAI-ARIA 작성 방법 1.2의 경고 설계 패턴</a>
     </nav>
   </body>
 </html>

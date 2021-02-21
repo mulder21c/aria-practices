@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Alert Dialog Example | WAI-ARIA Authoring Practices 1.2</title>
+    <title>경고 대화상자 예제 | WAI-ARIA 작성 방법 1.2</title>
     <!--  Core js and css shared by all examples; do not modify when using this template. -->
     <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css">
     <link rel="stylesheet" href="../css/core.css">
@@ -20,66 +20,66 @@
   <body>
     <nav aria-label="Related Links" class="feedback">
       <ul>
-        <li><a href="../../#browser_and_AT_support">Browser and Assistive Technology Support</a></li>
+        <li><a href="../../#browser_and_AT_support">브라우저와 보조 기술 지원</a></li>
         <li><a href="https://github.com/w3c/aria-practices/issues/new">Report Issue</a></li>
         <li><a href="https://github.com/w3c/aria-practices/projects/20">Related Issues</a></li>
-        <li><a href="../../#alertdialog">Design Pattern</a></li>
+        <li><a href="../../#alertdialog">설계 패턴</a></li>
       </ul>
     </nav>
     <main>
-      <h1>Alert Dialog Example</h1>
+      <h1>경고 대화상자 예제</h1>
       <p>
-        The below example of a confirmation prompt demonstrates the <a href="../../#alertdialog">design pattern for an alert dialog</a>.
-        It also includes an example of the <a href="../../#alert">design pattern for an alert</a> to make comparing the experiences provided by the two patterns easy.
+        다음 확인 프롬프트 예제는 <a href="../../#alertdialog">경고 대화상자에 대한 설계 패턴</a>을 보여줍니다.
+        또한 두 패턴에서 제공되는 경험을 쉽게 비교할 수 있도록 <a href="../../#alert">경고에 대한 설계 패턴</a>의 예를 포함합니다.
       </p>
-      <p>To use this example:</p>
+      <p>이 예제를 사용하려면:</p>
       <ul>
         <li>
-          Activate the "discard" button to trigger a confirmation dialog.
+          확인 대화상자를 작동시키려면 "폐기" 버튼을 활성화시키세요.
           <ul>
-            <li>Activating the "yes" button removes the contents of both the "Notes" text area and local storage of the notes.</li>
-            <li>Activating the "no" button or pressing <kbd>escape</kbd> closes the dialog.</li>
-            <li>The "discard" button is disabled if the notes text area does not contain any text.</li>
+            <li>"예" 버튼을 활성화하면 "노트" 텍스트 영역과 노트의 로컬 스토리지가 모두 삭제됩니다.</li>
+            <li>"아니오" 버튼을 활성화 하거나 <kbd>escape</kbd>를 누르면 대화상자가 닫힙니다.</li>
+            <li>노트 텍스트 영역에 텍스트가 포함되어 있지 않으면 "폐기" 버튼이 비활성화 됩니다.</li>
           </ul>
         </li>
         <li>
-          Activate the "save" button to trigger an alert when it saves the contents of the "Notes" text area to <a href="https://www.w3.org/TR/webstorage/#the-localstorage-attribute">local storage</a>.
+          "노트" 텍스트 영역의 내용을 <a href="https://www.w3.org/TR/webstorage/#the-localstorage-attribute">로컬 스토리지</a>에 저장할 때 경고를 작동시키려면 "확인" 버튼을 활성화시키세요.
           <ul>
-            <li>A successful save triggers a short alert to notify the user that the notes have been saved.</li>
-            <li>The "save" button is disabled if the user's local storage value is the same as the "Notes" field.</li>
+            <li>성공적으로 저장하면 노트가 저장되었다고 사용자에게 알리는 짧은 경고가 작동합니다.</li>
+            <li>사용자의 로컬 스토리지 값이 "노트" 필드와 동일하면 "저장" 버튼은 비활성화 됩니다.</li>
           </ul>
         </li>
-        <li>Modify the "notes" text area as needed to enable and disable the discard and save functions.</li>
+        <li>폐기 및 저장 기능을 활성화하고 비활성화 하려면 "노트" 텍스트 영역을 수정하세요.</li>
       </ul>
       <p>
-          Note: This example uses code from the <a href="dialog.html">modal dialog example</a> to create the behaviors of the <code>alertdialog</code> so referencing that example may be useful.
+          참고: 이 예제는 <code>alertdialog</code>의 동작을 만들기 위해 <a href="dialog.html">모달 대화상자 예제</a>의 코드를 사용하므로 해당 예제를 참고하는 것이 유용할 수 있습니다.
         </p>
-      <p>Similar examples include:</p>
+      <p>유사한 예는 다음과 같습니다:</p>
       <ul>
-        <li><a href="../alert/alert.html">Alert</a>: a basic alert.</li>
-        <li><a href="dialog.html">Modal Dialog Example</a>: An example demonstrating multiple layers of modal dialogs with both small and large amounts of content.</li>
-        <li><a href="datepicker-dialog.html">Date Picker Dialog example</a>: Demonstrates a dialog containing a calendar grid for choosing a date.</li>
+        <li><a href="../alert/alert.html">경고</a>: 기본적인 경고.</li>
+        <li><a href="dialog.html">모달 대화상자 예제</a>: 적고 많은 양의 콘텐트를 가진 여러 레이어의 모달 대화상자를 보여줍니다.</li>
+        <li><a href="datepicker-dialog.html">날짜 선택 대화상자 예제</a>: 날짜를 선택하기 위한 달력 그리드가 포함 된 대화상자를 보여줍니다.</li>
       </ul>
       <section>
         <div class="example-header">
-          <h2 id="ex_label">Example</h2>
+          <h2 id="ex_label">예제</h2>
         </div>
         <div role="separator" id="ex_start_sep" aria-labelledby="ex_start_sep ex_label" aria-label="Start of"></div>
         <div id="ex_alertdialog">
           <label for="notes">Notes</label>
-          <textarea class="notes" name="notes" id="notes" rows="7">This is an example text box, which unsurprisingly contains text. The user is given the option to save this text - which triggers a basic alert - or to discard the text - which triggers an alert dialog that prompts the user for confirmation.</textarea>
-          <button type="button" aria-controls="notes" id="notes_save">Save</button>
-          <button type="button" aria-controls="notes" id="notes_discard" onclick="openAlertDialog('alert_dialog', this)">Discard</button>
-          <div role="alert" id="alert_toast" class="toast hidden">Nothing to discard.</div>
+          <textarea class="notes" name="notes" id="notes" rows="7">이것은 당연하게도 텍스트를 포함하는 텍스트 상자입니다. 사용자는 기본 경고를 작동시키는 이 텍스트를 저장하는 옵션이나 사용자에게 확인을 요청하는 경고 대화상자를 작동시키는 텍스트를 폐기하는 옵션이 주어집니다.</textarea>
+          <button type="button" aria-controls="notes" id="notes_save">저장</button>
+          <button type="button" aria-controls="notes" id="notes_discard" onclick="openAlertDialog('alert_dialog', this)">폐기</button>
+          <div role="alert" id="alert_toast" class="toast hidden">폐기할 것이 없습니다.</div>
           <div class="dialog-backdrop no-scroll">
             <div id="alert_dialog" role="alertdialog" aria-modal="true" aria-labelledby="dialog_label" aria-describedby="dialog_desc" class="hidden">
-              <h2 id="dialog_label" class="dialog_label">Confirmation</h2>
+              <h2 id="dialog_label" class="dialog_label">확인</h2>
               <div id="dialog_desc" class="dialog_desc">
-                <p>Are you sure you want to discard all of your notes?</p>
+                <p>정말 노트를 모두 삭제하시겠습니까?</p>
               </div>
               <div class="dialog_form_actions">
-                <button type="button" onclick="closeDialog(this)">No</button>
-                <button type="button" aria-controls="notes" id="notes_confirm" onclick="discardInput(this)">Yes</button>
+                <button type="button" onclick="closeDialog(this)">아니오</button>
+                <button type="button" aria-controls="notes" id="notes_confirm" onclick="discardInput(this)">예</button>
               </div>
             </div>
           </div>
@@ -87,23 +87,23 @@
         <div role="separator" id="ex_end_sep" aria-labelledby="ex_end_sep ex_label" aria-label="End of"></div>
       </section>
       <section>
-        <h2>Accessibility Features</h2>
+        <h2>접근성 특성</h2>
         <ol>
-          <li>The accessible label for the alert dialog is set to its heading ("Confirmation").</li>
-          <li>The dialog's prompt ("Are you sure...?") is referenced via <code>aria-describedby</code> to ensure that the user is immediately aware of the prompt.</li>
+          <li>경고 대화상자에 대한 접근 가능한 레이블은 헤딩인 ("확인")으로 설정됩니다.</li>
+          <li>대화상자의 프롬프트 ("정말...?")은 사용자가 프롬프트를 즉시 인식하도록 하기 위해 <code>aria-describedby</code>를 통해 참조 됩니다.</li>
           <li>
-            Focus is automatically set to the first focusable element inside the dialog, which is the "No" <code>button</code>.
-            This is the least destructive action, so focusing "No" helps prevent users from accidentally confirming the destructive "Discard" action, which cannot be undone.
+            초점은 대화상자 내 첫 번째 초점을 얻을 수 있는 (focusable) 엘리먼트인 "No" <code>button</code>에 자동으로 설정됩니다.
+            이는 적어도 파괴적인 작업이므로, "아니오"에 초점을 맞추면 되돌릴 수 없는 "폐기" 작업을 사용자가 실수로 확인하는 것을 방지할 수 잇습니다.
           </li>
         </ol>
       </section>
       <section>
-        <h2 id="kbd_label">Keyboard Support</h2>
+        <h2 id="kbd_label">키보드 지원</h2>
         <table aria-labelledby="kbd_label" class="def">
           <thead>
             <tr>
-              <th>Key</th>
-              <th>Function</th>
+              <th>키</th>
+              <th>기능</th>
             </tr>
           </thead>
           <tbody>
@@ -111,8 +111,8 @@
               <th><kbd>Tab</kbd></th>
               <td>
                 <ul>
-                  <li>Moves focus to next focusable element inside the dialog.</li>
-                  <li>When focus is on the last focusable element in the dialog, moves focus to the first focusable element in the dialog.</li>
+                  <li>대화상자 내 다음 초점을 얻을 수 있는(focusable) 엘리먼트로 초점을 이동시키세요.</li>
+                  <li>초점이 대화상자 내 마지막 초점을 얻을 수 있는(focusable) 엘리먼트에 있다면, 대화상자 내 첫 번째 초점을 얻을 수 있는(focusable) 엘리먼트로 초점을 이동시키세요.</li>
                 </ul>
               </td>
             </tr>
@@ -120,35 +120,35 @@
               <th><kbd>Shift + Tab</kbd></th>
               <td>
                 <ul>
-                  <li>Moves focus to previous focusable element inside the dialog.</li>
-                  <li>When focus is on the first focusable element in the dialog, moves focus to the last focusable element in the dialog.</li>
+                  <li>대화상자 내 이전 초점을 얻을 수 있는(focusable) 엘리먼트로 초점을 이동시키세요.</li>
+                  <li>초점이 대화상자 내 첫 번째 초점을 얻을 수 있는(focusable) 엘리먼트에 있다면, 대화상자 내 마지막 초점을 얻을 수 있는(focusable) 엘리먼트로 초점을 이동시키세요.</li>
                 </ul>
               </td>
             </tr>
             <tr>
               <th><kbd>Escape</kbd></th>
-              <td>Closes the dialog.</td>
+              <td>대화상자를 닫으세요.</td>
             </tr>
             <tr>
               <th><kbd>Command + S</kbd></th>
-              <td>(Mac only) Save the contents of the notes <code>textarea</code> when focused.</td>
+              <td>(Mac만) 초점을 얻은 경우 노트 <code>textarea</code>의 콘텐츠를 저장하세요</td>
             </tr>
             <tr>
               <th><kbd>Control + S</kbd></th>
-              <td>(Windows only) Save the contents of the notes <code>textarea</code> when focused.</td>
+              <td>(Windows만) 초점을 얻은 경우 노트 <code>textarea</code>의 콘텐츠를 저장하세요</td>
             </tr>
           </tbody>
         </table>
       </section>
       <section>
-        <h2 id="rps_label">Role, Property, State, and Tabindex  Attributes</h2>
+        <h2 id="rps_label">Role, Property, State, Tabindex 어트리뷰트</h2>
         <table aria-labelledby="rps_label" class="data attributes">
           <thead>
             <tr>
-              <th scope="col">Role</th>
-              <th scope="col">Attribute</th>
-              <th scope="col">Element</th>
-              <th scope="col">Usage</th>
+              <th scope="col">역할(role)</th>
+              <th scope="col">어트리뷰트</th>
+              <th scope="col">엘리먼트</th>
+              <th scope="col">사용법</th>
             </tr>
           </thead>
           <tbody>
@@ -157,7 +157,7 @@
               <td></td>
               <td><code>div</code></td>
               <td>
-                Identifies the element that serves as the alert dialog container.
+                경고 대화상자 컨테이너로 제공되는 엘리먼트를 식별 시킵니다.
               </td>
             </tr>
             <tr>
@@ -165,7 +165,7 @@
               <th scope="row"><code>aria-labelledby=<q>IDREF</q></code></th>
               <td><code>div</code></td>
               <td>
-                Gives the alert dialog an accessible name by referring to the element that provides the alert dialog title.
+                경고 대화상자 제목을 제공하는 엘리먼트를 참조하여 경고 대화상자에 접근 가능한 이름을 제공 시킵니다.
               </td>
             </tr>
             <tr>
@@ -173,7 +173,7 @@
               <th scope="row"><code>aria-describedby=<q>IDREF</q></code></th>
               <td><code>div</code></td>
               <td>
-                Gives the alert dialog an accessible description by referring to the alert dialog content that describes the primary message or purpose of the alert dialog.
+                주요 메세지나 경고 대화상자의 목적을 설명하는 경고 대화상자 콘텐츠를 참조하여 경고 대화상자에 접근 가능한 설명을 제공 시킵니다.
               </td>
             </tr>
             <tr>
@@ -181,7 +181,7 @@
               <th scope="row"><code>aria-modal=<q>true</q></code></th>
               <td><code>div</code></td>
               <td>
-                Tells assistive technologies that the windows underneath the current alert dialog are not available for interaction (inert).
+                현재 경고 대화상자 아래 가려진 창이 상호 작용 가능하지 않음을 (inert) 보조 기술에 지시합니다.
               </td>
             </tr>
               <tr>
@@ -189,39 +189,38 @@
                 <td></td>
                 <td><code>div</code></td>
                 <td>
-                  Identifies the element that serves as the alert notification.
+                  경고 알림으로 제공하는 엘리먼트를 식별 시킵니다.
                 </td>
               </tr>
           </tbody>
         </table>
-        <h3>Notes on <code>aria-modal</code> and <code>aria-hidden</code></h3>
+        <h3><code>aria-modal</code>과 <code>aria-hidden</code>에 대한 참고 사항</h3>
         <ol>
           <li>
-            The <code>aria-modal</code> property was introduced in ARIA 1.1.
-            As a new property, screen reader users may experience varying degrees of support for it.
+            <code>aria-modal</code> 속성(property)은 ARIA 1.1에서 도입되었습니다.
+            새로운 속성(property)이기 때문에,스크린리더 사용자는 이에 대한 다양한 범위의 지원을 경험할 수 있습니다.
           </li>
           <li>
-            Applying the <code>aria-modal</code> property to the <code>dialog</code> element
-            replaces the technique of using <code>aria-hidden</code> on the background for informing assistive technologies that content outside a dialog is inert.
+            <code>dialog</code> 엘리먼트에 <code>aria-modal</code> 속성(property)을 적용하는 것은 보조 기술에 대화상자 바깥 콘텐트가 비활성(inert) 상태임을 알리기 위해 백그라운드에 <code>aria-hidden</code>를 사용하는 기법을 대체합니다.
           </li>
           <li>
-            In legacy dialog implementations where <code>aria-hidden</code> is used to make content outside a dialog inert for assistive technology users, it is important that:
+            <code>aria-hidden</code>이 보조 기술 사용자에게 대화상자 바깥 콘텐트를 비활성(inert)로 만드는데 사용되는 레거시 대화상자 구현에서는, 다음이 중요합니다:
             <ol>
-              <li><code>aria-hidden</code> is set to <code>true</code> on each element containing a portion of the inert layer.</li>
-              <li>The dialog element is not a descendant of any element that has <code>aria-hidden</code> set to <code>true</code>.</li>
+              <li><code>aria-hidden</code>은 비활성 레이어를 포함하는 각 엘리먼트에 설정됩니다.</li>
+              <li>대화상자 엘리먼트는 <code>aria-hidden</code>이 <code>true</code>로 설정된 엘리먼트의 후손이 아닙니다.</li>
             </ol>
           </li>
         </ol>
       </section>
       <section>
-        <h2 id="src_label">Javascript and CSS Source Code</h2>
+        <h2 id="src_label">Javascript와 CSS 소스 코드</h2>
         <ul id="css_js_files">
           <li> CSS: <a href="css/dialog.css" type="text/css">dialog.css</a></li>
           <li> Javascript: <a href="js/alertdialog.js" type="text/javascript">alertdialog.js</a>, <a href="js/dialog.js" type="text/javascript">dialog.js</a>, <a href="../js/utils.js">utils.js</a></li>
         </ul>
       </section>
       <section>
-        <h2 id="sc1_label">HTML Source Code</h2>
+        <h2 id="sc1_label">HTML 소스 코드</h2>
         <div role="separator" id="sc1_start_sep" aria-labelledby="sc1_start_sep sc1_label" aria-label="Start of"></div>
         <pre><code id="sc1"></code></pre>
         <div role="separator" id="sc1_end_sep" aria-labelledby="sc1_end_sep sc1_label" aria-label="End of"></div>
@@ -232,7 +231,7 @@
       </section>
     </main>
     <nav>
-      <a href="../../#alertdialog">Alert and Message Dialogs Design Pattern in WAI-ARIA Authoring Practices 1.2</a>
+      <a href="../../#alertdialog">WAI-ARIA 작성 방법 1.2의 경고와 메세지 대화 상자 설계 패턴</a>
     </nav>
   </body>
 </html>
