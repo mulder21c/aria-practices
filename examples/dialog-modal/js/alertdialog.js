@@ -183,8 +183,8 @@ document.addEventListener('DOMContentLoaded', function initAlertDialog() {
       desc.appendChild(wordCount);
     }
     var count = target.value.split(/\s/).length;
-    var frag = count > 1 ? 'words' : 'word';
-    wordCount.textContent = count + ' ' + frag + ' will be deleted.';
+    var frag = '개 단어';
+    wordCount.textContent = count + frag + '가 삭제됩니다.';
     openDialog(dialogId, target, focusFirst);
   };
 });

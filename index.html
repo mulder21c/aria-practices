@@ -150,16 +150,16 @@
       "aliasOf": "WAI-ARIA-1.1"
     }
   },
-  "publishDate": "2021-02-14",
-  "publishISODate": "2021-02-14T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 14 February 2021"
+  "publishDate": "2021-02-21",
+  "publishISODate": "2021-02-21T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 21 February 2021"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 <body class="h-entry informative"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">WAI-ARIA 작성 방법 1.2</h1>
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2021-02-14">14 February 2021</time>
+      <time class="dt-published" datetime="2021-02-21">21 February 2021</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -295,7 +295,7 @@
   </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>소개</a></li><li class="tocline"><a class="tocxref" href="#read_me_first"><bdi class="secno">2. </bdi>먼저 읽어주세요</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#no_aria_better_bad_aria"><bdi class="secno">2.1 </bdi>잘못된 ARIA보다 ARIA를 안쓰는게 낫다</a></li><li class="tocline"><a class="tocxref" href="#browser_and_AT_support"><bdi class="secno">2.2 </bdi>브라우저와 보조 기술 지원</a></li><li class="tocline"><a class="tocxref" href="#mobile_and_touch_support"><bdi class="secno">2.3 </bdi>모바일과 터치 지원</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_ex"><bdi class="secno">3. </bdi>설계 패턴과 위젯</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accordion"><bdi class="secno">3.1 </bdi>아코디언 (Show/Hide 기능이 있는 섹션)</a></li><li class="tocline"><a class="tocxref" href="#alert"><bdi class="secno">3.2 </bdi>경고</a></li><li class="tocline"><a class="tocxref" href="#alertdialog"><bdi class="secno">3.3 </bdi>Alert and Message Dialogs</a></li><li class="tocline"><a class="tocxref" href="#breadcrumb"><bdi class="secno">3.4 </bdi>Breadcrumb</a></li><li class="tocline"><a class="tocxref" href="#button"><bdi class="secno">3.5 </bdi>Button</a></li><li class="tocline"><a class="tocxref" href="#carousel"><bdi class="secno">3.6 </bdi>Carousel (Slide Show or Image Rotator)</a></li><li class="tocline"><a class="tocxref" href="#checkbox"><bdi class="secno">3.7 </bdi>Checkbox</a></li><li class="tocline"><a class="tocxref" href="#combobox"><bdi class="secno">3.8 </bdi>Combobox</a></li><li class="tocline"><a class="tocxref" href="#dialog_modal"><bdi class="secno">3.9 </bdi>Dialog (Modal)</a></li><li class="tocline"><a class="tocxref" href="#disclosure"><bdi class="secno">3.10 </bdi>Disclosure (Show/Hide)</a></li><li class="tocline"><a class="tocxref" href="#feed"><bdi class="secno">3.11 </bdi>Feed</a></li><li class="tocline"><a class="tocxref" href="#grid"><bdi class="secno">3.12 </bdi>Grids : Interactive Tabular Data and Layout Containers</a></li><li class="tocline"><a class="tocxref" href="#link"><bdi class="secno">3.13 </bdi>Link</a></li><li class="tocline"><a class="tocxref" href="#Listbox"><bdi class="secno">3.14 </bdi>Listbox</a></li><li class="tocline"><a class="tocxref" href="#menu"><bdi class="secno">3.15 </bdi>Menu or Menu bar</a></li><li class="tocline"><a class="tocxref" href="#menubutton"><bdi class="secno">3.16 </bdi>Menu Button</a></li><li class="tocline"><a class="tocxref" href="#meter"><bdi class="secno">3.17 </bdi>Meter</a></li><li class="tocline"><a class="tocxref" href="#radiobutton"><bdi class="secno">3.18 </bdi>Radio Group</a></li><li class="tocline"><a class="tocxref" href="#slider"><bdi class="secno">3.19 </bdi>Slider</a></li><li class="tocline"><a class="tocxref" href="#slidertwothumb"><bdi class="secno">3.20 </bdi>Slider (Multi-Thumb)</a></li><li class="tocline"><a class="tocxref" href="#spinbutton"><bdi class="secno">3.21 </bdi>Spinbutton</a></li><li class="tocline"><a class="tocxref" href="#table"><bdi class="secno">3.22 </bdi>Table</a></li><li class="tocline"><a class="tocxref" href="#tabpanel"><bdi class="secno">3.23 </bdi>Tabs</a></li><li class="tocline"><a class="tocxref" href="#toolbar"><bdi class="secno">3.24 </bdi>Toolbar</a></li><li class="tocline"><a class="tocxref" href="#tooltip"><bdi class="secno">3.25 </bdi>Tooltip Widget</a></li><li class="tocline"><a class="tocxref" href="#TreeView"><bdi class="secno">3.26 </bdi>Tree View</a></li><li class="tocline"><a class="tocxref" href="#treegrid"><bdi class="secno">3.27 </bdi>Treegrid</a></li><li class="tocline"><a class="tocxref" href="#windowsplitter"><bdi class="secno">3.28 </bdi>Window Splitter</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_landmark"><bdi class="secno">4. </bdi>랜드마크 영역</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#html"><bdi class="secno">4.1 </bdi>HTML 섹션화 엘리먼트</a></li><li class="tocline"><a class="tocxref" href="#generatedID"><bdi class="secno">4.2 </bdi>랜드마크 설계 일반 원칙</a></li><li class="tocline"><a class="tocxref" href="#generatedID-0"><bdi class="secno">4.3 </bdi>랜드마크 영역</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aria_lh_banner"><bdi class="secno">4.3.1 </bdi>Banner</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_complementary"><bdi class="secno">4.3.2 </bdi>Complementary</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_contentinfo"><bdi class="secno">4.3.3 </bdi>Contentinfo</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_form"><bdi class="secno">4.3.4 </bdi>Form</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_main"><bdi class="secno">4.3.5 </bdi>Main</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_navigation"><bdi class="secno">4.3.6 </bdi>Navigation</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_region"><bdi class="secno">4.3.7 </bdi>Region</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_search"><bdi class="secno">4.3.8 </bdi>Search</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions"><bdi class="secno">5. </bdi>접근 가능한 이름과 설명 제공</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#names_and_descriptions_definition"><bdi class="secno">5.1 </bdi>접근 가능한 이름과 설명이란?</a></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions_derivation"><bdi class="secno">5.2 </bdi>이름과 설명 문자열은 어떻게 파생되나요?</a></li><li class="tocline"><a class="tocxref" href="#accessible_names"><bdi class="secno">5.3 </bdi>접근 가능한 이름</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_cardinal_rules"><bdi class="secno">5.3.1 </bdi>이름 지정의 기본 규칙</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_rule_heed_warnings"><bdi class="secno">5.3.1.1 </bdi>규칙 1: 경고에 주의하고 철처하게 테스트</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_visible_text"><bdi class="secno">5.3.1.2 </bdi>규칙 2: 보이는 텍스트 선택</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_native_techniques"><bdi class="secno">5.3.1.3 </bdi>규칙 3: 기본 기술 선택</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_avoid_fallback"><bdi class="secno">5.3.1.4 </bdi>규칙 4: 브라우저 폴백 방지</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_brief_names"><bdi class="secno">5.3.1.5 </bdi>규칙 5: 간단하고 유용한 이름 작성</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_techniques"><bdi class="secno">5.3.2 </bdi>이름 지정 기법</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_with_child_content"><bdi class="secno">5.3.2.1 </bdi>자식 콘텐츠로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-label"><bdi class="secno">5.3.2.2 </bdi><code>aria-label</code>을 통해 문자열 속성으로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-labelledby"><bdi class="secno">5.3.2.3 </bdi><code>aria-labelledby</code>를 통해 참조된 콘텐트로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_labels"><bdi class="secno">5.3.2.4 </bdi>Label 엘리먼트로 폼 컨트롤 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_legends"><bdi class="secno">5.3.2.5 </bdi>legend 엘리먼트로 필드셋 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_captions"><bdi class="secno">5.3.2.6 </bdi>캡션으로 표와 삽화 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_fallback"><bdi class="secno">5.3.2.7 </bdi>title 및 placeholder로부터 파생 된 대체 이름</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_effectively"><bdi class="secno">5.3.3 </bdi>효과적이고 사용자 친화적인 접근 가능한 이름 구성</a></li><li class="tocline"><a class="tocxref" href="#naming_role_guidance"><bdi class="secno">5.3.4 </bdi><span id="naming_role_guidance_heading">역할(role)별 접근 가능한 이름 지정 지침</span></a></li><li class="tocline"><a class="tocxref" href="#name_calculation"><bdi class="secno">5.3.5 </bdi>접근 가능한 이름 계산</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#name_calculation_non-recursive_ex"><bdi class="secno">5.3.5.1 </bdi>비 재귀적 접근 가능한 이름 계산의 예</a></li><li class="tocline"><a class="tocxref" href="#name_calculation_recursive_ex"><bdi class="secno">5.3.5.2 </bdi>재귀적 접근 가능한 이름 계산의 예</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessible_descriptions"><bdi class="secno">5.4 </bdi>접근 가능한 설명</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_techniques"><bdi class="secno">5.4.1 </bdi>설명 기법</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_with_aria-describedby"><bdi class="secno">5.4.1.1 </bdi><code>aria-describedby</code>로 내용을 참조하여 설명하기</a></li><li class="tocline"><a class="tocxref" href="#describing_with_captions"><bdi class="secno">5.4.1.2 </bdi>캡션으로 표 및 삽화에 설명 지정</a></li><li class="tocline"><a class="tocxref" href="#describing_with_title"><bdi class="secno">5.4.1.3 </bdi>title로부터 파생된 설명</a></li></ol></li><li class="tocline"><a class="tocxref" href="#description_calculation"><bdi class="secno">5.4.2 </bdi>접근 가능한 설명 계산</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#keyboard"><bdi class="secno">6. </bdi>키보드 인터페이스 개발</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_generalnav"><bdi class="secno">6.1 </bdi>핵심 키보드 탐색 규칙</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_discernable_predictable"><bdi class="secno">6.2 </bdi>식별 가능하고 예측 가능한 키보드 초점</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_vs_selection"><bdi class="secno">6.3 </bdi>초점 vs 선택, 이중 초점 인식</a></li><li class="tocline"><a class="tocxref" href="#kbd_selection_follows_focus"><bdi class="secno">6.4 </bdi>초점을 따라 자동으로 선택되게 하는 시기 결정</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_between"><bdi class="secno">6.5 </bdi>컴포넌트 간 키보드 탐색 (탭 시퀀스)</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_within"><bdi class="secno">6.6 </bdi> 컴포넌트 내부 키보드 탐색</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_roving_tabindex"><bdi class="secno">6.6.1 </bdi>이동(roving) tabindex를 사용하여 컴포넌트에서 초점 관리</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_activedescendant"><bdi class="secno">6.6.2 </bdi>aria-activedescendant를 사용하여 복합 컴포넌트에서 초점 관리</a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_disabled_controls"><bdi class="secno">6.7 </bdi>비활성화 된 컨트롤의 초점 가능성(focusability)</a></li><li class="tocline"><a class="tocxref" href="#kbd_common_conventions"><bdi class="secno">6.8 </bdi>공통 기능에 대한 키 할당 규칙</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts"><bdi class="secno">6.9 </bdi>키보드 단축키</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_behavior_design"><bdi class="secno">6.9.1 </bdi>키보드 단축키의 범위와 동작 설계</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_basic"><bdi class="secno">6.9.1.1 </bdi>탐색을 통한 기본 접근 보장</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_choose_behavior"><bdi class="secno">6.9.1.2 </bdi>적절한 단축키 동작 선택</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_where"><bdi class="secno">6.9.1.3 </bdi>단축키를 추가할 위치 선택 </a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assigning"><bdi class="secno">6.9.2 </bdi>키보드 단축키 할당</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_opsys_conflicts"><bdi class="secno">6.9.2.1 </bdi>운영 체제 키 충돌</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_assistivetech_conflicts"><bdi class="secno">6.9.2.2 </bdi>보조 기술 키 충돌</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_browser_conflicts"><bdi class="secno">6.9.2.3 </bdi>브라우저 키 충돌</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_intentional_conflicts"><bdi class="secno">6.9.2.4 </bdi>의도적인 키 충돌</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties"><bdi class="secno">7. </bdi>Grid와 Table 속성(property)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_rows"><bdi class="secno">7.1 </bdi><code>aria-rowcount</code>와 <code>aria-rowindex</code> 사용</a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols"><bdi class="secno">7.2 </bdi><code>aria-colcount</code>과 <code>aria-colindex</code>사용</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_contiguous"><bdi class="secno">7.2.1 </bdi>열 인덱스가 연속적일 때 <code>aria-colindex</code> 사용</a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_noncontiguous"><bdi class="secno">7.2.2 </bdi>열 인덱스가 비연속적일 때 <code>aria-colindex</code> 사용</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_spans"><bdi class="secno">7.3 </bdi><code>aria-colspan</code>과 <code>aria-rowspan</code>를 사용하여 셀 합치기 정의</a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_sort"><bdi class="secno">7.4 </bdi><code>aria-sort</code>로 정렬 순서 나타내기</a></li></ol></li><li class="tocline"><a class="tocxref" href="#range_related_properties"><bdi class="secno">8. </bdi>범위 위젯에 대한 값과 제한 전달</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#range_related_properties_using_aria-valuemin_aria-valuemax_and_aria-valuenow"><bdi class="secno">8.1 </bdi><code>aria-valuemin</code>, <code>aria-valuemax</code>, <code>aria-valuenow</code> 사용하기</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_using_aria-valuetext"><bdi class="secno">8.2 </bdi><code>aria-valuetext</code>사용하기</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_meter_role"><bdi class="secno">8.3 </bdi>meter 범위 속성(property)</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_progressbar_role"><bdi class="secno">8.4 </bdi>progress bars 범위 속성(property)</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_scrollbar_role"><bdi class="secno">8.5 </bdi>scrollbars 범위 속성(property)</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_slider_role"><bdi class="secno">8.6 </bdi>sliders 범위 속성(property)</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_spinbutton_role"><bdi class="secno">8.7 </bdi>spin buttons 범위 속성(property)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#presentation_role"><bdi class="secno">9. </bdi><code>presentation</code> 역할(role)로 의도적으로 의미론 숨기기</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#presentation_role_effects"><bdi class="secno">9.1 </bdi>
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>소개</a></li><li class="tocline"><a class="tocxref" href="#read_me_first"><bdi class="secno">2. </bdi>먼저 읽어주세요</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#no_aria_better_bad_aria"><bdi class="secno">2.1 </bdi>잘못된 ARIA보다 ARIA를 안쓰는게 낫다</a></li><li class="tocline"><a class="tocxref" href="#browser_and_AT_support"><bdi class="secno">2.2 </bdi>브라우저와 보조 기술 지원</a></li><li class="tocline"><a class="tocxref" href="#mobile_and_touch_support"><bdi class="secno">2.3 </bdi>모바일과 터치 지원</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_ex"><bdi class="secno">3. </bdi>설계 패턴과 위젯</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accordion"><bdi class="secno">3.1 </bdi>아코디언 (Show/Hide 기능이 있는 섹션)</a></li><li class="tocline"><a class="tocxref" href="#alert"><bdi class="secno">3.2 </bdi>경고</a></li><li class="tocline"><a class="tocxref" href="#alertdialog"><bdi class="secno">3.3 </bdi>경고 및 메세지 대화상자</a></li><li class="tocline"><a class="tocxref" href="#breadcrumb"><bdi class="secno">3.4 </bdi>Breadcrumb</a></li><li class="tocline"><a class="tocxref" href="#button"><bdi class="secno">3.5 </bdi>Button</a></li><li class="tocline"><a class="tocxref" href="#carousel"><bdi class="secno">3.6 </bdi>Carousel (Slide Show or Image Rotator)</a></li><li class="tocline"><a class="tocxref" href="#checkbox"><bdi class="secno">3.7 </bdi>Checkbox</a></li><li class="tocline"><a class="tocxref" href="#combobox"><bdi class="secno">3.8 </bdi>Combobox</a></li><li class="tocline"><a class="tocxref" href="#dialog_modal"><bdi class="secno">3.9 </bdi>Dialog (Modal)</a></li><li class="tocline"><a class="tocxref" href="#disclosure"><bdi class="secno">3.10 </bdi>Disclosure (Show/Hide)</a></li><li class="tocline"><a class="tocxref" href="#feed"><bdi class="secno">3.11 </bdi>Feed</a></li><li class="tocline"><a class="tocxref" href="#grid"><bdi class="secno">3.12 </bdi>Grids : Interactive Tabular Data and Layout Containers</a></li><li class="tocline"><a class="tocxref" href="#link"><bdi class="secno">3.13 </bdi>Link</a></li><li class="tocline"><a class="tocxref" href="#Listbox"><bdi class="secno">3.14 </bdi>Listbox</a></li><li class="tocline"><a class="tocxref" href="#menu"><bdi class="secno">3.15 </bdi>Menu or Menu bar</a></li><li class="tocline"><a class="tocxref" href="#menubutton"><bdi class="secno">3.16 </bdi>Menu Button</a></li><li class="tocline"><a class="tocxref" href="#meter"><bdi class="secno">3.17 </bdi>Meter</a></li><li class="tocline"><a class="tocxref" href="#radiobutton"><bdi class="secno">3.18 </bdi>Radio Group</a></li><li class="tocline"><a class="tocxref" href="#slider"><bdi class="secno">3.19 </bdi>Slider</a></li><li class="tocline"><a class="tocxref" href="#slidertwothumb"><bdi class="secno">3.20 </bdi>Slider (Multi-Thumb)</a></li><li class="tocline"><a class="tocxref" href="#spinbutton"><bdi class="secno">3.21 </bdi>Spinbutton</a></li><li class="tocline"><a class="tocxref" href="#table"><bdi class="secno">3.22 </bdi>Table</a></li><li class="tocline"><a class="tocxref" href="#tabpanel"><bdi class="secno">3.23 </bdi>Tabs</a></li><li class="tocline"><a class="tocxref" href="#toolbar"><bdi class="secno">3.24 </bdi>Toolbar</a></li><li class="tocline"><a class="tocxref" href="#tooltip"><bdi class="secno">3.25 </bdi>Tooltip Widget</a></li><li class="tocline"><a class="tocxref" href="#TreeView"><bdi class="secno">3.26 </bdi>Tree View</a></li><li class="tocline"><a class="tocxref" href="#treegrid"><bdi class="secno">3.27 </bdi>Treegrid</a></li><li class="tocline"><a class="tocxref" href="#windowsplitter"><bdi class="secno">3.28 </bdi>Window Splitter</a></li></ol></li><li class="tocline"><a class="tocxref" href="#aria_landmark"><bdi class="secno">4. </bdi>랜드마크 영역</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#html"><bdi class="secno">4.1 </bdi>HTML 섹션화 엘리먼트</a></li><li class="tocline"><a class="tocxref" href="#generatedID"><bdi class="secno">4.2 </bdi>랜드마크 설계 일반 원칙</a></li><li class="tocline"><a class="tocxref" href="#generatedID-0"><bdi class="secno">4.3 </bdi>랜드마크 영역</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#aria_lh_banner"><bdi class="secno">4.3.1 </bdi>Banner</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_complementary"><bdi class="secno">4.3.2 </bdi>Complementary</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_contentinfo"><bdi class="secno">4.3.3 </bdi>Contentinfo</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_form"><bdi class="secno">4.3.4 </bdi>Form</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_main"><bdi class="secno">4.3.5 </bdi>Main</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_navigation"><bdi class="secno">4.3.6 </bdi>Navigation</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_region"><bdi class="secno">4.3.7 </bdi>Region</a></li><li class="tocline"><a class="tocxref" href="#aria_lh_search"><bdi class="secno">4.3.8 </bdi>Search</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions"><bdi class="secno">5. </bdi>접근 가능한 이름과 설명 제공</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#names_and_descriptions_definition"><bdi class="secno">5.1 </bdi>접근 가능한 이름과 설명이란?</a></li><li class="tocline"><a class="tocxref" href="#names_and_descriptions_derivation"><bdi class="secno">5.2 </bdi>이름과 설명 문자열은 어떻게 파생되나요?</a></li><li class="tocline"><a class="tocxref" href="#accessible_names"><bdi class="secno">5.3 </bdi>접근 가능한 이름</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_cardinal_rules"><bdi class="secno">5.3.1 </bdi>이름 지정의 기본 규칙</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_rule_heed_warnings"><bdi class="secno">5.3.1.1 </bdi>규칙 1: 경고에 주의하고 철처하게 테스트</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_visible_text"><bdi class="secno">5.3.1.2 </bdi>규칙 2: 보이는 텍스트 선택</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_native_techniques"><bdi class="secno">5.3.1.3 </bdi>규칙 3: 기본 기술 선택</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_avoid_fallback"><bdi class="secno">5.3.1.4 </bdi>규칙 4: 브라우저 폴백 방지</a></li><li class="tocline"><a class="tocxref" href="#naming_rule_brief_names"><bdi class="secno">5.3.1.5 </bdi>규칙 5: 간단하고 유용한 이름 작성</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_techniques"><bdi class="secno">5.3.2 </bdi>이름 지정 기법</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#naming_with_child_content"><bdi class="secno">5.3.2.1 </bdi>자식 콘텐츠로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-label"><bdi class="secno">5.3.2.2 </bdi><code>aria-label</code>을 통해 문자열 속성으로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_aria-labelledby"><bdi class="secno">5.3.2.3 </bdi><code>aria-labelledby</code>를 통해 참조된 콘텐트로 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_labels"><bdi class="secno">5.3.2.4 </bdi>Label 엘리먼트로 폼 컨트롤 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_legends"><bdi class="secno">5.3.2.5 </bdi>legend 엘리먼트로 필드셋 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_captions"><bdi class="secno">5.3.2.6 </bdi>캡션으로 표와 삽화 이름 지정</a></li><li class="tocline"><a class="tocxref" href="#naming_with_fallback"><bdi class="secno">5.3.2.7 </bdi>title 및 placeholder로부터 파생 된 대체 이름</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming_effectively"><bdi class="secno">5.3.3 </bdi>효과적이고 사용자 친화적인 접근 가능한 이름 구성</a></li><li class="tocline"><a class="tocxref" href="#naming_role_guidance"><bdi class="secno">5.3.4 </bdi><span id="naming_role_guidance_heading">역할(role)별 접근 가능한 이름 지정 지침</span></a></li><li class="tocline"><a class="tocxref" href="#name_calculation"><bdi class="secno">5.3.5 </bdi>접근 가능한 이름 계산</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#name_calculation_non-recursive_ex"><bdi class="secno">5.3.5.1 </bdi>비 재귀적 접근 가능한 이름 계산의 예</a></li><li class="tocline"><a class="tocxref" href="#name_calculation_recursive_ex"><bdi class="secno">5.3.5.2 </bdi>재귀적 접근 가능한 이름 계산의 예</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessible_descriptions"><bdi class="secno">5.4 </bdi>접근 가능한 설명</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_techniques"><bdi class="secno">5.4.1 </bdi>설명 기법</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#describing_with_aria-describedby"><bdi class="secno">5.4.1.1 </bdi><code>aria-describedby</code>로 내용을 참조하여 설명하기</a></li><li class="tocline"><a class="tocxref" href="#describing_with_captions"><bdi class="secno">5.4.1.2 </bdi>캡션으로 표 및 삽화에 설명 지정</a></li><li class="tocline"><a class="tocxref" href="#describing_with_title"><bdi class="secno">5.4.1.3 </bdi>title로부터 파생된 설명</a></li></ol></li><li class="tocline"><a class="tocxref" href="#description_calculation"><bdi class="secno">5.4.2 </bdi>접근 가능한 설명 계산</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#keyboard"><bdi class="secno">6. </bdi>키보드 인터페이스 개발</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_generalnav"><bdi class="secno">6.1 </bdi>핵심 키보드 탐색 규칙</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_discernable_predictable"><bdi class="secno">6.2 </bdi>식별 가능하고 예측 가능한 키보드 초점</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_vs_selection"><bdi class="secno">6.3 </bdi>초점 vs 선택, 이중 초점 인식</a></li><li class="tocline"><a class="tocxref" href="#kbd_selection_follows_focus"><bdi class="secno">6.4 </bdi>초점을 따라 자동으로 선택되게 하는 시기 결정</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_between"><bdi class="secno">6.5 </bdi>컴포넌트 간 키보드 탐색 (탭 시퀀스)</a></li><li class="tocline"><a class="tocxref" href="#kbd_general_within"><bdi class="secno">6.6 </bdi> 컴포넌트 내부 키보드 탐색</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_roving_tabindex"><bdi class="secno">6.6.1 </bdi>이동(roving) tabindex를 사용하여 컴포넌트에서 초점 관리</a></li><li class="tocline"><a class="tocxref" href="#kbd_focus_activedescendant"><bdi class="secno">6.6.2 </bdi>aria-activedescendant를 사용하여 복합 컴포넌트에서 초점 관리</a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_disabled_controls"><bdi class="secno">6.7 </bdi>비활성화 된 컨트롤의 초점 가능성(focusability)</a></li><li class="tocline"><a class="tocxref" href="#kbd_common_conventions"><bdi class="secno">6.8 </bdi>공통 기능에 대한 키 할당 규칙</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts"><bdi class="secno">6.9 </bdi>키보드 단축키</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_behavior_design"><bdi class="secno">6.9.1 </bdi>키보드 단축키의 범위와 동작 설계</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_basic"><bdi class="secno">6.9.1.1 </bdi>탐색을 통한 기본 접근 보장</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_choose_behavior"><bdi class="secno">6.9.1.2 </bdi>적절한 단축키 동작 선택</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_design_where"><bdi class="secno">6.9.1.3 </bdi>단축키를 추가할 위치 선택 </a></li></ol></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assigning"><bdi class="secno">6.9.2 </bdi>키보드 단축키 할당</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_opsys_conflicts"><bdi class="secno">6.9.2.1 </bdi>운영 체제 키 충돌</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_assistivetech_conflicts"><bdi class="secno">6.9.2.2 </bdi>보조 기술 키 충돌</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_browser_conflicts"><bdi class="secno">6.9.2.3 </bdi>브라우저 키 충돌</a></li><li class="tocline"><a class="tocxref" href="#kbd_shortcuts_assignments_intentional_conflicts"><bdi class="secno">6.9.2.4 </bdi>의도적인 키 충돌</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties"><bdi class="secno">7. </bdi>Grid와 Table 속성(property)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_rows"><bdi class="secno">7.1 </bdi><code>aria-rowcount</code>와 <code>aria-rowindex</code> 사용</a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols"><bdi class="secno">7.2 </bdi><code>aria-colcount</code>과 <code>aria-colindex</code>사용</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_contiguous"><bdi class="secno">7.2.1 </bdi>열 인덱스가 연속적일 때 <code>aria-colindex</code> 사용</a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_cols_noncontiguous"><bdi class="secno">7.2.2 </bdi>열 인덱스가 비연속적일 때 <code>aria-colindex</code> 사용</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_spans"><bdi class="secno">7.3 </bdi><code>aria-colspan</code>과 <code>aria-rowspan</code>를 사용하여 셀 합치기 정의</a></li><li class="tocline"><a class="tocxref" href="#gridAndTableProperties_sort"><bdi class="secno">7.4 </bdi><code>aria-sort</code>로 정렬 순서 나타내기</a></li></ol></li><li class="tocline"><a class="tocxref" href="#range_related_properties"><bdi class="secno">8. </bdi>범위 위젯에 대한 값과 제한 전달</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#range_related_properties_using_aria-valuemin_aria-valuemax_and_aria-valuenow"><bdi class="secno">8.1 </bdi><code>aria-valuemin</code>, <code>aria-valuemax</code>, <code>aria-valuenow</code> 사용하기</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_using_aria-valuetext"><bdi class="secno">8.2 </bdi><code>aria-valuetext</code>사용하기</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_meter_role"><bdi class="secno">8.3 </bdi>meter 범위 속성(property)</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_progressbar_role"><bdi class="secno">8.4 </bdi>progress bars 범위 속성(property)</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_scrollbar_role"><bdi class="secno">8.5 </bdi>scrollbars 범위 속성(property)</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_slider_role"><bdi class="secno">8.6 </bdi>sliders 범위 속성(property)</a></li><li class="tocline"><a class="tocxref" href="#range_related_properties_spinbutton_role"><bdi class="secno">8.7 </bdi>spin buttons 범위 속성(property)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#presentation_role"><bdi class="secno">9. </bdi><code>presentation</code> 역할(role)로 의도적으로 의미론 숨기기</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#presentation_role_effects"><bdi class="secno">9.1 </bdi>
         <code>presentation</code> 역할(role)의 효과
       </a></li><li class="tocline"><a class="tocxref" href="#presentation_role_ignored"><bdi class="secno">9.2 </bdi>
         <code>presentation</code> 역할(role)이 무시되는 조건
@@ -549,52 +549,42 @@
     </section>
 
     <section class="widget" id="alertdialog">
-      <h3 id="x3-3-alert-and-message-dialogs"><bdi class="secno">3.3 </bdi>Alert and Message Dialogs<a class="self-link" aria-label="§" href="#alertdialog"></a></h3>
+      <h3 id="x3-3"><bdi class="secno">3.3 </bdi>경고 및 메세지 대화상자<a class="self-link" aria-label="§" href="#alertdialog"></a></h3>
       <p>
-        An alert dialog  is a <a href="#dialog_modal">modal dialog</a> that interrupts the user's workflow to communicate an important message and acquire a response.
-        Examples include action confirmation prompts and error message confirmations.
-        The <a href="https://w3c.github.io/aria/#alertdialog" class="role-reference">alertdialog</a> role
-        enables assistive technologies and browsers to distinguish alert dialogs from other dialogs
-        so they have the option of giving alert dialogs special treatment, such as playing a system alert sound.
+        경고 대화상자는 중요한 메세지를 전달하고 응답을 얻기 위해 사용자의 작업 흐름을 잠시 중단시키는 <a href="#dialog_modal">모달 대화상자</a>입니다.
+        예제는 작업 확인 프롬프트와 경고 메세지 확인을 포함합니다.
+        <a href="https://w3c.github.io/aria/#alertdialog" class="role-reference">alertdialog</a> 역할(role)은 보조 기술 및 브라우저가 다른 대화상자와 경고 대화상자를 구별할 수 있게 하기 때문에 시스템 경고음을 재생하는 것 같은 경고 대화 상자에 특수 처리를 제공하는 옵션이 있습니다.
       </p>
 
       <section class="notoc">
-        <h4 id="example">Example<a class="self-link" aria-label="§" href="#example"></a></h4>
-        <p><a href="examples/dialog-modal/alertdialog.html">Alert Dialog Example</a>: A confirmation prompt that demonstrates an alert dialog.</p>
+        <h4 id="generatedID-5">예제<a class="self-link" aria-label="§" href="#generatedID-5"></a></h4>
+        <p><a href="examples/dialog-modal/alertdialog.html">경고 대화상자 예제</a>: 경고 대화상자를 보여주는 확인 프롬프트.</p>
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction"></a></h4>
-        <p>See the keyboard interaction section for the <a href="#dialog_modal">modal dialog pattern</a>.</p>
+        <h4 id="generatedID-6">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-6"></a></h4>
+        <p><a href="#dialog_modal">모달 대화상자 패턴</a>에 대한 키보드 인터랙션 섹션 참고.</p>
       </section>
       <section class="notoc">
           <h4 id="wai-aria-role-state-property-0"><abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> 역할(role), 상태(state), 속성(property)<a class="self-link" aria-label="§" href="#wai-aria-role-state-property-0"></a></h4>
           <ul>
               <li>
-                  The element that contains all elements of the dialog, including the alert
-                  message and any dialog buttons, has role
-                  <a class="role-reference" href="https://w3c.github.io/aria/#alertdialog">alertdialog</a>.
+                  경고 메세지와 대화상자 버튼을 포함하여, 대화상자의 모든 엘리먼트를 포함하는 엘리먼트는
+                  <a class="role-reference" href="https://w3c.github.io/aria/#alertdialog">alertdialog</a> 역할(role)을 가집니다.
               </li>
               <li>
-                  The element with role <code>alertdialog</code> has either:
+                <code>alertdialog</code> 역할(role)을 가진 엘리먼트는:
                   <ul>
                       <li>
-                          A value for
-                          <a href="https://w3c.github.io/aria/#aria-labelledby" class="property-reference">aria-labelledby</a>
-                          that refers to the element containing the title of the dialog if the
-                          dialog has a visible label.
+                          대화상자가 눈에 보이는 레이블을 가지는 경우 <a href="https://w3c.github.io/aria/#aria-labelledby" class="property-reference">aria-labelledby</a>에 대화상자의 제목을 포함하는 엘리먼트를 가리키는 값을 가지거나
                       </li>
                       <li>
-                          A value for
-                          <a href="https://w3c.github.io/aria/#aria-label" class="property-reference">aria-label</a>
-                          if the dialog does not have a visible label.
+                          대화상자가 눈에 보이는 레이블을 가지지 않는 경우 <a href="https://w3c.github.io/aria/#aria-label" class="property-reference">aria-label</a>에 값을 가집니다.
                       </li>
                   </ul>
               </li>
               <li>
-                  The element with role <code>alertdialog</code> has a value set for
-                  <a href="https://w3c.github.io/aria/#aria-describedby" class="property-reference">aria-describedby</a>
-                  that refers to the element containing the alert message.
+                <code>alertdialog</code> 역할(role)을 가진 엘리먼트는 <a href="https://w3c.github.io/aria/#aria-describedby" class="property-reference">aria-describedby</a>에 경고 메세지를 포함하는 엘리먼트를 가리키는 값을 가집니다.
               </li>
           </ul>
       </section>
@@ -609,12 +599,12 @@
       </p>
 
       <section class="notoc">
-        <h4 id="example-0">Example<a class="self-link" aria-label="§" href="#example-0"></a></h4>
+        <h4 id="example">Example<a class="self-link" aria-label="§" href="#example"></a></h4>
         <p><a href="examples/breadcrumb/index.html">Breadcrumb design pattern example</a></p>
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-0">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-0"></a></h4>
+        <h4 id="generatedID-7">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-7"></a></h4>
         <p>해당되지 않음.</p>
       </section>
 
@@ -666,7 +656,7 @@
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-1">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-1"></a></h4>
+        <h4 id="generatedID-8">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-8"></a></h4>
         <p>When the button has focus:</p>
         <ul>
           <li>
@@ -778,7 +768,7 @@
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-2">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-2"></a></h4>
+        <h4 id="generatedID-9">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-9"></a></h4>
         <ul>
           <li>
             If the carousel has an auto-rotate feature, automatic slide rotation stops when any element in the carousel receives keyboard focus.
@@ -930,7 +920,7 @@
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-3">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-3"></a></h4>
+        <h4 id="generatedID-10">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-10"></a></h4>
         <p>When the checkbox has focus, pressing the <kbd>Space</kbd> key changes the state of the checkbox.</p>
       </section>
 
@@ -1046,7 +1036,7 @@
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-4">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-4"></a></h4>
+        <h4 id="generatedID-11">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-11"></a></h4>
         <ul>
           <li><kbd>Tab</kbd>: The combobox is in the page <kbd>Tab</kbd> sequence.</li>
           <li>Note: The popup indicator icon or button (if present), the popup, and the popup descendants are excluded from the page <kbd>Tab</kbd> sequence. </li>
@@ -1354,7 +1344,7 @@
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-5">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-5"></a></h4>
+        <h4 id="generatedID-12">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-12"></a></h4>
         <p>In the following description, the term <q>tabbable element</q> refers to any element with a <code>tabindex</code> value of zero or greater. Note that values greater than 0 are strongly discouraged.</p>
         <ul>
           <li>When a dialog opens, focus moves to an element inside the dialog. See notes below regarding initial focus placement.</li>
@@ -1478,7 +1468,7 @@
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-6">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-6"></a></h4>
+        <h4 id="generatedID-13">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-13"></a></h4>
         <p>When the disclosure control has focus:</p>
         <ul>
           <li><kbd>Enter</kbd>: activates the disclosure control and toggles the visibility of the disclosure content.</li>
@@ -1555,14 +1545,14 @@
       </p>
 
       <section class="notoc">
-        <h4 id="example-1">Example<a class="self-link" aria-label="§" href="#example-1"></a></h4>
+        <h4 id="example-0">Example<a class="self-link" aria-label="§" href="#example-0"></a></h4>
         <p>
         <a href="examples/feed/feed.html">Example Implementation of Feed Pattern</a>
         </p>
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-7">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-7"></a></h4>
+        <h4 id="generatedID-14">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-14"></a></h4>
         <p>
           The feed pattern is not based on a desktop GUI widget so the <code>feed</code> role is not associated with any well-established keyboard conventions.
           Supporting the following, or a similar,  interface is recommended.
@@ -2006,7 +1996,7 @@
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-8">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-8"></a></h4>
+        <h4 id="generatedID-15">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-15"></a></h4>
         <ul>
           <li><kbd>Enter</kbd>: Executes the link and moves focus to the link target.</li>
           <li><kbd>Shift + F10</kbd> (Optional): Opens a context menu for the link.</li>
@@ -2061,7 +2051,7 @@
       </section>
 
       <section id="listbox_kbd_interaction" class="notoc">
-        <h4 id="keyboard-interaction-9">Keyboard Interaction<a class="self-link" aria-label="§" href="#listbox_kbd_interaction"></a></h4>
+        <h4 id="generatedID-16">키보드 인터랙션<a class="self-link" aria-label="§" href="#listbox_kbd_interaction"></a></h4>
         <p>For a vertically oriented listbox:</p>
         <ul>
           <li> When a single-select listbox receives focus:
@@ -2190,7 +2180,7 @@
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-10">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-10"></a></h4>
+        <h4 id="generatedID-17">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-17"></a></h4>
         <p>
           The following description of keyboard behaviors assumes:</p>
           <ol>
@@ -2371,7 +2361,7 @@
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-11">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-11"></a></h4>
+        <h4 id="generatedID-18">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-18"></a></h4>
         <ul>
           <li>With focus on the button:
             <ul>
@@ -2426,12 +2416,12 @@
       </ul></div>
 
       <section class="notoc">
-        <h4 id="example-2">Example<a class="self-link" aria-label="§" href="#example-2"></a></h4>
+        <h4 id="example-1">Example<a class="self-link" aria-label="§" href="#example-1"></a></h4>
         <p><a href="examples/meter/meter.html">Meter Example</a></p>
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-12">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-12"></a></h4>
+        <h4 id="generatedID-19">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-19"></a></h4>
         <p>해당되지 않음.</p>
       </section>
 
@@ -2470,7 +2460,7 @@
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-13">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-13"></a></h4>
+        <h4 id="generatedID-20">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-20"></a></h4>
         <section class="notoc">
           <h5 id="for-radio-groups-not-contained-in-a-toolbar">For Radio Groups Not Contained in a Toolbar<a class="self-link" aria-label="§" href="#for-radio-groups-not-contained-in-a-toolbar"></a></h5>
           <p>
@@ -2609,7 +2599,7 @@
       </section>
 
       <section id="slider_kbd_interaction" class="notoc">
-        <h4 id="keyboard-interaction-14">Keyboard Interaction<a class="self-link" aria-label="§" href="#slider_kbd_interaction"></a></h4>
+        <h4 id="generatedID-21">키보드 인터랙션<a class="self-link" aria-label="§" href="#slider_kbd_interaction"></a></h4>
         <ul>
           <li><kbd>Right Arrow</kbd>: Increase the value of the slider by one step.</li>
           <li><kbd>Up Arrow</kbd>: Increase the value of the slider by one step.</li>
@@ -2668,12 +2658,12 @@
       </p></div>
 
       <section class="notoc">
-        <h4 id="example-3">Example<a class="self-link" aria-label="§" href="#example-3"></a></h4>
+        <h4 id="example-2">Example<a class="self-link" aria-label="§" href="#example-2"></a></h4>
         <p><a href="examples/slider/multithumb-slider.html">Multi-Thumb Slider Examples</a>: Demonstrates two-thumb sliders for picking price ranges for an airline flight and hotel reservation.</p>
       </section>
 
       <section id="slidertwothumb_kbd_interaction" class="notoc">
-        <h4 id="keyboard-interaction-15">Keyboard Interaction<a class="self-link" aria-label="§" href="#slidertwothumb_kbd_interaction"></a></h4>
+        <h4 id="generatedID-22">키보드 인터랙션<a class="self-link" aria-label="§" href="#slidertwothumb_kbd_interaction"></a></h4>
         <ul>
           <li>Each thumb is in the page tab sequence and has the same keyboard interaction as a <a href="#slider_kbd_interaction">single-thumb slider</a>.</li>
           <li>
@@ -2727,12 +2717,12 @@
       </p>
 
       <section class="notoc">
-        <h4 id="example-4">Example<a class="self-link" aria-label="§" href="#example-4"></a></h4>
+        <h4 id="example-3">Example<a class="self-link" aria-label="§" href="#example-3"></a></h4>
         <p><a href="examples/spinbutton/datepicker-spinbuttons.html">Date Picker Spin Button Example:</a> Illustrates a date picker made from three spin buttons for day, month, and year.</p>
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-16">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-16"></a></h4>
+        <h4 id="generatedID-23">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-23"></a></h4>
         <ul>
           <li><kbd>Up Arrow</kbd>: Increases the value.</li>
           <li><kbd>Down Arrow</kbd>: Decreases the value.</li>
@@ -2818,7 +2808,7 @@
         <p><a href="examples/table/table.html">Table Example</a>: ARIA table made using HTML <code>div</code> and <code>span</code> elements.</p>
       </section>
       <section class="notoc">
-        <h4 id="keyboard-interaction-17">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-17"></a></h4>
+        <h4 id="generatedID-24">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-24"></a></h4>
         <p>해당되지 않음.</p>
       </section>
       <section id="table_roles_states_props" class="notoc">
@@ -2887,7 +2877,7 @@
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-18">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-18"></a></h4>
+        <h4 id="generatedID-25">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-25"></a></h4>
         <p>For the tab list:</p>
         <ul>
           <li>
@@ -2989,14 +2979,14 @@
         <li>Use toolbar as a grouping element only if the group contains 3 or more controls.</li>
       </ul>
       <section class="notoc">
-        <h4 id="example-5">Example<a class="self-link" aria-label="§" href="#example-5"></a></h4>
+        <h4 id="example-4">Example<a class="self-link" aria-label="§" href="#example-4"></a></h4>
         <p>
           <a href="examples/toolbar/toolbar.html">Toolbar Example</a>:
           A toolbar that uses roving tabindex to manage focus and contains several types of controls, including toggle buttons, radio buttons, a menu button, a spin button, a checkbox, and a link.
         </p>
       </section>
       <section class="notoc">
-        <h4 id="keyboard-interaction-19">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-19"></a></h4>
+        <h4 id="generatedID-26">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-26"></a></h4>
         <ul>
           <li><kbd>Tab</kbd> and <kbd>Shift + Tab</kbd>: Move focus into and out of the toolbar. When focus moves into a toolbar:
             <ul>
@@ -3059,14 +3049,14 @@
         A hover that contains focusable elements can be made using a non-modal dialog.
       </p>
       <section class="notoc">
-        <h4 id="example-6">Example<a class="self-link" aria-label="§" href="#example-6"></a></h4>
+        <h4 id="example-5">Example<a class="self-link" aria-label="§" href="#example-5"></a></h4>
         <p>
           Work to develop a tooltip example is tracked by
           <a href="https://github.com/w3c/aria-practices/issues/127">issue 127.</a>
         </p>
       </section>
       <section class="notoc">
-        <h4 id="keyboard-interaction-20">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-20"></a></h4>
+        <h4 id="generatedID-27">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-27"></a></h4>
         <p><kbd>Escape</kbd>: Dismisses the Tooltip.</p>
         <div class="note" role="note" id="issue-container-generatedID-29"><div role="heading" class="note-title marker" id="h-note-27" aria-level="5"><span>Note</span></div><ol class="">
           <li>Focus stays on the triggering element while the tooltip is displayed.</li>
@@ -3140,7 +3130,7 @@
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-21">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-21"></a></h4>
+        <h4 id="generatedID-28">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-28"></a></h4>
         <p>For a vertically oriented tree:</p>
         <ul>
           <li> When a single-select tree receives focus:
@@ -3307,7 +3297,7 @@
       </section>
 
       <section class="notoc">
-        <h4 id="keyboard-interaction-22">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-22"></a></h4>
+        <h4 id="generatedID-29">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-29"></a></h4>
         <p>
           The following keys provide <code>treegrid</code> navigation by moving focus among rows and cells of the grid.
           Implementations of <code>treegrid</code> make these key commands available when an element in the grid has received focus, e.g., after a user has moved focus to the grid with <kbd>Tab</kbd>.
@@ -3538,14 +3528,14 @@
         Note that the term "primary pane" does not describe the importance or purpose of content inside the pane.
       </p>
       <section class="notoc">
-        <h4 id="example-7">Example<a class="self-link" aria-label="§" href="#example-7"></a></h4>
+        <h4 id="example-6">Example<a class="self-link" aria-label="§" href="#example-6"></a></h4>
         <p>
           Work to develop an example window splitter widget is tracked by
           <a href="https://github.com/w3c/aria-practices/issues/130">issue 130.</a>
         </p>
       </section>
       <section class="notoc">
-        <h4 id="keyboard-interaction-23">Keyboard Interaction<a class="self-link" aria-label="§" href="#keyboard-interaction-23"></a></h4>
+        <h4 id="generatedID-30">키보드 인터랙션<a class="self-link" aria-label="§" href="#generatedID-30"></a></h4>
         <ul>
           <li><kbd>Left Arrow</kbd>: Moves a vertical splitter to the left.</li>
           <li><kbd>Right Arrow</kbd>: Moves a vertical splitter to the right.</li>
@@ -3742,7 +3732,7 @@
         </section>
 
         <section class="notoc">
-          <h5 id="generatedID-5">예<a class="self-link" aria-label="§" href="#generatedID-5"></a></h5>
+          <h5 id="generatedID-31">예<a class="self-link" aria-label="§" href="#generatedID-31"></a></h5>
 
           <p><a href="examples/landmarks/banner.html">Banner Landmark 예제</a></p>
         </section>
@@ -3774,7 +3764,7 @@
         </section>
 
         <section class="notoc">
-          <h5 id="generatedID-6">예제<a class="self-link" aria-label="§" href="#generatedID-6"></a></h5>
+          <h5 id="generatedID-32">예제<a class="self-link" aria-label="§" href="#generatedID-32"></a></h5>
 
           <p><a href="examples/landmarks/complementary.html">Complementary 랜드마크 예</a></p>
         </section>
@@ -3822,7 +3812,7 @@
         </section>
 
         <section class="notoc">
-          <h5 id="generatedID-7">예제<a class="self-link" aria-label="§" href="#generatedID-7"></a></h5>
+          <h5 id="generatedID-33">예제<a class="self-link" aria-label="§" href="#generatedID-33"></a></h5>
           <p><a href="examples/landmarks/contentinfo.html">Contentinfo 랜드마크 예</a></p>
         </section>
       </section>
@@ -3867,7 +3857,7 @@
         </section>
 
         <section class="notoc">
-          <h5 id="generatedID-8">예제<a class="self-link" aria-label="§" href="#generatedID-8"></a></h5>
+          <h5 id="generatedID-34">예제<a class="self-link" aria-label="§" href="#generatedID-34"></a></h5>
 
           <p><a href="examples/landmarks/form.html">Form 랜드마크 예</a></p>
         </section>
@@ -3900,7 +3890,7 @@
         </section>
 
         <section class="notoc">
-          <h5 id="generatedID-9">예제<a class="self-link" aria-label="§" href="#generatedID-9"></a></h5>
+          <h5 id="generatedID-35">예제<a class="self-link" aria-label="§" href="#generatedID-35"></a></h5>
 
           <p><a href="examples/landmarks/main.html">Main 랜드마크 예</a></p>
         </section>
@@ -3929,7 +3919,7 @@
         </section>
 
         <section class="notoc">
-          <h5 id="generatedID-10">예제<a class="self-link" aria-label="§" href="#generatedID-10"></a></h5>
+          <h5 id="generatedID-36">예제<a class="self-link" aria-label="§" href="#generatedID-36"></a></h5>
 
           <p><a href="examples/landmarks/navigation.html">Navigation 랜드마크 예</a></p>
         </section>
@@ -3959,7 +3949,7 @@
         </section>
 
         <section class="notoc">
-          <h5 id="generatedID-11">예제<a class="self-link" aria-label="§" href="#generatedID-11"></a></h5>
+          <h5 id="generatedID-37">예제<a class="self-link" aria-label="§" href="#generatedID-37"></a></h5>
 
           <p><a href="examples/landmarks/region.html">Region 랜드마크 예</a></p>
         </section>
@@ -3986,7 +3976,7 @@
         </section>
 
         <section class="notoc">
-          <h5 id="generatedID-12">예제<a class="self-link" aria-label="§" href="#generatedID-12"></a></h5>
+          <h5 id="generatedID-38">예제<a class="self-link" aria-label="§" href="#generatedID-38"></a></h5>
 
           <p><a href="examples/landmarks/search.html">Search 랜드마크 예</a></p>
         </section>
@@ -7277,7 +7267,7 @@
         Informative references
       <a class="self-link" aria-label="§" href="#informative-references"></a></h3>
     <dl class="bibliography">
-      <dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-html-aam">[HTML-AAM]</dt><dd><a href="https://www.w3.org/TR/html-aam-1.0/"><cite>HTML Accessibility API Mappings 1.0</cite></a>. Steve Faulkner; Alexander Surkov; Scott O'Hara; Bogdan Brinza; Jason Kiss; Cynthia Shelly.  W3C. 17 August 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/html-aam-1.0/">https://www.w3.org/TR/html-aam-1.0/</a></dd><dt id="bib-html-aria">[HTML-ARIA]</dt><dd><a href="https://www.w3.org/TR/html-aria/"><cite>ARIA in HTML</cite></a>. Steve Faulkner; Scott O'Hara; Patrick Lauke.  W3C. 14 February 2021. W3C Working Draft. URL: <a href="https://www.w3.org/TR/html-aria/">https://www.w3.org/TR/html-aria/</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd><dt id="bib-wai-aria-1.2">[WAI-ARIA-1.2]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.2/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.2</cite></a>. Joanmarie Diggs; Shane McCarron; James Nurthen; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 18 December 2019. W3C Working Draft. URL: <a href="https://www.w3.org/TR/wai-aria-1.2/">https://www.w3.org/TR/wai-aria-1.2/</a></dd>
+      <dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-html-aam">[HTML-AAM]</dt><dd><a href="https://www.w3.org/TR/html-aam-1.0/"><cite>HTML Accessibility API Mappings 1.0</cite></a>. Steve Faulkner; Alexander Surkov; Scott O'Hara; Bogdan Brinza; Jason Kiss; Cynthia Shelly.  W3C. 17 August 2020. W3C Working Draft. URL: <a href="https://www.w3.org/TR/html-aam-1.0/">https://www.w3.org/TR/html-aam-1.0/</a></dd><dt id="bib-html-aria">[HTML-ARIA]</dt><dd><a href="https://www.w3.org/TR/html-aria/"><cite>ARIA in HTML</cite></a>. Steve Faulkner; Scott O'Hara; Patrick Lauke.  W3C. 20 February 2021. W3C Working Draft. URL: <a href="https://www.w3.org/TR/html-aria/">https://www.w3.org/TR/html-aria/</a></dd><dt id="bib-svg2">[SVG2]</dt><dd><a href="https://www.w3.org/TR/SVG2/"><cite>Scalable Vector Graphics (SVG) 2</cite></a>. Amelia Bellamy-Royds; Bogdan Brinza; Chris Lilley; Dirk Schulze; David Storey; Eric Willigers.  W3C. 4 October 2018. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/SVG2/">https://www.w3.org/TR/SVG2/</a></dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.1/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.1</cite></a>. Joanmarie Diggs; Shane McCarron; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria-1.1/">https://www.w3.org/TR/wai-aria-1.1/</a></dd><dt id="bib-wai-aria-1.2">[WAI-ARIA-1.2]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.2/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.2</cite></a>. Joanmarie Diggs; Shane McCarron; James Nurthen; Michael Cooper; Richard Schwerdtfeger; James Craig.  W3C. 18 December 2019. W3C Working Draft. URL: <a href="https://www.w3.org/TR/wai-aria-1.2/">https://www.w3.org/TR/wai-aria-1.2/</a></dd>
     </dl></section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>

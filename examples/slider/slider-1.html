@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Horizontal Slider Example | WAI-ARIA Authoring Practices 1.2</title>
+  <title>Horizontal Slider Example | WAI-ARIA 작성 방법 1.2</title>
 
   <!--  Core js and css shared by all examples; do not modify when using this template. -->
   <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css">
@@ -18,16 +18,16 @@
 <body>
   <nav aria-label="Related Links" class="feedback">
     <ul>
-      <li><a href="../../#browser_and_AT_support">Browser and Assistive Technology Support</a></li>
+      <li><a href="../../#browser_and_AT_support">브라우저와 보조 기술 지원</a></li>
       <li><a href="https://github.com/w3c/aria-practices/issues/new">Report Issue</a></li>
       <li><a href="https://github.com/w3c/aria-practices/projects/3">Related Issues</a></li>
-      <li><a href="../../#slider">Design Pattern</a></li>
+      <li><a href="../../#slider">설계 패턴</a></li>
     </ul>
   </nav>
   <main>
     <h1>Horizontal Slider Example</h1>
     <p>
-      Following is an example of a color picker that demonstrates the 
+      Following is an example of a color picker that demonstrates the
       <a href="../../#slider">slider design pattern.</a>
       Change the background color of the box below the picker by adjusting the sliders for red, green, and blue values.
       The HEX and RGB values of the chosen color are displayed by the color box.
@@ -35,7 +35,7 @@
     <p>Similar examples include: </p>
     <ul>
       <li>
-        <a href="slider-2.html">Slider Examples with aria-orientation and aria-valuetext</a>: 
+        <a href="slider-2.html">Slider Examples with aria-orientation and aria-valuetext</a>:
         Three thermostat control sliders that demonstrate using aria-orientation and aria-valuetext.
       </li>
     </ul>
@@ -43,7 +43,7 @@
       <div class="example-header">
         <h2 id="ex_label">Example</h2>
       </div>
-          <div role="separator" id="ex_start_sep" aria-labelledby="ex_start_sep ex_label" aria-label="Start of"></div>        
+          <div role="separator" id="ex_start_sep" aria-labelledby="ex_start_sep ex_label" aria-label="Start of"></div>
           <div id="ex1">
             <div id="idSliders">
               <div id="idRed" class="label">Red</div>
@@ -98,17 +98,17 @@
               <label>Color (HEX): <input type="text" readonly id="idColorValueHex" value=""></label>
               <label>Color (RGB): <input type="text" readonly id="idColorValueRGB" value=""></label>
             </div>
-          </div>          
+          </div>
           <div role="separator" id="ex_end_sep" aria-labelledby="ex_end_sep ex_label" aria-label="End of"></div>
     </section>
 
     <section>
-        <h2 id="kbd_label">Keyboard Support</h2>
+        <h2 id="kbd_label">키보드 지원</h2>
         <table aria-labelledby="kbd_label" class="def">
           <thead>
             <tr>
-              <th>Key</th>
-              <th>Function</th>
+              <th>키</th>
+              <th>기능</th>
             </tr>
           </thead>
           <tbody>
@@ -153,10 +153,10 @@
       <table aria-labelledby="rps_label" class="data attributes">
         <thead>
           <tr>
-            <th scope="col">Role</th>
-            <th scope="col">Attribute</th>
-            <th scope="col">Element</th>
-            <th scope="col">Usage</th>
+            <th scope="col">역할(role)</th>
+            <th scope="col">어트리뷰트</th>
+            <th scope="col">엘리먼트</th>
+            <th scope="col">사용법</th>
           </tr>
         </thead>
         <tbody>
@@ -230,7 +230,7 @@
     </section>
 
   <section>
-        <h2>Javascript and CSS Source Code</h2>
+        <h2>Javascript와 CSS 소스 코드</h2>
         <ul id="css_js_files">
           <li>CSS: <a href="css/slider.css" type="tex/css">slider.css</a></li>
           <li>Javascript: <a href="js/slider.js" type="text/javascript">slider.js</a></li>
@@ -238,7 +238,7 @@
     </section>
 
     <section>
-        <h2 id="sc1_label">HTML Source Code</h2>
+        <h2 id="sc1_label">HTML 소스 코드</h2>
         <div role="separator" id="sc1_start_sep" aria-labelledby="sc1_start_sep sc1_label" aria-label="Start of"></div>
         <pre><code id="sc1"></code></pre>
         <div role="separator" id="sc1_end_sep" aria-labelledby="sc1_end_sep sc1_label" aria-label="End of"></div>
